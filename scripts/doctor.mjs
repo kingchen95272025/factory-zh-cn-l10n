@@ -3,7 +3,7 @@ import { spawnSync } from 'node:child_process';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 import path from 'node:path';
 import { appInfo, isAppRunning, parseArgs, resolveAppPath, sha256File } from './lib/app.mjs';
-import { asarIntegrityHash } from './lib/asar.mjs';
+import { asarIntegrityHash, hasChinesePack } from './lib/asar.mjs';
 import { loadManifest, listReleases, loadSourceCatalog, loadTranslations, resolveRelease } from './lib/release.mjs';
 import {
   formatPercent,
@@ -23,6 +23,12 @@ function safeRun(command, commandArgs) {
 const info = appInfo(appPath);
 const asarSha = await sha256File(info.asarPath);
 const headerHash = asarIntegrityHash(info.asarPath);
+const signatureCheck = spawnSync(
+  '/usr/bin/codesign',
+  ['--verify', '--deep', '--strict', '--verbose=2', appPath],
+  { encoding: 'utf8' },
+);
+const signatureOk = signatureCheck.status === 0;
 const signature = safeRun('/usr/bin/codesign', ['-dv', appPath]);
 const team = signature.match(/TeamIdentifier=([^\n]+)/)?.[1] ?? '未知';
 const fusesBinary = path.resolve('node_modules/.bin/electron-fuses');
@@ -74,11 +80,19 @@ const installedState = existsSync(installedStatePath)
   ? JSON.parse(readFileSync(installedStatePath, 'utf8'))
   : null;
 
-let verdict = '原版（未打补丁）';
-if (distDirs.length && asarSha === distDirs[0].manifest.app.outputAsarSha256) {
-  verdict = `已安装补丁 ${distDirs[0].manifest.releaseId}（${distDirs[0].manifest.language}）`;
-} else if (distDirs.length && asarSha !== distDirs[0].manifest.app.sourceAsarSha256) {
-  verdict = '未知 asar（既非原版也非当前补丁，可能已升级或被其他工具修改）';
+const patched = hasChinesePack(info.asarPath);
+const matchingDist = distDirs.find(
+  (candidate) => candidate.manifest.app.outputAsarSha256 === asarSha,
+);
+let verdict;
+if (matchingDist) {
+  verdict = `已安装补丁 ${matchingDist.manifest.releaseId}（${matchingDist.manifest.language}）`;
+} else if (patched) {
+  verdict = '已安装补丁（未知构建，dist 中没有匹配的产物）';
+} else if (distDirs.some((candidate) => candidate.manifest.app.sourceAsarSha256 === asarSha)) {
+  verdict = '原版（未打补丁）';
+} else {
+  verdict = '未检测到中文补丁（asar 与已知来源不一致）';
 }
 
 console.log(`Factory 巡检`);
@@ -89,9 +103,14 @@ console.log(`Bundle ID：${info.bundleId}`);
 console.log(`app.asar SHA-256：${asarSha}`);
 console.log(`asar 头部完整性哈希：${headerHash}`);
 console.log(`Info.plist 完整性哈希：${info.integrityHash ?? '无'}`);
-console.log(`完整性校验：${info.integrityHash === headerHash ? '通过' : '不一致（应用可能无法启动）'}`);
+const integrityOk = info.integrityHash === headerHash;
+console.log(`完整性校验：${integrityOk ? '通过' : '不一致（应用可能无法启动）'}`);
 console.log(`运行状态：${isAppRunning(appPath) ? '运行中' : '未运行'}`);
 console.log(`签名 Team ID：${team}`);
+console.log(`签名校验：${signatureOk ? '通过' : '失败'}`);
+if (!signatureOk) {
+  console.log(`${signatureCheck.stdout ?? ''}${signatureCheck.stderr ?? ''}`.trim());
+}
 console.log(`当前判定：${verdict}`);
 if (installedState) {
   console.log(
@@ -105,13 +124,24 @@ console.log(`\nElectron Fuses：\n${fuses}`);
 if (releaseId) {
   const manifest = loadManifest(releaseId);
   const patchedVerdict = verdict.startsWith('已安装补丁');
-  const compareHash = patchedVerdict ? distDirs[0]?.manifest.app.sourceAsarSha256 : asarSha;
+  const compareDist =
+    matchingDist ??
+    (patched ? null : distDirs.find((candidate) => candidate.manifest.app.sourceAsarSha256 === asarSha));
+  const compareHash = compareDist
+    ? patchedVerdict
+      ? compareDist.manifest.app.sourceAsarSha256
+      : asarSha
+    : null;
   console.log(`\n英文目录：${releaseId}（${manifest.totals.strings} 条字符串）`);
-  console.log(
-    `英文目录与${patchedVerdict ? '补丁来源' : '当前应用'}一致：${
-      manifest.app.asarSha256 === compareHash ? '是' : '否（需要重新 extract）'
-    }`,
-  );
+  if (compareHash) {
+    console.log(
+      `英文目录与${patchedVerdict ? '补丁来源' : '当前应用'}一致：${
+        manifest.app.asarSha256 === compareHash ? '是' : '否（需要重新 extract）'
+      }`,
+    );
+  } else {
+    console.log('英文目录比对：无法比对（dist 中没有与当前应用匹配的产物）');
+  }
   if (coverage) {
     console.log(
       `已建译文命名空间覆盖率：${formatPercent(coverage.coverage)}（${coverage.translated}/${coverage.total}）`,
@@ -135,6 +165,10 @@ if (distDirs.length) {
 const releases = listReleases();
 if (releases.length > 1) {
   console.log(`\n历史英文目录：${releases.join(', ')}`);
+}
+
+if (!integrityOk || !signatureOk) {
+  process.exitCode = 1;
 }
 
 console.log('\n提醒：');

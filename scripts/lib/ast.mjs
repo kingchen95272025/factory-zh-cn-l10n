@@ -271,10 +271,10 @@ export function findRendererCatalog(ast, source) {
   walkAst(ast, (node) => {
     if (node.type !== 'CallExpression') return;
     if (node.callee.type === 'MemberExpression' && memberName(node.callee) === 'assign') {
-      const first = node.arguments[0];
-      if (first?.type === 'ObjectExpression' && findProperty(first, './common.json')) {
-        assignCalls.push(node);
-      }
+      const hasCommonNamespace = node.arguments.some(
+        (arg) => arg?.type === 'ObjectExpression' && Boolean(findProperty(arg, './common.json')),
+      );
+      if (hasCommonNamespace) assignCalls.push(node);
     }
   });
   if (assignCalls.length !== 1) {
@@ -295,11 +295,24 @@ export function findRendererCatalog(ast, source) {
   }
   const outerArg = outerCalls[0].arguments[0];
   const namespaceProps = new Map();
-  for (const property of assignCall.arguments[0].properties) {
-    const key = property.type === 'Property' ? propertyKey(property) : null;
-    if (!key) continue;
-    const name = key.replace(/^.*\//, '').replace(/\.json$/, '');
-    namespaceProps.set(name, property.value);
+  for (const argument of assignCall.arguments) {
+    if (argument.type !== 'ObjectExpression') {
+      throw new Error('渲染层 Object.assign 中存在非对象参数，无法安全抽取');
+    }
+    for (const property of argument.properties) {
+      if (property.type !== 'Property') {
+        throw new Error('渲染层命名空间表中存在无法静态解析的 spread，已中止以避免静默漏译');
+      }
+      const key = propertyKey(property);
+      if (!key) {
+        throw new Error('渲染层命名空间表中存在无法解析的属性名，已中止');
+      }
+      const name = key.replace(/^.*\//, '').replace(/\.json$/, '');
+      namespaceProps.set(name, property.value);
+    }
+  }
+  if (namespaceProps.size === 0) {
+    throw new Error('渲染层命名空间表为空');
   }
   const componentsProp = findProperty(outerArg, 'components');
   if (componentsProp) namespaceProps.set('components', componentsProp.value);
@@ -307,26 +320,31 @@ export function findRendererCatalog(ast, source) {
 }
 
 export function findRendererLanguageList(ast) {
-  let supportedProp = null;
+  const supportedProps = [];
   walkAst(ast, (node) => {
     if (node.type !== 'Property' || propertyKey(node) !== 'supportedLngs') return;
-    if (node.value.type === 'ArrayExpression') supportedProp = node;
+    if (node.value.type === 'ArrayExpression') supportedProps.push(node);
   });
-  if (!supportedProp) {
-    throw new Error('未能定位 supportedLngs 配置');
+  if (supportedProps.length !== 1) {
+    throw new Error(`supportedLngs 数组配置不唯一（命中 ${supportedProps.length} 次）`);
   }
+  const supportedProp = supportedProps[0];
   const spread = supportedProp.value.elements.find((element) => element?.type === 'SpreadElement');
   if (!spread || spread.argument.type !== 'Identifier') {
     throw new Error('supportedLngs 中未找到语言列表变量');
   }
   const name = spread.argument.name;
-  let listNode = null;
+  const declarators = [];
   walkAst(ast, (node) => {
     if (node.type !== 'VariableDeclarator') return;
-    if (node.id.type === 'Identifier' && node.id.name === name) {
-      listNode = node.init;
+    if (node.id.type === 'Identifier' && node.id.name === name && node.init) {
+      declarators.push(node);
     }
   });
+  if (declarators.length !== 1) {
+    throw new Error(`语言列表变量 ${name} 声明了 ${declarators.length} 次，无法安全定位`);
+  }
+  const listNode = declarators[0].init;
   if (!listNode || listNode.type !== 'ArrayExpression') {
     throw new Error(`未能解析语言列表变量 ${name}`);
   }
@@ -433,6 +451,30 @@ export function findMainSupportedList(ast) {
   return { name: supportedIdentifier, node: listNode, declarator, values };
 }
 
+export function hasChineseEnum(ast) {
+  let found = false;
+  walkAst(ast, (node) => {
+    if (
+      node.type === 'Property' &&
+      propertyKey(node) === 'ChineseSimplified' &&
+      node.value.type === 'Literal' &&
+      node.value.value === 'zh-CN'
+    ) {
+      found = true;
+    }
+    if (
+      node.type === 'AssignmentExpression' &&
+      node.left.type === 'MemberExpression' &&
+      memberName(node.left) === 'ChineseSimplified' &&
+      node.right.type === 'Literal' &&
+      node.right.value === 'zh-CN'
+    ) {
+      found = true;
+    }
+  });
+  return found;
+}
+
 export function findStatementContaining(ast, targetNode) {
   let best = null;
   const visitStatement = (statement) => {
@@ -449,6 +491,9 @@ export function findStatementContaining(ast, targetNode) {
     }
   };
   for (const statement of ast.body) visitStatement(statement);
+  if (best && best.type !== 'VariableDeclaration' && !best.type.endsWith('Statement')) {
+    throw new Error(`目标节点所在容器不是语句（${best.type}），无法安全插入 var 声明`);
+  }
   return best;
 }
 

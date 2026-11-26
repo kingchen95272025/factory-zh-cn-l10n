@@ -32,7 +32,7 @@ const result = applyPatchToApp({
   appPath,
   distDir,
   backupRoot,
-  sign: !args['no-sign'],
+  sign: true,
   force: Boolean(args.force),
 });
 

@@ -3,9 +3,9 @@
 - 验证时间：2026-11-26
 - 应用版本：Factory 1.20.0 (build 17041)
 - 原始 app.asar SHA-256：`320c8a948e4806104d6e97dfbc253810fbfe2fef73c663fe7e233d50dfc93493`
-- 补丁 app.asar SHA-256：`a7523ac486d8a4695c6666e08ecdbe0d66de3146e69274a1a6df119c19b7eb42`
-- asar 头部完整性哈希：`7ea09736f8390a3d6a53342de65103c7c34d13ec955dccc588a1a76e5df68ae9`
-- 渲染层资源分块：`resources-zhCN-d9f4ae54.js`
+- 补丁 app.asar SHA-256：`be6b81c4a290202566afd3c388bc8e6de5947589402f14b1c5d87389f1e37d43`
+- asar 头部完整性哈希：`4b9d5c09f7e966bd0ebc4425cc35f6bc83fc7bf288be676ed1564377ef17909d`
+- 渲染层资源分块：`resources-zhCN-55033086.js`
 - 译文覆盖：647 / 9,176（已建译文的命名空间）
   - `renderer/common`：365 / 365（100%）
   - `renderer/components`：142 / 7,886（`layout` 可见子集 + 主界面问候/输入/项目选择等）
@@ -31,8 +31,8 @@
 | `codesign --verify --deep --strict` | 通过 |
 | `Info.plist` 完整性哈希 | 与 asar 头部一致 |
 | `<html lang>` | `zh-CN` |
-| 界面中文字符 | 41 |
-| 命中已翻译文案 | 25 条（新建会话 / 任务控制 / 自动化 / 代码审查 / 搜索 / 想让我们做什么？/ 描述任务或提问 / 选择项目 / 拖放以添加附件…） |
+| 界面中文字符 | 70 |
+| 命中已翻译文案 | 28 条（新建会话 / 任务控制 / 自动化 / 代码审查 / 搜索 / 想让我们做什么？/ 描述任务或提问 / 选择项目 / 拖放以添加附件…） |
 | 主界面截图 | `work/poc/1.20.0-17041/screenshot.png` |
 | 进程清理 | 通过（副本与 droid 守护进程均已退出） |
 
@@ -41,7 +41,9 @@
 在独立副本 `work/test-restore/Factory.app` 上执行：
 
 1. `npm run install:patch -- --app work/test-restore/Factory.app`：安装成功，ad-hoc 签名校验通过；
-2. `npm run restore -- --app work/test-restore/Factory.app`：还原成功，签名 Team ID 回到 Factory 官方 `SW6TL4V6Q5`。
+2. 人为执行 `codesign --remove-signature` 制造坏签名，再次安装：被识别为「asar 一致但签名无效」，自动重新安装并修复；
+3. `npm run restore -- --app work/test-restore/Factory.app`：还原成功，签名 Team ID 回到 Factory 官方 `SW6TL4V6Q5`；
+4. 移走应用目录后再次 `restore`：仍能从版本匹配的备份完成救援。
 
 ## 结论
 

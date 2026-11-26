@@ -5,6 +5,7 @@ import {
   findMainDesktopMap,
   findMainSupportedList,
   findStatementContaining,
+  hasChineseEnum,
   parseBundle,
   walkAst,
 } from './ast.mjs';
@@ -32,6 +33,12 @@ function applyEdits(source, edits) {
   return result;
 }
 
+function appendMember(source, closingIndex, member) {
+  const before = source.slice(0, closingIndex).trimEnd();
+  const endsWithSeparator = /[,\[{]$/.test(before);
+  return `${endsWithSeparator ? '' : ','}${member}`;
+}
+
 export function buildResourceChunk(resources) {
   const json = JSON.stringify(resources);
   const content = `const resources=${json};export{resources};\n`;
@@ -41,16 +48,29 @@ export function buildResourceChunk(resources) {
 
 export function planRendererPatch(source) {
   const ast = parseBundle(source, 'renderer');
+  if (!hasChineseEnum(ast)) {
+    throw new Error('语言枚举中不存在 ChineseSimplified="zh-CN"，补丁锚点不匹配');
+  }
   const languageList = findRendererLanguageList(ast);
   const loaderMap = findRendererLoaderMap(ast);
   const values = languageList.node.elements.map(
     (element) => element.property?.name ?? element.name ?? null,
   );
   const enumName = loaderMap.properties[0].key.object.name;
-  const alreadyPatched =
-    values.includes('ChineseSimplified') ||
-    loaderMap.properties.some((property) => property.key.property?.name === 'ChineseSimplified');
-  return { ast, languageList, loaderMap, values, enumName, alreadyPatched };
+  const languagePresent = values.includes('ChineseSimplified');
+  const loaderPresent = loaderMap.properties.some(
+    (property) => property.key.property?.name === 'ChineseSimplified',
+  );
+  return {
+    ast,
+    languageList,
+    loaderMap,
+    values,
+    enumName,
+    languagePresent,
+    loaderPresent,
+    alreadyPatched: languagePresent && loaderPresent,
+  };
 }
 
 export function patchRenderer(source, resources) {
@@ -60,7 +80,7 @@ export function patchRenderer(source, resources) {
     return { source, chunk, alreadyPatched: true, enumName: plan.enumName, languageList: plan.values };
   }
 
-  const { languageList, loaderMap, enumName } = plan;
+  const { languageList, loaderMap, enumName, languagePresent, loaderPresent } = plan;
   const japanese = loaderMap.properties.find(
     (property) => property.key.property?.name === 'Japanese',
   );
@@ -90,36 +110,43 @@ export function patchRenderer(source, resources) {
     throw new Error('资源加载表结尾不是 “}”，补丁锚点已变化');
   }
 
-  const edited = applyEdits(source, [
-    {
+  const edits = [];
+  if (!languagePresent) {
+    edits.push({
       at: languageList.node.end - 1,
-      text: `,${enumName}.ChineseSimplified`,
-    },
-    {
+      text: appendMember(source, languageList.node.end - 1, `${enumName}.ChineseSimplified`),
+    });
+  }
+  if (!loaderPresent) {
+    edits.push({
       at: loaderMap.node.end - 1,
-      text: `,${newProperty}`,
-    },
-  ]);
+      text: appendMember(source, loaderMap.node.end - 1, newProperty),
+    });
+  }
+  const edited = applyEdits(source, edits);
 
   return {
     source: edited,
     chunk,
     alreadyPatched: false,
     enumName,
-    languageList: [...plan.values, 'ChineseSimplified'],
-    loaderProperty: newProperty,
+    languageList: languagePresent ? plan.values : [...plan.values, 'ChineseSimplified'],
+    loaderProperty: loaderPresent ? null : newProperty,
   };
 }
 
 export function patchMain(source, desktopResources) {
   const ast = parseBundle(source, 'main');
+  if (!hasChineseEnum(ast)) {
+    throw new Error('主进程语言枚举中不存在 ChineseSimplified="zh-CN"，补丁锚点不匹配');
+  }
   const map = findMainDesktopMap(ast);
   const supported = findMainSupportedList(ast);
   const languageAlreadyPresent = supported.values.some((value) => value.name === 'ChineseSimplified');
-  const alreadyPatched = map.properties.some(
+  const mapAlreadyPatched = map.properties.some(
     (property) => property.key.property?.name === 'ChineseSimplified',
   );
-  if (alreadyPatched && languageAlreadyPresent) {
+  if (mapAlreadyPatched && languageAlreadyPresent) {
     return {
       source,
       alreadyPatched: true,
@@ -140,19 +167,26 @@ export function patchMain(source, desktopResources) {
   const variable = '__FACTORY_ZH_CN_DESKTOP__';
   if (source.includes(variable)) throw new Error(`主进程补丁变量 ${variable} 已存在`);
 
-  const dataDeclaration = `var ${variable}=${JSON.stringify(desktopResources)};\n`;
   const enumName = supported.values.find((value) => value.enumName)?.enumName ?? map.enumName;
-  const edits = [
-    { at: statement.start, text: dataDeclaration },
-    {
-      at: supported.node.end - 1,
-      text: `,${enumName}.ChineseSimplified`,
-    },
-  ];
-  if (!alreadyPatched) {
+  const edits = [];
+  if (!mapAlreadyPatched) {
+    edits.push({
+      at: statement.start,
+      text: `var ${variable}=${JSON.stringify(desktopResources)};\n`,
+    });
     edits.push({
       at: map.node.end - 1,
-      text: `,[${map.enumName}.ChineseSimplified]:{desktop:${variable}}`,
+      text: appendMember(
+        source,
+        map.node.end - 1,
+        `[${map.enumName}.ChineseSimplified]:{desktop:${variable}}`,
+      ),
+    });
+  }
+  if (!languageAlreadyPresent) {
+    edits.push({
+      at: supported.node.end - 1,
+      text: appendMember(source, supported.node.end - 1, `${enumName}.ChineseSimplified`),
     });
   }
   const edited = applyEdits(source, edits);
@@ -162,7 +196,9 @@ export function patchMain(source, desktopResources) {
     alreadyPatched: false,
     enumName: map.enumName,
     supportedList: supported.name,
-    languages: [...supported.values.map((value) => value.name), 'ChineseSimplified'],
-    variable,
+    languages: languageAlreadyPresent
+      ? supported.values.map((value) => value.name)
+      : [...supported.values.map((value) => value.name), 'ChineseSimplified'],
+    variable: mapAlreadyPatched ? null : variable,
   };
 }

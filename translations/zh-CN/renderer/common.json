@@ -229,8 +229,8 @@
       "daemonNotRunning": "无法连接。请确保你的机器上正在运行 Factory 守护进程。"
     },
     "secureChannel": "我们无法验证此计算机的安全连接。",
-    "sessionLimit": "你已达到活跃 云端会话数量上限。请关闭所有未使用的 云端会话，几分钟后重试。",
-    "sessionLimitWithCount": "你已达到 {{limit}} 个活跃 云端会话的上限。请关闭所有未使用的 云端会话，几分钟后重试。",
+    "sessionLimit": "你已达到活跃云端会话数量上限。请关闭所有未使用的云端会话，几分钟后重试。",
+    "sessionLimitWithCount": "你已达到 {{limit}} 个活跃云端会话的上限。请关闭所有未使用的云端会话，几分钟后重试。",
     "sharedSessionAccessDenied": "你已无权访问此共享会话。",
     "sharedSessionUnavailable": "此共享会话所用的计算机不可用。",
     "transport": "我们暂时无法连接 Droid。",

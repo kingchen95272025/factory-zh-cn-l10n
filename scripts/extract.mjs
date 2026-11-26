@@ -2,7 +2,7 @@
 import path from 'node:path';
 import { cpSync, existsSync, mkdirSync, writeFileSync } from 'node:fs';
 import { appInfo, parseArgs, resolveAppPath, sha256File, sha256Text } from './lib/app.mjs';
-import { extractAsar, hasChinesePack, readAsarHeader } from './lib/asar.mjs';
+import { extractAsar, hasChinesePack, listUnpackedFiles, readAsarHeader } from './lib/asar.mjs';
 import {
   countStrings,
   extractMainCatalog,
@@ -57,7 +57,8 @@ if (sourceAsar === app.asarPath) {
   }
 }
 const header = readAsarHeader(sourceAsar);
-const unpackedCount = Object.keys(header.files ?? {}).length;
+const topLevelEntries = Object.keys(header.files ?? {}).length;
+const unpackedFiles = listUnpackedFiles(header);
 
 const entryPath = locateRendererEntry(extractDir);
 const mainBundlePath = locateMainBundle(extractDir);
@@ -92,6 +93,7 @@ const manifest = sortDeep({
     bundleId: app.bundleId,
     asarSha256,
     integrityHash: app.integrityHash,
+    unpackedFiles,
   },
   generatedAt: new Date().toISOString(),
   renderer: {
@@ -113,7 +115,8 @@ const manifest = sortDeep({
     rendererStrings,
     mainStrings,
     strings: rendererStrings + mainStrings,
-    asarTopLevelEntries: unpackedCount,
+    asarTopLevelEntries: topLevelEntries,
+    unpackedFiles: unpackedFiles.length,
   },
 });
 writeJson(path.join(catalogDir, 'manifest.json'), manifest);

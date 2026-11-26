@@ -2,7 +2,7 @@
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { appInfo, parseArgs, resolveAppPath, sha256File, sha256Text } from './lib/app.mjs';
-import { extractAsar, packAsar, asarIntegrityHash } from './lib/asar.mjs';
+import { extractAsar, packAsar, asarIntegrityHash, hasChinesePack } from './lib/asar.mjs';
 import { patchMain, patchRenderer } from './lib/patch.mjs';
 import {
   loadManifest,
@@ -26,11 +26,12 @@ const app = appInfo(appPath);
 const manifest = loadManifest(releaseId);
 const currentAsarSha256 = await sha256File(app.asarPath);
 const pristineAsar = path.resolve('work/pristine', releaseId, 'app.asar');
+const patched = hasChinesePack(app.asarPath);
 
 let sourceAsar = app.asarPath;
 let asarSha256 = currentAsarSha256;
 if (currentAsarSha256 !== manifest.app.asarSha256) {
-  if (existsSync(pristineAsar)) {
+  if (patched && existsSync(pristineAsar)) {
     const pristineSha256 = await sha256File(pristineAsar);
     if (pristineSha256 === manifest.app.asarSha256) {
       console.log('当前安装的是补丁版应用，改用原始 asar 快照构建');
@@ -40,12 +41,16 @@ if (currentAsarSha256 !== manifest.app.asarSha256) {
   }
 }
 
-if (asarSha256 !== manifest.app.asarSha256 && !args['allow-mismatch']) {
-  console.error('应用版本与英文目录不匹配：');
+if (asarSha256 !== manifest.app.asarSha256) {
+  console.error(`应用与英文目录 ${releaseId} 不匹配：`);
   console.error(`  当前 app.asar：${currentAsarSha256}`);
   console.error(`  目录记录：    ${manifest.app.asarSha256}`);
-  console.error(`请先运行 npm run extract 生成 ${app.version}-${app.build} 的英文目录；`);
-  console.error('或使用 --allow-mismatch 强制构建（不推荐）。');
+  if (patched) {
+    console.error('当前是补丁版应用，但没有可用的原始 asar 快照。');
+    console.error('请先运行 npm run restore 还原，再重新 npm run extract。');
+  } else {
+    console.error(`应用可能已升级到 ${app.version} (${app.build})，请重新运行 npm run extract。`);
+  }
   process.exit(1);
 }
 
@@ -124,8 +129,16 @@ const chunkPath = path.join(
 writeFileSync(chunkPath, rendererPatch.chunk.content, 'utf8');
 
 const outputAsar = path.join(distDir, 'app.asar');
-console.log('重新打包 app.asar（保留 node_modules/keytar 为 unpacked）');
-await packAsar(extractDir, outputAsar, { unpackDir: 'node_modules/keytar' });
+const unpackedFiles = manifest.app.unpackedFiles ?? [];
+const unpackedBasenames = [...new Set(unpackedFiles.map((filePath) => path.posix.basename(filePath)))];
+const unpackPattern =
+  unpackedBasenames.length === 0
+    ? '**/*.node'
+    : unpackedBasenames.length === 1
+      ? `**/${unpackedBasenames[0]}`
+      : `**/{${unpackedBasenames.join(',')}}`;
+console.log(`重新打包 app.asar（unpacked: ${unpackedFiles.join(', ') || '自动匹配 *.node'}）`);
+await packAsar(extractDir, outputAsar, { unpack: unpackPattern });
 const outputSha256 = await sha256File(outputAsar);
 const outputHeaderSha256 = asarIntegrityHash(outputAsar);
 
@@ -140,6 +153,8 @@ const patchManifest = {
     sourceAsarSha256: manifest.app.asarSha256,
     outputAsarSha256: outputSha256,
     outputHeaderSha256,
+    unpackedFiles,
+    unpackPattern,
   },
   renderer: {
     entry: manifest.renderer.entry,

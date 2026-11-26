@@ -101,7 +101,7 @@ Factory 使用 Squirrel.Mac。修改后的应用会带来两个后果：
 
 ## 5. 备份与回滚
 
-安装器在替换任何文件之前，会用 APFS clone 完整复制一份原应用：
+安装器在替换任何文件之前，会先用 APFS clone 完整复制一份原应用到 staging 目录，校验副本 asar 哈希并读取原始 entitlements，最后以原子 rename 落盘：
 
 ```text
 work/backups/<version>-<build>-<asar sha8>/
@@ -110,6 +110,14 @@ work/backups/<version>-<build>-<asar sha8>/
   entitlements-adhoc.plist
   metadata.json
 ```
+
+安全约束：
+
+- 备份复用前会校验 `metadata.sourceAsarSha256` 与备份内 asar 的实际哈希；损坏的备份会被拒绝，而不是当作原始应用。
+- 安装的「替换 asar / 替换 unpacked / 写完整性哈希 / 重签名 / 校验签名」在同一个事务内；任一步失败会自动从备份回滚。
+- 若当前 asar 已与补丁一致但签名或完整性哈希损坏，再次安装会识别并修复，而不是误报“已安装”。
+- 还原只选择与当前应用版本号、build 号匹配的备份；替换前后都会校验签名，失败会把旧应用换回来。
+- 即使应用目录已缺失，`restore` 仍可用显式 `--backup` 或最新备份救援。
 
 还原：
 

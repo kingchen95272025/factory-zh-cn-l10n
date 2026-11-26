@@ -65,7 +65,7 @@ docs/
   glossary.md                     术语表与翻译红线
   poc-report.md                   本次 PoC 的验证记录与哈希基线
 work/                             临时解包、构建、备份、PoC（gitignore）
-dist/                             构建产物：app.asar、资源分块、补丁清单（gitignore）
+dist/                             构建产物：app.asar（内含资源分块）、unpacked、补丁清单（gitignore）
 ```
 
 ## 工作原理（简版）

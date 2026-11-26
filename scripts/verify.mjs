@@ -65,6 +65,8 @@ runGroup('renderer', source.renderer, translations.renderer);
 runGroup('main', source.main, translations.main);
 
 const totals = summarize(results);
+const missingSet = new Set(missingNamespaces);
+const activeTotals = summarize(results.filter((result) => !missingSet.has(result.namespace)));
 const pathInfo = translationPaths(lang);
 
 console.log(`Factory ${manifest.app.version} (build ${manifest.app.build})  语言：${lang}`);
@@ -82,9 +84,14 @@ for (const result of results) {
 }
 console.log('─'.repeat(68));
 console.log(
-  `合计${' '.repeat(26)}${formatPercent(totals.coverage).padStart(8)}  ${String(totals.translated).padStart(
+  `全量覆盖率${' '.repeat(22)}${formatPercent(totals.coverage).padStart(8)}  ${String(totals.translated).padStart(
     6,
   )}/${String(totals.total).padEnd(7)} ${String(totals.missing).padStart(5)}`,
+);
+console.log(
+  `已建译文命名空间${' '.repeat(16)}${formatPercent(activeTotals.coverage).padStart(8)}  ${String(
+    activeTotals.translated,
+  ).padStart(6)}/${String(activeTotals.total).padEnd(7)} ${String(activeTotals.missing).padStart(5)}`,
 );
 
 if (missingNamespaces.length) {

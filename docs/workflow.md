@@ -47,19 +47,21 @@ translations/zh-CN/
 npm run verify
 ```
 
-- **覆盖率**：按命名空间统计，只计算已创建译文文件的命名空间；未创建的不计入总数，避免「全量 21,007 条」造成心理压力。
+- **覆盖率**：同时输出两个口径：
+  - **全量覆盖率**：分母是全部英文源串（复数折叠后约 20,700 条），用于评估整体进度；
+  - **已建译文命名空间覆盖率**：分母只统计已创建译文文件的命名空间，用于衡量当前批次完成度。
+  `build` 的 `patch-manifest.json` 使用后者。
 - **错误**：键不存在、占位符不一致、`$t()` 引用不一致、译文为空、类型错误。构建会直接中止。
-- **警告**：译文与英文相同、产品名未保留。不阻断构建，但应逐条清理。
+- **警告**：译文与英文相同、产品名未保留。这些是提示，不是错误：`Beta`、`Wiki`、`Slack`、`Jira`、`Software Factory`（已约定译作“软件工厂”）等品牌/专名会稳定出现，不要为了消除警告去翻译它们；只需清理真正的漏译。
 - **规范化提示**：复数键被归并到 `_other` 时输出。
 
 ## 5. 构建产物
 
 ```text
 dist/<version>-<build>/
-  app.asar                   ← 已注入补丁的完整 asar
-  app.asar.unpacked/         ← keytar 原生模块（必须与 asar 一起安装）
-  resources-zhCN-<hash>.js   ← 渲染层中文资源分块（也在 asar 内）
-  patch-manifest.json        ← 源/输出哈希、补丁点、覆盖率、语言列表
+  app.asar                   ← 已注入补丁；中文资源分块在 asar 内部
+  app.asar.unpacked/         ← 源 asar 声明的 unpacked 原生模块
+  patch-manifest.json        ← 源/输出哈希、补丁点、覆盖率、语言列表、chunk 名、unpacked 列表
 ```
 
 `patch-manifest.json` 是安装与巡检的唯一依据，不要手工编辑。

@@ -167,7 +167,8 @@ translations/zh-CN/*.json ─┤
                           ├─ normalize（中文复数归并到 _other）
                           ├─ patch（语言列表、加载器、资源表）
                           └─ pack ──► dist/<ver>/app.asar
-                                        + resources-zhCN-<hash>.js
+                                        （内含 resources-zhCN-<hash>.js）
+                                        + app.asar.unpacked/
                                         + patch-manifest.json
 ```
 

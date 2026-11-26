@@ -4,9 +4,12 @@
     "build": "17041",
     "bundleId": "com.electron.factory",
     "integrityHash": "1c9a18c6bf0c941da43935efa93a2c66aac190eb14315e92db2ae1984338863d",
+    "unpackedFiles": [
+      "node_modules/keytar/build/Release/keytar.node"
+    ],
     "version": "1.20.0"
   },
-  "generatedAt": "2026-11-26T02:18:24.458Z",
+  "generatedAt": "2026-11-26T02:56:07.144Z",
   "main": {
     "anchors": {
       "enumName": "Ee",
@@ -335,6 +338,7 @@
     "mainStrings": 150,
     "namespaces": 35,
     "rendererStrings": 20857,
-    "strings": 21007
+    "strings": 21007,
+    "unpackedFiles": 1
   }
 }

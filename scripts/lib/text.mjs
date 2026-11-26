@@ -130,10 +130,12 @@ export function validatePair(sourceText, targetText, keyPath) {
       }）`,
     );
   }
+  const localizedFeatureName =
+    sourceText.includes('Software Factory') && targetText.includes('软件工厂');
   for (const brand of ['Factory', 'droid']) {
     const sourceHas = sourceText.toLowerCase().includes(brand.toLowerCase());
     const targetHas = targetText.toLowerCase().includes(brand.toLowerCase());
-    if (sourceHas && !targetHas) {
+    if (sourceHas && !targetHas && !localizedFeatureName) {
       warnings.push(`${keyPath}: 源文包含产品名 ${brand}，译文未保留`);
     }
   }
