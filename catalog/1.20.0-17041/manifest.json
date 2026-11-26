@@ -4,12 +4,14 @@
     "build": "17041",
     "bundleId": "com.electron.factory",
     "integrityHash": "1c9a18c6bf0c941da43935efa93a2c66aac190eb14315e92db2ae1984338863d",
+    "layout": "mac",
+    "platform": "darwin",
     "unpackedFiles": [
       "node_modules/keytar/build/Release/keytar.node"
     ],
     "version": "1.20.0"
   },
-  "generatedAt": "2026-11-26T02:56:07.144Z",
+  "generatedAt": "2026-11-26T03:22:16.545Z",
   "main": {
     "anchors": {
       "enumName": "Ee",

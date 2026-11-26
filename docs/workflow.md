@@ -3,13 +3,21 @@
 ## 1. 日常闭环
 
 ```bash
-npm run extract     # 当前安装版本 → catalog/<ver>/
-npm run verify      # 译文结构与质量校验
-npm run build       # 生成 dist/<ver>/app.asar + 资源分块
-npm run poc         # 隔离副本端到端验证（推荐先跑）
-npm run install:patch -- --quit   # 安装到 /Applications
-npm run doctor      # 巡检
-npm run restore -- --quit         # 还原原始应用
+# 统一 CLI
+node bin/factory-l10n.mjs status
+node bin/factory-l10n.mjs pack              # extract + build
+node bin/factory-l10n.mjs install --quit
+node bin/factory-l10n.mjs check-update
+node bin/factory-l10n.mjs uninstall --quit
+
+# 底层脚本
+npm run extract
+npm run verify
+npm run build
+npm run poc
+npm run install:patch -- --quit
+npm run doctor
+npm run restore -- --quit
 ```
 
 顺序原则：**先验证，后安装**。`poc` 永远不会碰 `/Applications`。

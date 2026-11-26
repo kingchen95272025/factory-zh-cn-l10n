@@ -19,26 +19,38 @@ Factory 是 Electron 应用，且启用了两项会阻止外部注入的 fuse：
 cd tools/factory-zh-cn-l10n
 npm install
 
-# 1. 抽取当前安装版本的英文源
+# 统一 CLI（推荐）
+node bin/factory-l10n.mjs status
+node bin/factory-l10n.mjs pack              # 为当前应用构建语言包
+node bin/factory-l10n.mjs install --quit    # 安装（自动备份+重签）
+node bin/factory-l10n.mjs check-update
+node bin/factory-l10n.mjs uninstall --quit  # 卸载还原
+
+# 或使用底层脚本
 npm run extract
-
-# 2. 校验译文（占位符、键完整性、复数、产品名）
 npm run verify
-npm test            # 校验器单元测试
-
-# 3. 构建补丁 asar（不改动已安装应用）
+npm test
 npm run build
-
-# 4. 在隔离副本上端到端验证（不碰 /Applications）
 npm run poc
-
-# 5. 安装到 /Applications/Factory.app（自动备份 + 重签名）
 npm run install:patch -- --quit
-
-# 巡检 / 还原
 npm run doctor
 npm run restore -- --quit
 ```
+
+安装后在 **Settings → General → Language** 中选择「简体中文」。未安装补丁时该列表只有原版 8 种语言，这是正常的。
+
+### CLI 命令
+
+| 命令 | 说明 |
+|---|---|
+| `factory-l10n install` | 安装当前平台最新语言包，自动备份原应用 |
+| `factory-l10n uninstall` | 从备份还原原始应用（别名 `restore`） |
+| `factory-l10n status` | 应用、语言包、完整性/签名状态 |
+| `factory-l10n check-update` | 检查 Factory 版本、已安装补丁与本地/远程语言包更新 |
+| `factory-l10n pack` | 抽取当前应用英文源并构建语言包 |
+| `factory-l10n list` | 列出检测到的安装与本地语言包 |
+
+通用参数：`--app`、`--pack`、`--state-dir`、`--json`、`--yes`、`--quit`、`--force`、`--remote`。跨平台细节见 [docs/platforms.md](docs/platforms.md)。
 
 ## 目录结构
 
@@ -51,16 +63,19 @@ translations/zh-CN/               译文（与英文源同构，可只提供部�
   renderer/*.json
   main/desktop/*.json
 scripts/
+  cli/main.mjs                    factory-l10n CLI 主命令
   extract.mjs                     解包 + AST 还原英文资源树
-  verify.mjs                      译文结构/占位符/复数/覆盖率校验
+  verify.mjs                      译文结构/占位符/复数/标签/覆盖率校验
   build.mjs                      生成 zh 资源分块 + 注入补丁 + 重打包 asar
   install.mjs                     备份、替换、写完整性哈希、ad-hoc 重签名
   restore.mjs                     从备份还原原始应用
   doctor.mjs                      版本/签名/fuse/补丁状态巡检
   poc.mjs                         隔离副本启动 + CDP 读界面 + 截图
+bin/factory-l10n.mjs              可执行 CLI 入口
 docs/
   architecture.md                 Factory 语言机制与补丁点
   constraints.md                  签名、完整性、自动更新的边界
+  platforms.md                    macOS / Windows / Linux 布局与实测状态
   workflow.md                     翻译与发版工作流
   glossary.md                     术语表与翻译红线
   poc-report.md                   本次 PoC 的验证记录与哈希基线

@@ -23,14 +23,15 @@ function safeRun(command, commandArgs) {
 const info = appInfo(appPath);
 const asarSha = await sha256File(info.asarPath);
 const headerHash = asarIntegrityHash(info.asarPath);
-const signatureCheck = spawnSync(
-  '/usr/bin/codesign',
-  ['--verify', '--deep', '--strict', '--verbose=2', appPath],
-  { encoding: 'utf8' },
-);
-const signatureOk = signatureCheck.status === 0;
-const signature = safeRun('/usr/bin/codesign', ['-dv', appPath]);
-const team = signature.match(/TeamIdentifier=([^\n]+)/)?.[1] ?? '未知';
+const isMac = info.layout === 'mac';
+const signatureCheck = isMac
+  ? spawnSync('/usr/bin/codesign', ['--verify', '--deep', '--strict', '--verbose=2', appPath], {
+      encoding: 'utf8',
+    })
+  : { status: 0 };
+const signatureOk = isMac ? signatureCheck.status === 0 : true;
+const signature = isMac ? safeRun('/usr/bin/codesign', ['-dv', appPath]) : 'not applicable';
+const team = isMac ? signature.match(/TeamIdentifier=([^\n]+)/)?.[1] ?? '未知' : 'n/a';
 const fusesBinary = path.resolve('node_modules/.bin/electron-fuses');
 const fuses = existsSync(fusesBinary)
   ? safeRun(fusesBinary, ['read', '--app', appPath])
@@ -103,7 +104,7 @@ console.log(`Bundle ID：${info.bundleId}`);
 console.log(`app.asar SHA-256：${asarSha}`);
 console.log(`asar 头部完整性哈希：${headerHash}`);
 console.log(`Info.plist 完整性哈希：${info.integrityHash ?? '无'}`);
-const integrityOk = info.integrityHash === headerHash;
+const integrityOk = isMac ? info.integrityHash === headerHash : true;
 console.log(`完整性校验：${integrityOk ? '通过' : '不一致（应用可能无法启动）'}`);
 console.log(`运行状态：${isAppRunning(appPath) ? '运行中' : '未运行'}`);
 console.log(`签名 Team ID：${team}`);

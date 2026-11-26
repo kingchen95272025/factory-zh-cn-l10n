@@ -48,6 +48,23 @@
 3. `npm run restore -- --app work/test-restore/Factory.app`：还原成功，签名 Team ID 回到 Factory 官方 `SW6TL4V6Q5`；
 4. 移走应用目录后再次 `restore`：仍能从版本匹配的备份完成救援。
 
+### CLI 闭环
+
+在 `work/cli-test/Factory.app` 上执行：
+
+```bash
+node bin/factory-l10n.mjs install --app work/cli-test/Factory.app --pack dist/1.20.0-17041 --state-dir work/cli-test/state --yes
+node bin/factory-l10n.mjs status   --app work/cli-test/Factory.app --state-dir work/cli-test/state
+node bin/factory-l10n.mjs check-update --app work/cli-test/Factory.app --state-dir work/cli-test/state
+node bin/factory-l10n.mjs uninstall --app work/cli-test/Factory.app --state-dir work/cli-test/state --yes
+```
+
+结果：安装/状态/更新检查（`up-to-date`）/卸载全部通过，卸载后签名与完整性校验恢复原版。
+
+### 非 .app 布局
+
+在 `work/cli-dir/Factory/resources/app.asar`（模拟 Windows/Linux 的目录布局）上执行同样的 CLI 闭环：备份为 asar + unpacked + metadata，安装不写 plist、不签名，卸载后 asar 哈希恢复原值。Windows/Linux 的真实安装尚未在本机验证，见 [platforms.md](./platforms.md)。
+
 ## 结论
 
 - 渲染层语言白名单、资源加载器、资源分块三处补丁均生效；

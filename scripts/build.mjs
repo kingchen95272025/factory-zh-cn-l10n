@@ -150,6 +150,8 @@ const patchManifest = {
   app: {
     version: manifest.app.version,
     build: manifest.app.build,
+    platform: process.platform,
+    layout: app.layout,
     bundleId: manifest.app.bundleId,
     sourceAsarSha256: manifest.app.asarSha256,
     outputAsarSha256: outputSha256,

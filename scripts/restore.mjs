@@ -2,7 +2,7 @@
 import { existsSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { appInfo, isAppRunning, parseArgs, resolveAppPath, run } from './lib/app.mjs';
-import { restoreAppFromBackup, verifySignature } from './lib/install.mjs';
+import { loadBackupRecord, restoreAppFromBackup, verifySignature } from './lib/install.mjs';
 
 const args = parseArgs();
 const appPath = resolveAppPath(args);
@@ -74,8 +74,10 @@ if (backupDir) {
   backupDir = candidates[0].dir;
 }
 
-const backupApp = path.join(backupDir, 'Factory.app');
-if (!existsSync(backupApp)) throw new Error(`备份应用不存在：${backupApp}`);
+const backupDirRecord = loadBackupRecord(backupDir);
+const backupApp = backupDirRecord.backupApp;
+if (backupApp && !existsSync(backupApp)) throw new Error(`备份应用不存在：${backupApp}`);
+if (!backupDirRecord.backupAsar && !backupApp) throw new Error(`备份内容不完整：${backupDir}`);
 
 if (isAppRunning(appPath)) {
   if (args.quit) {
@@ -94,8 +96,8 @@ if (isAppRunning(appPath)) {
   }
 }
 
-console.log(`从备份恢复：${backupApp}`);
-restoreAppFromBackup(appPath, backupApp);
+console.log(`从备份恢复：${backupDirRecord.backupDir}`);
+restoreAppFromBackup(appPath, backupDirRecord);
 const signature = verifySignature(appPath);
 if (!signature.valid) throw new Error(`恢复后签名校验失败：${signature.detail}`);
 rmSync(path.resolve('work/installed-state.json'), { force: true });

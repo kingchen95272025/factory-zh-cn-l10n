@@ -17,7 +17,7 @@ import {
 const args = parseArgs();
 const appPath = resolveAppPath(args);
 const app = appInfo(appPath);
-const releaseId = `${app.version}-${app.build}`;
+const releaseId = app.build ? `${app.version}-${app.build}` : app.version;
 const pristineDir = path.resolve('work/pristine', releaseId);
 const pristineAsar = path.join(pristineDir, 'app.asar');
 
@@ -90,6 +90,8 @@ const manifest = sortDeep({
   app: {
     version: app.version,
     build: app.build,
+    platform: app.platform,
+    layout: app.layout,
     bundleId: app.bundleId,
     asarSha256,
     integrityHash: app.integrityHash,

@@ -172,7 +172,23 @@ translations/zh-CN/*.json ─┤
                                         + patch-manifest.json
 ```
 
-## 7. 未覆盖范围
+## 7. 跨平台适配
+
+`factory-l10n` 通过「应用布局」而不是平台名来分派安装逻辑：
+
+| 布局 | 识别方式 | 安装动作 |
+|---|---|---|
+| `mac` | `Contents/Resources/app.asar` | 替换 asar + 更新 plist 完整性哈希 + ad-hoc 重签 |
+| `dir` | `resources/app.asar`（Windows Squirrel、Linux deb/rpm） | 替换 asar/unpacked，无 plist/签名 |
+| `resources` | 直接传入 resources 目录 | 同上 |
+| `asar` | 直接传入 app.asar | 同上 |
+
+- Windows/Linux 的备份是 asar + unpacked + metadata，不复制整包。
+- Apple 平台额外做 `ElectronAsarIntegrity` 与 codesign 校验；其他平台只校验 asar 哈希。
+- 语言包通过 `patch-manifest.json` 的 `app.platform` 与目标平台匹配，拒绝跨平台安装。
+- 详见 [platforms.md](./platforms.md)。
+
+## 8. 未覆盖范围
 
 - 未走 i18next 的硬编码字符串（例如部分第三方组件、日志、错误堆栈）。
 - 服务端下发的动态文案（若有）。
