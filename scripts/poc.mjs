@@ -1,7 +1,10 @@
 #!/usr/bin/env node
-import { spawn } from 'node:child_process';
+import { spawn, spawnSync } from 'node:child_process';
 import { existsSync, mkdirSync, openSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import net from 'node:net';
 import path from 'node:path';
+import * as asar from '@electron/asar';
+import { WebSocket } from 'ws';
 import { appInfo, parseArgs, resolveAppPath, run, sha256File } from './lib/app.mjs';
 import { hasChinesePack } from './lib/asar.mjs';
 import {
@@ -10,7 +13,6 @@ import {
   loadPatchManifest,
   resolveDist,
 } from './lib/install.mjs';
-import { loadTranslations } from './lib/release.mjs';
 import { flatten } from './lib/text.mjs';
 
 const args = parseArgs();
@@ -18,13 +20,25 @@ const sourceApp = resolveAppPath(args);
 const distDir = resolveDist(args.dist);
 const dist = loadPatchManifest(distDir);
 const releaseId = dist.releaseId;
-const port = Number(args.port || 9333);
 const pocRoot = path.resolve('work/poc', releaseId);
 const targetApp = path.join(pocRoot, 'Factory-patched.app');
 const userDataDir = path.resolve(args['user-data-dir'] || path.join(pocRoot, 'userdata'));
 const screenshotPath = path.join(pocRoot, 'screenshot.png');
 const textPath = path.join(pocRoot, 'body.txt');
 const logPath = path.join(pocRoot, 'app.log');
+
+async function getFreePort() {
+  return new Promise((resolve, reject) => {
+    const server = net.createServer();
+    server.once('error', reject);
+    server.listen(0, '127.0.0.1', () => {
+      const { port: freePort } = server.address();
+      server.close(() => resolve(freePort));
+    });
+  });
+}
+
+const port = args.port ? Number(args.port) : await getFreePort();
 
 function sleep(ms) {
   return new Promise((resolve) => setTimeout(resolve, ms));
@@ -53,7 +67,7 @@ function connect(wsUrl) {
     let nextId = 0;
     const pending = new Map();
     socket.addEventListener('message', (event) => {
-      const message = JSON.parse(event.data);
+      const message = JSON.parse(String(event.data));
       if (message.id && pending.has(message.id)) {
         const { resolve: done, reject: fail } = pending.get(message.id);
         pending.delete(message.id);
@@ -132,20 +146,64 @@ async function waitForLocalizedText(client, expected, timeoutMs) {
   return { ...state, settled: false };
 }
 
-function loadExpectedStrings(language) {
-  const translations = loadTranslations(language);
-  const expected = [];
-  for (const object of Object.values(translations.renderer)) {
-    for (const value of flatten(object).values()) {
-      if (typeof value === 'string' && /[一-鿿]/.test(value)) expected.push(value);
+function loadExpectedStrings() {
+  const chunkPath = path.join(distDir, dist.renderer.chunk);
+  if (!existsSync(chunkPath)) {
+    throw new Error(`dist 中缺少资源分块 ${dist.renderer.chunk}，请重新运行 npm run build`);
+  }
+  const source = readFileSync(chunkPath, 'utf8');
+  const start = source.indexOf('=');
+  const end = source.lastIndexOf(';export');
+  if (start < 0 || end < 0) throw new Error('无法解析资源分块结构');
+  const resources = JSON.parse(source.slice(start + 1, end));
+  return [...flatten(resources).values()].filter(
+    (value) => typeof value === 'string' && /[一-鿿]/.test(value),
+  );
+}
+
+function extractJsonLiteral(text, startIndex) {
+  let depth = 0;
+  let inString = false;
+  let escaped = false;
+  for (let index = startIndex; index < text.length; index += 1) {
+    const character = text[index];
+    if (inString) {
+      if (escaped) escaped = false;
+      else if (character === '\\') escaped = true;
+      else if (character === '"') inString = false;
+      continue;
+    }
+    if (character === '"') inString = true;
+    else if (character === '{') depth += 1;
+    else if (character === '}') {
+      depth -= 1;
+      if (depth === 0) return text.slice(startIndex, index + 1);
     }
   }
-  for (const object of Object.values(translations.main)) {
-    for (const value of flatten(object).values()) {
-      if (typeof value === 'string' && /[一-鿿]/.test(value)) expected.push(value);
-    }
+  throw new Error('主进程中文资源 JSON 未闭合');
+}
+
+function verifyMainStatic() {
+  const asarPath = path.join(targetApp, 'Contents/Resources/app.asar');
+  const buffer = asar.extractFile(asarPath, dist.main.bundle);
+  const text = buffer.toString('utf8');
+  const marker = '__FACTORY_ZH_CN_DESKTOP__=';
+  const markerIndex = text.indexOf(marker);
+  const mapPresent = text.includes(`[${dist.main.enumName}.ChineseSimplified]:{desktop:`);
+  if (markerIndex < 0) return { ok: false, reason: '未找到主进程中文资源变量' };
+  const jsonStart = text.indexOf('{', markerIndex + marker.length);
+  const desktop = JSON.parse(extractJsonLiteral(text, jsonStart));
+  const chinese = (JSON.stringify(desktop).match(/[一-鿿]/g) ?? []).length;
+  return { ok: mapPresent && chinese > 0, mapPresent, chinese };
+}
+
+function readMainMenu(pid) {
+  const script = `tell application "System Events" to tell (first process whose unix id is ${pid}) to get name of every menu bar item of menu bar 1`;
+  const result = spawnSync('/usr/bin/osascript', ['-e', script], { encoding: 'utf8' });
+  if (result.status !== 0) {
+    return { available: false, error: `${result.stderr ?? ''}`.trim() };
   }
-  return expected;
+  return { available: true, items: result.stdout.trim().split(', ').filter(Boolean) };
 }
 
 function killTree(child) {
@@ -198,6 +256,12 @@ if (patchResult.alreadyInstalled) console.log('副本已是最新补丁');
 const info = appInfo(targetApp);
 const asarSha = await sha256File(info.asarPath);
 console.log(`副本 asar SHA-256：${asarSha}`);
+const mainStatic = verifyMainStatic();
+console.log(
+  `主进程中文资源静态校验：${mainStatic.ok ? '通过' : '失败'}${
+    mainStatic.ok ? `（${mainStatic.chinese} 个中文字符）` : `（${mainStatic.reason ?? '缺少 zh-CN desktop 资源'}）`
+  }`,
+);
 
 const stdout = openSync(logPath, 'w');
 const stderr = openSync(logPath, 'a');
@@ -214,9 +278,20 @@ const child = spawn(`${targetApp}/Contents/MacOS/Factory`, launchArgs, {
 });
 child.unref();
 
+const shutdown = (signal) => {
+  console.error(`收到 ${signal}，清理 PoC 进程…`);
+  killTree(child);
+  process.exit(130);
+};
+process.once('SIGINT', () => shutdown('SIGINT'));
+process.once('SIGTERM', () => shutdown('SIGTERM'));
+
 let exitCode = 0;
 try {
   const target = await waitForTarget(Number(args.timeout || 60000));
+  if (!target.url.includes(targetApp) && !target.url.includes('Factory-patched.app')) {
+    throw new Error(`DevTools target 不属于本次 PoC 副本：${target.url}`);
+  }
   console.log(`已连接渲染进程：${target.url}`);
   const client = await connect(target.webSocketDebuggerUrl);
   await client.send('Runtime.enable');
@@ -254,7 +329,7 @@ try {
     console.warn(`诊断读取失败：${error.message}`);
   }
 
-  const expected = loadExpectedStrings(dist.language);
+  const expected = loadExpectedStrings();
   let initialLang = await evaluate(client, 'document.documentElement.lang');
   if (initialLang !== dist.language && bridgeReady && !args['no-select']) {
     console.log(`初始语言为 ${initialLang}，模拟用户在设置中选择 ${dist.language}`);
@@ -283,13 +358,30 @@ try {
     console.warn(`截图失败：${error.message}`);
   }
 
+  const mainMenu = readMainMenu(child.pid);
+  if (mainMenu.available) {
+    console.log(`原生菜单栏：${mainMenu.items.join(' / ')}`);
+    console.log(`原生菜单中文：${mainMenu.items.some((item) => /[一-鿿]/.test(item)) ? '是' : '否'}`);
+  } else {
+    console.log('原生菜单检查：不可用（需要辅助功能权限，跳过）');
+  }
+
   console.log(`\nhtml lang：${lang}`);
   console.log(`界面已稳定：${localized.settled ? '是' : '否（等待超时，可能是加载页）'}`);
+  console.log(`主进程中文资源：${mainStatic.ok ? '通过' : '失败'}`);
   console.log(`界面中文字符数：${chineseCount}`);
-  console.log(`命中的已翻译文案（${matched.length}）：${matched.slice(0, 12).join(' / ') || '无'}`);
+  console.log(`命中的构建产物文案（${matched.length}）：${matched.slice(0, 12).join(' / ') || '无'}`);
   console.log(`正文前 300 字：\n${bodyText.slice(0, 300)}`);
   if (screenshot) console.log(`截图：${screenshot}`);
 
+  if (!localized.settled) {
+    console.error('✗ 界面未在超时内稳定，拒绝以加载页作为 PoC 结论');
+    exitCode = 1;
+  }
+  if (!mainStatic.ok) {
+    console.error('✗ 主进程中文资源静态校验失败，原生菜单/对话框不会被翻译');
+    exitCode = 1;
+  }
   if (lang !== dist.language) {
     console.error(`✗ html lang 期望 ${dist.language}，实际 ${lang}`);
     exitCode = 1;
@@ -299,7 +391,7 @@ try {
     exitCode = 1;
   }
   if (matched.length === 0) {
-    console.error('✗ 界面未命中当前译文文件中的任何文案，PoC 无法证明补丁生效');
+    console.error('✗ 界面未命中构建产物中的任何文案，PoC 无法证明补丁生效');
     exitCode = 1;
   }
   client.close();

@@ -59,8 +59,9 @@ npm run verify
 
 ```text
 dist/<version>-<build>/
-  app.asar                   ← 已注入补丁；中文资源分块在 asar 内部
+  app.asar                   ← 已注入补丁；中文资源分块也在 asar 内部
   app.asar.unpacked/         ← 源 asar 声明的 unpacked 原生模块
+  resources-zhCN-<hash>.js   ← 与 asar 内一致的资源分块副本，供检查
   patch-manifest.json        ← 源/输出哈希、补丁点、覆盖率、语言列表、chunk 名、unpacked 列表
 ```
 
@@ -74,14 +75,16 @@ npm run poc
 
 1. APFS clone 一份 `Factory.app` 到 `work/poc/<ver>/Factory-patched.app`；
 2. 注入补丁并 ad-hoc 重签；
-3. 用独立 `--user-data-dir` 启动副本，附加 `--remote-debugging-port`；
-4. 通过 CDP 读取 `document.body.innerText` 与 `<html lang>`；
+3. 用独立 `--user-data-dir` 启动副本，自动选择空闲调试端口，并校验 CDP target 属于该副本；
+4. 通过 CDP 读取 `document.body.innerText` 与 `<html lang>`；期望文案取自 `dist/` 中与 asar 一致的资源分块副本；
 5. 断言：
+   - 界面已稳定（不是加载页，`settled=true`）；
    - `html lang === "zh-CN"`；
-   - 界面包含中文字符；
-   - 命中当前译文文件中的至少一条文案；
-6. `Page.captureScreenshot` 截图到 `work/poc/<ver>/screenshot.png`；
-7. 关闭副本，不影响正在运行的原应用与 `/Applications` 数据。
+   - 界面包含中文字符，且命中构建产物中的文案；
+   - 主进程 desktop 资源静态校验通过；
+6. 辅助功能权限可用时，同时读取原生菜单栏名称，验证主进程菜单是否中文；
+7. `Page.captureScreenshot` 截图到 `work/poc/<ver>/screenshot.png`；
+8. 注册 SIGINT/SIGTERM 清理，关闭副本与 droid 守护进程，不影响正在运行的原应用与 `/Applications` 数据。
 
 这种方式不依赖 macOS 屏幕录制权限，也不读取用户真实界面。
 

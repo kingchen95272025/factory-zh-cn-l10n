@@ -143,4 +143,4 @@ npm run restore -- --quit
 | 语言仍是英文 | 语言白名单未打补丁 / 资源分块未加载 | 检查 `patch-manifest.json` 的 `languages` 与 `chunk` |
 | 切换语言报「Unsupported app locale」 | 主进程 `Sv` 白名单未含中文 | 重新构建，确认 `main.supportedList` 补丁 |
 | 部分界面英文 | 该命名空间尚未翻译 | 补齐译文后重新 `build` |
-| 应用更新后中文消失 | Squirrel 覆盖了 asar | `restore` → 重新 extract/build/install |
+| 应用更新后中文消失 | Squirrel 覆盖了 asar | 直接重新 `extract` → `build` → `install:patch`；`restore` 只适用于回退到**同版本**官方包，升级后通常没有新版本备份 |

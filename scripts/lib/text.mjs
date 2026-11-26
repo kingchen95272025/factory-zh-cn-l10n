@@ -1,6 +1,7 @@
 const PLURAL_SUFFIXES = ['zero', 'one', 'two', 'few', 'many', 'other'];
 const PLACEHOLDER_RE = /\{\{[^{}]+\}\}/g;
 const NESTED_REF_RE = /\$t\(([^)]+)\)/g;
+const TAG_RE = /<\/?[A-Za-z][A-Za-z0-9._-]*(?:\s[^>]*)?>/g;
 
 export function isPlainObject(value) {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value);
@@ -39,6 +40,10 @@ export function nestedRefs(text) {
   return new Set(
     Array.from(String(text).matchAll(NESTED_REF_RE), (match) => match[1].trim()),
   );
+}
+
+export function tags(text) {
+  return Array.from(String(text).matchAll(TAG_RE), (match) => match[0]);
 }
 
 export function pluralBase(key) {
@@ -127,6 +132,15 @@ export function validatePair(sourceText, targetText, keyPath) {
     errors.push(
       `${keyPath}: $t() 引用不一致（源 ${[...sourceRefs].join(', ') || '无'} / 译 ${
         [...targetRefs].join(', ') || '无'
+      }）`,
+    );
+  }
+  const sourceTags = tags(sourceText);
+  const targetTags = tags(targetText);
+  if (sourceTags.length !== targetTags.length || sourceTags.some((tag, index) => tag !== targetTags[index])) {
+    errors.push(
+      `${keyPath}: 标签不一致（源 ${sourceTags.join(' ') || '无'} / 译 ${
+        targetTags.join(' ') || '无'
       }）`,
     );
   }

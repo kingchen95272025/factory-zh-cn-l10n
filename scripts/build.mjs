@@ -127,6 +127,7 @@ const chunkPath = path.join(
   rendererPatch.chunk.filename,
 );
 writeFileSync(chunkPath, rendererPatch.chunk.content, 'utf8');
+writeFileSync(path.join(distDir, rendererPatch.chunk.filename), rendererPatch.chunk.content, 'utf8');
 
 const outputAsar = path.join(distDir, 'app.asar');
 const unpackedFiles = manifest.app.unpackedFiles ?? [];

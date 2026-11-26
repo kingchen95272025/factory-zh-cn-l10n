@@ -84,3 +84,29 @@ test('复数分组识别', () => {
   assert.equal(groups.size, 1);
   assert.equal(groups.get('a').length, 2);
 });
+
+test('HTML 标签必须逐字对应', () => {
+  const ok = validatePair(
+    'Read <settingsLink>settings</settingsLink> now',
+    '现在阅读<settingsLink>设置</settingsLink>',
+    'k',
+  );
+  assert.deepEqual(ok.errors, []);
+});
+
+test('标签缺失或改名必须报错', () => {
+  const missing = validatePair(
+    'Read <settingsLink>settings</settingsLink>',
+    '阅读设置',
+    'k',
+  );
+  assert.equal(missing.errors.length, 1);
+  assert.match(missing.errors[0], /标签不一致/);
+
+  const renamed = validatePair(
+    'Read <settingsLink>settings</settingsLink>',
+    '阅读<settings>设置</settings>',
+    'k',
+  );
+  assert.equal(renamed.errors.length, 1);
+});

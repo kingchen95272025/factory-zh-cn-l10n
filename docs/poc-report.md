@@ -19,9 +19,10 @@
 1. APFS clone 一份应用到 `work/poc/1.20.0-17041/Factory-patched.app`；
 2. 注入 `dist/1.20.0-17041/app.asar`，更新 `Info.plist` 头部哈希；
 3. 剔除 ad-hoc 不可持有的 entitlements 后重签名；
-4. 使用独立 `--user-data-dir` 启动副本，附加 `--remote-debugging-port=9333`；
-5. 通过 CDP 读取 `document.body.innerText` 与 `<html lang>`；
-6. 等待语言与界面稳定后断言，并用 `Page.captureScreenshot` 截图。
+4. 使用独立 `--user-data-dir` 启动副本，附加自动选择的空闲 `--remote-debugging-port`；
+5. 通过 CDP 读取 `document.body.innerText` 与 `<html lang>`，期望文案取自 `dist/` 中的资源分块副本；
+6. 断言界面已稳定（非加载页），静态校验主进程 desktop 资源，并在辅助功能权限可用时读取原生菜单栏；
+7. 用 `Page.captureScreenshot` 截图。
 
 ## 结果
 
@@ -31,8 +32,10 @@
 | `codesign --verify --deep --strict` | 通过 |
 | `Info.plist` 完整性哈希 | 与 asar 头部一致 |
 | `<html lang>` | `zh-CN` |
-| 界面中文字符 | 70 |
-| 命中已翻译文案 | 28 条（新建会话 / 任务控制 / 自动化 / 代码审查 / 搜索 / 想让我们做什么？/ 描述任务或提问 / 选择项目 / 拖放以添加附件…） |
+| 界面中文字符 | 41（随启动页面不同会有波动） |
+| 命中构建产物文案 | 23 条（新建会话 / 任务控制 / 自动化 / 代码审查 / 搜索 / 选择项目 / 拖放以添加附件…） |
+| 主进程中文资源静态校验 | 通过（1,305 个中文字符） |
+| 原生菜单栏运行态 | `Apple / Factory / 文件 / Edit / 视图 / Window / 帮助`（中英混合，Edit/Window 为系统角色） |
 | 主界面截图 | `work/poc/1.20.0-17041/screenshot.png` |
 | 进程清理 | 通过（副本与 droid 守护进程均已退出） |
 
@@ -48,7 +51,7 @@
 ## 结论
 
 - 渲染层语言白名单、资源加载器、资源分块三处补丁均生效；
-- 主进程 supported 白名单与 desktop 资源表补丁生效（设置语言不再报 `Unsupported app locale`）；
+- 主进程 supported 白名单与 desktop 资源表补丁生效（设置语言不再报 `Unsupported app locale`；原生菜单已验证为中文，Edit/Window 为系统角色）；
 - asar 头部完整性哈希与 ad-hoc 重签名链路可用；
 - 安装 → 使用 → 还原的闭环可用；
 - 部分翻译可正常回退英文，具备按命名空间分批交付的条件。
