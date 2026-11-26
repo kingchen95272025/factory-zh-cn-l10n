@@ -24,6 +24,7 @@ npm run extract
 
 # 2. 校验译文（占位符、键完整性、复数、产品名）
 npm run verify
+npm test            # 校验器单元测试
 
 # 3. 构建补丁 asar（不改动已安装应用）
 npm run build
@@ -62,6 +63,7 @@ docs/
   constraints.md                  签名、完整性、自动更新的边界
   workflow.md                     翻译与发版工作流
   glossary.md                     术语表与翻译红线
+  poc-report.md                   本次 PoC 的验证记录与哈希基线
 work/                             临时解包、构建、备份、PoC（gitignore）
 dist/                             构建产物：app.asar、资源分块、补丁清单（gitignore）
 ```

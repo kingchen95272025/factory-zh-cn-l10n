@@ -21,7 +21,7 @@
       "search": "搜索",
       "searchOrJumpTo": "搜索或跳转",
       "sessions": "会话",
-      "softwareFactory": "Software Factory",
+      "softwareFactory": "软件工厂",
       "switchOrganization": "{{name}}，切换组织",
       "tileCodeReview": "平铺代码审查",
       "usageWillBeHaltedOn": "用量将于 {{date}} 停止。"
@@ -31,7 +31,7 @@
       "cleaningUpWorktree": "正在清理工作树…",
       "emptyState": {
         "noAutomationSessions": "暂无自动化会话",
-        "noExecSessions": "暂无 exec 会话",
+        "noExecSessions": "暂无执行会话",
         "noMatchingSessions": "没有符合筛选条件的会话",
         "noSessions": "暂无会话"
       },
@@ -129,7 +129,7 @@
         "closed": "已关闭",
         "draft": "草稿",
         "merged": "已合并",
-        "open": "开放"
+        "open": "已开启"
       },
       "pullRequestTooltipMore_other": "另有 {{count}} 个 PR",
       "pullRequests": "拉取请求",
@@ -164,6 +164,33 @@
       "more": "更多",
       "rename": "重命名",
       "viewOptions": "{{name}} 的选项"
+    }
+  },
+  "app": {
+    "droidHeader": {
+      "greeting": "想让我们做什么？"
+    }
+  },
+  "settings": {
+    "projectSelector": {
+      "selectProject": "选择项目"
+    }
+  },
+  "chat": {
+    "sessionFileDropField": {
+      "dropToAttach": "拖放以添加附件",
+      "anyFile": "任意文件类型"
+    },
+    "missionWelcomeBlock": {
+      "local": "本地"
+    },
+    "localhostSuggestions": {
+      "local": "本地"
+    }
+  },
+  "announcements": {
+    "smallAnnouncementCard": {
+      "learnMore": "了解更多"
     }
   }
 }

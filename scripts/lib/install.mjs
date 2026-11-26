@@ -5,6 +5,7 @@ import {
   mkdirSync,
   readFileSync,
   readdirSync,
+  renameSync,
   rmSync,
   writeFileSync,
 } from 'node:fs';
@@ -194,6 +195,17 @@ export function findOriginalBackup(backupRoot, sourceSha) {
   return null;
 }
 
+export function replaceAppFromBackup(appPath, backupApp) {
+  const staging = `${appPath}.restoring`;
+  rmSync(staging, { recursive: true, force: true });
+  cpSync(backupApp, staging, { recursive: true, clone: true, verbatimSymlinks: true });
+  const retired = `${appPath}.retired`;
+  rmSync(retired, { recursive: true, force: true });
+  renameSync(appPath, retired);
+  renameSync(staging, appPath);
+  rmSync(retired, { recursive: true, force: true });
+}
+
 export function applyPatchToApp({ appPath, distDir, backupRoot, sign = true, force = false }) {
   const info = appInfo(appPath);
   const dist = loadPatchManifest(distDir);
@@ -245,34 +257,51 @@ export function applyPatchToApp({ appPath, distDir, backupRoot, sign = true, for
     throw new Error(`补丁 asar 头部哈希与清单不一致：${actualDistHash} vs ${integrityHash}`);
   }
   console.log(`替换 app.asar → ${info.asarPath}`);
-  cpSync(distAsar, info.asarPath, { force: true });
+  const stagingAsar = `${info.asarPath}.installing`;
+  cpSync(distAsar, stagingAsar, { force: true });
+  renameSync(stagingAsar, info.asarPath);
 
   const distUnpacked = `${distAsar}.unpacked`;
   const targetUnpacked = `${info.asarPath}.unpacked`;
   if (existsSync(distUnpacked)) {
+    const stagingUnpacked = `${targetUnpacked}.installing`;
+    rmSync(stagingUnpacked, { recursive: true, force: true });
+    cpSync(distUnpacked, stagingUnpacked, { recursive: true, clone: true, verbatimSymlinks: true });
     rmSync(targetUnpacked, { recursive: true, force: true });
-    cpSync(distUnpacked, targetUnpacked, { recursive: true, clone: true, verbatimSymlinks: true });
+    renameSync(stagingUnpacked, targetUnpacked);
   }
 
   updateIntegrityHash(info.plistPath, integrityHash);
 
   let signing = { signed: false };
-  if (sign) {
-    const entitlementsPath = path.join(backup.backupDir, 'entitlements.plist');
-    let effectiveEntitlements = entitlementsPath;
-    if (existsSync(entitlementsPath)) {
-      const sanitized = sanitizeEntitlements(readFileSync(entitlementsPath, 'utf8'));
-      const sanitizedPath = path.join(backup.backupDir, 'entitlements-adhoc.plist');
-      writeFileSync(sanitizedPath, sanitized, 'utf8');
-      effectiveEntitlements = sanitizedPath;
+  let signature = null;
+  try {
+    if (sign) {
+      const entitlementsPath = path.join(backup.backupDir, 'entitlements.plist');
+      let effectiveEntitlements = entitlementsPath;
+      if (existsSync(entitlementsPath)) {
+        const sanitized = sanitizeEntitlements(readFileSync(entitlementsPath, 'utf8'));
+        const sanitizedPath = path.join(backup.backupDir, 'entitlements-adhoc.plist');
+        writeFileSync(sanitizedPath, sanitized, 'utf8');
+        effectiveEntitlements = sanitizedPath;
+      }
+      console.log('重新签名（ad-hoc + hardened runtime）');
+      signing = signApp(appPath, effectiveEntitlements);
     }
-    console.log('重新签名（ad-hoc + hardened runtime）');
-    signing = signApp(appPath, effectiveEntitlements);
-  }
 
-  const signature = verifySignature(appPath);
-  if (!signature.valid) {
-    throw new Error(`签名校验失败：${signature.detail}`);
+    signature = verifySignature(appPath);
+    if (!signature.valid) {
+      throw new Error(`签名校验失败：${signature.detail}`);
+    }
+  } catch (error) {
+    console.error('签名或校验失败，正在从备份自动恢复原始应用…');
+    try {
+      replaceAppFromBackup(appPath, backup.backupApp);
+      console.error(`已恢复原始应用：${appPath}`);
+    } catch (restoreError) {
+      console.error(`自动恢复失败，请手动运行 npm run restore：${restoreError.message}`);
+    }
+    throw error;
   }
 
   writeFileSync(

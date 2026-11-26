@@ -1,0 +1,10 @@
+{
+  "newSession": {
+    "placeholder": {
+      "describeTask": "描述任务或提问"
+    },
+    "machineName": {
+      "local": "本地"
+    }
+  }
+}

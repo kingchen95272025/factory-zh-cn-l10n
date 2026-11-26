@@ -3,7 +3,13 @@ import { spawn } from 'node:child_process';
 import { existsSync, mkdirSync, openSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { appInfo, parseArgs, resolveAppPath, run, sha256File } from './lib/app.mjs';
-import { applyPatchToApp, loadPatchManifest, resolveDist } from './lib/install.mjs';
+import { hasChinesePack } from './lib/asar.mjs';
+import {
+  applyPatchToApp,
+  findOriginalBackup,
+  loadPatchManifest,
+  resolveDist,
+} from './lib/install.mjs';
 import { loadTranslations } from './lib/release.mjs';
 import { flatten } from './lib/text.mjs';
 
@@ -162,7 +168,22 @@ mkdirSync(pocRoot, { recursive: true });
 mkdirSync(userDataDir, { recursive: true });
 
 console.log(`创建隔离副本：${targetApp}`);
-run('/bin/cp', ['-cR', sourceApp, targetApp]);
+const sourceInfo = appInfo(sourceApp);
+let copySource = sourceApp;
+if (hasChinesePack(sourceInfo.asarPath)) {
+  const original = findOriginalBackup(
+    path.resolve(args['backup-root'] || 'work/backups'),
+    dist.app.sourceAsarSha256,
+  );
+  if (!original) {
+    throw new Error(
+      '当前安装的是补丁版应用，且找不到对应的原始备份。请先 npm run restore，或用 --app 指定原始应用。',
+    );
+  }
+  copySource = original.backupApp;
+  console.log(`检测到补丁版应用，改用原始备份作为 PoC 源：${copySource}`);
+}
+run('/bin/cp', ['-cR', copySource, targetApp]);
 
 console.log(`向副本注入补丁：${distDir}`);
 const patchResult = applyPatchToApp({

@@ -1,8 +1,8 @@
 #!/usr/bin/env node
-import { existsSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { existsSync, readdirSync, readFileSync, rmSync } from 'node:fs';
 import path from 'node:path';
 import { isAppRunning, parseArgs, resolveAppPath, run } from './lib/app.mjs';
-import { verifySignature } from './lib/install.mjs';
+import { replaceAppFromBackup, verifySignature } from './lib/install.mjs';
 
 const args = parseArgs();
 const appPath = resolveAppPath(args);
@@ -52,8 +52,7 @@ if (isAppRunning(appPath)) {
 }
 
 console.log(`从备份恢复：${backupApp}`);
-rmSync(appPath, { recursive: true, force: true });
-run('/bin/cp', ['-cR', backupApp, appPath]);
+replaceAppFromBackup(appPath, backupApp);
 const signature = verifySignature(appPath);
 if (!signature.valid) throw new Error(`恢复后签名校验失败：${signature.detail}`);
 rmSync(path.resolve('work/installed-state.json'), { force: true });

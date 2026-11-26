@@ -1,12 +1,12 @@
 {
   "age": {
-    "day_other": "{{count}} 天",
-    "hour_other": "{{count}} 小时",
-    "minute_other": "{{count}} 分钟",
-    "month_other": "{{count}} 个月",
+    "day_other": "{{count}}天",
+    "hour_other": "{{count}}小时",
+    "minute_other": "{{count}}分钟",
+    "month_other": "{{count}}个月",
     "now": "刚刚",
-    "week_other": "{{count}} 周",
-    "year_other": "{{count}} 年"
+    "week_other": "{{count}}周",
+    "year_other": "{{count}}年"
   },
   "askedQuestions_other": "提出了 {{count}} 个问题",
   "daemonOffline": "Droid 守护进程未运行",

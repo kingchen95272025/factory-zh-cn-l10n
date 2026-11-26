@@ -229,8 +229,8 @@
       "daemonNotRunning": "无法连接。请确保你的机器上正在运行 Factory 守护进程。"
     },
     "secureChannel": "我们无法验证此计算机的安全连接。",
-    "sessionLimit": "你已达到活跃 Cloud 会话数量上限。请关闭所有未使用的 Cloud 会话，几分钟后重试。",
-    "sessionLimitWithCount": "你已达到 {{limit}} 个活跃 Cloud 会话的上限。请关闭所有未使用的 Cloud 会话，几分钟后重试。",
+    "sessionLimit": "你已达到活跃 云端会话数量上限。请关闭所有未使用的 云端会话，几分钟后重试。",
+    "sessionLimitWithCount": "你已达到 {{limit}} 个活跃 云端会话的上限。请关闭所有未使用的 云端会话，几分钟后重试。",
     "sharedSessionAccessDenied": "你已无权访问此共享会话。",
     "sharedSessionUnavailable": "此共享会话所用的计算机不可用。",
     "transport": "我们暂时无法连接 Droid。",
@@ -404,7 +404,7 @@
   },
   "mcpOauthReconnectionBanner": {
     "dismissMcpOauthReconnectionBanner": "关闭 MCP OAuth 重新连接横幅",
-    "reauthenticateMessage": "我们对 MCP OAuth 进行了重构，以提升稳定性。请通过 MCP 按钮重新验证你的 MCP OAuth 服务器。"
+    "reauthenticateMessage": "我们重构了 MCP OAuth 以提升稳定性。请通过 MCP 按钮重新对 MCP OAuth 服务器进行身份验证。"
   },
   "openDesktop": {
     "downloadDesktop": "下载 Factory Desktop",
