@@ -37,6 +37,22 @@ translations/zh-CN/
     ...
 ```
 
+### 大命名空间的分块翻译
+
+`settings`、`components`、`lessons` 等命名空间字符串量大，直接整文件翻译容易丢失键。仓库提供分块流水线：
+
+```bash
+npm run plan:translation     # 生成 work/translation-plan.json 与每块 source 文件
+# 译者/代理逐块翻译，写入同目录的 <id>.zh.json
+npm run merge:translation    # 合并分块；已有译文作为覆盖层保留
+node scripts/check-translation-chunks.mjs
+npm run verify
+```
+
+- 每块默认约 350 条字符串，按顶层/次级键递归拆分。
+- `merge` 会保留 `translations/zh-CN` 中已有译文（已有值优先），因此可以增量迭代。
+- `check-translation-chunks` 会逐块报告缺失键、多余键、占位符/标签错误。
+
 - 文件与命名空间一一对应，内部结构与英文源同构。
 - **允许只翻译部分键**：缺失的键在运行时回退英文，因此可以按命名空间、按子模块分批交付。
 - 键名、层级、类型不得改动；不允许多出英文源不存在的键（`verify` 会报错）。

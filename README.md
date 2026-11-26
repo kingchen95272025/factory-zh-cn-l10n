@@ -52,6 +52,18 @@ npm run restore -- --quit
 
 通用参数：`--app`、`--pack`、`--state-dir`、`--json`、`--yes`、`--quit`、`--force`、`--remote`。跨平台细节见 [docs/platforms.md](docs/platforms.md)。
 
+### 全量翻译流水线
+
+```bash
+npm run plan:translation          # 按 350 条/块拆分全部命名空间
+# 对每个分块执行翻译（可并行代理），译稿写入 work/translation/<ns>/*.zh.json
+npm run merge:translation         # 合并分块 + 保留已有译文覆盖层
+node scripts/check-translation-chunks.mjs
+npm run verify                    # 键/占位符/标签/复数门禁
+npm run pack                      # 重建语言包
+factory-l10n install --quit       # 更新已安装应用
+```
+
 ## 目录结构
 
 ```

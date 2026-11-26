@@ -13,6 +13,8 @@
   "scripts": {
     "cli": "node bin/factory-l10n.mjs",
     "pack": "node bin/factory-l10n.mjs pack",
+    "plan:translation": "node scripts/plan-translation.mjs",
+    "merge:translation": "node scripts/merge-translations.mjs",
     "test": "node --test tests/*.test.mjs",
     "extract": "node scripts/extract.mjs",
     "verify": "node scripts/verify.mjs",
