@@ -1,0 +1,475 @@
+{
+  "academyNavContentV2": {
+    "academy": "Academy",
+    "backToApp": "Back to App",
+    "home": "Home",
+    "quiz": "Quiz"
+  },
+  "actions": {
+    "contactUs": "Contact Us"
+  },
+  "activeOrganizationSwitcher": {
+    "failedToSwitchOrganization": "Failed to switch organization",
+    "unknownError": "Unknown error"
+  },
+  "analytics2NavContentV2": {
+    "adoption": "Adoption",
+    "agentEffectiveness": "Agent Effectiveness",
+    "agentReadiness": "Agent Readiness",
+    "analytics": "Analytics",
+    "backToApp": "Back to App",
+    "bugAttribution": "Bug Attribution",
+    "company": "COMPANY",
+    "consumption": "Consumption",
+    "enterprise": "ENTERPRISE",
+    "localStats": "Local Stats",
+    "overview": "Overview",
+    "personal": "PERSONAL",
+    "productivity": "Productivity",
+    "tools": "Tools",
+    "usage": "Usage"
+  },
+  "archMismatchBanner": {
+    "dismiss": "Dismiss",
+    "downloadAppleSiliconBuild": "Download the Apple Silicon build",
+    "downloadWindowsArm64Build": "Download the Windows ARM64 build",
+    "macIntelOnAppleSilicon": "You're running the Intel build of Factory on Apple Silicon. Translation via Rosetta slows session startup and typing responsiveness.",
+    "windowsX64OnArm64": "You're running the x64 build of Factory on a Windows ARM64 machine. Emulation can cause the Droid daemon to crash."
+  },
+  "authLoading": {
+    "browserSetupHint": "Finish setting up in your browser, then come back here.",
+    "browserSlowHint": "Didn't see a browser window? Cancel and try again.",
+    "cancelSignIn": "Cancel sign in",
+    "openingSignIn": "Opening sign-in",
+    "openingSignUp": "Opening sign-up",
+    "signingOut": "Signing out"
+  },
+  "automationCreationBanner": {
+    "sessionMustComplete": "This session must complete for the automation to be created. Stay in this session until the agent finishes; if you leave or interrupt it, the automation may not be saved.",
+    "sessionMustCompleteNamed": "This session must complete for \"{{name}}\" to be created. Stay in this session until the agent finishes; if you leave or interrupt it, the automation may not be saved."
+  },
+  "callback": {
+    "completingAuthentication": "Completing authentication.",
+    "finishingSignIn": "Finishing sign-in",
+    "signInAgain": "Sign in again",
+    "signInLinkExpired": "Sign-in link expired",
+    "thisSignInStepHasAlready": "This sign-in step has already finished, expired, or was opened directly. Start sign-in again to continue to Factory."
+  },
+  "checkForUpdatesModal": {
+    "arm64Emulation": "ARM64 emulation",
+    "checkAgain": "Check again",
+    "checkForUpdates": "Check for updates",
+    "close": "Close",
+    "currentVersion": "Current version",
+    "latestVersion": "Latest version",
+    "platform": "Platform",
+    "released": "Released",
+    "releasedDaysAgo_one": "{{date}} ({{count}} day ago)",
+    "releasedDaysAgo_other": "{{date}} ({{count}} days ago)",
+    "releasedToday": "{{date}} (today)",
+    "releasedYesterday": "{{date}} (yesterday)",
+    "restartToUpdate": "Restart to update",
+    "retryUpdate": "Retry update",
+    "rosetta": "Rosetta",
+    "updateToVersion": "Update to v{{version}}",
+    "updating": "Updating…"
+  },
+  "close": {
+    "connectorCanceled": "Connector setup was canceled.",
+    "connectorConnected": "Your connector is connected.",
+    "connectorFailed": "The connector didn't connect. Return to Factory to try again.",
+    "factoryConnected": "Factory is connected.",
+    "githubConnected": "GitHub is connected.",
+    "githubInstallCancelled": "GitHub is connected, but the Factory app wasn't installed.",
+    "githubInstallRequested": "GitHub is connected. Your GitHub organization owner needs to approve the Factory app.",
+    "githubOrgInstallRequired": "GitHub is connected. Ask a Factory admin to install the Factory app on GitHub.",
+    "githubRepositoriesUpdated": "Your GitHub repository access is updated.",
+    "integrationConnected": "Your integration is connected.",
+    "returnToApp": "Return to the Factory app",
+    "title": "You can close this tab"
+  },
+  "commandPalette": {
+    "academy": "Academy",
+    "academyDescription": "Guides and courses for getting more from Droid",
+    "analytics": "Analytics",
+    "automations": "Automations",
+    "automationsDescription": "Scheduled and event-driven droids",
+    "changeTheme": "Change Theme...",
+    "changeThemeDescription": "Light, dark, or match your system",
+    "close": "Close",
+    "commandPalette": "Command Palette",
+    "copied": "Copied!",
+    "copySessionLink": "Copy Session Link",
+    "copySessionLinkDescription": "Share this session with a teammate",
+    "copySharableLink": "Copy Sharable Link",
+    "copySharableLinkDescription": "Teammates who open it join this session",
+    "createNewMission": "Create New Mission",
+    "createNewMissionDescription": "Plan and orchestrate multi-step work",
+    "createNewSession": "Create New Session",
+    "createNewSessionDescription": "Start a fresh droid session",
+    "createNewSharedSession": "Create New Shared Session",
+    "createNewSharedSessionDescription": "Start a session teammates can join by link",
+    "esc": "esc",
+    "evaluations": "Evaluations",
+    "evaluationsDescription": "Datasets and evaluation runs",
+    "filter": "Filter",
+    "filterResults": "Filter results",
+    "filterSessionTypes": "Filter session types, {{selected}} selected",
+    "findInPage": "Find in Page",
+    "general": "General",
+    "goBack": "Go Back",
+    "goBackDescription": "Previous page in history",
+    "goForward": "Go Forward",
+    "goForwardDescription": "Next page in history",
+    "goTo": "Go to",
+    "help": "Help",
+    "integrations": "Integrations",
+    "integrationsDescription": "Settings · Code providers and apps",
+    "keyboardShortcuts": "Keyboard Shortcuts",
+    "keyboardShortcutsDescription": "Every shortcut in one place",
+    "lookBack": "Look back",
+    "lookBeyondTheCurrentTimeWindow": "Look beyond the current time window",
+    "matchCount_one": "{{count}} match",
+    "matchCount_other": "{{count}} matches",
+    "matchingSettings": "Matching Settings",
+    "missionControl": "Mission Control",
+    "missionControlDescription": "Track missions and their workers",
+    "moreSessions": "More Sessions",
+    "navigate": "Navigate",
+    "newSession": "New Session",
+    "noResultsFound": "No results found.",
+    "noSessionsOfThisType": "No sessions of this type.",
+    "openPlugins": "Open Plugins",
+    "openPluginsDescription": "Browse and install plugins",
+    "openToolsPanel": "Open Tools Panel",
+    "openToolsPanelDescription": "Files, diffs, browser, and more",
+    "pressTabToSearchAnotherCategory": "Press Tab to search another category.",
+    "pullRequestReview": "Pull Request Review",
+    "pullRequestReviewDescription": "Review pull requests with Droid",
+    "pullRequestReview_gitlab": "Merge Request Review",
+    "recentCommands": "Recent Commands",
+    "recentSessions": "Recent Sessions",
+    "renameSession": "Rename Session",
+    "renameSessionDescription": "Give this session a clearer title",
+    "reportABug": "Report a Bug",
+    "reportABugDescription": "Send feedback to the Factory team",
+    "running": "Running",
+    "scopeAll": "All",
+    "scopeLast30Days": "30d",
+    "scopeLast7Days": "7d",
+    "scopeLast90Days": "90d",
+    "searchAllHistory": "Search all history",
+    "searchForCommandsAndActions": "Search for commands and actions",
+    "searchIncomplete": "Search results may be incomplete.",
+    "searchSubPage": "Search {{page}}…",
+    "searchedBackTo": "Searched back to {{date}}",
+    "searchingSessions": "Searching sessions",
+    "select": "Select",
+    "sessionActions": "Session Actions",
+    "sessionCount_one": "{{count}} session",
+    "sessionCount_other": "{{count}} sessions",
+    "sessionResults": "Session results",
+    "sessions": "Sessions",
+    "sessionsHeadingWithMatches": "Sessions ({{matches}} in {{sessions}})",
+    "sessionsHeadingWithTotal": "Sessions ({{total}})",
+    "settings": "Settings",
+    "settingsPageSection": "Settings · {{page}} › {{section}}",
+    "settingsSection": "Settings · {{section}}",
+    "softwareFactory": "Software Factory",
+    "softwareFactoryDescription": "Stages, runs, and deliveries",
+    "tabActions": "Actions",
+    "tabActionsPlaceholder": "Run an action…",
+    "tabAll": "All",
+    "tabAllPlaceholder": "Search sessions, pages, settings, and actions…",
+    "tabPages": "Pages",
+    "tabPagesPlaceholder": "Jump to a page…",
+    "tabSessions": "Sessions",
+    "tabSessionsPlaceholder": "Search session titles…",
+    "tabSettings": "Settings",
+    "tabSettingsPlaceholder": "Find any setting…",
+    "tabTranscripts": "Transcripts",
+    "tabTranscriptsPlaceholder": "Search inside session transcripts…",
+    "theme": "Theme",
+    "themeDark": "Dark",
+    "themeLight": "Light",
+    "themeSystem": "System",
+    "toggleSidebar": "Toggle Sidebar",
+    "toggleSidebarDescription": "Show or hide the left sidebar",
+    "toggleTerminal": "Toggle Terminal",
+    "toggleTerminalDescription": "Open a shell next to this session",
+    "toggleToolsPanel": "Toggle Tools Panel",
+    "transcriptResults": "Transcript results",
+    "transcriptsHeadingWithMatches": "Transcripts ({{matches}} in {{sessions}})",
+    "transcriptsSearchHint": "Type at least {{minLength}} characters to search inside session transcripts.",
+    "tryADifferentSearch": "Try a different search.",
+    "tryASessionTitlePageOrSetting": "Try a session title, a page, or a setting name.",
+    "typeAutomations": "Automations",
+    "typeEvaluations": "Evaluations",
+    "typeExec": "Exec",
+    "typeSessions": "Sessions",
+    "typeSubagents": "Subagents",
+    "typeToSearchEverySessionTitle": "Type to search every session title.",
+    "untitledSession": "Untitled Session",
+    "wiki": "Wiki",
+    "wikiDescription": "Generated docs for your repositories"
+  },
+  "connectionFailure": {
+    "auth": "Your session expired. Please sign in.",
+    "computeLimit": "Your organization has hit its compute limit.",
+    "computerStatus": {
+      "transport": "Droid went to sleep. Start typing and we’ll reconnect.",
+      "wakeFailed": "Droid couldn’t wake up. Start typing to try again."
+    },
+    "computerUnavailable": "This computer is no longer available.",
+    "daemonConflict": "Another daemon is connected. Restart it to reconnect.",
+    "daemonOffline": "Factory isn't running on your machine.",
+    "offline": "You're offline.",
+    "policyDisabled": "Your organization does not allow this computer to run.",
+    "protocolMismatch": "This computer is running an older version of Factory. Please update your client.",
+    "rateLimited": "Too many connection attempts.",
+    "recovery": {
+      "computerStarting": "Could not connect to computer. It may still be starting — try again in a moment.",
+      "daemonNotRunning": "Could not connect. Ensure the Factory daemon is running on your machine."
+    },
+    "secureChannel": "We couldn’t verify this computer’s secure connection.",
+    "sessionLimit": "You have reached the maximum number of active Cloud sessions. Please close all unused Cloud sessions and try again in a few minutes.",
+    "sessionLimitWithCount": "You have reached the maximum of {{limit}} active Cloud sessions. Please close all unused Cloud sessions and try again in a few minutes.",
+    "sharedSessionAccessDenied": "You no longer have access to this shared session.",
+    "sharedSessionUnavailable": "The computer for this shared session is not available.",
+    "transport": "We can’t reach Droid right now.",
+    "undeliveredMessage": {
+      "inSession": "Couldn't send your message in \"{{title}}\".",
+      "inThisSession": "Couldn't send your message in this session.",
+      "restoredInSession": "Couldn't send your message in \"{{title}}\". It's back in the composer.",
+      "restoredInThisSession": "Couldn't send your message in this session. It's back in the composer."
+    },
+    "wakeFailed": "Droid couldn’t wake up."
+  },
+  "connectorRateLimit": {
+    "organization": "Your organization has reached its shared connector request limit. Try again in up to a minute.",
+    "title": "Connector request limit reached",
+    "unknown": "Connector requests are rate limited. Try again in up to a minute.",
+    "upstream": "The connector service is limiting requests right now. Try again in up to a minute.",
+    "user": "You've reached your connector request limit. Try again in up to a minute."
+  },
+  "cookieBanner": {
+    "agree": "Agree",
+    "deny": "Deny",
+    "message": "This website and its subdomains (*.factory.ai) use cookies to ensure optimal operation. By continuing to browse, you agree to the placement of cookies on your device under the conditions set out in the <privacyLink>Privacy Policy</privacyLink>."
+  },
+  "coreUi": {
+    "breadcrumbs": {
+      "label": "Breadcrumb"
+    },
+    "codeBlock": {
+      "copy": "Copy code"
+    },
+    "filterMenu": {
+      "addFilterPlaceholder": "Add filter…",
+      "clearFilters": "Clear filters",
+      "findFilter": "Find filter",
+      "noMatches": "No matches",
+      "optionSearchLabel": "Filter {{facet}}",
+      "optionSearchPlaceholder": "Filter…"
+    },
+    "modal": {
+      "close": "Close"
+    },
+    "multiSelectFilter": {
+      "allSelected": "All",
+      "done": "Done",
+      "noMatches": "No matches",
+      "optionsLabel": "{{label}} options",
+      "searchLabel": "Search {{label}}",
+      "searchPlaceholder": "Search {{label}}…",
+      "selectedCount_one": "{{count}} selected",
+      "selectedCount_other": "{{count}} selected"
+    },
+    "numberInput": {
+      "decrease": "Decrease",
+      "increase": "Increase"
+    },
+    "pagination": {
+      "label": "Pagination",
+      "nextPage": "Next page",
+      "previousPage": "Previous page"
+    },
+    "searchableSelect": {
+      "searchPlaceholder": "Search…"
+    },
+    "toast": {
+      "close": "Close",
+      "dismiss": "Dismiss"
+    }
+  },
+  "debug": {
+    "debugDataFromApiDebugEndpoint": "Debug data from /api/debug endpoint",
+    "debugInformation": "Debug Information",
+    "echoParameterOptional": "Echo parameter (optional):",
+    "enterTextToEchoBack": "Enter text to echo back...",
+    "loading": "Loading debug information",
+    "noDebugDataAvailable": "No debug data available.",
+    "refetch": "Refetch",
+    "send": "Send"
+  },
+  "desktopSessionTilingHost": {
+    "closeNewSessionTile": "Close new session",
+    "removeTiledReview": "Remove tiled Code Review",
+    "removeTiledSession": "Remove tiled session",
+    "resizeColumns": "Resize session columns",
+    "resizeRows": "Resize session rows"
+  },
+  "error": {
+    "appCodeLoadFailed": "Couldn't load Factory. Reload to try again.",
+    "currentPath": "Current path: {{path}}",
+    "goHome": "Go Home",
+    "httpRequestId": "HTTP Request ID:",
+    "logout": "Logout",
+    "reloadApplication": "Reload Application",
+    "somethingWentWrong": "Something Went Wrong",
+    "stackTraceShownInDevelopmentOnly": "Stack trace (shown in development only)",
+    "unexpectedErrorBody": "An unexpected error occurred. Please try again or contact support if the problem persists."
+  },
+  "errorToast": {
+    "forbidden": {
+      "hint": "Ask an admin if you need access.",
+      "title": "You don't have access to do that"
+    },
+    "generic": {
+      "hint": "Try again in a moment.",
+      "title": "Something went wrong"
+    },
+    "network": {
+      "hint": "Check your connection and try again.",
+      "title": "Couldn't reach Factory"
+    },
+    "notFound": {
+      "hint": "It may have been moved or deleted.",
+      "title": "We couldn't find that"
+    },
+    "rateLimited": {
+      "hint": "Wait a moment and try again.",
+      "title": "Too many requests"
+    },
+    "signedOut": {
+      "hint": "Sign in again to continue.",
+      "title": "You've been signed out"
+    },
+    "timeout": {
+      "hint": "Try again in a moment.",
+      "title": "The request timed out"
+    }
+  },
+  "evaluationsNavContent": {
+    "backToApp": "Back to App",
+    "datasets": "Datasets",
+    "evaluations": "Evaluations",
+    "runs": "Runs"
+  },
+  "health": {
+    "backendHealthStatusFromApiHealth": "Backend health status from /api/health",
+    "debugEndpointStatusFromApiDebug": "Debug endpoint status from /api/debug",
+    "fetchingDebug": "Fetching Debug...",
+    "healthCheck": "Health Check",
+    "loading": "Checking system health",
+    "noDebugDataAvailableClickQuery": "No debug data available. Click \"Query Debug\" to fetch.",
+    "noHealthDataAvailable": "No health data available.",
+    "queryDebug": "Query Debug",
+    "refetch": "Refetch",
+    "triggerCrash": "Trigger Crash",
+    "triggerError": "Trigger Error",
+    "triggering": "Triggering..."
+  },
+  "integrationHandoff": {
+    "canCloseTab": "You can close this tab.",
+    "closeTab": "You can close this tab once the app opens.",
+    "connected": "Connected",
+    "continueInApp": "Continue in the Factory app",
+    "couldNotOpen": "Couldn't open the Factory app",
+    "didNotOpen": "Didn't open? Make sure the Factory app is installed, then use the button.",
+    "invalidLink": "This link can't open the Factory app. Return to Factory and try again.",
+    "openApp": "Open the Factory app"
+  },
+  "mcpOauthCallback": {
+    "authorizationFailed": "Authorization failed",
+    "authorizationNotCompleted": "Authorization was not completed. Restart authentication and try again.",
+    "authorizationReceived": "Authorization received",
+    "backToFactory": "Back to Factory",
+    "completingAuthentication": "Completing authentication.",
+    "completingAuthorization": "Completing authorization",
+    "finishingInFactory": "Factory is finishing sign-in and will show the result there. You can safely close this window.",
+    "missingAuthenticationState": "This callback is missing authentication state. Restart authentication and try again.",
+    "missingAuthorizationResult": "This callback is missing an authorization result. Restart authentication and try again.",
+    "openFactoryDesktop": "Open Factory Desktop",
+    "openingFactoryDesktop": "Opening Factory Desktop to complete authentication. If nothing happens, use the button below.",
+    "repeatedIssuer": "The authorization response repeated the iss parameter. Restart authentication and try again.",
+    "returnToFactoryForResult": "Factory will show the result of this sign-in. If it does not, go back to Factory and restart authentication.",
+    "returningYouToFactory": "Returning you to Factory"
+  },
+  "mcpOauthReconnectionBanner": {
+    "dismissMcpOauthReconnectionBanner": "Dismiss MCP OAuth reconnection banner",
+    "reauthenticateMessage": "We re-architected MCP OAuth to increase stability. Please re-authenticate your MCP OAuth servers via the MCP button."
+  },
+  "openDesktop": {
+    "downloadDesktop": "Download Factory Desktop",
+    "manageAccount": "Manage your account",
+    "noAppYet": "Don't have the app yet?",
+    "openInBrowser": "Open in your browser instead",
+    "subtitle": "Your browser may ask to open Factory Desktop.",
+    "title": "Opening in Factory Desktop"
+  },
+  "openVscode": {
+    "continueOnWeb": "Continue on web",
+    "manageAccount": "Manage account",
+    "missingComputerName": "This link is missing a computer name.",
+    "notWhereYouWantedToGo": "Not where you wanted to go? Set up SSH access below, then retry.",
+    "openInVsCode": "Open in VS Code",
+    "unsupportedComputerName": "This computer name isn't supported for VS Code Remote-SSH."
+  },
+  "organizationRouting": {
+    "goToRegion": "Go to {{region}}",
+    "incorrectRegion": "Incorrect Region",
+    "openingRegion": "Opening your organization's region",
+    "organizationId": "Org ID: {{id}}",
+    "organizationName": "Organization: {{name}}",
+    "signInToOrganizationRegion": "Your organization is based in the {{region}} region. Please sign in there to continue.",
+    "signedInAs": "Signed in as: {{email}}"
+  },
+  "sidebarRouter": {
+    "automations": "Automations",
+    "backToApp": "Back to App",
+    "searchSettings": "Search settings",
+    "softwareFactory": "Software Factory"
+  },
+  "subscriptionBanner": {
+    "freeTier": "You're on the Free plan. <billingLink>Upgrade your plan</billingLink> for managed models and cloud features.",
+    "freeTierWithByok": "You're on the Free plan. <byokLink>Use your own API keys</byokLink> or <billingLink>upgrade your plan</billingLink> for managed models and cloud features.",
+    "gracePeriod": "Payment overdue. Usage will be halted on {{date}}. <billingLink>Go to billing</billingLink> to resolve.",
+    "overdueBlocked": "Your account has an overdue invoice, and access is currently blocked. <billingLink>Go to billing</billingLink> to restore access."
+  },
+  "toastContainer": {
+    "checkNetwork": "Check network",
+    "couldNotShowDownloadedFile": "Couldn't show the downloaded file",
+    "downloadedFile": "File",
+    "reportBug": "Report bug",
+    "signInLinkExpired": "This sign-in link has expired. Sign in again to continue."
+  },
+  "userProfileMenu": {
+    "failedToLogOut": "Failed to log out"
+  },
+  "visualArtifactViewer": {
+    "noVisualOutputAvailable": "No visual output available",
+    "theVisualContentAppearsToBe": "The visual content appears to be empty or invalid.",
+    "theVisualFileMayContainInvalid": "The visual file may contain invalid HTML.",
+    "unableToDisplayVisualContent": "Unable to display visual content",
+    "visualOutput": "Visual Output"
+  },
+  "wikiNavContentV2": {
+    "backToApp": "Back to App",
+    "backToWiki": "Back to Wiki",
+    "noMatchingRepositories": "No matching repositories",
+    "noWikisYet": "No wikis yet",
+    "runWikiInTheCliTo": "Run /wiki in a session to generate",
+    "wiki": "Wiki"
+  }
+}

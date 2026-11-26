@@ -1,0 +1,5 @@
+{
+  "customerConnectivity": "客户后端连通性",
+  "customerConnectivityHint": "检查客户后端、防火墙规则、代理配置和系统信任存储。",
+  "customerHostedSkipped": "已跳过，因为这是客户自托管部署。"
+}

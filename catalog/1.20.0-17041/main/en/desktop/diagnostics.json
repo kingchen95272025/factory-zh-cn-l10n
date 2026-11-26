@@ -1,0 +1,5 @@
+{
+  "customerConnectivity": "Customer backend connectivity",
+  "customerConnectivityHint": "Check the customer backend, firewall rules, proxy configuration, and system trust store.",
+  "customerHostedSkipped": "Skipped because this is a customer-hosted deployment."
+}

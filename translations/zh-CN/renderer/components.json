@@ -1,0 +1,169 @@
+{
+  "layout": {
+    "sessionManager": {
+      "allSessions": "全部会话",
+      "automations": "自动化",
+      "beta": "Beta",
+      "codeReview": "代码审查",
+      "customize": "自定义",
+      "factory": "Factory",
+      "goToBilling": "前往账单",
+      "hidden": "已隐藏",
+      "hiddenCount_other": "已隐藏，{{count}} 项",
+      "home": "主页",
+      "inbox": "收件箱",
+      "inboxNeedsAction_other": "收件箱，{{badge}} 项需要处理",
+      "missionControl": "任务控制",
+      "more": "更多",
+      "moreEmpty": "隐藏的按钮和分组会显示在这里。",
+      "newSession": "新建会话",
+      "paymentOverdue": "付款已逾期",
+      "search": "搜索",
+      "searchOrJumpTo": "搜索或跳转",
+      "sessions": "会话",
+      "softwareFactory": "Software Factory",
+      "switchOrganization": "{{name}}，切换组织",
+      "tileCodeReview": "平铺代码审查",
+      "usageWillBeHaltedOn": "用量将于 {{date}} 停止。"
+    },
+    "sessionListV2": {
+      "addProject": "添加项目",
+      "cleaningUpWorktree": "正在清理工作树…",
+      "emptyState": {
+        "noAutomationSessions": "暂无自动化会话",
+        "noExecSessions": "暂无 exec 会话",
+        "noMatchingSessions": "没有符合筛选条件的会话",
+        "noSessions": "暂无会话"
+      },
+      "groupActions": {
+        "archiveProject": "归档项目",
+        "deleteWorktree": "删除工作树",
+        "renameProject": "重命名项目"
+      },
+      "machineLabels": {
+        "cloud": "云端",
+        "droidComputer": "Droid 计算机",
+        "local": "本地"
+      },
+      "newMission": "新建工作流",
+      "noMissionsYet": "暂无工作流",
+      "noSectionSessionsYet": "暂无会话",
+      "oneList": {
+        "allSettled": "所有会话均已结束",
+        "noneActive": "没有活跃会话",
+        "showOneList": "显示单个列表",
+        "showSections": "显示分组",
+        "toggle": "单列表"
+      },
+      "releaseToUnpin": "松开以取消固定",
+      "sectionTitles": {
+        "computers": "计算机",
+        "pinned": "已固定",
+        "projects": "项目",
+        "recent": "最近",
+        "sessions": "会话",
+        "settled": "已结束",
+        "snoozed": "已延后",
+        "working": "进行中",
+        "yourMissions": "工作流"
+      },
+      "updatedAt": {
+        "last30Days": "最近 30 天",
+        "last3Days": "最近 3 天",
+        "last7Days": "最近 7 天",
+        "older": "更早",
+        "today": "今天"
+      }
+    },
+    "sessionListV2SessionRow": {
+      "actions": {
+        "archive": "归档",
+        "copySessionId": "复制会话 ID",
+        "fork": "分叉",
+        "hide": "隐藏",
+        "markAsUnread": "标记为未读",
+        "missionSettings": "设置",
+        "moveToSection": "移动到分组",
+        "newSection": "新建分组",
+        "openInNewWindow": "在新窗口打开",
+        "pin": "固定",
+        "removeFromSection": "从分组中移除",
+        "removeFromTiles": "从平铺中移除",
+        "rename": "重命名",
+        "settle": "结束",
+        "snooze": "延后",
+        "tileSession": "平铺会话",
+        "unpin": "取消固定",
+        "unsettle": "取消结束",
+        "wake": "唤醒"
+      },
+      "archiveSession": "归档会话",
+      "archiveTitle": "归档 {{title}}",
+      "branch": "分支",
+      "compactTime": {
+        "day_other": "{{count}}天",
+        "hour_other": "{{count}}小时",
+        "minute_other": "{{count}}分钟",
+        "month_other": "{{count}}个月",
+        "now": "刚刚",
+        "week_other": "{{count}}周",
+        "year_other": "{{count}}年"
+      },
+      "computer": "计算机",
+      "dismissWoke": "清除已唤醒标记",
+      "dismissWokeTitle": "清除 {{title}} 的已唤醒标记",
+      "draft": "草稿",
+      "environments": {
+        "droidComputer": "Droid 计算机",
+        "template": "环境"
+      },
+      "ephemeralWorktree": "临时工作树",
+      "folder": "文件夹",
+      "hideSession": "隐藏会话",
+      "hideTitle": "隐藏 {{title}}",
+      "pinSession": "固定会话",
+      "pinTitle": "固定 {{title}}",
+      "pullRequestCountLabel_other": "{{count}} 个 PR {{state}}",
+      "pullRequestLabel": "PR {{state}}",
+      "pullRequestStates": {
+        "closed": "已关闭",
+        "draft": "草稿",
+        "merged": "已合并",
+        "open": "开放"
+      },
+      "pullRequestTooltipMore_other": "另有 {{count}} 个 PR",
+      "pullRequests": "拉取请求",
+      "repoCount_other": "{{count}} 个仓库",
+      "repoNameMore": "{{name}} +{{count}}",
+      "settleSession": "结束会话",
+      "settleTitle": "结束 {{title}}",
+      "sharedSurfaces": {
+        "app": "共享",
+        "googleChat": "Google Chat",
+        "jira": "Jira",
+        "linear": "Linear",
+        "microsoftTeams": "Microsoft Teams",
+        "slack": "Slack"
+      },
+      "snoozeSession": "延后会话",
+      "snoozeTitle": "延后 {{title}}",
+      "tiledTitle": "{{title}}（平铺）",
+      "unpinSession": "取消固定会话",
+      "unpinTitle": "取消固定 {{title}}",
+      "unsettleSession": "取消结束会话",
+      "unsettleTitle": "取消结束 {{title}}",
+      "wakeSession": "立即唤醒会话",
+      "wakeTitle": "立即唤醒 {{title}}",
+      "wakesIn": "{{time}} 后唤醒",
+      "woke": "已唤醒",
+      "working": "进行中",
+      "worktree": "工作树"
+    },
+    "pullRequestInboxTabs": {
+      "delete": "删除",
+      "more": "更多",
+      "rename": "重命名",
+      "viewOptions": "{{name}} 的选项"
+    }
+  }
+}

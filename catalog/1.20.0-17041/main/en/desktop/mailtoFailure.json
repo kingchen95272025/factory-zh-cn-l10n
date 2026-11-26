@@ -1,0 +1,5 @@
+{
+  "detail": "Set a default mail app in your system settings, or open the draft in Gmail or Outlook from its Send menu. The menu can also make one of them the default.",
+  "message": "No mail app opened this email",
+  "title": "Couldn't open a mail app"
+}

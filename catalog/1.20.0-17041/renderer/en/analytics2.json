@@ -1,0 +1,1032 @@
+{
+  "adoptionCapabilities": {
+    "avgDailyMcpUsers": "Avg daily MCP users",
+    "avgDailyMcpUsersTooltip": "Daily distinct users with recorded MCP tool usage, summed and divided by calendar days in the range. Not a count of configured MCP servers or distinct users across the whole range.",
+    "recordedToolActivityAndMcpUsage": "Recorded tool activity and MCP usage over the selected range. These describe usage, not output quality.",
+    "subtitle": "Tool calls / session is an average of reported daily values.",
+    "toolCalls": "Tool calls",
+    "toolCallsPerSession": "Tool calls / session",
+    "toolCallsPerSessionTooltip": "Average of reported daily per-session tool-call averages. Days are weighted equally, not by session count. Higher does not necessarily mean better results.",
+    "toolCallsTooltip": "Recorded tool calls during the selected range.",
+    "toolUsage": "Tool usage"
+  },
+  "adoptionDeltas": {
+    "noChange": "No change vs {{days}}d",
+    "percent": "{{value}}% vs {{days}}d",
+    "points": "{{value}} pts vs {{days}}d"
+  },
+  "adoptionOverview": {
+    "activeUsers": "Active Users",
+    "averagePercentageOfDailyActiveUsers": "Average percentage of daily active users who used each client.",
+    "avgDau": "Avg DAU",
+    "avgDauTooltip": "Average number of unique users active each day.",
+    "avgMau": "Avg MAU",
+    "avgMauTooltip": "Average number of unique users active in each rolling 30-day window.",
+    "avgWau": "Avg WAU",
+    "avgWauTooltip": "Average number of unique users active in each rolling seven-day window.",
+    "clientAdoptionDataIsNotAvailable": "Client adoption data is not available for this period.",
+    "dailyTotalsWithMessagesOnThe": "Daily totals, with messages on the left axis and sessions on the right.",
+    "failedToLoadAdoptionData": "Failed to load adoption data",
+    "loading": "Loading adoption data...",
+    "messagesLeftAxis": "Messages (left axis)",
+    "noActiveUserData": "No active user data is available.",
+    "noAdoptionData": "No adoption data",
+    "noMembershipData": "Organization membership data is not available.",
+    "noSessionMessageData": "No session or message data is available.",
+    "periodComparisonIsUnavailableRightNow": "Period comparison is unavailable right now; showing the current period only.",
+    "rollingWeeklyActiveUsersAsA": "Rolling weekly active users as a share of all members.",
+    "sessionsMessages": "Sessions & Messages",
+    "sessionsRightAxis": "Sessions (right axis)",
+    "stickiness": "Stickiness",
+    "stickinessTooltip": "Average daily active users divided by average monthly active users.",
+    "surfaceAdoption": "Surface Adoption",
+    "surfaceAdoptionCalculation": "Surface adoption calculation",
+    "surfaceDefinition": "{{surface}} definition",
+    "surfaceOverlapTooltip": "Users may use more than one client on the same day, so percentages can overlap and do not add up to 100%.",
+    "thereIsNoActivityDataIn": "There is no activity data in the selected date range.",
+    "totalMessages": "Total Messages",
+    "totalMessagesTooltip": "User and assistant messages sent during the selected period.",
+    "totalSessions": "Total Sessions",
+    "totalSessionsTooltip": "Droid sessions created during the selected period.",
+    "uniqueUsersActiveEachDayIn": "Unique users active each day in the selected range.",
+    "wauPercentOfOrg": "WAU % of org",
+    "weeklyAdoption": "Weekly Adoption"
+  },
+  "adoptionSurfaces": {
+    "nonInteractiveCli": {
+      "label": "Non-Interactive CLI",
+      "tooltip": "Users who ran headless CLI commands, such as droid exec, scripts, or CI."
+    },
+    "terminalCli": {
+      "label": "Terminal CLI",
+      "tooltip": "Users who worked in Droid's interactive terminal interface."
+    },
+    "web": {
+      "label": "Web",
+      "tooltip": "Users who worked in Factory's web app."
+    }
+  },
+  "adoptionTab": {
+    "adoption": "Adoption",
+    "organizationEngagement": "Organization engagement. Data is displayed in UTC.",
+    "organizationEngagementAndPerUserActivity": "Organization engagement and per-user activity. Data is displayed in UTC.",
+    "subpages": {
+      "overview": "Overview",
+      "users": "Users"
+    }
+  },
+  "adoptionUsers": {
+    "clearSearch": "Clear search",
+    "exportFormat": "Export format",
+    "exportFormats": {
+      "aggregated": "Aggregated (per-user summary)",
+      "raw": "Raw (daily per-user)"
+    },
+    "failedToLoadUsers": "Failed to load users",
+    "loading": "Loading users...",
+    "noUserActivity": "No user activity was recorded in the selected date range.",
+    "noUsersFound": "No users found",
+    "pageSummary": "{{start}}–{{end}} of {{total}} users",
+    "searchUsers": "Search users",
+    "tryAnotherSearch": "Try another search or date range."
+  },
+  "adoptionUsersTable": {
+    "autonomy": "Autonomy",
+    "autonomyTooltip": "Ratio of tool calls to user turns, averaged over the days this user was active. Higher means Droid does more work per message.",
+    "columns": {
+      "fsc": "FSC",
+      "messages": "Messages",
+      "sessions": "Sessions",
+      "toolCalls": "Tool Calls"
+    },
+    "initials": "{{name}} initials",
+    "lastActive": "Last Active",
+    "toolCallsTooltip": "Total tools Droid invoked while working for this user over the selected period.",
+    "user": "User"
+  },
+  "companyCostTab": {
+    "consumption": "Consumption",
+    "factoryStandardCreditConsumptionAcrossThe": "Factory Standard Credit consumption across the org. Data is displayed in UTC.",
+    "factoryStandardCreditConsumptionAcrossYour": "Factory Standard Credit consumption across your root organization and its sub-organizations. Data is displayed in UTC.",
+    "usage": "Usage",
+    "yourFactoryStandardCreditConsumption": "Your Factory Standard Credit consumption. Data is displayed in UTC."
+  },
+  "concentrationBreakdowns": {
+    "spendByRepo": "Spend by Repo",
+    "spendByRepoDescription": "Repos with the highest FSC. Sessions that can’t be linked to a repo are excluded.",
+    "topTickets": "Top Tickets",
+    "topTicketsDescription": "Tickets with the highest FSC. Sessions not linked to a ticket are excluded."
+  },
+  "concentrationKpis": {
+    "longTailUsers": "Long-tail users",
+    "longTailUsersTooltip": "Users who together account for the bottom 10% of total FSC.",
+    "longTailUsersTooltipWithTotal_one": "Users who together account for the bottom 10% of total FSC, out of {{total}} active user.",
+    "longTailUsersTooltipWithTotal_other": "Users who together account for the bottom 10% of total FSC, out of {{total}} active users.",
+    "top10Users": "Top 10% users · FSC share",
+    "top10UsersTooltip": "Share of total FSC consumed by the top 10% of users by spend.",
+    "top1Sessions": "Top 1% sessions · FSC share",
+    "top1SessionsTooltip": "Share of total FSC consumed by the top 1% of sessions by spend.",
+    "topRepo": "Top repo share",
+    "topRepoTooltip": "The largest repo's share of all FSC that could be attributed to a repo. Sessions without repo information are excluded.",
+    "topRepoTooltipNamed": "The largest repo's share ({{repo}}) of all FSC that could be attributed to a repo. Sessions without repo information are excluded."
+  },
+  "costAttributionSubpage": {
+    "assignee": "Assignee",
+    "attributionMode": "Attribution mode",
+    "author": "Author",
+    "close": "Close",
+    "consumptionAttribution": "Consumption Attribution",
+    "consumptionBySession": "Consumption by Session",
+    "fsc": "FSC",
+    "fscValue": "{{value}} FSC",
+    "id": "ID",
+    "kpi": {
+      "attributedTickets": "Attributed tickets",
+      "projects": "Projects",
+      "prs": "PRs",
+      "sessions": "Sessions"
+    },
+    "linkedPullRequestDataIsUnavailable": "Linked pull request data is unavailable.",
+    "moreContributors": "{{overflow}} more contributors",
+    "noIncludedTickets": "No included tickets.",
+    "noLinkedPullRequests": "No linked pull requests.",
+    "noLinkedTickets": "No linked tickets.",
+    "openItem": "Open {{name}}",
+    "openPullRequest": "Open pull request",
+    "openSession": "Open {{session}} session",
+    "openTicket": "Open ticket",
+    "pr": "PR",
+    "progressSummary": "{{shown}} of {{total}}",
+    "projectSummary_one": "{{tickets}} ticket · {{fsc}} FSC",
+    "projectSummary_other": "{{tickets}} tickets · {{fsc}} FSC",
+    "pullRequestCount_one": "{{count}} pull request",
+    "pullRequestCount_other": "{{count}} pull requests",
+    "pullRequestLinksUnavailable": "Pull request links unavailable",
+    "pullRequests": "Pull Requests",
+    "rangeSummary": "{{start}}–{{end}} of {{total}}",
+    "rootSessionsOnly": "Root sessions only",
+    "sessions": "Sessions",
+    "status": "Status",
+    "ticket": "Ticket",
+    "tickets": "Tickets",
+    "title": "Title",
+    "untitledSession": "Untitled session"
+  },
+  "costCard": {
+    "definition": "{{label}} definition",
+    "failedToLoad": "Failed to load: {{message}}",
+    "loading": "Loading...",
+    "noDataForThisRange": "No data for this range"
+  },
+  "costColumns": {
+    "added": "Added",
+    "agentType": "Agent Type",
+    "amount": "Amount",
+    "assignee": "Assignee",
+    "assigneeEmail": "Assignee Email",
+    "assigneeLogin": "Assignee Login",
+    "assigneeName": "Assignee Name",
+    "associatedPrs": "Associated PRs",
+    "associatedSessions": "Associated Sessions",
+    "authType": "Auth Type",
+    "authorEmail": "Author Email",
+    "authorName": "Author Name",
+    "avgDailyFsc": "Avg Daily FSC",
+    "avgFscPerMessage": "Avg FSC / Message",
+    "avgFscPerSession": "Avg FSC / Session",
+    "balanceFsc": "Balance FSC",
+    "billedMessages": "Billed Messages",
+    "billedRouterSessionPct": "Billed Router Session %",
+    "billedRouterSessions": "Billed Router Sessions",
+    "block": "Block",
+    "bonusFsc": "Bonus FSC",
+    "byokRoutedMessages": "BYOK Routed Messages",
+    "cacheHitPct": "Cache Hit %",
+    "cacheRead": "Cache Read",
+    "commitFsc": "Commit FSC",
+    "commitStart": "Commit Start",
+    "completed": "Completed",
+    "completedIssueCount": "Completed Issue Count",
+    "completedProjects": "Completed Projects",
+    "completedTickets": "Completed Tickets",
+    "consumedBonusFsc": "Consumed Bonus FSC",
+    "consumedPaidFsc": "Consumed Paid FSC",
+    "consumedTotalFsc": "Consumed Total FSC",
+    "contributor": "Contributor",
+    "contributorFsc": "Contributor FSC",
+    "contributors": "Contributors",
+    "createdAt": "Created At",
+    "cumPctOfFsc": "Cum % of FSC",
+    "cumulativeCommitFsc": "Cumulative Commit FSC",
+    "currentFsc": "Current FSC",
+    "date": "Date",
+    "day": "Day",
+    "distinctBilledModels": "Distinct Billed Models",
+    "drawnFsc": "Drawn FSC",
+    "duration": "Duration",
+    "durationMinutes": "Duration (min)",
+    "durationSeconds": "Duration Seconds",
+    "effectiveAt": "Effective At",
+    "eligibleRoutedMessageFsc": "Eligible Routed Message FSC",
+    "email": "Email",
+    "endedAt": "Ended At",
+    "expiry": "Expiry",
+    "expiryDate": "Expiry Date",
+    "firstSeen": "First Seen",
+    "fsc": "FSC",
+    "fscCost": "FSC Cost",
+    "fscPct": "FSC %",
+    "fscPctOfRaw": "FSC % of Raw",
+    "fscSharePct": "FSC %",
+    "grantedFsc": "Granted FSC",
+    "identityEmail": "Identity Email",
+    "includedTickets": "Included Tickets",
+    "intent": "Intent",
+    "isBot": "Is Bot",
+    "isEpic": "Is Epic",
+    "isRouted": "Is Routed",
+    "isSubSession": "Is Sub Session",
+    "isSubagent": "Is Subagent",
+    "issueKey": "Issue Key",
+    "lead": "Lead",
+    "linkedFsc": "Linked FSC",
+    "linkedFscPct": "Linked FSC %",
+    "linkedSessionPct": "Linked Session %",
+    "linkedSessions": "Linked Sessions",
+    "longTailUsers": "Long Tail Users",
+    "manualFsc": "Manual FSC",
+    "manualRawTokens": "Manual Raw Tokens",
+    "manualSessions": "Manual Sessions",
+    "merged": "Merged",
+    "mergedPrs": "Merged PRs",
+    "messageDate": "Message Date",
+    "messagePct": "Message %",
+    "messageSharePct": "Message Share %",
+    "messages": "Messages",
+    "mixedPctOfBilledRouterSessions": "Mixed % of Billed Router Sessions",
+    "mixedRouterNonrouterSessions": "Mixed Router Nonrouter Sessions",
+    "model": "Model",
+    "modelFsc": "Model FSC",
+    "modelId": "Model ID",
+    "month": "Month",
+    "multiModelPctOfBilledRouterSessions": "Multi Model % of Billed Router Sessions",
+    "nonRouterBilledMessages": "Non Router Billed Messages",
+    "nonRouterMessageFsc": "Non Router Message FSC",
+    "owner": "Owner",
+    "ownerEmail": "Owner Email",
+    "paidCommitFsc": "Paid Commit FSC",
+    "paidCommitStart": "Paid Commit Start",
+    "paidFsc": "Paid FSC",
+    "parentSessionId": "Parent Session ID",
+    "pctOfFsc": "FSC %",
+    "pr": "PR",
+    "prId": "PR ID",
+    "primaryIntent": "Primary Intent",
+    "priorFsc": "Prior FSC",
+    "project": "Project",
+    "projectId": "Project ID",
+    "projectName": "Project Name",
+    "projects": "Projects",
+    "provider": "Provider",
+    "prs": "PRs",
+    "rawTokens": "Raw Tokens",
+    "reason": "Reason",
+    "remainingPaidFsc": "Remaining Paid FSC",
+    "remainingTotalFsc": "Remaining Total FSC",
+    "removed": "Removed",
+    "repoName": "Repo Name",
+    "rootFsc": "Root FSC",
+    "rootSessionId": "Root Session ID",
+    "rootSessions": "Root Sessions",
+    "routedBilledMessages": "Routed Billed Messages",
+    "routedFsc": "Routed FSC",
+    "routedFscPct": "Routed FSC %",
+    "routedMessageCompanyFscPct": "Routed Message Company FSC %",
+    "routedMessageFsc": "Routed Message FSC",
+    "routedRawTokens": "Routed Raw Tokens",
+    "routedSessions": "Routed Sessions",
+    "routerMessageShareWithinRouterSessionFsc": "Router Message Share Within Router Session FSC",
+    "routerMessages": "Router Messages",
+    "routerSessionCompanyFscPct": "Router Session Company FSC %",
+    "routerSessionFsc": "Router Session FSC",
+    "routerSessionPct": "Router Session %",
+    "routerSessions": "Router Sessions",
+    "routerSessionsMultiModel": "Router Sessions Multi Model",
+    "sdlcStage": "SDLC Stage",
+    "session": "Session",
+    "sessionFsc": "Session FSC",
+    "sessionId": "Session ID",
+    "sessionIds": "Session IDs",
+    "sessionName": "Session Name",
+    "sessionPct": "Session %",
+    "sessionSharePct": "Session Share %",
+    "sessions": "Sessions",
+    "startedAt": "Started At",
+    "state": "State",
+    "status": "Status",
+    "statusCategory": "Status Category",
+    "statusGroup": "Status Group",
+    "statusName": "Status Name",
+    "tagStatus": "Tag Status",
+    "ticket": "Ticket",
+    "ticketKey": "Ticket Key",
+    "ticketTitle": "Ticket Title",
+    "tickets": "Tickets",
+    "title": "Title",
+    "tokens": "Tokens",
+    "topModel": "Top Model",
+    "topRepoFscPct": "Top Repo FSC %",
+    "topRepoName": "Top Repo Name",
+    "totalBilledSessions": "Total Billed Sessions",
+    "totalFsc": "Total FSC",
+    "totalMessages": "Total Messages",
+    "totalProjects": "Total Projects",
+    "totalSessions": "Total Sessions",
+    "totalUsers": "Total Users",
+    "touchedSessionFscPct": "Touched Session FSC %",
+    "usageSource": "Usage Source",
+    "usdPerFsc": "USD per FSC",
+    "user": "User",
+    "userEmail": "User Email",
+    "userId": "User ID",
+    "users": "Users"
+  },
+  "costCopy": {
+    "attributionModes": {
+      "byProject": {
+        "description": "Session FSC rolled up to the project behind each attributed ticket. Sessions whose tickets have no project (or no ticket at all) are not represented here.",
+        "label": "By Project",
+        "subtitle": "Per-project Factory Standard Credit consumption"
+      },
+      "bySession": {
+        "description": "Top 1,000 root sessions by FSC in the org, with user, associated ticket(s) and PR(s), and FSC share. Subagent spend rolls into the root session it belongs to.",
+        "label": "By Session",
+        "subtitle": "Per-session Factory Standard Credit consumption"
+      },
+      "bySessionBasicDescription": "Top 1,000 root sessions by FSC, with user, top model, and the span from the first to last billed event. Subagent spend rolls into its root session. Open a session by clicking its title.",
+      "byTicket": {
+        "description": "Session FSC rolled up per Linear or Jira ticket. Subagent spend falls back to the parent session ticket.",
+        "label": "By Ticket",
+        "subtitle": "Per-ticket Factory Standard Credit consumption"
+      },
+      "byUser": {
+        "description": "FSC per user with the root sessions, tickets, and PRs that spend was attributed to.",
+        "label": "By User",
+        "subtitle": "Per-user Factory Standard Credit consumption"
+      }
+    },
+    "columnTooltips": {
+      "attributionRootSessions": "Root sessions only. Sub-session FSC is rolled into its root session and does not increase this count.",
+      "fscShare": "Share of total FSC billed across the selected date range.",
+      "prAdded": "Lines this PR added.",
+      "prMerged": "Date the PR was merged (UTC).",
+      "prRemoved": "Lines this PR removed.",
+      "projectCompletedTickets": "How many of your completed tickets in this project fall in the selected date range.",
+      "projectFsc": "Your FSC linked to completed tickets in this project.",
+      "projectName": "Project your completed tickets belong to.",
+      "rootSessions": "Root sessions only. Sub-agent spend rolls into its root session, so this list can be shorter than the session count.",
+      "sessionShare": "Share of all sessions in the selected date range.",
+      "sessionsCount": "Every billed session contributing FSC to this ticket or PR, including sub-agent sessions, whose spend is attributed to the session that launched them.",
+      "ticketCompleted": "Date the ticket was marked completed (UTC).",
+      "ticketFsc": "Your FSC linked to this ticket in the selected date range.",
+      "ticketProject": "Project the ticket belongs to, if any.",
+      "ticketStatus": "Workflow status recorded when the ticket was completed."
+    },
+    "kpiGroups": {
+      "vsAllFrontier": "vs All-Frontier",
+      "vsOrgUsage": "vs Org Usage"
+    },
+    "otherCategory": "Other",
+    "sections": {
+      "activity": "Activity",
+      "byPr": "By PR",
+      "byTicket": "By Ticket",
+      "consumptionAttribution": "Consumption Attribution",
+      "modelRouterSavings": "Model Router Savings",
+      "sessionLabels": "Session Labels",
+      "sessions": "Sessions"
+    },
+    "subpages": {
+      "concentration": "Consumption Concentration",
+      "costAttribution": "Consumption Attribution",
+      "modelRouterSavings": "Model Router",
+      "overview": "Overview"
+    },
+    "tables": {
+      "myActivitySummary": {
+        "description": "Your total FSC, time spent, and sessions across the selected date range.",
+        "title": "Activity Summary"
+      },
+      "myIntentBreakdown": {
+        "description": "How many of your sessions fall under each label on the tickets they were attributed to, with the FSC behind them. Sessions without an attributed ticket are excluded; tickets with no labels show as No label.",
+        "title": "Sessions by Label"
+      },
+      "myTimeSpent": {
+        "description": "Daily session activity, colored by session count. Hover for duration, sessions, and FSC.",
+        "title": "Activity"
+      },
+      "myTopPrs": {
+        "description": "Your session FSC rolled up per GitHub pull request or GitLab merge request, with title. Sessions without a detected PR are excluded.",
+        "title": "Top 20 PRs by FSC"
+      },
+      "myTopSessions": {
+        "description": "Your highest-FSC root sessions with associated ticket(s) and PR(s), and FSC share. Subagent spend rolls into the root session it belongs to.",
+        "title": "Top 50 Sessions"
+      },
+      "myTopTickets": {
+        "description": "Your session FSC rolled up per Linear or Jira ticket. Sessions without a detected ticket are excluded.",
+        "title": "Top 20 Tickets by FSC"
+      },
+      "routerAdoption": {
+        "description": "Model Router session adoption and routed FSC share.",
+        "title": "Model Router Adoption"
+      },
+      "routerCoverage": {
+        "description": "Router message volume and FSC shares associated with Auto usage.",
+        "title": "Model Router Coverage"
+      },
+      "routerSavingsEstimate": {
+        "description": "Estimated savings on routed usage versus the All-Frontier baseline and the org’s non-Auto usage baseline.",
+        "title": "Model Router Savings Estimate"
+      }
+    },
+    "unknownCategory": "(unknown)"
+  },
+  "costVisualization": {
+    "comparisonBaseline": "Comparison baseline",
+    "derivedFromBars": "derived from the bars above",
+    "heatFsc": "{{value}} FSC",
+    "heatMetrics": {
+      "fsc": "FSC",
+      "sessions": "Sessions",
+      "timeSpent": "Time Spent"
+    },
+    "heatSessions": "{{value}} sessions",
+    "hoverOverADayToSee": "Hover over a day to see details",
+    "kpi": {
+      "avgFscPerMessage": "Avg FSC / Message",
+      "avgFscPerSession": "Avg FSC / Session",
+      "byokRoutedMessages": "BYOK Routed Messages",
+      "cacheHitPct": "Cache Hit %",
+      "cacheRead": "Cache Read",
+      "fscPctOfRaw": "FSC % of Raw",
+      "messages": "Messages",
+      "rawTokens": "Raw Tokens",
+      "routedFsc": "Routed FSC",
+      "routedSessions": "Routed Sessions",
+      "savedFscVsAllFrontier": "Saved FSC vs All-Frontier",
+      "savedFscVsOrgUsage": "Saved FSC vs Org Usage",
+      "savedVsAllFrontier": "Saved vs All-Frontier",
+      "savedVsOrgUsage": "Saved vs Org Usage",
+      "sessions": "Sessions",
+      "timeSpent": "Time Spent",
+      "totalFsc": "Total FSC"
+    },
+    "less": "Less",
+    "logScaleEnabledForVisibilityTooltip": "Log scale enabled for visibility. Tooltip values are raw FSC plus each series' share of that day.",
+    "metricLabels": {
+      "avgDuration": "Avg Duration"
+    },
+    "more": "More",
+    "noDataAvailable": "No data available",
+    "overlayCallout": "{{label}} · right axis, {{callout}}",
+    "shareOfDay": "{{value}} ({{pct}} of day)"
+  },
+  "cumulativeSpend": {
+    "bySession": "By Session",
+    "byUser": "By User",
+    "cumulative": "Cumulative",
+    "cumulativeSpendPareto": "Cumulative Spend (Pareto)",
+    "description": "How concentrated FSC spend is across sessions or users, ranked by spend. By Session groups sessions into Top 1% / Next 9% / Middle 40% / Bottom 50%; By User groups users into deciles.",
+    "sessionDetail_one": "{{formattedCount}} session · {{fsc}} of {{totalFsc}} FSC",
+    "sessionDetail_other": "{{formattedCount}} sessions · {{fsc}} of {{totalFsc}} FSC",
+    "shareOfFsc": "Share of FSC",
+    "subtitle": "Bars = share of FSC · Line = cumulative share",
+    "userDetail_one": "{{formattedCount}} user · {{fsc}} of {{totalFsc}} FSC",
+    "userDetail_other": "{{formattedCount}} users · {{fsc}} of {{totalFsc}} FSC"
+  },
+  "deliveryDetail": {
+    "projects": {
+      "description": "Your completed tickets grouped by project, with your ticket-linked FSC.",
+      "subtitle": "Projects your completed tickets belong to"
+    },
+    "prs": {
+      "description": "PRs you merged in the selected date range, with the lines each one changed.",
+      "subtitle": "PRs you authored and merged"
+    },
+    "tickets": {
+      "description": "Tickets assigned to you and completed in the selected date range, with your ticket-linked FSC.",
+      "subtitle": "Tickets assigned to you and completed"
+    }
+  },
+  "deliveryModes": {
+    "projects": "Projects",
+    "prs": "PRs",
+    "tickets": "Tickets"
+  },
+  "enterpriseCost": {
+    "filters": {
+      "accessType": "Access type",
+      "all": "All",
+      "model": "Model",
+      "source": "Source",
+      "user": "User",
+      "userType": "User type"
+    },
+    "kpi": {
+      "activeOrganizations": "Active organizations",
+      "activeOrganizationsTooltip": "Organizations with FSC in the selected date range, among the organizations in scope (the filtered selection, or the whole hierarchy).",
+      "fscPerUserMonth": "FSC / user / month",
+      "fscPerUserMonthTooltip": "Average FSC billed per active user per month: all users' FSC divided by the months they were active in the selected date range. The current month counts for the days elapsed so far, and every user counts at least one month."
+    },
+    "leaderboard": {
+      "columns": {
+        "activeUsers": "Active Users",
+        "fsc": "FSC",
+        "fscPerUser": "FSC / User / Month",
+        "fscPerUserTooltip": "Average FSC billed per active user per month: the organization's FSC divided by the months its users were active in the selected date range. The current month counts for the days elapsed so far, and every user counts at least one month.",
+        "organization": "Organization",
+        "sessions": "Sessions",
+        "share": "Share"
+      },
+      "description": "Every organization in scope ranked by FSC over the selected date range, the root organization's own usage included. Active Users counts users with billed usage.",
+      "subtitle": "Ranked by FSC",
+      "tableLabel": "Organizations ranked by FSC",
+      "title": "Organization Leaderboard"
+    },
+    "orgFilter": {
+      "all": "All organizations",
+      "ariaLabel": "Filter by organization",
+      "label": "Organization",
+      "noneInHierarchy": "None of the selected organizations are in your hierarchy anymore. Clear filters to see all organizations."
+    },
+    "organizationsPageSummary": "{{start}}–{{end}} of {{total}} organizations",
+    "rangeFilter": {
+      "label": "Date range",
+      "last3Months": "Last 3 months",
+      "last6Months": "Last 6 months",
+      "lastMonth": "Last month",
+      "thisMonth": "This month"
+    }
+  },
+  "lastActive": {
+    "daysAgo": "{{days}}d ago",
+    "today": "Today",
+    "weeksAgo": "{{weeks}}w ago",
+    "yesterday": "Yesterday"
+  },
+  "overviewTab": {
+    "acrossRepositories_one": "across {{count}} repository",
+    "acrossRepositories_other": "across {{count}} repositories",
+    "activeUsers": "Active users",
+    "agentReadiness": "Agent readiness",
+    "allFrontierBaselineCaption": "vs All-Frontier baseline",
+    "comparisonCaption": "vs prev {{days}}d",
+    "comparisonCaptionFallback": "vs previous period",
+    "completedTickets": "Completed tickets",
+    "levelValue": "Level {{level}}",
+    "links": {
+      "adoption": "Adoption",
+      "agentReadiness": "Agent Readiness",
+      "consumptionOverview": "Consumption Overview",
+      "modelRouter": "Model Router"
+    },
+    "overview": "Overview",
+    "pullRequests": "Pull requests",
+    "rangeLastDays": "Last {{days}} days",
+    "rangeSelected": "Selected range",
+    "rangeSpan": "{{start}} – {{end}}",
+    "routerSavings": "Router savings",
+    "subtitle": "Organization-wide snapshot · {{range}}. Data is displayed in UTC.",
+    "tooltips": {
+      "activeUsers": "Distinct users with at least one session in the selected range.",
+      "agentReadiness": "Average readiness level across measured repositories. Reports describe each repository's current state, so this tile ignores the date range.",
+      "completedTickets": "Linear and Jira tickets completed in the selected range. Jira Epics and automated accounts are excluded.",
+      "pullRequests": "Pull requests merged in the selected range. Bot authors are excluded.",
+      "routerSavings": "Share of routed spend avoided against the All-Frontier baseline. A directional estimate, not a billed amount.",
+      "totalCreditSpend": "Factory Standard Credits billed across the organization in the selected range."
+    },
+    "totalCreditSpend": "Total credit spend"
+  },
+  "personalProductivity": {
+    "atAGlance": "At a glance",
+    "deliveryDetail": "Delivery detail",
+    "deliveryThroughput": "Delivery throughput",
+    "fscUsage": "FSC usage",
+    "fscUsageCallout": "daily FSC from the usage query",
+    "productivity": "Productivity",
+    "reviewYourCompletedTicketsAndProjects": "Review your completed tickets and projects, daily throughput, Factory Standard Credit (FSC) usage, activity, and session labels. Data is displayed in UTC.",
+    "throughput": {
+      "projects": "Projects you completed a ticket in per day, with your daily FSC usage overlaid as a right-axis line. A project counts once on every day it took delivery, so the bars do not sum to your project total.",
+      "prs": "PRs you merged per day, with your daily FSC usage overlaid as a right-axis line.",
+      "tickets": "Tickets you completed per day, with your daily FSC usage overlaid as a right-axis line."
+    },
+    "yourCompletedTicketsMergedPrsProjects": "Your completed tickets, merged PRs, projects, and FSC usage across the selected range."
+  },
+  "personalUsageOverview": {
+    "attributionModes": {
+      "prs": {
+        "description": "Your session FSC rolled up per GitHub pull request or GitLab merge request, with its title and current state. Sessions with no detected PR are left out, so these rows do not add up to your total FSC.",
+        "label": "PRs",
+        "subtitle": "Top 20 PRs by FSC"
+      },
+      "sessions": {
+        "basicDescription": "Your highest-FSC root sessions with the model that billed the most and the span from their first to their last billed message. Open a session by clicking its title; subagent spend rolls into the root session it belongs to.",
+        "description": "Your highest-FSC root sessions with the ticket(s) and PR(s) they were attributed to, the model that billed the most, and the span from their first to their last billed message. Open a session by clicking its title; subagent spend rolls into the root session it belongs to.",
+        "label": "Sessions",
+        "subtitle": "Top 50 root sessions by FSC"
+      },
+      "tickets": {
+        "description": "Your session FSC rolled up per Linear or Jira ticket, with the ticket’s current status. Sessions with no detected ticket are left out, so these rows do not add up to your total FSC.",
+        "label": "Tickets",
+        "subtitle": "Top 20 tickets by FSC"
+      }
+    },
+    "kpi": {
+      "avgDailyFsc": "Avg daily FSC",
+      "messages": "Messages",
+      "sessions": "Sessions",
+      "totalFsc": "Total FSC",
+      "totalFscDays": "Total FSC · {{days}}d"
+    },
+    "modelMix": "Model Mix",
+    "shareOfYourFscByModel": "Share of your FSC by model over the selected date range (top 20 billed models); the rest fold into Other. Excludes models Factory runs under the hood (e.g. session-title generation), so it reflects models you deliberately used.",
+    "shareOfYourFscByThe": "Share of your FSC by the labels on the tickets your sessions were attributed to. Sessions without an attributed ticket are excluded; tickets with no labels show as No label.",
+    "usageAttribution": "Usage Attribution",
+    "usageBySession": "Usage by Session",
+    "usageBySessionLabel": "Usage by Session Label"
+  },
+  "productivityCard": {
+    "aboutTitle": "About {{title}}",
+    "failedToLoadThisDataPlease": "Failed to load this data. Please try again.",
+    "loading": "Loading..."
+  },
+  "readinessCategories": {
+    "build": "Build System",
+    "debugging": "Debugging & Observability",
+    "devEnv": "Development Environment",
+    "docs": "Documentation",
+    "product": "Product & Experimentation",
+    "security": "Security",
+    "style": "Style & Validation",
+    "taskDiscovery": "Task Discovery",
+    "testing": "Testing"
+  },
+  "readinessCriteriaSettings": {
+    "actions": "Actions",
+    "agentReadiness": "Agent Readiness",
+    "allRepositories": "All repositories",
+    "allRepositoriesHelper": "Includes repositories added later.",
+    "appliesTo": "Applies to",
+    "cancel": "Cancel",
+    "clearSelection": "Clear",
+    "create": "Create",
+    "criteriaCount": "{{current}} of {{max}} criteria",
+    "criterion": "Criterion",
+    "customCriteriaLimitReached": "Your organization reached the {{max}}-custom-criteria limit. Delete one to add another.",
+    "customCriteriaTitle": "Custom Criteria",
+    "delete": "Delete",
+    "deleteCriterion": "Delete {{name}}",
+    "deleteCriterionTitle": "Delete “{{name}}”?",
+    "deleting": "Deleting…",
+    "description": "Description",
+    "eGTerraformModulesDocumented": "e.g. Terraform modules documented",
+    "editCriterion": "Edit {{name}}",
+    "editCustomCriterion": "Edit Custom Criterion",
+    "emptyDescription": "Create one to extend the readiness evaluation with your organization's own rules.",
+    "emptyTitle": "No custom criteria yet",
+    "enabled": "Enabled",
+    "enabledHelper": "Disabled criteria are kept but skipped in readiness reports.",
+    "evaluationInstructions": "Evaluation instructions",
+    "futureReadinessReportsWillStopEvaluating": "Future readiness reports will stop evaluating this criterion. Existing reports keep their stored results.",
+    "level": "Level",
+    "levelCell": "Level {{level}}",
+    "levelOption": "Level {{level}} — {{name}}",
+    "loadingRepositories": "Loading repositories…",
+    "name": "Name",
+    "newCriterion": "New Criterion",
+    "newCustomCriterion": "New Custom Criterion",
+    "noRepositoriesAvailable": "No repositories found. Connect a code host to target specific repositories.",
+    "noRepositoriesMatch": "No repositories match your search.",
+    "pageDescription": "Define your organization's own readiness checks. The Readiness Droid evaluates each enabled criterion on the repositories it applies to, and results appear in the Organization-Defined Custom Criteria section on each repository's report. Custom criteria do not affect the readiness level.",
+    "renamingKeepsId": "Renaming keeps the criterion ID ({{id}}) so past reports still match.",
+    "repositoryCount_one": "{{count}} repository",
+    "repositoryCount_other": "{{count}} repositories",
+    "save": "Save",
+    "saving": "Saving…",
+    "scope": "Scope",
+    "scopeApplication": "Application",
+    "scopeApplicationOption": "Application — checked once per application",
+    "scopeRepository": "Repository",
+    "scopeRepositoryOption": "Repository — checked once for the whole repo",
+    "searchRepositories": "Search repositories",
+    "selectAtLeastOneRepository": "Select at least one repository.",
+    "selectedCount": "Selected: {{total}}",
+    "selectedRepositories": "Selected repositories",
+    "shownInReportsWhatDoesThis": "Shown in reports: what does this criterion measure?",
+    "skippableTheDroidMayMarkThis": "Skippable — the droid may mark this criterion N/A when it does not apply",
+    "tellTheReadinessDroidExactlyWhat": "Tell the readiness droid exactly what to check and when the criterion passes, e.g. “Pass if every Terraform module under infra/ has a README describing its inputs and outputs.”",
+    "theReadinessDroidFollowsTheseInstructions": "The readiness droid follows these instructions verbatim when it evaluates each repository.",
+    "toggleCriterion": "Enable {{name}}"
+  },
+  "readinessOverview": {
+    "agentReadiness": "Agent Readiness",
+    "categoryBreakdown": "CATEGORY BREAKDOWN",
+    "criteria": "Criteria",
+    "daysAgo_one": "day ago",
+    "daysAgo_other": "days ago",
+    "deleteReports_one": "Delete report",
+    "deleteReports_other": "Delete {{count}} reports",
+    "errorLoadingAgentReadinessReports": "Error loading agent readiness reports",
+    "hoursAgo_one": "hour ago",
+    "hoursAgo_other": "hours ago",
+    "lastUpdated": "Last Updated",
+    "loading": "Loading agent readiness",
+    "measureYourOrganizationsProgressTowardAutonomous": "Measure your organization's progress toward autonomous software development. Track agent readiness across repositories, from basic tooling to self-sustaining systems that maintain and improve themselves.",
+    "organizationScore": "Organization Score",
+    "readTheDocs": "Read the Docs",
+    "repositoriesTracked": "Repositories Tracked",
+    "staleReportsDescription": "Reports for {{staleCount}} of {{totalCount}} repositories are more than {{days}} days old, so their levels may not reflect the current code. Refresh them for up-to-date results.",
+    "staleReportsTitle": "Some reports may be out of date",
+    "theOrganizationScoreIsCalculatedBy": "The organization score is calculated by taking the average level of all measured repositories in the organization."
+  },
+  "readinessRepositoryDetail": {
+    "agentReadiness": "Agent Readiness",
+    "allowPopupsToExportPdf": "Please allow popups to export PDF",
+    "backToAgentReadiness": "Back to Agent Readiness",
+    "customCriteriaEmptyDescription": "Add your organization's own checks. The Readiness Droid evaluates them in the next report.",
+    "customCriteriaTitle": "Organization-Defined Custom Criteria",
+    "errorLoadingAgentReadinessReport": "Error loading agent readiness report",
+    "loading": "Loading repository readiness",
+    "missingCriterionRationale": "This criterion was not measured. The report may be outdated - refresh the report to measure all criteria.",
+    "missionReadinessDescription": "Missions depend on these signals to set up worker environments, run programmatic validation (test, typecheck, lint), and QA the application interactively. Resolve them first to make this repository mission-ready.",
+    "missionReadinessTitle": "Mission Readiness",
+    "notApplicable": "N/A",
+    "passRateByCategory": "PASS RATE BY CATEGORY",
+    "repositoryNotFound": "Repository not found",
+    "successRateSuffix": "success rate"
+  },
+  "routerReasons": {
+    "allModels": "All models",
+    "hoverASegmentForItsCount": "Hover a segment for its count and share of that model",
+    "routingReasons": "Routing Reasons",
+    "routingReasonsMeasure": "Routing reasons measure",
+    "segmentAriaLabel": "{{model}}: {{reason}}, {{share}}",
+    "shareOfModel": "{{share}} of {{model}}",
+    "shareOfRoutedFsc": "{{share}} of routed FSC",
+    "shareOfRoutedMessages": "{{share}} of routed messages",
+    "subtitleFsc": "{{population}} · Attributed: {{share}} of routed FSC",
+    "subtitleMessages": "{{population}} · Attributed: {{share}} of routed messages",
+    "whyAutoServedEachModelOver": "Why Auto served each model over the selected range. Each bar is one model: its length is that model's share of all routed usage under the intent and agent type filters above, and its segments are the router's reasons for picking it. The model filter does not apply here because every model is already a row. Unattributed means no reason was recorded for those messages (sessions from before the record existed, or resumed after a restart)."
+  },
+  "routerTransparency": {
+    "agentType": "Agent type",
+    "intent": "Intent",
+    "intentBreakdownAndFilteringRequireAdvanced": "Intent breakdown and filtering require Advanced Analytics.",
+    "model": "Model"
+  },
+  "routerUsageMix": {
+    "breakdowns": {
+      "agentType": "Agent type",
+      "intent": "Intent",
+      "model": "Model"
+    },
+    "dailyShareOfSuccessfulManagedAuto": "Daily share of successful managed Auto and Auto Fast usage, measured as billed messages or FSC. The filters above narrow the routed population before each day is normalized to 100%.",
+    "fscValue": "{{value}} FSC",
+    "measures": {
+      "fsc": "FSC",
+      "messages": "Messages"
+    },
+    "messagesValue": "{{value}} msgs",
+    "mostlyReason": "Mostly {{reason}} · {{pct}}%",
+    "routerUsageBreakdown": "Router usage breakdown",
+    "routerUsageMeasure": "Router usage measure",
+    "routerUsageMix": "Router Usage Mix",
+    "subtitleFsc": "Daily · Share of routed FSC",
+    "subtitleMessages": "Daily · Share of routed messages"
+  },
+  "routingReasons": {
+    "agentEscalated": {
+      "description": "Model requested a stronger model mid-task",
+      "label": "Agent escalated"
+    },
+    "default": {
+      "description": "Classifier unavailable; default model used",
+      "label": "Default"
+    },
+    "hard": {
+      "description": "No model was confident; highest score picked",
+      "label": "Hard"
+    },
+    "modelUnavailable": {
+      "description": "Error, refusal, retirement, or usage limit",
+      "label": "Model unavailable"
+    },
+    "orgPolicy": {
+      "description": "Allowed-models policy constrained the pick",
+      "label": "Org policy"
+    },
+    "routine": {
+      "description": "Most models could do it; cheapest picked",
+      "label": "Routine"
+    },
+    "taskFit": {
+      "description": "Only some models fit; cheapest of those",
+      "label": "Task fit"
+    },
+    "unattributed": {
+      "description": "No reason was recorded for these messages",
+      "label": "Unattributed"
+    },
+    "visionRequired": {
+      "description": "Images needed a vision-capable model",
+      "label": "Vision required"
+    }
+  },
+  "spendBreakdown": {
+    "intents": {
+      "agentConfig": "Agent Config",
+      "automation": "Automation",
+      "codeGeneration": "Code Generation",
+      "codeReview": "Code Review",
+      "data": "Data",
+      "debugging": "Debugging",
+      "devops": "DevOps",
+      "documentation": "Documentation",
+      "knowledgeQa": "Knowledge Q&A",
+      "noise": "Noise",
+      "other": "Other",
+      "planning": "Planning",
+      "research": "Research"
+    },
+    "modelMix": "Model Mix",
+    "shareOfFscByEachSessions": "Share of FSC by each session's automatically classified primary intent. Sessions without a classification are excluded, so shares describe classified spend only.",
+    "shareOfFscByModelOver": "Share of FSC by model over the selected date range (top 20 billed models). Top models by spend, remaining listed models fold into Other. Note: company view includes background/system model usage.",
+    "spendByIntent": "Spend by Intent"
+  },
+  "spendOverTime": {
+    "company": {
+      "description": "Daily FSC spend over the selected date range. Overall shows the unsplit daily total; By Model and By User stack the top 7 by FSC with everything else folded into Others. By Source splits the product source behind each call (managed chat, BYOK, Compute, Prem, and Advanced Analytics, which covers live and backfill session classification), where FSC accrues to Factory-managed inference and so dominates by design, and By Access Type splits Human (interactive) vs API (programmatic) spend.",
+      "title": "Spend Over Time"
+    },
+    "enterprise": {
+      "description": "Daily or monthly FSC spend across your root organization and its sub-organizations over the selected date range; a month still in progress counts through today. Overall shows the unsplit total; By Organization, By Model, and By User stack the top 7 by FSC with everything else folded into Others. By User Type splits human users from service accounts, By Source splits the product source behind each call, and By Access Type splits Human (interactive) vs API (programmatic) spend."
+    },
+    "groupLabel": "{{title}} grouping",
+    "groups": {
+      "byAccessType": "By Access Type",
+      "byModel": "By Model",
+      "byOrganization": "By Organization",
+      "bySource": "By Source",
+      "byUser": "By User",
+      "byUserType": "By User Type",
+      "overall": "Overall"
+    },
+    "interval": {
+      "daily": "Daily",
+      "monthly": "Monthly"
+    },
+    "intervalLabel": "{{title}} interval",
+    "monthlySubtitle": "Monthly (UTC) · Factory Standard Credits",
+    "personal": {
+      "description": "Your daily FSC over the selected date range. Overall shows your unsplit daily total; By Model stacks your top 7 models by FSC with everything else folded into Others. The model split excludes models Factory runs under the hood (e.g. session-title generation), so it can total slightly less than Overall.",
+      "title": "Usage Over Time"
+    },
+    "subtitle": "Daily (UTC) · Factory Standard Credits",
+    "totalFsc": "Total FSC"
+  },
+  "tokenSpendOverTime": {
+    "creditSpendOverTime": "Credit Spend Over Time",
+    "description": "Daily Factory Standard Credit spend across the organization over the selected date range. Same billing rollup the Consumption Overview reports, so the totals reconcile.",
+    "subtitle": "Total {{total}} FSC · {{range}} (UTC)",
+    "totalFsc": "Total FSC"
+  },
+  "toolUsageLabels": {
+    "mcp": {
+      "label": "MCP",
+      "plural": "MCP servers",
+      "scope": "MCP calls are grouped by server, not individual tool.",
+      "singular": "MCP server",
+      "usage": "MCP",
+      "usageTitle": "MCP usage"
+    },
+    "skills": {
+      "label": "Skills",
+      "plural": "skills",
+      "scope": "Skills are grouped by name.",
+      "singular": "Skill",
+      "usage": "skill",
+      "usageTitle": "Skill usage"
+    },
+    "slashCommands": {
+      "label": "Slash commands",
+      "plural": "slash commands",
+      "scope": "Slash commands are grouped by command name, including built-in, custom, and skill entry points. Counts record invocation, not successful completion.",
+      "singular": "Slash command",
+      "usage": "slash command",
+      "usageTitle": "Slash command usage"
+    }
+  },
+  "toolUsageOverview": {
+    "bottomSubtitle": "Bottom {{limit}} · Recorded invocations",
+    "breakdownGroup": "{{usageTitle}} breakdown",
+    "dailySubtitle": "Daily · Recorded invocations",
+    "failedToLoad": "Failed to load {{plural}}",
+    "inactiveDescription": "Observed in the {{lookbackDays}}-day window {{lookbackStart}} to {{endDate}}, with no recorded calls in the last {{inactiveDays}} UTC days. Up to {{limit}}, longest idle first. Values are days since last observed use as of {{endDate}}. Missing telemetry can appear as inactivity.",
+    "inactiveSubtitle": "No calls in {{inactiveDays}}d · As of {{endDate}}",
+    "invocations": "Invocations",
+    "kpi": {
+      "avgDailyInvocations": "Avg daily invocations",
+      "avgDailyInvocationsTooltip": "Recorded invocations divided by UTC calendar days in the selected range.",
+      "itemsUsed": "{{singular}}s used",
+      "itemsUsedTooltip": "Distinct {{plural}} with recorded usage.",
+      "recordedInvocations": "Recorded invocations",
+      "usersUsing": "Users using {{plural}}",
+      "usersUsingTooltip": "Distinct users with recorded {{usage}} usage, including service accounts."
+    },
+    "leastUsed": "Least-used {{plural}}",
+    "leastUsedDescription": "{{singular}}s ranked from fewest to most recorded invocations. Only {{plural}} with recorded calls in the selected range are included.",
+    "mostUsed": "Most-used {{plural}}",
+    "mostUsedDescription": "{{singular}}s ranked by recorded invocations in the selected date range.",
+    "noInactive": "No inactive {{plural}} found in this lookback window.",
+    "noRecordedUsage": "No recorded {{usage}} usage in the selected range.",
+    "overTimeTitle": "{{usageTitle}} over time",
+    "reviewMode": {
+      "inactive": "Inactive",
+      "lowUsage": "Low Usage"
+    },
+    "topSubtitle": "Top {{limit}} · Recorded invocations",
+    "trendDescription": "Recorded {{usage}} invocations per UTC day. Item and user breakdowns show the top {{limit}} over the whole selected range, with all remaining usage combined into Others.",
+    "trendDescriptionUserType": "Recorded {{usage}} invocations per UTC day, grouped by current user type. Unknown users cannot be classified from current identity data. User type does not distinguish manual from automated usage.",
+    "trendGroup": {
+      "byItem": "By {{singular}}",
+      "byUser": "By User",
+      "byUserType": "By User Type",
+      "overall": "Overall"
+    },
+    "trendRegion": "{{usageTitle}} trend",
+    "viewAll": "View all {{plural}}",
+    "viewGroup": "{{usageTitle}} view"
+  },
+  "toolUsageRankingModal": {
+    "daysSinceLastUse": "Days since last use",
+    "failedToLoadInactive": "Failed to load inactive {{plural}}",
+    "inactiveDescription": "As of {{endDate}} (UTC) · Observed from {{lookbackStart}} to {{endDate}} · No recorded calls in the last {{inactiveDays}} days",
+    "inactiveTitle": "Inactive {{plural}}",
+    "invocations": "Invocations",
+    "lastObserved": "Last observed (UTC)",
+    "loading": "Loading {{plural}}...",
+    "noneFound": "No {{plural}} found.",
+    "pageSummary": "Page {{page}}",
+    "pagination": "{{singular}}s ranking pagination",
+    "rangeSummary": "{{start}}–{{end}} of {{total}} {{plural}}",
+    "rankingTable": "{{usageTitle}} ranking",
+    "search": "Search {{plural}}",
+    "shareOfTotal": "Share of total",
+    "totalSummary": "{{total}} {{plural}}",
+    "usageDescription": "{{startDate}} to {{endDate}} (UTC) · Share uses all recorded {{usage}} invocations, even when searching"
+  },
+  "toolUsageUsers": {
+    "description": "All users with recorded {{usage}} usage in the selected range, sorted by invocations. Select a user to see their {{plural}}. User totals include every item.",
+    "invocations": "Invocations",
+    "itemsUsed": "{{singular}}s used",
+    "pageSummary": "Page {{page}}",
+    "pagination": "{{singular}} users pagination",
+    "rangeSummary": "{{start}}–{{end}} of {{total}} users",
+    "serviceAccount": "Service account",
+    "subtitle": "{{perPage}} users per page",
+    "tableLabel": "{{singular}} users",
+    "title": "Users by {{usage}} usage",
+    "truncatedItems": "Showing the top {{shown}} of {{total}}",
+    "user": "User",
+    "userItemsDescription": "{{windowLabel}} · {{invocations}} total invocations",
+    "userItemsTitle": "{{usageTitle}} for {{userName}}",
+    "usersSummary": "{{total}} users"
+  },
+  "toolsTab": {
+    "footnote": "{{scope}} Recorded usage in the selected date range, updated daily. This is not an inventory; missing telemetry does not prove non-use. Users include service accounts. Categories can overlap: a skill invoked through a slash command can appear in both Skills and Slash commands. Do not add category totals together.",
+    "observedUsageOfSkillsMcpServers": "Observed usage of skills, MCP servers, and slash commands. Data is displayed in UTC.",
+    "tools": "Tools",
+    "toolsSubpages": "Tools subpages"
+  },
+  "topUsers": {
+    "cappedSubtitle": "Top {{shown}} of {{total}} users by FSC",
+    "columns": {
+      "fsc": "FSC",
+      "fscPct": "FSC %",
+      "fscPerMonth": "FSC / Month",
+      "fscPerMonthTooltip": "Average FSC billed per active month: the user's FSC divided by the months they were active in the selected date range. The current month counts for the days elapsed so far, and every user counts at least one month.",
+      "organization": "Organization",
+      "sessionPct": "Session %",
+      "sessions": "Sessions",
+      "user": "User"
+    },
+    "description": "Top 20 users by total FSC over the selected date range, with each user's share of company FSC, billed sessions, and share of all company sessions.",
+    "enterpriseDescription": "Every user with usage over the selected date range across your root organization and its sub-organizations, ranked by total FSC, with the organizations their spend landed in, each user's share of the combined FSC, billed sessions, and share of all sessions.",
+    "moreOrganizations": "+{{extra}}",
+    "moreOrganizationsLabel": "Also spent in {{names}}",
+    "organizationSpend": "{{name}}: {{fsc}}",
+    "pageSummary": "{{start}}–{{end}} of {{total}} users",
+    "title": "Top Users by Spend"
+  }
+}

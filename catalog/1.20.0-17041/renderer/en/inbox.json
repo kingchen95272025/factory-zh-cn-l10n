@@ -1,0 +1,111 @@
+{
+  "cta": {
+    "askUser": {
+      "answer": "Answer here",
+      "connecting": "Connecting…",
+      "description": "Answer here and Droid picks the session back up where it stopped.",
+      "title": "Droid is waiting on your answer"
+    },
+    "skillSuggestion": {
+      "description": "A fork of the session the skill ran in fixes it in a new worktree and opens a pull request. The original session is left untouched.",
+      "openFix": "Open PR with fix",
+      "title": "Fix this skill?"
+    },
+    "suggestion": {
+      "decline": "Decline",
+      "declineReason": "Why decline?",
+      "notWorthIt": "Not worth it",
+      "wrong": "It's wrong"
+    },
+    "workstreamInvite": {
+      "description": "Open the workstream to see what the team is working on, or ignore this item.",
+      "ignore": "Ignore",
+      "open": "Open workstream",
+      "title": "{{inviter}} added you to a workstream",
+      "titleUnnamed": "You were added to a workstream"
+    },
+    "workstreamSuggestion": {
+      "machine": {
+        "apply": "Fix with agent",
+        "description": "The workstream's orchestrator is asked to start an agent that makes this change on the workstream's machines.",
+        "title": "Fix this machine setup?"
+      },
+      "sharedNote": {
+        "added": "Added the note to {{path}} in the shared folder.",
+        "apply": "Add to shared notes",
+        "description": "The note is added to {{path}} in the workstream's shared folder, which later agents read before they start. No running agent is messaged.",
+        "failed": "Could not add the note to the shared folder",
+        "title": "Add this note?"
+      }
+    }
+  },
+  "desktopNotifications": {
+    "summaryBody": "Open your inbox to review them.",
+    "summaryTitle_one": "{{count}} new item needs your attention",
+    "summaryTitle_other": "{{count}} new items need your attention"
+  },
+  "inbox": {
+    "emptyState": {
+      "all": {
+        "primary": "Your inbox is empty",
+        "secondary": "Attention from sessions, workstreams, and missions will land here."
+      },
+      "needsAction": {
+        "primary": "Nothing needs you",
+        "secondary": "Questions and permission requests will land here."
+      },
+      "typeFilter": {
+        "primary": "No items of these types yet",
+        "secondary": "Reset the filter to see the other items",
+        "secondaryMore": "Load more or reset the filter"
+      }
+    },
+    "inboxRefreshFailedShowingTheLatest": "Inbox refresh failed. Showing the latest saved data.",
+    "loadingInbox": "Loading inbox",
+    "loadingInboxEllipsis": "Loading inbox…",
+    "retryInbox": "Retry inbox",
+    "unableToLoadYourInbox": "Unable to load your inbox"
+  },
+  "sessionEntity": {
+    "answerFailed": "Unable to send your answer",
+    "failures": {
+      "connectionFailed": "The connection to the session's machine failed.",
+      "loadFailed": "The session could not be loaded on its machine.",
+      "noAccessToken": "Your sign-in has expired. Sign in again and retry.",
+      "readFailed": "The session could not be read."
+    },
+    "question": "Question",
+    "unavailable": {
+      "answered": {
+        "description": "Droid is no longer waiting on it, so there is nothing to answer here.",
+        "title": "This question has already been answered"
+      },
+      "sent": {
+        "description": "Droid picked the session back up with your answer.",
+        "title": "Answer sent"
+      },
+      "unreachable": {
+        "description": "The machine that asked it is not reachable from this device. Open the session to pick it up there.",
+        "title": "This question can no longer be answered here"
+      }
+    }
+  },
+  "skillSuggestionPrompt": {
+    "alreadyFixed": "First check the cited lines on the default branch; if they no longer say this, stop and report that it is already fixed instead of opening a PR.",
+    "instructions": "In a new git worktree, make the smallest edit to this skill file that prevents this, commit it on a new branch, and open a pull request that follows the repository's conventions. Include {{trailer}} in the PR description.",
+    "intro": "A repository skill caused friction earlier in this session. Fix the skill so this does not happen again."
+  },
+  "snooze": {
+    "nextWeek": "Next week",
+    "oneHour": "1 hour",
+    "tomorrowMorning": "Tomorrow, 9am"
+  },
+  "updateHint": {
+    "desktop": "Update Factory to see this item in full.",
+    "web": "Reload to see this item in full."
+  },
+  "workstreamMachineFixPrompt": {
+    "instructions": "Start an agent on the machine that needs this change to make it, then report what changed. If that machine gives each agent a fresh computer, an install does not last: also add a note to {{path}} in the shared folder telling later agents how to set it up.",
+    "intro": "One of this workstream's agents hit a gap in its machine setup."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "checkForUpdates": "检查更新",
+  "detail": "你的版本（{{version}}）已不再受支持。\n\n请安装最新版本以继续。",
+  "message": "你的版本已不再受支持",
+  "quit": "退出",
+  "title": "需要更新"
+}

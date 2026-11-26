@@ -1,0 +1,2098 @@
+{
+  "automationBreadcrumbV2": {
+    "automations": "Automations"
+  },
+  "automationChainedDetailPage": {
+    "cancel": "Cancel",
+    "cancelCreationOf": "Cancel creation of \"{{name}}\"? The setup session will be abandoned.",
+    "chainedAfter": "Chained after",
+    "edit": "Edit",
+    "noChangesHaveBeenMade": "No changes have been made",
+    "save": "Save",
+    "saving": "Saving...",
+    "sessionPrivacy": "Session privacy"
+  },
+  "automationChainedEditFormV2": {
+    "agentInstructions": "Agent instructions",
+    "chainedAfter": "Chained after",
+    "chainedAfterNames": "Chained after {{names}}",
+    "describeWhatDroidShouldDoEach": "Describe what Droid should do each time this automation is started...",
+    "instructions": "Instructions",
+    "permanentlyRemovesThisAutomationTheAutomations": "Permanently removes this automation. The automations that triggered it stop starting it. Past run history is kept.",
+    "runsStartWhenARunOf": "Runs start when a run of one of these automations ends, whether it completed or failed.",
+    "whatDroidDoesEachTimeThe": "What Droid does each time the automation before it finishes a run."
+  },
+  "automationCideleteModal": {
+    "description": "Removing opens a PR that deletes the workflow file in each checked repo, or closes its install PR if that hasn't merged. The automation stays listed while any repo still has the workflow.",
+    "loadingRepositories": "Loading repositories...",
+    "statusesUnavailable": "Couldn't load repository statuses. Trying again…"
+  },
+  "automationCioverview": {
+    "configuration": "Configuration",
+    "custom": "Custom",
+    "default": "Default",
+    "events": "Events",
+    "lastRun": "Last run",
+    "mixedAcrossRepositories": "Mixed across {{count}} repositories",
+    "model": "Model",
+    "noEventsConfigured": "No events configured",
+    "owner": "Owner",
+    "prompt": "Prompt",
+    "repository": "Repository",
+    "reviewGuidelines": {
+      "generateNow": "Generate now",
+      "lastRefresh": "Last refresh",
+      "latestUpdate": "Latest update",
+      "notCreatedYet": "Not created yet",
+      "notRunYet": "Not run yet",
+      "off": "Off",
+      "prStatus": {
+        "closed": "Closed",
+        "merged": "Merged",
+        "open": "Awaiting review"
+      },
+      "refresh": "Refresh",
+      "refreshValue": {
+        "monthlyHumansOnly": "Monthly · Human comments only",
+        "monthlyWithBots": "Monthly · Human and bot comments",
+        "weeklyHumansOnly": "Weekly · Human comments only",
+        "weeklyWithBots": "Weekly · Human and bot comments"
+      },
+      "ruleCount_one": "{{count}} rule",
+      "ruleCount_other": "{{count}} rules",
+      "rules": "Rules",
+      "setUp": "Set up",
+      "starting": "Starting…",
+      "status": "Status",
+      "title": "Review guidelines"
+    },
+    "runHistory": "Run History",
+    "schedule": "Schedule (CI)",
+    "successRate7d": "Success rate (7d)",
+    "template": "Template",
+    "triggers": "Triggers",
+    "viewOnGithub": "View on GitHub",
+    "workflow": "Workflow",
+    "workflowFile": "Workflow file",
+    "workflowFiles": "{{count}} workflow files"
+  },
+  "automationCipage": {
+    "applyChanges": "Apply changes",
+    "applying": "Applying…",
+    "automation": "Automation",
+    "automationActions": "Automation actions",
+    "automationPrompt": "Automation prompt",
+    "automationUpdated": "Automation updated",
+    "cancel": "Cancel",
+    "chooseWhichOrganizationRulesGet": "Choose which organization rules get your changes. Unchecked ones keep their current setup.",
+    "chooseWhichReposAndOrganizationRules": "Choose which repos and organization rules get your changes. Unchecked ones keep their current setup.",
+    "chooseWhichReposGetYourChanges": "Choose which repos get your changes. Unchecked repos keep their current setup.",
+    "deleteFailed": "Delete failed",
+    "deletePrOpenedFor": "Delete PR opened for {{repo}}",
+    "describeWhatYouWantThisAutomation": "Describe what you want this automation to accomplish each time it runs...",
+    "edit": "Edit",
+    "editFailed": "Edit failed",
+    "editPrOpenedFor": "Edit PR opened for {{repo}}",
+    "emptyPromptError": "This automation runs on a prompt, so it cannot be left empty. Describe what it should do, or delete the automation.",
+    "envPermissionsConcurrencyRunsOnOverrides": "env, permissions, concurrency, runs-on overrides...",
+    "githubActionParameters": "GitHub Action Parameters",
+    "howThisWorkflowRunsChangesApply": "How this workflow runs. Changes apply only to the repositories you select.",
+    "installTargets": {
+      "organization": {
+        "applyTo_one": "Apply to {{count}} organization",
+        "applyTo_other": "Apply to {{count}} organizations",
+        "selectAll_one": "Select all {{count}} organization to apply the new name.",
+        "selectAll_other": "Select all {{count}} organizations to apply the new name.",
+        "selectAtLeastOne": "Select at least one organization to apply changes.",
+        "selectTheOne": "Select the organization to apply the new name."
+      },
+      "repository": {
+        "applyTo_one": "Apply to {{count}} repository",
+        "applyTo_other": "Apply to {{count}} repositories",
+        "selectAll_one": "Select all {{count}} repository to apply the new name.",
+        "selectAll_other": "Select all {{count}} repositories to apply the new name.",
+        "selectAtLeastOne": "Select at least one repository to apply changes.",
+        "selectTheOne": "Select the repository to apply the new name."
+      },
+      "target": {
+        "applyTo_one": "Apply to {{count}} target",
+        "applyTo_other": "Apply to {{count}} targets",
+        "selectAll_one": "Select all {{count}} target to apply the new name.",
+        "selectAll_other": "Select all {{count}} targets to apply the new name.",
+        "selectAtLeastOne": "Select at least one target to apply changes.",
+        "selectTheOne": "Select the target to apply the new name."
+      }
+    },
+    "instructions": "Instructions",
+    "model": "Model",
+    "nameChangeWillBeAppliedHere": "Name change will be applied here immediately, but the PR must be approved for the change to be reflected in the YAML file",
+    "noneOfTheSelectedRepositoriesAllowPushing": "None of the selected repositories allow pushing. Ask a maintainer for write access.",
+    "optionalWorkflowInputsAsYamlOr": "Optional: workflow inputs as YAML or JSON",
+    "organizationPlural": "organizations",
+    "organizationRule": "organization rule",
+    "organizationSingular": "organization",
+    "organizations": "Organizations",
+    "overrideTheModelThisWorkflowRuns": "Override the model this workflow runs with. Leave on Default to keep the workflow's current model.",
+    "overrideTheReasoningEffortThisWorkflow": "Override the reasoning effort this workflow runs with. Leave on Default to keep the workflow's current setting.",
+    "reasoningLevel": "Reasoning Level",
+    "renameHintAllRepos": "A rename applies to every repo. Select all {{count}} to apply it.",
+    "renameHintSingleRepo": "A rename applies to every repo. Select the repo to apply it.",
+    "repositories": "Repositories",
+    "reset": "Reset",
+    "reviewGuidelinesStarted_one": "Started learning review guidelines. The run opens a PR when it finishes.",
+    "reviewGuidelinesStarted_other": "Started learning review guidelines in {{count}} repositories. Each run opens a PR when it finishes.",
+    "targetPlural": "targets",
+    "targetSingular": "target",
+    "triggers": "Triggers",
+    "viewPr": "View PR",
+    "whatDroidDoesEachTimeThis": "What Droid does each time this workflow runs.",
+    "whereItsInstalled": "Where it’s installed",
+    "workflow": "Workflow",
+    "workflowYamlExtras": "Workflow YAML extras"
+  },
+  "automationCirepoStatus": {
+    "active": "Active",
+    "deletePrOpen": "Delete PR open",
+    "failed": "Failed",
+    "openingDeletePr": "Opening delete PR…",
+    "openingPr": "Opening PR…",
+    "prClosed": "PR closed",
+    "prOpen": "PR open",
+    "readOnly": "Read-only",
+    "writable": "Writable"
+  },
+  "automationCirepositoriesPanel": {
+    "access": "Access",
+    "load25More": "Load 25 more",
+    "organization": "Organization",
+    "organizations": "Organizations",
+    "repositories": "Repositories",
+    "repository": "Repository",
+    "status": "Status"
+  },
+  "automationDeleteModal": {
+    "cancel": "Cancel",
+    "cancelAutomationCreation": "Cancel automation creation",
+    "cancelCreation": "Cancel creation",
+    "cancelling": "Cancelling...",
+    "delete": "Delete",
+    "deleting": "Deleting...",
+    "keepCreating": "Keep creating",
+    "removesFiles": "This will permanently remove the automation and all its files. Past run history is kept.",
+    "removesReceiver": "This permanently removes the automation and its receiver URL, and it will no longer accept future deliveries. Past run history is kept.",
+    "stopsTriggers": "The automations that trigger it will stop starting it. Past run history is kept.",
+    "title": "Delete {{name}}?"
+  },
+  "automationDetailActionsMenuV2": {
+    "automationActions": "Automation actions",
+    "moreActions": "More actions"
+  },
+  "automationDetailMetaLine": {
+    "lastRun": "Last run {{value}}",
+    "lastRunNever": "Last run never",
+    "successRate7d": "Success rate (7d) {{value}}"
+  },
+  "automationDetailPageShell": {
+    "automationDetailSections": "Automation detail sections",
+    "openSidebar": "Open sidebar",
+    "tabs": {
+      "config": "Config",
+      "dashboard": "Dashboard",
+      "events": "Events",
+      "flow": "Flow"
+    }
+  },
+  "automationEditFormFieldsV2": {
+    "absolutePathTheRunExecutesIn": "Absolute path the run executes in, e.g. ~/code/my-repo",
+    "automation": "Automation",
+    "automationName": "Automation name",
+    "delete": "Delete",
+    "deleteAutomation": "Delete automation",
+    "description": "Description",
+    "descriptionOptional": "Description (optional)",
+    "orgDefaultModel": "Organization default",
+    "sessions": "Sessions",
+    "sharedSessionModelLocked": "Runs post into an existing session, which keeps using its own model and reasoning settings. To change the model and reasoning settings, open the session from the overview page.",
+    "shortSummaryShownInTheAutomation": "Short summary shown in the automation list",
+    "templateAutomation": "{{name}} automation",
+    "visibility": "Visibility",
+    "whoCanOpenTheSessionsThisAutomationStarts": "Who can open the sessions this automation starts.",
+    "whoCanSeeAndRunThisAutomation": "Who can see and run this automation, and who can open the sessions it starts.",
+    "workingDirectory": "Working directory",
+    "workingDirectoryOptional": "Working directory (optional)"
+  },
+  "automationEventsTableV2": {
+    "alerts": "alerts",
+    "bodySize": "Body size: {{size}}",
+    "channel": "Channel: {{channel}}",
+    "deliveries": "deliveries",
+    "duration": "Duration",
+    "event": "Event",
+    "events": "Events",
+    "filter": {
+      "alerts": "Alerts",
+      "all": "All",
+      "countOpenEnded": "{{value}}+",
+      "deliveries": "Deliveries",
+      "label": "Event kind",
+      "runs": "Runs"
+    },
+    "goToSession": "Go to Session",
+    "loadingEvents": "Loading events...",
+    "noAlerts": "No alerts",
+    "noEventsYet": "No events yet",
+    "noRunId": "none",
+    "noRunsYet": "No runs yet",
+    "noSlackDeliveriesYet": "No deliveries yet — post a message in one of the automation's channels.",
+    "noWebhookDeliveriesYet": "No deliveries yet — send a request to the webhook URL.",
+    "pageLabel": "Page {{page}}",
+    "retry": "retry",
+    "runEntryDataMayBeIncomplete": "Run entry data may be incomplete",
+    "runs": "runs",
+    "session": "Session",
+    "sessionIsBeingCreated": "Session is being created…",
+    "sessionIsPrivate": "This session is private.",
+    "slackMessageReceived": "Slack message received",
+    "timestamp": "Timestamp",
+    "unableToLoad": "Unable to load {{label}}: {{message}}",
+    "webhookDelivery": "Webhook delivery"
+  },
+  "automationFlow": {
+    "addAfter": "Add after",
+    "addAfterLabel": "Add an automation that runs after {{name}}",
+    "addAfterLocked": "Add an automation that runs after {{name}}. {{reason}}",
+    "addBefore": "Add before",
+    "addBeforeLabel": "Add an automation that runs before {{name}}",
+    "addBeforeLocked": "Add an automation that runs before {{name}}. {{reason}}",
+    "canvasLabel": "Automation chain",
+    "chainAfterExistingAutomations": "Chain after existing automations",
+    "chainedAfterUpdated": "Chained after updated",
+    "fitToView": "Fit to view",
+    "onlyTheOwnerCanAddAfter": "Only the owner can add automations after this one: they have to come from the owner's automations.",
+    "runsUnavailable": "Couldn't load runs",
+    "sharedSessionCannotAddAfter": "Runs post into an existing session, so they can't start other automations.",
+    "zoomIn": "Zoom in",
+    "zoomOut": "Zoom out"
+  },
+  "automationMarketplaceV2": {
+    "openSidebar": "Open sidebar",
+    "templates": "Templates"
+  },
+  "automationModelControlsV2": {
+    "automationModel": "Automation model",
+    "automationReasoningLevel": "Automation reasoning level",
+    "model": "Model",
+    "reasoning": "Reasoning"
+  },
+  "automationOverviewProperties": {
+    "chainAFollowUpAutomation": "Chain a follow-up automation",
+    "createNew": "Create new",
+    "selectExisting": "Select existing"
+  },
+  "automationRunHistoryTableV2": {
+    "duration": "Duration",
+    "goToSession": "Go to Session",
+    "loadingHistory": "Loading history...",
+    "loadingRuns": "Loading runs...",
+    "noRunsYet": "No runs yet",
+    "outcome": "Outcome",
+    "outcomeChanged": "edited",
+    "outcomeChangedNote": "Note: {{note}}",
+    "outcomeChangedTooltip": "Outcome changed by {{name}}\nOriginal: {{status}}",
+    "pageLabel": "Page {{page}}",
+    "recentRuns": "Recent runs",
+    "retry": "retry",
+    "runEntryDataMayBeIncomplete": "Run entry data may be incomplete",
+    "session": "Session",
+    "sessionIsBeingCreated": "Session is being created…",
+    "started": "Started",
+    "startedCreate": "{{startedLabel}} (create)",
+    "unableToLoadHistory": "Unable to load history: {{message}}"
+  },
+  "automationRunTableRows": {
+    "openSession": "Open session"
+  },
+  "automationScheduleDetailPage": {
+    "backToDashboard": "Back to dashboard",
+    "cancel": "Cancel",
+    "cancelCreationOf": "Cancel creation of \"{{name}}\"? Any setup files already written to disk will be removed and the setup session will be abandoned.",
+    "computerConnected": "Computer connected",
+    "computerIsOfflineOrHibernating": "Computer is offline or hibernating. Click to retry...",
+    "configuration": "Configuration",
+    "connectToComputer": "Connect to computer",
+    "connectTooltip": {
+      "owning": {
+        "connectPrompt": "Connect to the owning machine to run or modify this automation",
+        "connected": "Connected to the owning machine",
+        "connecting": "Connecting to the owning machine…",
+        "unavailable": "The owning machine is unavailable. It may have been deleted."
+      },
+      "remote": {
+        "connectPrompt": "Connect to the remote machine to run or modify this automation",
+        "connected": "Connected to the remote machine",
+        "connecting": "Connecting to the remote machine…",
+        "unavailable": "The remote machine is unavailable. It may have been deleted."
+      }
+    },
+    "edit": "Edit",
+    "fullscreen": "Fullscreen",
+    "noChangesHaveBeenMade": "No changes have been made",
+    "notConfigured": "Not configured",
+    "runDetails": "Run Details",
+    "runTheAutomationToGenerateA": "Run the automation to generate a visual first",
+    "save": "Save",
+    "saving": "Saving...",
+    "schedule": "Schedule",
+    "triggers": "Triggers"
+  },
+  "automationScheduleEditFormV2": {
+    "agentInstructions": "Agent instructions",
+    "automationSchedule": "Automation schedule",
+    "describeWhatDroidShouldDoEach": "Describe what Droid should do each time this automation runs...",
+    "frequency": "Frequency",
+    "instructions": "Instructions",
+    "permanentlyRemovesThisAutomationPastRun": "Permanently removes this automation. Past run history is kept.",
+    "schedule": "Schedule",
+    "whatDroidDoesEachTimeThis": "What Droid does each time this automation runs.",
+    "whenSetScheduledRunsExecuteFrom": "When set, scheduled runs execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from Droid's default automation folder.",
+    "whenThisAutomationRunsUsePlain": "When this automation runs. Use plain words or a cron expression."
+  },
+  "automationShareDropdownV2": {
+    "access": "Access",
+    "private": "Private",
+    "share": "Share",
+    "shared": "Shared"
+  },
+  "automationSlackDetailPage": {
+    "cancel": "Cancel",
+    "cancelCreationOf": "Cancel creation of \"{{name}}\"? Any setup files already written to disk will be removed and the setup session will be abandoned.",
+    "channelRules": "Channel rules",
+    "channels": "Channels",
+    "edit": "Edit",
+    "excludedKeywords": "Excluded keywords",
+    "excludedSenders": "Excluded senders",
+    "keywords": "Keywords",
+    "messageSource": "Message source",
+    "noChangesHaveBeenMade": "No changes have been made",
+    "noChannels": "No channels",
+    "privateChannel": "Private channel",
+    "save": "Save",
+    "saving": "Saving...",
+    "sessionPrivacy": "Session privacy"
+  },
+  "automationSlackEditFormV2": {
+    "enableAutomation": "Enable automation",
+    "enabled": "Enabled",
+    "permanentlyRemovesThisAutomationPastRun": "Permanently removes this automation. Past run history is kept.",
+    "turnOffToPauseTheAutomation": "Turn off to pause the automation."
+  },
+  "automationStatusChip": {
+    "active": "Active",
+    "activeDegraded": "Active · Degraded",
+    "activeDegradedAriaLabel": "Active · Degraded. {{tooltip}}",
+    "automationStatusCreating": "Automation status: creating",
+    "creating": "Creating",
+    "degraded": "Degraded",
+    "paused": "Paused"
+  },
+  "automationVisualViewerV2": {
+    "automationVisualOutput": "Automation Visual Output",
+    "runTheAutomationToGenerateA": "Run the automation to generate a visual",
+    "selectAnAutomationToViewIts": "Select an automation to view its visual output",
+    "theVisualFileMayContainInvalid": "The visual file may contain invalid HTML. Try running the automation again."
+  },
+  "automationWebhookDetailPage": {
+    "cancel": "Cancel",
+    "cancelCreationOf": "Cancel creation of \"{{name}}\"? The setup session will be abandoned.",
+    "copied": "Copied",
+    "copyUrl": "Copy URL",
+    "copyWebhookUrl": "Copy webhook URL",
+    "edit": "Edit",
+    "noChangesHaveBeenMade": "No changes have been made",
+    "notConfigured": "Not configured",
+    "payloadFilter": "Payload filter",
+    "save": "Save",
+    "saving": "Saving...",
+    "secretFingerprint": "Secret fingerprint",
+    "sessionPrivacy": "Session privacy",
+    "webhookUrl": "Webhook URL"
+  },
+  "automationWebhookEditFormV2": {
+    "agentInstructions": "Agent instructions",
+    "describeWhatDroidShouldDoEach": "Describe what Droid should do each time this webhook fires...",
+    "everyDeliveryStartsARun": "Every delivery starts a run",
+    "instructions": "Instructions",
+    "payloadFilterSummary": "Payload filter: {{payloadFilter}}",
+    "permanentlyRemovesThisAutomationAndIts": "Permanently removes this automation and its receiver URL. Past run history is kept.",
+    "runsStartWhenAnHttpPost": "Runs start when an HTTP POST hits this automation's unique URL. Deliveries that don't match the filter are recorded as Filtered and start no run.",
+    "webhook": "Webhook",
+    "webhookPayloadFilter": "Webhook payload filter",
+    "whatDroidDoesWhenAnEvent": "What Droid does when an event arrives."
+  },
+  "automationWebhookRotateSecret": {
+    "cancel": "Cancel",
+    "rotateSecret": "Rotate secret",
+    "rotateWebhookSecret": "Rotate webhook secret",
+    "rotating": "Rotating…",
+    "rotatingMintsANewSecretAnd": "Rotating mints a new secret and invalidates the current one immediately. Every sender must be updated with the new secret before its deliveries will be accepted again."
+  },
+  "automationsListChromeV2": {
+    "automations": "Automations",
+    "automationsRequireAConnectionToThe": "Automations require a connection to the local daemon. <desktopLink>Open the Factory desktop app</desktopLink> to use this feature.",
+    "browseTemplates": "Browse templates",
+    "connectGithub": "Connect GitHub",
+    "connectYourGithubAccountToView": "Connect your GitHub account to view and manage CI automations.",
+    "createFromTemplate": "Create from template",
+    "createManually": "Create manually",
+    "createWithDroid": "Create with Droid",
+    "desktopAppRequired": "Desktop app required",
+    "githubWorkflowScanFailed": "GitHub workflow scan failed",
+    "newAutomation": "New automation",
+    "reconnectGithub": "Reconnect GitHub",
+    "refreshCiWorkflows": "Refresh CI workflows",
+    "rescanGithubWorkflows": "Rescan GitHub workflows",
+    "searchAutomations": "Search automations",
+    "yourGithubConnectionHasExpired": "Your GitHub connection has expired. Reconnect to view and manage CI automations."
+  },
+  "automationsListModalsV2": {
+    "attention": "Attention",
+    "dismiss": "Dismiss",
+    "goToSession": "Go to session",
+    "theSetupSessionRequiresYourResponse": "The setup session requires your response to proceed."
+  },
+  "automationsV2": {
+    "automationForkedSuccessfully": "Automation forked successfully",
+    "automationSetToPrivate": "Automation set to private",
+    "automationSharedWithOrg": "Automation shared with org",
+    "automationUpdated": "Automation updated",
+    "couldNotScanGithubWorkflows": "Could not scan GitHub workflows",
+    "failedToDeleteAutomation": "Failed to delete automation",
+    "failedToDeleteAutomationFiles": "Failed to delete automation files",
+    "failedToForkAutomationV2": "Failed to fork automation (v2)",
+    "failedToPause": "Failed to pause",
+    "failedToResume": "Failed to resume",
+    "failedToRotateTheWebhookSecret": "Failed to rotate the webhook secret",
+    "failedToUpdateAutomation": "Failed to update automation",
+    "failedToUpdatePrivacy": "Failed to update privacy",
+    "failedToUpdateSlackAutomation": "Failed to update Slack automation",
+    "failedToWriteForkedAutomationFiles": "Failed to write forked automation files",
+    "forkedWithoutOthersTriggeredBy": "Automation forked. Its “Triggered by” automations weren't copied because they belong to someone else.",
+    "forkedWithoutTriggeredBy": "Automation forked. Its “Triggered by” automations weren't copied because this machine can't be started by other automations.",
+    "githubWorkflowsScannedClickToRescan": "GitHub workflows scanned {{scannedAgo}}. Click to rescan.",
+    "loadingCiWorkflows": "Loading CI workflows...",
+    "loadingSharedAutomations": "Loading shared automations...",
+    "noAccessTokenAvailable": "No access token available",
+    "noAutomationsYet": "No automations yet",
+    "pendingPrDescription": "{{repoFullName}} · pending PR",
+    "rescanGithubWorkflows": "Rescan GitHub workflows",
+    "setupSessionEndedMessage": "The setup session ended before setup finished. Open the setup session to finish setup, or cancel the creation and try again.",
+    "setupStep": {
+      "configuringFiles": "Configuring automation files",
+      "planning": "Planning your automation",
+      "settingUp": "Setting up your automation"
+    },
+    "setupTimedOutMessage": "Automation creation timed out before setup finished. Open the setup session to finish setup, or cancel the creation and try again.",
+    "slackAutomationUpdated": "Slack automation updated",
+    "startFromATemplateOrDescribeTheJob": "Start from a template, or describe the job and Droid sets it up with you.",
+    "thisMachine": "This machine",
+    "untitledSession": "Untitled session",
+    "webhookSecretRotated": "Webhook secret rotated"
+  },
+  "automationsV2Queries": {
+    "localAutomationsDesktopOnly": "Local automations are only available in the desktop app",
+    "localDaemonDisconnected": "Not connected to the local daemon. Wait for the desktop app to reconnect and try again."
+  },
+  "buildAutomationConfigurationRows": {
+    "access": "Access",
+    "chain": "Chain",
+    "chainedAfter": "Chained after",
+    "createdIn": "Created in",
+    "defaultModel": "Default",
+    "forkedFrom": "Forked from",
+    "inProgress": "In progress",
+    "lastRun": "Last run",
+    "model": "Model",
+    "noRunTarget": "No run target — runs can't start. Recreate this automation with a computer or environment.",
+    "none": "None",
+    "openSetupSession": "Open setup session",
+    "orgDefaultModel": "Organization default",
+    "orgDefaultUnavailable": "Organization default unavailable",
+    "owner": "Owner",
+    "privateSession": "Private session",
+    "prompt": "Prompt",
+    "retry": "Retry",
+    "runAs": "Run as",
+    "runSettings": "Run settings",
+    "runsOn": "Runs on",
+    "session": "Session",
+    "sessionEnded": "Session ended",
+    "setupSession": "Setup session",
+    "startsNext": "Starts next",
+    "successRate7d": "Success rate (7d)",
+    "trigger": "Trigger",
+    "viewInFlow": "View in Flow",
+    "visibility": "Visibility",
+    "visibilityOnlyYou": "Only you",
+    "visibilityOrganization": "Anyone in your organization",
+    "waitingForYourResponse": "Waiting for your response",
+    "workingDirectory": "Working directory"
+  },
+  "buildCIAutomations": {
+    "automaticCodeReview": "Automatic code review",
+    "droidExecOnMention": "Droid exec on @droid mention",
+    "runOnDroidMentions": "Run Droid on @droid mentions"
+  },
+  "chainExistingAutomationsModal": {
+    "followUpAutomationsUpdated": "Follow-up automations updated"
+  },
+  "chainExistingAutomationsModalV2": {
+    "cancel": "Cancel",
+    "chainExistingAutomations": "Chain existing automations",
+    "save": "Save",
+    "saving": "Saving...",
+    "startsNext": "Starts next",
+    "startsNextHelperText": "Automations that start when a run of this automation ends, whether it completed or failed."
+  },
+  "ciRepoAccess": {
+    "appNotInstalled": "The Factory Droid GitHub App is not installed on this repository.",
+    "requiresWriteAccess": "Creating CI automations requires write access to the repo. You only have {{permission}} access.",
+    "unknownPermission": "unknown"
+  },
+  "codeReviewMode": {
+    "allowedBots": "Allowed bots",
+    "commaSeparatedBotLoginsAllowedTo": "Comma-separated bot logins allowed to trigger reviews. Leave blank to disallow bot-authored PRs.",
+    "controlsHowMuchExtraReasoningThe": "Controls how much extra reasoning the agent spends on each review.",
+    "custom": "Custom…",
+    "deep": "Deep",
+    "disableToKeepTheWorkflowOn": "Disable to keep the workflow on disk but skip every run.",
+    "eGDependabotRenovate": "e.g. dependabot,renovate",
+    "eGMinimal": "e.g. minimal",
+    "reasoning": "Reasoning",
+    "reasoningDefault": "Default",
+    "reasoningHigh": "High",
+    "reasoningLow": "Low",
+    "reasoningMedium": "Medium",
+    "reviewDepth": "Review depth",
+    "securityReview": "Security review",
+    "shallow": "Shallow",
+    "shallowIsAFastSurfaceReview": "Shallow is a fast surface review. Deep lets the agent explore related code before commenting.",
+    "turnsOnAutomaticSecurityReviewFor": "Turns on automatic_security_review for the droid-action step."
+  },
+  "codeReviewModeV2": {
+    "allowedBots": "Allowed bots",
+    "commaSeparatedBotLoginsAllowedTo": "Comma-separated bot logins allowed to trigger reviews. Leave blank to disallow bot-authored PRs.",
+    "controlsHowMuchExtraReasoningThe": "Controls how much extra reasoning the agent spends on each review.",
+    "custom": "Custom…",
+    "customReasoning": "Custom reasoning",
+    "deep": "Deep",
+    "disableToKeepTheWorkflowOn": "Disable to keep the workflow on disk but skip every run.",
+    "eGDependabotRenovate": "e.g. dependabot,renovate",
+    "eGMinimal": "e.g. minimal",
+    "reasoning": "Reasoning",
+    "reasoningDefault": "Default",
+    "reasoningHigh": "High",
+    "reasoningLow": "Low",
+    "reasoningMedium": "Medium",
+    "reviewDepth": "Review depth",
+    "reviewGuidelinesMixed": "Set differently across repositories (on in {{enabled}} of {{total}}). A change applies to the repositories you select.",
+    "securityReview": "Security review",
+    "shallow": "Shallow",
+    "shallowIsAFastSurfaceReview": "Shallow is a fast surface review. Deep lets the agent explore related code before commenting.",
+    "summary": {
+      "allowedBots": "Allowed bots: {{allowedBots}}",
+      "deepReview": "Deep review",
+      "disabled": "Disabled",
+      "learnsGuidelinesMonthly": "Learns guidelines monthly",
+      "learnsGuidelinesWeekly": "Learns guidelines weekly",
+      "reasoning": "Reasoning: {{reasoning}}",
+      "securityReviewOn": "Security review on",
+      "shallowReview": "Shallow review"
+    },
+    "turnsOnAutomaticSecurityReviewFor": "Turns on automatic_security_review for the droid-action step."
+  },
+  "codeWalkthroughModeV2": {
+    "disableToKeepTheWorkflow": "Disable to keep the code walkthrough workflow on disk but skip every pull request event.",
+    "includeDraftPrs": "Include draft PRs",
+    "model": {
+      "balanced": "Balanced",
+      "balancedDescription": "Balances low cost with accuracy.",
+      "lite": "Lite",
+      "liteDescription": "Very low cost, but sometimes misses details."
+    },
+    "skipsDraftPullRequests": "Droid skips draft pull requests and writes the walkthrough once one is marked ready for review.",
+    "summary": {
+      "includesDraftPrs": "Includes draft PRs"
+    },
+    "writesAndUpdatesOnDrafts": "Droid also writes and updates walkthroughs on draft pull requests. Every push to a draft starts a run."
+  },
+  "constants": {
+    "breadcrumbLabels": {
+      "alertResponder": "New Webhook Incident Response Automation",
+      "chained": "New Automation-Triggered Automation",
+      "channelQa": "New Channel Q&A Automation",
+      "ciFailureTriage": "New CI Failure Triage Automation",
+      "codeHealth": "New Code Health Automation",
+      "codeReview": "New Code Review Automation",
+      "codeWalkthrough": "New Code Walkthrough Automation",
+      "dailyStatusDigest": "New Daily Status Digest Automation",
+      "docsRefresh": "New Docs Refresh Automation",
+      "errorTriage": "New Scheduled Error Triage Automation",
+      "github": "New GitHub Automation",
+      "incidentResponse": "New Slack Incident Response Automation",
+      "meetingNotesSync": "New Meeting Notes Sync Automation",
+      "newIssueInvestigator": "New Issue Investigator Automation",
+      "prReviewer": "New PR Reviewer Automation",
+      "qa": "New QA Automation",
+      "reviewCommentFixer": "New Review Comment Fixer Automation",
+      "scheduled": "New Scheduled Automation",
+      "securityAudit": "New Security Audit Automation",
+      "slack": "New Slack Automation",
+      "slackBugFixer": "New Slack Bug Fixer Automation",
+      "slackDigest": "New Slack Digest Automation",
+      "slackTicketFiler": "New Slack Ticket Filer Automation",
+      "testCoverage": "New Automated Test Coverage Automation",
+      "ticketToPr": "New Ticket to PR Automation",
+      "triage": "New Triage Automation",
+      "unified": "New Automation",
+      "webhook": "New Webhook Automation",
+      "wiki": "New AutoWiki Automation"
+    },
+    "chainAfterExistingHelperText": "Set this automation to run after another automation completes.",
+    "chainAfterExistingLabel": "Chain after existing automation?",
+    "chainDepthLimitMessage": "Chaining this automation would exceed the depth limit of {{max}} chained automations.",
+    "chainFollowUpsRefreshError": "Could not refresh your automations, so nothing was saved. Try again.",
+    "chainFollowUpsRefreshErrorWithReason": "Could not refresh your automations, so nothing was saved: {{message}}",
+    "chainInboundLimitMessage": "This automation has reached the limit of {{max}} inbound chained automations.",
+    "chainOutboundLimitMessage": "This automation has reached the limit of {{max}} outbound chained automations.",
+    "chainPickerLoadError": "Could not load your automations. Reload the page to try again.",
+    "chainTargetLocalOnlyMessage": "Only an automation that runs on a Droid Computer, a self-hosted computer, an environment, or the organization default can be chained after other automations.",
+    "chainedTriggeredByEmpty": "Nothing triggers this automation yet",
+    "chainedTriggeredByNoneVisible": "No automations you can see trigger this one",
+    "chainedTriggeredByUnavailable": "Chained automations are not enabled for your organization",
+    "ciModeAutonomyLabels": {
+      "high": "High",
+      "low": "Low",
+      "medium": "Medium"
+    },
+    "ciTemplates": {
+      "codeReview": {
+        "description": "Run Droid as an automatic code reviewer on pull requests.",
+        "label": "Code Review"
+      },
+      "codeReviewSecurity": {
+        "description": "Run Droid as an automatic code reviewer with security review enabled on pull requests.",
+        "label": "Code Review with Security Review"
+      },
+      "codeWalkthrough": {
+        "description": "For pull requests reviewed in Factory's desktop and web app. Keeps a code walkthrough on every pull request in this repository. Opens a pull request that adds `.github/workflows/droid-code-walkthrough.yml`, which writes the walkthrough when a pull request opens and updates it on every new commit.",
+        "label": "Code Walkthrough"
+      },
+      "custom": {
+        "description": "Configure GitHub Action parameters manually.",
+        "label": "Custom"
+      },
+      "qa": {
+        "description": "Set up automated QA testing for this repository. Opens a Droid session that runs /install-qa to analyze your codebase and generate the QA skill and workflow.",
+        "label": "QA Testing"
+      },
+      "securityAudit": {
+        "description": "Set up a scheduled deep security audit for this repository. Opens a pull request that adds `.github/workflows/deep-security-review.yml` to run /security-review across the codebase on your schedule.",
+        "label": "Security Audit"
+      },
+      "wiki": {
+        "description": "Set up automatic wiki generation for this repository. Opens a pull request that adds `.github/workflows/droid-wiki-refresh.yml` to refresh the Factory Wiki on the trigger you selected. Each refresh also commits the wiki to a rolling `factory/droid-wiki` pull request in the repository.",
+        "label": "AutoWiki"
+      }
+    },
+    "computerConnectFailure": "Could not connect to computer. It may be offline or hibernating.",
+    "computerConnectionLost": "Lost connection to the computer. It may be offline or hibernating.",
+    "computerPickerConnectRequired": "Connect to the selected computer to continue.",
+    "computerPickerRequired": "Pick a computer or environment for this automation to run on.",
+    "createStepLabels": {
+      "additional": "Additional settings",
+      "goal": "Goal",
+      "instructions": "Instructions",
+      "trigger": "Trigger",
+      "where": "Where it runs",
+      "workstream": "Workstream"
+    },
+    "createWithDroidPrompt": {
+      "guidance": "Before you create it, ask me for anything you still need, including what should trigger it: a schedule runs the prompt on a cadence, and a webhook runs it whenever an external service POSTs to a receiver URL that is minted for the automation.",
+      "opening": "Create an automation with Factory.",
+      "openingNamed": "Create an automation with Factory named \"{{name}}\".",
+      "whatItShouldDo": "What it should do: {{description}}"
+    },
+    "createWithDroidSuggestions": {
+      "dependencyAdvisories": "Every Monday, check our dependencies for security advisories and open pull requests to upgrade the affected ones.",
+      "mergedPrDigest": "Every weekday at 9am, summarize the pull requests merged yesterday and post the digest to #eng-updates.",
+      "sentryFix": "When Sentry reports a new error, find the likely cause and open a draft pull request with a fix."
+    },
+    "degradedChipTooltip": "Recent runs failed. The automation keeps running on its schedule and returns to Active after the next successful run.",
+    "deleteOtherHostWarning": "Warning: this automation appears to be owned by a different machine. Deletion will likely result in loss of data on another machine. Are you sure you want to proceed?",
+    "deleteUnknownHostWarning": "Warning: this computer does not appear to own this automation's files. Deleting may result in loss of data on a different machine. Are you sure you want to proceed?",
+    "githubTriggerEventLabels": {
+      "checksCompleted": "Checks completed",
+      "commentAdded": "Comment added",
+      "labelChange": "Label change",
+      "prOpened": "Pull request opened",
+      "pullRequest": "Pull request activity",
+      "push": "New push to branch"
+    },
+    "marketplaceSections": {
+      "ciWorkflows": {
+        "description": "Workflows that run Droid in your repository's GitHub Actions. Setting one up adds a workflow file to your repository.",
+        "title": "CI workflows"
+      },
+      "useCases": {
+        "description": "Jobs teams automate most, with the creation form filled in and ready to use.",
+        "title": "Automation templates"
+      }
+    },
+    "maxRunsPerHourHelpText": "Up to {{max}}. Requests past this limit in a clock hour are recorded as Capped and don't start a run.",
+    "maxRunsPerHourInvalid": "Enter a whole number from 1 to {{max}}.",
+    "maxRunsPerHourLabel": "Max runs per hour",
+    "modelAvailabilityPendingHint": "Still checking whether this model is available where this automation will run",
+    "modelConnectingTooltip": "This custom model's host computer is currently connecting…",
+    "modelUnavailableHint": "Pick a model that is available where this automation will run",
+    "modelUnavailableTooltip": "This model is not available where this automation will run.",
+    "modelUnverifiedTooltip": "This model could not be checked because the machine this automation will run on is not connected. If it is not set up there, the run will use the default model instead.",
+    "passUpstreamContextHelperText": "Turn this off if this automation doesn't depend on the output of the run that triggered it",
+    "passUpstreamContextLabel": "Pass upstream context?",
+    "passUpstreamContextOwnerOnly": "Only the owner of this automation can turn upstream context back on.",
+    "payloadFilterHelpText": "JavaScript regular expression syntax, matched with RE2 against the raw request body: no lookaheads, lookbehinds, backreferences, or inline modifiers. To require several fields, match them in the order they appear in the payload. Deliveries that don't match are recorded as Filtered and don't start a run. Leave empty to run on every event.",
+    "payloadFilterInvalid": "Payload filter must be a valid JavaScript regular expression that RE2 can match: no lookaheads, lookbehinds, backreferences, or inline modifiers.",
+    "payloadFilterLabel": "Payload filter",
+    "payloadFilterPlaceholder": "e.g. \"action\":\\s*\"created\"[\\s\\S]*\"type\":\\s*\"Issue\"",
+    "payloadFilterTag": "Regex",
+    "privacyHelperText": {
+      "organization": "Everyone in your organization can find and run this automation.",
+      "private": "Only you can see and run this automation."
+    },
+    "privacyLabels": {
+      "organization": "Shared",
+      "private": "Private"
+    },
+    "reasoningEffortLabels": {
+      "dynamic": "Dynamic",
+      "extraHigh": "Extra High",
+      "high": "High",
+      "low": "Low",
+      "max": "Max",
+      "medium": "Medium",
+      "minimal": "Minimal",
+      "none": "None",
+      "off": "Off"
+    },
+    "reviewGuidelinesSchedule": {
+      "monthly": "Runs on the 1st of each month at 09:00 UTC.",
+      "weekly": "Runs Mondays at 09:00 UTC."
+    },
+    "runAsSelfIdentityNote": "Runs use your connector access, and Slack posts come from your account.",
+    "runAsSelfOptionLabel": "No selection (yourself)",
+    "runAsServiceIdentityNote": "Runs use this service account's connector access, and Slack posts come from Factory.",
+    "runFailedFallbackLabel": "Failed",
+    "runOutcome": {
+      "cancelled": {
+        "eventLabel": "Run cancelled",
+        "label": "Cancelled"
+      },
+      "failure": {
+        "eventLabel": "Run failed",
+        "label": "Failed"
+      },
+      "inProgress": {
+        "eventLabel": "Run in progress",
+        "label": "Running"
+      },
+      "pending": {
+        "eventLabel": "Run pending",
+        "label": "Pending"
+      },
+      "success": {
+        "eventLabel": "Run success",
+        "label": "Success"
+      }
+    },
+    "sessionPrivacyHelperText": {
+      "private": "Only you can open the sessions each run starts.",
+      "team": "Everyone in your organization can open the sessions each run starts."
+    },
+    "sessionPrivacyLabels": {
+      "private": "Private",
+      "team": "Team"
+    },
+    "slackChannelEmptySearch": "No matching channels. Add a * to match by name.",
+    "slackChannelPickerHint": "Type a channel name, or use a wildcard (*) to match any substring (e.g. incident-*)",
+    "slackChannelsUnavailable": "Could not load Slack channels. Connect Slack in Settings, then reload to add a rule.",
+    "slackMessageSourceLabels": {
+      "anyone": "Anyone",
+      "bots": "Bots only",
+      "humans": "Humans only"
+    },
+    "slackNoChannels": "No Slack channels available. Connect Slack in Settings first.",
+    "slackPatternAlreadyAdded": "That rule has already been added.",
+    "slackPatternErrors": {
+      "empty": "Enter a channel name rule.",
+      "noWildcard": "Add a * to match more than one channel.",
+      "tooBroad": "Add at least {{minLiteralLength}} characters besides *, or this matches most of the workspace.",
+      "tooLong": "Rules are limited to {{maxLength}} characters."
+    },
+    "slackPatternMatchBase": "Listens on every matching channel that Droid is already in, as well as new matching channels that are created.",
+    "slackWorkingDirectoryTooltip": "When set, runs triggered from Slack execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from the computer's home directory.",
+    "templateFlow": {
+      "output": {
+        "commitAndComment": "Commit + comment",
+        "commitAndReply": "Commit + reply",
+        "notionOrTracker": "Notion / tracker",
+        "prComment": "PR comment",
+        "pullRequest": "Pull request",
+        "slackDm": "Slack DM",
+        "slackOrPr": "Slack / PR",
+        "slackSummary": "Slack summary",
+        "threadReply": "Thread reply",
+        "ticketAndThreadReply": "Ticket + thread reply",
+        "ticketCommentOrPr": "Ticket comment / PR"
+      },
+      "trigger": {
+        "hourly": "Hourly",
+        "prComment": "PR comment",
+        "prOpenedOrUpdated": "PR opened / updated",
+        "push": "Push",
+        "scheduled": "Scheduled",
+        "slackMessage": "Slack message",
+        "threeTimesADay": "Three times a day",
+        "webhook": "Webhook",
+        "weekdays6am": "Every weekday 6am",
+        "weekdays8am": "Every weekday 8am",
+        "weekdays9am": "Every weekday 9am"
+      }
+    },
+    "templateVariablesUnresolved": "Please fill out template variables {{placeholder}} to proceed",
+    "templates": {
+      "alertResponder": {
+        "description": "Investigate Sentry, Datadog, or PagerDuty alerts as they fire: root-cause analysis and a fix PR when safe. Runs on a Droid Computer or an environment. After saving, add the webhook URL to the sending service.",
+        "name": "Webhook Incident Response"
+      },
+      "chained": {
+        "description": "Runs when a run of another automation ends. Pick which automations trigger it.",
+        "name": "Automation-triggered"
+      },
+      "channelQa": {
+        "connectorPurposes": {
+          "notion": "Searches your docs for the answer.",
+          "slack": "Watches your channel and answers in the thread."
+        },
+        "description": "Answer questions in a channel from your docs, Notion, tickets, and code, always citing sources in the thread.",
+        "name": "Channel Q&A"
+      },
+      "ciFailureTriage": {
+        "connectorPurposes": {
+          "github": "Reads the failed run and the commits behind it."
+        },
+        "description": "Classify failed GitHub Actions or GitLab pipelines as flaky, infrastructure, or regression, and name the commit responsible. Runs on a Droid Computer or an environment. After saving, add the webhook URL to the sending service.",
+        "name": "CI Failure Triage"
+      },
+      "codeHealth": {
+        "description": "Rotate through dependency audits, dead code, coverage gaps, and stale docs, landing one small maintenance PR per run.",
+        "name": "Code Health"
+      },
+      "codeReview": {
+        "description": "Review pull requests in your repositories.",
+        "name": "Code Review"
+      },
+      "codeWalkthrough": {
+        "description": "Keep walkthroughs current for pull requests reviewed in Factory's desktop and web app.",
+        "name": "Code Walkthrough"
+      },
+      "dailyStatusDigest": {
+        "connectorPurposes": {
+          "github": "Reads your open pull requests and pending reviews.",
+          "linear": "Reads the tickets assigned to you and what moved.",
+          "slack": "Sends the morning digest to you."
+        },
+        "description": "A morning digest of your PRs and tickets: what needs your action, what is waiting on others, and what moved since yesterday.",
+        "name": "Daily Status Digest"
+      },
+      "docsRefresh": {
+        "description": "Keep the docs in your repo current with each push to the default branch, via a pull request. For the Factory wiki, use AutoWiki.",
+        "name": "Docs Refresh"
+      },
+      "errorTriage": {
+        "connectorPurposes": {
+          "sentry": "Polls for new errors to investigate each hour."
+        },
+        "description": "Poll Sentry, Datadog, or another error source hourly, investigate the errors that matter, and report root causes with a fix PR when safe.",
+        "name": "Scheduled Error Triage"
+      },
+      "github": {
+        "description": "Configure a custom GitHub Actions workflow that runs Droid on repository events.",
+        "name": "GitHub"
+      },
+      "incidentResponse": {
+        "connectorPurposes": {
+          "slack": "Watches your alert channels and posts the RCA in the thread."
+        },
+        "defaultName": "Incident Response",
+        "description": "Investigate alerts posted to a Slack channel and reply in the thread with a root-cause analysis.",
+        "name": "Slack Incident Response"
+      },
+      "meetingNotesSync": {
+        "connectorPurposes": {
+          "granola": "Reads the notes from each finished meeting.",
+          "notion": "Files the summary and action items."
+        },
+        "description": "Summarize finished meetings, extract action items, and file them into Notion, your CRM, or your tracker.",
+        "name": "Meeting Notes Sync"
+      },
+      "newIssueInvestigator": {
+        "connectorPurposes": {
+          "linear": "Reads each new issue and comments with what it found."
+        },
+        "description": "Investigate each new Linear, Jira, or GitHub issue: duplicates, likely cause, files involved, and a PR for trivial fixes. Runs on a Droid Computer or an environment. After saving, add the webhook URL to the sending service.",
+        "name": "New Issue Investigator"
+      },
+      "prReviewer": {
+        "connectorPurposes": {
+          "github": "Reads new pull requests and posts one review per head commit."
+        },
+        "description": "Review new pull or merge requests on a schedule and post one comment review per head commit. Works with GitLab as well as GitHub. For reviews that run in GitHub Actions, use Code Review.",
+        "name": "PR Reviewer (GitLab/GitHub)"
+      },
+      "qa": {
+        "description": "Generate and run QA checks against your changes.",
+        "name": "QA"
+      },
+      "reviewCommentFixer": {
+        "description": "When a teammate comments on a pull request asking for a change, make it, push one commit to the branch, and reply.",
+        "name": "Review Comment Fixer"
+      },
+      "scheduled": {
+        "description": "Run a prompt on a recurring schedule.",
+        "name": "Scheduled"
+      },
+      "securityAudit": {
+        "description": "Run a scheduled deep security review across your repository.",
+        "name": "Security Audit"
+      },
+      "slack": {
+        "description": "Trigger Droid sessions from messages in Slack channels.",
+        "name": "Slack"
+      },
+      "slackBugFixer": {
+        "description": "Turn bug reports posted in a channel into tickets, a root-cause hypothesis in the thread, and a fix PR when the change is small.",
+        "name": "Slack Bug Fixer"
+      },
+      "slackDigest": {
+        "connectorPurposes": {
+          "slack": "Reads DMs, mentions, and channel activity. Posts DMs to you."
+        },
+        "description": "A private morning DM listing the Slack threads waiting on you, mentions to know about, and highlights from your channels.",
+        "name": "Slack Digest"
+      },
+      "slackTicketFiler": {
+        "connectorPurposes": {
+          "linear": "Files each actionable message as a ticket.",
+          "slack": "Watches your channel and posts the ticket link in the thread."
+        },
+        "description": "File actionable channel messages as tickets, deduplicated and routed to the right team, with the link posted back in the thread.",
+        "name": "Slack Ticket Filer"
+      },
+      "testCoverage": {
+        "description": "Add focused tests for the code each pull request changes, pushed to the branch with a comment on what is now covered.",
+        "name": "Automated Test Coverage"
+      },
+      "ticketToPr": {
+        "connectorPurposes": {
+          "linear": "Picks up ready tickets and links each one to its pull request."
+        },
+        "description": "Pick up ready tickets from your tracker one at a time and drive each to an open pull request.",
+        "name": "Ticket to PR"
+      },
+      "triage": {
+        "description": "Triage on a schedule and act on what needs attention.",
+        "name": "Triage"
+      },
+      "webhook": {
+        "description": "Trigger runs from any external service that can send an HTTP webhook.",
+        "name": "Webhook"
+      },
+      "wiki": {
+        "description": "Refresh a codebase wiki for your repository on a daily schedule and keep it in a rolling pull request. For the docs in your repo, use Docs Refresh.",
+        "name": "AutoWiki"
+      }
+    },
+    "webhookWorkingDirectoryTooltip": "When set, runs triggered by this webhook execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from the computer's home directory.",
+    "wikiPullRequestTriggerWarning": "Warning: This workflow triggers a full wiki rebuild. These triggers may be too frequent on busy repositories."
+  },
+  "createAutomationCoreV2": {
+    "absolutePathTheRunExecutesIn": "Absolute path the run executes in, e.g. ~/code/my-repo",
+    "addGithubEventTriggers": "Add GitHub event triggers",
+    "additionalSettings": "Additional settings",
+    "allowedBots": "Allowed bots",
+    "allowedBotsHelperText": "Comma-separated bot logins allowed to trigger reviews. Leave blank to disallow bot-authored PRs.",
+    "alreadyConfigured": "Already configured",
+    "applyTo": "Apply to",
+    "applyToOrganizationHint": "Apply via GitHub Required Workflows on organization rulesets.",
+    "applyToRepositoryHint": "Add the workflow file to one or more repositories.",
+    "automationModel": "Automation model",
+    "automationName": "Enter name",
+    "cannotCreateCiAutomationForRepository": "You cannot create a CI automation for this repository.",
+    "checkingDirectory": "Checking directory…",
+    "couldNotVerifyWorkingDirectory": "Could not verify the working directory. Try again.",
+    "customCiPromptPlaceholder": "Describe what you want this automation to accomplish each time it runs...",
+    "deep": "Deep",
+    "description": "Description",
+    "descriptionHelperText": "Helps teammates understand what this automation does.",
+    "descriptionTooLong": "Description must be {{max}} characters or fewer.",
+    "droidWillPickHostRepoPerOrg": "Droid will pick a host repo per org",
+    "eGDependabotRenovate": "e.g. dependabot,renovate",
+    "eligibleForOrgWideInstall": "Eligible for org-wide install",
+    "existingModeWorkflowHelperText": {
+      "codeWalkthrough": "This repository already has a code walkthrough workflow — Create will take you to the existing automation instead.",
+      "qa": "This repository already has a QA workflow — Create will take you to the existing automation instead.",
+      "securityAudit": "This repository already has a security audit workflow — Create will take you to the existing automation instead.",
+      "wiki": "This repository already has an AutoWiki workflow — Create will take you to the existing automation instead."
+    },
+    "fineTuneHowThisAutomationRuns": "Fine-tune how this automation runs. Everything here has a sensible default.",
+    "fixedInstructions": "This workflow type's instructions cannot be modified",
+    "githubActionParameters": "GitHub Action Parameters",
+    "githubEventTriggers": "GitHub event triggers",
+    "githubOrganizations": "GitHub organizations",
+    "hasCodeReview": "Has code review",
+    "hostRepositoryLabel": "Host repository (where the workflow file lives)",
+    "howShouldThisAutomationImproveOver": "How should this automation improve over time? What should it remember between runs?",
+    "installAppApprovalRequested": "A GitHub organization owner needs to approve the Factory Droid App. Once they approve it, select {{action}} again to finish.",
+    "installAppCancelled": "The Factory Droid App wasn't installed. Select {{action}} to try again.",
+    "installAppFailed": "Couldn't install the Factory Droid App. Select {{action}} to try again.",
+    "installAppStillOpen": "The GitHub window is still open. Finish the install there, or select {{action}} again to start over.",
+    "installTheFactoryDroidApp": "Install the Factory Droid App",
+    "instructions": "Instructions",
+    "instructionsStep": {
+      "chained": "What Droid does each time the automation before it finishes a run.",
+      "prefilled": "Prefilled from the template.",
+      "prefilledWithVariables": "Prefilled from the template. Replace anything in {{placeholder}} before you continue.",
+      "schedule": "What Droid does each time this automation runs.",
+      "slack": "Added to every session a matching message starts.",
+      "webhook": "What Droid does when an event arrives."
+    },
+    "loadingRepositories": "Loading repositories...",
+    "memoryAmpEvolution": "Memory & Evolution",
+    "memoryAndEvolution": "Memory and evolution",
+    "memoryEvolutionHelperText": "What carries over between runs so the automation gets better.",
+    "modeCreateHelperText": {
+      "codeWalkthrough": "Clicking Create will open a pull request adding .github/workflows/droid-code-walkthrough.yml to the selected repository. The workflow generates a code walkthrough when a pull request is opened or marked ready for review, and updates it on every new commit. Walkthroughs are for pull requests reviewed in Factory's desktop and web app. The repository needs a FACTORY_API_KEY Actions secret.",
+      "qa": "Clicking Create will open a new Droid session pre-filled with the /install-qa command and your selections above. The agent will analyze the selected repository interactively and generate the QA skill plus a .github/workflows/qa.yml workflow you can commit.",
+      "securityAudit": "Clicking Create will open a pull request adding .github/workflows/deep-security-review.yml to the selected repository. The workflow runs /security-review across the codebase on your schedule (with your settings above) and can also be run manually.",
+      "wiki": "Clicking Create will open a pull request adding .github/workflows/droid-wiki-refresh.yml to the selected repository. The workflow refreshes the Factory Wiki on the trigger you selected (with your settings above) and can also be run manually. Each refresh also commits the wiki to the factory/droid-wiki branch and keeps a single pull request open with the latest version."
+    },
+    "model": "Model",
+    "modelHelperText": "Override the default model for this automation.",
+    "nameSection": "Automation Name",
+    "next": "Next",
+    "noAccess": "no access",
+    "noComputersAvailable": "No computers available. Add one in Settings → Droid Computers.",
+    "noGithubOrganizationsAvailable": "No GitHub organizations available.",
+    "noMatchingOrganizations": "No matching organizations",
+    "noWritableRepositoriesFound": "No writable repositories found",
+    "openExistingArrow": "Open existing →",
+    "openSidebar": "Open sidebar",
+    "optional": "Optional",
+    "optionalWorkflowInputsAsYamlOr": "Optional: workflow inputs as YAML or JSON",
+    "orgAlreadyHasOrgWideInstall": "{{org}} already has an org-wide install for this template — Create will take you to it.",
+    "orgDefaultModel": "Organization default",
+    "orgDisableReason": {
+      "alreadyInstalled": "already has an org-wide install",
+      "planRequired": "requires Team / Enterprise"
+    },
+    "orgDisableTooltip": {
+      "alreadyInstalled": "This organization already has a Factory-managed org-wide workflow installed.",
+      "planRequired": "GitHub Required Workflows require a GitHub Team or Enterprise plan."
+    },
+    "orgSelected": "{{login}} selected",
+    "organization": "Organization",
+    "organizationsSelected": "{{count}} organizations selected",
+    "privateSuffix": " · private",
+    "qaComputerDescription": "Droid uses this computer to create the automation. Runs take place in GitHub Actions.",
+    "reasoningLevel": "Reasoning Level",
+    "reasoningLevelHelperText": "Override the model-specific default reasoning level.",
+    "removeRepository": "Remove repository {{fullName}}",
+    "repoCoveredByOrgWideInstall": "This repo is already covered by an org-wide install on {{org}}. A per-repo workflow added here will run alongside it.",
+    "repositories": "Repositories",
+    "repository": "Repository",
+    "reviewDepth": "Review depth",
+    "runAsDescription": "Identity and billing this automation runs under.",
+    "runAsDescriptionWithNote": "Identity and billing this automation runs under. {{note}}",
+    "runConfig": {
+      "custom": "Configure your own computer and identity settings",
+      "dynamic": "{{serviceAccount}} on {{environment}}",
+      "dynamicWithoutEnvironment": "{{serviceAccount}} on your organization's default environment",
+      "needsSetup": "We'll set up your organization's default service account and environment",
+      "orgDefault": "Run on organization default computer and service account (recommended)",
+      "persistent": "{{serviceAccount}} on your organization's delegation computers",
+      "serviceAccountFallback": "Your organization's default service account",
+      "title": "Config"
+    },
+    "schedule": "Schedule",
+    "schedulePromptPlaceholder": "Describe what Droid should do each time this automation runs...",
+    "searchOrganizations": "Search organizations...",
+    "searchRepositories": "Search repositories...",
+    "securityReview": "Security review",
+    "selectAnOrganizationFirst": "Select an organization first",
+    "selectTrigger": "Select trigger",
+    "serviceAccountRequired": {
+      "orgDefaultUnavailable": "Slack automations run as a service account so they never post with your own access, and your organization's default service account isn't available. A Manager can set it up in Settings → Delegations."
+    },
+    "sessionWillPickHostRepositoryPerOrg": "The Droid session will pick a host repository for each selected org, then create one Required Workflow ruleset per org.",
+    "setupComputer": "Setup computer",
+    "shallow": "Shallow",
+    "shallowIsAFastSurfaceReview": "Shallow is a fast surface review. Deep lets the agent explore related code before commenting.",
+    "shortSummaryShownInTheAutomation": "Short summary shown in the automation list",
+    "slackPromptPlaceholder": "Instructions to inject into every session triggered from this channel...",
+    "submit": {
+      "create": "Create",
+      "createWithSession": "Create with session",
+      "createWithWorkstream": "Create with workstream",
+      "createWorkstreamAndAutomation": "Create workstream and automation",
+      "creating": "Creating...",
+      "openExisting": "Open existing",
+      "openingWorkstream": "Opening workstream..."
+    },
+    "templates": "Templates",
+    "trigger": "Trigger",
+    "triggerHelper": {
+      "github": "Runs Droid in a GitHub Actions workflow.",
+      "schedule": "Runs start on the schedule you set below."
+    },
+    "triggerOptions": {
+      "chained": "Automation",
+      "github": "GitHub",
+      "schedule": "Schedule",
+      "slack": "Slack",
+      "webhook": "Webhook"
+    },
+    "triggerSection": {
+      "description": "Select the event that runs this automation.",
+      "title": "What triggers this automation?"
+    },
+    "triggerStep": {
+      "chained": "Runs start when a run of another automation ends, whether it completed or failed. You can change them any time.",
+      "schedule": "Use plain words or a cron expression.",
+      "schedulePrefilled": "Use plain words or a cron expression. Prefilled from the {{name}} template.",
+      "slack": "Droid starts a run when a message is posted in one of these channels.",
+      "webhook": "Runs start when an HTTP POST hits this automation's unique URL. The URL and its secret are generated after you create the automation and shown once."
+    },
+    "turnsOnAutomaticSecurityReviewFor": "Turns on automatic_security_review for the droid-action step.",
+    "validation": {
+      "addName": "Add a name",
+      "allowManagedModel": "Ask an admin to allow one of this automation's models",
+      "chooseWorkflow": "Choose a workflow",
+      "connectSelectedComputer": "Connect to the selected computer to continue",
+      "describeAutomationGoal": "Describe what the automation should achieve",
+      "describeWhatDroidShouldDo": "Describe what Droid should do",
+      "fixWorkingDirectory": "Fix the working directory",
+      "nameWorkstream": "Name the workstream",
+      "pickAtLeastOneRepository": "Pick at least one repository",
+      "pickComputerForQaSetup": "Pick a computer for the QA setup session to run on",
+      "pickComputerOrTemplate": "Pick a computer or environment for this automation to run on",
+      "pickComputerOrTemplateForServiceAccount": "Pick a computer or environment for the service account to run on",
+      "pickDifferentComputer": "Pick a different computer",
+      "pickEventOrSchedule": "Pick at least one GitHub event or add a schedule",
+      "pickGithubEvent": "Pick at least one GitHub event",
+      "pickOrganization": "Pick an organization",
+      "pickRepoForAutoWiki": "Pick a repository to set up AutoWiki",
+      "pickRepoForCodeWalkthrough": "Pick a repository to set up code walkthroughs",
+      "pickRepoForSecurityAudit": "Pick a repository to set up the security audit",
+      "pickRepoToScaffoldQa": "Pick a repository to scaffold QA",
+      "pickRepository": "Pick a repository",
+      "pickServiceAccount": "Pick a service account for this automation to run as",
+      "pickSlackChannel": "Pick at least one Slack channel",
+      "pickWorkstream": "Pick a workstream",
+      "pickWorkstreamMachine": "Pick a machine for the workstream",
+      "selectTrigger": "Select a trigger",
+      "setValidSchedule": "Set a valid schedule or remove the schedule trigger",
+      "shortenWorkstreamName": "Shorten the workstream name",
+      "waitForWorkstreamMachines": "Wait for the workstream's machines to load"
+    },
+    "visualization": "Visualization",
+    "visualizationHelperText": "Droid builds a dashboard for each run from this description.",
+    "webhookPromptPlaceholder": "What should Droid do when an event arrives?",
+    "whatShouldDroidDoEachRun": "What should Droid do each run?",
+    "whatShouldTheDashboardDisplayE": "What should the dashboard display? e.g. a table of open issues, a chart of trends over time…",
+    "whereShouldItRun": "Where should it run?",
+    "whereStep": {
+      "chained": "The computer or environment each run lands on, and its visibility.",
+      "customCi": "The repository this workflow is added to.",
+      "default": "The identity, computer, and visibility of each run.",
+      "gitlabNotSupported": "GitLab automations are currently not supported, try <ciLink>running Droid from GitLab CI instead</ciLink>."
+    },
+    "workflowInstructions": {
+      "codeReview": "Reviews each pull request and posts high-confidence findings as inline comments with a summary. Follows the repo's review guidelines when present.",
+      "codeWalkthrough": "Writes a walkthrough for each pull request, updates it on new commits, and shows it on the review page.",
+      "qa": "During setup, Droid studies the repository and writes a QA skill for it. Each run follows that skill and writes a report."
+    },
+    "workflowSection": {
+      "customName": "Custom workflow",
+      "description": "Choose a workflow, or define your own with Custom workflow.",
+      "label": "Workflow",
+      "wikiDescription": "Refresh a codebase wiki for your repository on a daily schedule and keep it in a rolling pull request."
+    },
+    "workflowYamlWillBeCommittedToRepo": "The workflow YAML will be committed to this repo and enforced across the rest of the org via a GitHub Required Workflow ruleset.",
+    "workingDirectory": "Working directory",
+    "workingDirectoryNotAccessible": "Working directory is not accessible.",
+    "workingDirectoryTooltip": "When set, scheduled runs execute from this directory so they can use that project's skills, repo, and relative paths. Leave blank to run from Droid's default automation folder (~/{{factoryDirName}}/automations/<automation-slug>), which stores the prompt, dashboard, memory, and reports.",
+    "workstreamStep": {
+      "createNew": "Create a new workstream",
+      "createNewDescription": "Starts a workstream dedicated to this automation.",
+      "description": "The workstream creates the automation, walks you through the rest of its setup, and runs it.",
+      "goalDescription": "In your own words. The workstream asks you for what it needs, such as sources, credentials, filters, and target repositories.",
+      "goalLabel": "Goal",
+      "goalPlaceholder": "Describe the outcome you want from each run",
+      "goalTitle": "What should it achieve?",
+      "loadingWorkstreams": "Loading your workstreams...",
+      "modeLabel": "Workstream",
+      "noWorkstreams": "You have no workstreams to pick from yet. Create a new workstream instead.",
+      "noWorkstreamsMatch": "No workstreams match",
+      "pickerHelper": "Only workstreams you can open from here are listed.",
+      "pickerLabel": "Existing workstream",
+      "pickerPlaceholder": "Select a workstream",
+      "searchWorkstreams": "Search workstreams",
+      "title": "Which workstream should run it?",
+      "triggerDescriptionSchedule": "The workstream sets the schedule with you after you create it.",
+      "triggerDescriptionSlack": "The workstream picks the Slack channels with you after you create it.",
+      "untitledWorkstream": "Untitled workstream",
+      "useExisting": "Use an existing workstream",
+      "useExistingDescription": "Adds the automation to a workstream you already have.",
+      "workstreamsCouldNotLoad": "Your workstreams could not be loaded. Create a new workstream instead."
+    }
+  },
+  "createRepoGroupModal": {
+    "cancel": "Cancel",
+    "chooseRepositoriesHelper": "Choose the repositories that should drive this Software Factory view.",
+    "clearFiltered": "Clear filtered",
+    "createAPersonalSoftwareFactoryView": "Create a personal Software Factory view from repos you can access.",
+    "createGroup": "Create group",
+    "createRepositoryGroup": "Create repository group",
+    "groupName": "Group name *",
+    "makeDefault": "Make default",
+    "nameRequiredHelper": "Required. Name this view before saving it.",
+    "noRepositoriesFound": "No repositories found.",
+    "repositoryGroupName": "Repository group name",
+    "searchRepositories": "Search repositories",
+    "selectFiltered": "Select filtered",
+    "selectedFromAccessibleRepositories": "{{selected}} selected from {{available}} accessible repositories.",
+    "selectedOnly": "Selected only"
+  },
+  "editSectionSummaries": {
+    "autonomy": "Autonomy: {{level}}",
+    "description": "Description: {{description}}",
+    "disabled": "Disabled",
+    "excludedKeywords_one": "{{count}} excluded keyword",
+    "excludedKeywords_other": "{{count}} excluded keywords",
+    "excludedSenders_one": "{{count}} excluded sender",
+    "excludedSenders_other": "{{count}} excluded senders",
+    "githubActionParameters": "GitHub Action parameters",
+    "keywords": "Keywords: {{keywords}}",
+    "messagesFrom": {
+      "anyone": "Messages from anyone",
+      "bots": "Messages from bots only",
+      "humans": "Messages from humans only"
+    },
+    "model": "Model: {{model}}",
+    "paused": "Paused",
+    "privacy": {
+      "organization": "Shared automation",
+      "private": "Private automation"
+    },
+    "reasoning": "Reasoning: {{reasoning}}",
+    "sessionPrivacy": {
+      "private": "Private sessions",
+      "team": "Team sessions"
+    },
+    "workflowYamlExtras": "Workflow YAML extras",
+    "workingDirectory": "Working directory: {{path}}"
+  },
+  "forkAutomationModalV2": {
+    "computerOrTemplateTheForkedAutomation": "Computer or environment the forked automation will run on.",
+    "fork": "Fork",
+    "forkOptions": "Fork Options",
+    "noComputersOrTemplatesAvailable": "No computers or environments available. Add a computer to fork this automation.",
+    "selectRunTarget": "Select run target",
+    "serviceAccountForksAreSharedWith": "Service-account forks are shared with your organization."
+  },
+  "formatModelFallbackNotice": {
+    "customModelNotConfigured": "{{label}} isn't set up on the machine that ran this — used the default model instead",
+    "notAvailableForOrg": "{{label}} is no longer available to your organization — used the default model instead"
+  },
+  "getAutomationRunAsLabel": {
+    "myself": "Myself",
+    "none": "None",
+    "runAsComputerEmpty": "No computers or Environments available to {{serviceAccountName}} yet. A Manager can add a computer in Settings → Identity → Service Accounts, or create an org environment in Settings → Environments.",
+    "serviceAccount": "Service account",
+    "serviceAccountIdentity": "{{name}} (service account)"
+  },
+  "humanizeCron": {
+    "cadenceAtTimes": "{{cadence}}, at {{times}}",
+    "cadenceBetween": "{{cadence}} between {{first}} and {{last}}",
+    "cadenceEveryNHours": "{{cadence}}, every {{count}} hours",
+    "cadenceWithDays": "{{cadence}}, {{days}}",
+    "daily": "daily",
+    "dailyInMonths": "daily in {{months}}",
+    "dayOfMonth_ordinal_few": "{{count}}rd",
+    "dayOfMonth_ordinal_one": "{{count}}st",
+    "dayOfMonth_ordinal_other": "{{count}}th",
+    "dayOfMonth_ordinal_two": "{{count}}nd",
+    "days": {
+      "fri": "Fri",
+      "mon": "Mon",
+      "sat": "Sat",
+      "sun": "Sun",
+      "thu": "Thu",
+      "tue": "Tue",
+      "wed": "Wed"
+    },
+    "daysAtTimes": "{{days}} at {{times}}",
+    "daysInMonths": "{{days}} in {{months}}",
+    "daysOfEachMonth": "{{days}} of each month",
+    "daysOfMonths": "{{months}} {{days}}",
+    "everyMinute": "every minute",
+    "everyNDays": "every {{count}} days",
+    "everyNDaysInMonths": "{{months}} every {{count}} days",
+    "everyNHours": "every {{count}} hours",
+    "everyNHoursAt": "every {{count}} hours at {{minutes}}",
+    "everyNHoursBetween": "every {{count}} hours between {{first}} and {{last}}",
+    "everyNMinutes": "every {{count}} minutes",
+    "everyNMonths": "every {{count}} months",
+    "hourly": "hourly",
+    "hourlyAt": "hourly at {{minutes}}",
+    "hourlyBetween": "hourly between {{first}} and {{last}}",
+    "listSeparator": ", ",
+    "minuteMark": ":{{minute}}",
+    "minutesBetween": "at {{minutes}} between {{first}} and {{last}}",
+    "minutesPastTimes": "at {{minutes}} past {{times}}",
+    "months": {
+      "apr": "Apr",
+      "aug": "Aug",
+      "dec": "Dec",
+      "feb": "Feb",
+      "jan": "Jan",
+      "jul": "Jul",
+      "jun": "Jun",
+      "mar": "Mar",
+      "may": "May",
+      "nov": "Nov",
+      "oct": "Oct",
+      "sep": "Sep"
+    },
+    "nthWeekday": {
+      "fifth": "fifth {{day}}",
+      "fifth_sunday": "fifth {{day}}",
+      "first": "first {{day}}",
+      "first_sunday": "first {{day}}",
+      "fourth": "fourth {{day}}",
+      "fourth_sunday": "fourth {{day}}",
+      "second": "second {{day}}",
+      "second_sunday": "second {{day}}",
+      "third": "third {{day}}",
+      "third_sunday": "third {{day}}"
+    },
+    "nthWeekdayOfEachMonth": "{{days}} of each month",
+    "rawCronInUtc": "{{cron}} (UTC)",
+    "time": {
+      "am": "{{hour}}am",
+      "amWithMinutes": "{{hour}}:{{minute}}am",
+      "pm": "{{hour}}pm",
+      "pmWithMinutes": "{{hour}}:{{minute}}pm",
+      "twelveAm": "12am",
+      "twelveAmWithMinutes": "12:{{minute}}am",
+      "twelvePm": "12pm",
+      "twelvePmWithMinutes": "12:{{minute}}pm"
+    },
+    "timeInUtc": "{{time}} UTC",
+    "weekdays": "weekdays",
+    "weekends": "weekends"
+  },
+  "improveAutomationModalCoreV2": {
+    "cancel": "Cancel",
+    "eGImproveTheVisualizationReduce": "e.g. improve the visualization, reduce false positives, make reports more actionable...",
+    "recordOnly": {
+      "description": "This will start a Droid session that reviews “{{automationName}}” and suggests changes to its prompt and settings.",
+      "placeholder": "e.g. only act on new issues, make the replies shorter, ignore bot messages..."
+    },
+    "reviewImprove": "Review & Improve",
+    "startSession": "Start session",
+    "starting": "Starting...",
+    "startsOnEnvironmentComputer": "The session runs on a new Computer started from the automation's Environment, so it can take a minute or two to open.",
+    "thisWillStartADroidSession": "This will start a Droid session that analyzes “{{automationName}}” and suggests optimizations to its prompt, memory, and outputs.",
+    "whatShouldTheReviewFocusOn": "What should the review focus on? (optional)"
+  },
+  "modelSelectorV2": {
+    "default": "Default",
+    "labelWithAvailability": "{{label}}. {{availability}}",
+    "loadingCustomModels": "Loading custom models…",
+    "model": "Model",
+    "noModelsAvailable": "No models available",
+    "selectAModel": "Select a model..."
+  },
+  "optionalSettingsSectionV2": {
+    "additionalSettings": "Additional settings",
+    "fineTuneHowThisAutomationRuns": "Fine-tune how this automation runs. Everything here has a sensible default.",
+    "optional": "Optional"
+  },
+  "pendingAutomationCreationState": {
+    "cancelCreation": "Cancel creation",
+    "connectingToLocalDaemon": "Connecting to local daemon",
+    "creatingAutomationCard": "Creating automation card",
+    "initializingRemoteSetupSession": "Initializing remote setup session",
+    "initializingSetupSession": "Initializing setup session",
+    "openSetupSession": "Open setup session",
+    "registeringRemoteSchedule": "Registering remote schedule",
+    "registeringSchedule": "Registering schedule",
+    "scaffoldingAutomationFiles": "Scaffolding automation files",
+    "scaffoldingAutomationFilesRemotely": "Scaffolding automation files remotely",
+    "waitingForYourResponse": "Waiting for your response",
+    "wakingAndConnectingRemoteComputer": "Waking and connecting remote computer"
+  },
+  "pendingAutomationCreationsAtom": {
+    "setupInProgressDescription": "Automation setup is still in progress."
+  },
+  "promptModelSelectorV2": {
+    "automationModel": "Automation model",
+    "automationModelWithAvailability": "Automation model. {{availability}}",
+    "default": "Default",
+    "loadingCustomModels": "Loading custom models…",
+    "loadingModel": "Loading model",
+    "loadingModels": "Loading models...",
+    "modelName": "Model: {{model}}",
+    "noModelsAvailable": "No models available"
+  },
+  "promptReasoningSelectorV2": {
+    "automationReasoningLevel": "Automation reasoning level",
+    "default": "Default",
+    "defaultWithEffort": "Default ({{effort}})",
+    "loadingReasoningLevel": "Loading reasoning level",
+    "reasoningLevelName": "Reasoning Level: {{level}}"
+  },
+  "qaMode": {
+    "autoCommitUpdates": "Auto-commit updates",
+    "disableToKeepTheQaWorkflow": "Disable to keep the QA workflow on disk but skip every run.",
+    "eG10Default": "e.g. 10 (default)",
+    "editCurrentlyUnsupported": "(Edit currently unsupported)",
+    "failureLearning": "Failure learning",
+    "howQaShouldPropagateNewFailure": "How QA should propagate new failure-mode learnings back into the skill files.",
+    "imagemagick": "ImageMagick",
+    "installImagemagickInCiSoQa": "Install ImageMagick in CI so QA can generate animated GIF diffs of before/after screenshots.",
+    "openAPr": "Open a PR",
+    "suggestInReportDefault": "Suggest in report (default)",
+    "timeoutMinutes": "Timeout (minutes)"
+  },
+  "qaModeV2": {
+    "autoCommitUpdates": "Auto-commit updates",
+    "disableToKeepTheQaWorkflow": "Disable to keep the QA workflow on disk but skip every run.",
+    "eG10Default": "e.g. 10 (default)",
+    "editCurrentlyUnsupported": "(Edit currently unsupported)",
+    "failureLearning": "Failure learning",
+    "howQaShouldPropagateNewFailure": "How QA should propagate new failure-mode learnings back into the skill files.",
+    "imagemagick": "ImageMagick",
+    "installImagemagickInCiSoQa": "Install ImageMagick in CI so QA can generate animated GIF diffs of before/after screenshots.",
+    "openAPr": "Open a PR",
+    "suggestInReportDefault": "Suggest in report (default)",
+    "summary": {
+      "timeout": "Timeout: {{timeout}} min"
+    },
+    "timeoutMinutes": "Timeout (minutes)"
+  },
+  "reasoningLevelSelectorV2": {
+    "default": "Default",
+    "defaultWithEffort": "Default ({{effort}})",
+    "noReasoningLevelsAvailable": "No reasoning levels available",
+    "selectAReasoningLevel": "Select a reasoning level..."
+  },
+  "runAsPicker": {
+    "chooseServiceAccount": "Choose a service account",
+    "learnMore": "Learn more",
+    "noServiceAccounts": "Your organization has no active service accounts yet. Create one in Settings → Identity → Service Accounts.",
+    "noServiceAccountsMatch": "No service accounts match",
+    "runAsServiceAccount": "Run as service account",
+    "runAsServiceAccountOptional": "Run as service account?",
+    "searchServiceAccounts": "Search service accounts…"
+  },
+  "runHistory": {
+    "never": "Never",
+    "pageSummary": "{{start}}–{{end}} of {{total}}",
+    "statusTooltip": {
+      "cancelled": "Session cancelled.",
+      "failed": "Session failed.",
+      "inProgress": "Session in progress.",
+      "success": "Session completed successfully."
+    },
+    "timestamp": "{{date}} · {{time}}",
+    "tooltip": {
+      "description": "Description: {{description}}",
+      "failed": "Failed: {{time}}",
+      "parentSession": "Parent session: {{sourceRunId}}",
+      "posted": "Posted: {{time}}",
+      "reason": "Reason: {{reason}}",
+      "runId": "Run ID: {{runId}}",
+      "triggeredBy": "Triggered by: {{sourceName}}"
+    }
+  },
+  "runOnComputerPicker": {
+    "computer": "computer",
+    "connectedToName": "Connected to {{name}}.",
+    "connectingToName": "Connecting to {{name}}…",
+    "droidComputers": "Droid Computers",
+    "localComputerName": "{{name}} (local)",
+    "reconnectingToName": "Reconnecting to {{name}}…",
+    "remoteComputersNotEnabled": "Remote computers are not enabled for your organization",
+    "remoteComputersNotOnPlan": "Droid Computers are not available on your current plan. Upgrade to Pro or higher to use them.",
+    "remoteComputersRegionUnsupported": "Droid Computers are not available in this region.",
+    "remoteComputersSubscriptionInactive": "Droid Computers are not available due to your subscription status",
+    "selectTemplateOrComputer": "Select environment or computer",
+    "thisComputerAlreadyHasAutomations": "This computer already has {{count}} automations set up. Consider running this automation on a different computer to avoid overloading it."
+  },
+  "runOnComputerPickerV2": {
+    "computerOrTemplateThisAutomationRunsOn": "Computer or Environment this automation runs on.",
+    "retry": "Retry",
+    "runOn": "Run on"
+  },
+  "runTargetLabel": {
+    "environment": "{{name}} (environment)",
+    "localMachine": "Local machine",
+    "notSet": "Not set",
+    "orgDefault": "Organization default",
+    "thisMachine": "This machine",
+    "thisMachineWithName": "This machine ({{name}})",
+    "unknownComputer": "Unknown computer",
+    "unknownEnvironment": "Unknown environment",
+    "workstreamAgent": "Agent: {{name}}",
+    "workstreamAgentUntitled": "Workstream agent",
+    "workstreamOrchestrator": "Orchestrator"
+  },
+  "scheduleInput": {
+    "dayNames": {
+      "friday": "Friday",
+      "monday": "Monday",
+      "saturday": "Saturday",
+      "sunday": "Sunday",
+      "thursday": "Thursday",
+      "tuesday": "Tuesday",
+      "wednesday": "Wednesday"
+    },
+    "inputError": "Enter a schedule like \"every Monday at 9am PST\" or a 5-part cron expression.",
+    "inputPlaceholder": "e.g. every Monday at 9am PST or 0 9 * * 1",
+    "list": {
+      "many": "{{items}} and {{last}}",
+      "pair": "{{first}} and {{second}}",
+      "separator": ", "
+    },
+    "monthNames": {
+      "april": "April",
+      "august": "August",
+      "december": "December",
+      "february": "February",
+      "january": "January",
+      "july": "July",
+      "june": "June",
+      "march": "March",
+      "may": "May",
+      "november": "November",
+      "october": "October",
+      "september": "September"
+    },
+    "neverRuns": "Never runs: no date matches this schedule",
+    "nthWeekday": {
+      "fifth": "fifth {{day}}",
+      "fifth_sunday": "fifth {{day}}",
+      "first": "first {{day}}",
+      "first_sunday": "first {{day}}",
+      "fourth": "fourth {{day}}",
+      "fourth_sunday": "fourth {{day}}",
+      "second": "second {{day}}",
+      "second_sunday": "second {{day}}",
+      "third": "third {{day}}",
+      "third_sunday": "third {{day}}"
+    },
+    "recurrence": {
+      "atPrefix": "{{recurrence}} at ",
+      "everyDayAtUtc": "every day at {{time}} UTC",
+      "everyDaysAtUtc": "every {{days}} at {{time}} UTC",
+      "everyHour": "every hour",
+      "everyHourAtMinute": "every hour at minute {{minute}}",
+      "everyHourAtMinutes": "every hour at minutes {{minutes}}",
+      "everyMinute": "every minute",
+      "everyNMinutes": "every {{minutes}} minutes",
+      "everyWeekdayAtUtc": "every weekday at {{time}} UTC",
+      "everyWeekendDayAtUtc": "every weekend day at {{time}} UTC",
+      "localAt": "{{recurrence}} at {{times}} {{timeZone}}",
+      "localEveryDay": "every day",
+      "localEveryDays": "every {{days}}",
+      "localEveryWeekday": "every weekday",
+      "localEveryWeekendDay": "every weekend day",
+      "localMonthly": "on the {{day}} of every month",
+      "localWithUtc": "{{local}} ({{utc}})",
+      "monthlyAtUtc": "on the {{day}} of every month at {{time}} UTC",
+      "nthWeekdayAtUtc": "on the {{day}} of every month at {{time}} UTC",
+      "onSchedule": "on schedule {{cron}}",
+      "scopeWeekdays": "weekdays",
+      "scopeWeekends": "weekends",
+      "scoped": "{{recurrence}} on {{days}}",
+      "yearlyAtUtc": "every {{month}} {{day}} at {{time}} UTC"
+    },
+    "runs": "Runs {{schedule}}",
+    "time": {
+      "am": "{{hour}}:{{minute}} AM",
+      "pm": "{{hour}}:{{minute}} PM",
+      "twelveAm": "12:{{minute}} AM",
+      "twelvePm": "12:{{minute}} PM"
+    },
+    "timeZones": {
+      "centralDaylight": "Central Daylight Time",
+      "centralStandard": "Central Standard Time",
+      "easternDaylight": "Eastern Daylight Time",
+      "easternStandard": "Eastern Standard Time",
+      "mountainDaylight": "Mountain Daylight Time",
+      "mountainStandard": "Mountain Standard Time",
+      "pacificDaylight": "Pacific Daylight Time",
+      "pacificStandard": "Pacific Standard Time"
+    }
+  },
+  "securityAuditMode": {
+    "customInstructions": "Custom instructions",
+    "disableToKeepTheSecurityAudit": "Disable to keep the security audit workflow on disk but skip every scheduled run.",
+    "eGFocusOnAuthenticationAnd": "e.g. focus on authentication and the API layer",
+    "optionalAppendedToTheSlashCommand": "Optional. Appended to the <code>/security-review</code> slash command."
+  },
+  "securityAuditModeV2": {
+    "addedToTheEndOfTheCommand": "Added to the end of the <code>/security-review</code> command.",
+    "customInstructions": "Custom instructions",
+    "customInstructionsOptional": "Custom instructions (optional)",
+    "disableToKeepTheSecurityAudit": "Disable to keep the security audit workflow on disk but skip every scheduled run.",
+    "eGFocusOnAuthenticationAnd": "e.g. focus on authentication and the API layer",
+    "optionalAppendedToTheSlashCommand": "Optional. Appended to the <code>/security-review</code> slash command.",
+    "summary": {
+      "customInstructions": "Custom instructions: {{extras}}"
+    }
+  },
+  "sessionPrivacySelectorV2": {
+    "sessionPrivacy": "Session privacy"
+  },
+  "shareAutomationModalCoreV2": {
+    "anyoneInYourOrganizationCanView": "Anyone in your organization can view",
+    "copied": "Copied",
+    "copy": "Copy",
+    "onlyYouCanAccess": "Only you can access",
+    "organization": "Organization",
+    "private": "Private",
+    "shareAutomation": "Share Automation",
+    "shareLink": "Share Link",
+    "visibility": "Visibility"
+  },
+  "shared": {
+    "autonomyLevel": "Autonomy level",
+    "enabled": "Enabled",
+    "high": "High",
+    "low": "Low",
+    "medium": "Medium",
+    "setsTheAutoFlagPassedTo": "Sets the <code>--auto</code> flag passed to <code>droid exec</code>."
+  },
+  "sharedV2": {
+    "autonomyLevel": "Autonomy level",
+    "enabled": "Enabled",
+    "reviewGuidelines": {
+      "actedOnOnly": "Only comments that authors acted on are used.",
+      "description": "Turns review comments your team acted on into guidelines Droid follows. Every update is a pull request you approve.",
+      "includeBotComments": "Include bot comments",
+      "label": "Learn review guidelines",
+      "monthly": "Monthly",
+      "refresh": "Refresh",
+      "weekly": "Weekly"
+    },
+    "setsTheAutoFlagPassedTo": "Sets the <code>--auto</code> flag passed to <code>droid exec</code>."
+  },
+  "slackAutomationFormV2": {
+    "aMessageContainingOneOfThese": "A message containing one of these never starts a run.",
+    "aSlackMemberIdABot": "A Slack member ID, a bot ID, or a bot's display name.",
+    "addedToEverySessionAMatching": "Added to every session a matching message starts.",
+    "channels": "Channels",
+    "droidStartsARunWhenA": "Droid starts a run when a message is posted in one of these channels.",
+    "eGB0a663lrwusAxiomMonitorMonitor": "e.g. B0A663LRWUS, Axiom Monitor Monitor",
+    "excludeKeywords": "Exclude keywords",
+    "excludeSenders": "Exclude senders",
+    "instructions": "Instructions",
+    "instructionsToInjectIntoEverySession": "Instructions to inject into every session triggered from this channel...",
+    "keywords": "Keywords",
+    "matchChannelsNamed": "Match channels named {{pattern}}",
+    "narrowWhichMessagesStartARun": "Narrow which messages start a run and where the run executes.",
+    "onlyMessagesContainingOneOfThese": "Only messages containing one of these start a run. Leave empty to trigger on every message.",
+    "pickAtLeastOneChannel": "Pick at least one channel.",
+    "prompt": "Prompt",
+    "removeChannel": "Remove channel {{name}}",
+    "removeChannelNameRule": "Remove channel name rule {{name}}",
+    "removeKeyword": "Remove keyword {{keyword}}",
+    "removeLabelValue": "Remove {{label}} {{value}}",
+    "searchChannels": "Search channels...",
+    "trigger": "Trigger",
+    "triggerOnMessagesFrom": "Trigger on messages from",
+    "typeKeywordsSeparatedByCommas": "Type keywords separated by commas",
+    "typeKeywordsToExcludeSeparatedBy": "Type keywords to exclude, separated by commas"
+  },
+  "slackChannelSelection": {
+    "matchListWithOverflow_one": "Matches {{count}} channel right now: {{names}} (...{{overflow}} more)",
+    "matchListWithOverflow_other": "Matches {{count}} channels right now: {{names}} (...{{overflow}} more)",
+    "matchList_one": "Matches {{count}} channel right now: {{names}}",
+    "matchList_other": "Matches {{count}} channels right now: {{names}}"
+  },
+  "softwareFactory": {
+    "addNewGroup": "Add new group",
+    "badges": {
+      "intakeRate": "INTAKE RATE",
+      "mergeGate": "MERGE GATE",
+      "reliability": "RELIABILITY",
+      "shipRate": "SHIP RATE",
+      "trend": "TREND"
+    },
+    "comingSoon": "Coming soon",
+    "createAPersonalSoftwareFactoryView": "Create a personal Software Factory view from repos you can access to start tracking automation metrics.",
+    "createRepositoryGroup": "Create repository group",
+    "defaultView": "Default view",
+    "deleteGroup": "Delete group",
+    "deleteGroupAriaLabel": "Delete {{label}}",
+    "deploy": "DEPLOY",
+    "editGroup": "Edit group",
+    "editGroupAriaLabel": "Edit {{label}}",
+    "editRepositoryGroup": "Edit repository group",
+    "healthFraction": {
+      "healthy": "{{healthy}}/{{total}} healthy",
+      "integrations": "{{healthy}}/{{total}} integrations",
+      "repos": "{{healthy}}/{{total}} repos"
+    },
+    "healthy": "Healthy",
+    "inputSources_one": "{{count}} input source",
+    "inputSources_other": "{{count}} input sources",
+    "loadingMetricLabels": {
+      "averageTicketsPerDay": "Average tickets/day",
+      "effectivenessReports": "Effectiveness reports",
+      "linesOfCode": "Lines of code",
+      "numberOfDocs": "Number of docs",
+      "numberOfIncidents": "Number of incidents",
+      "pagesGenerated": "Pages generated",
+      "prsInReview": "PRs in review",
+      "prsPerDay": "PRs per day",
+      "ticketsInBacklog": "Tickets in backlog",
+      "validations": "Validations"
+    },
+    "makeDefaultView": "Make default view",
+    "makeGroupDefaultAriaLabel": "Make {{label}} the default Software Factory view",
+    "metrics": {
+      "incidentsProcessed": {
+        "title": "Incidents Processed",
+        "tooltipDescription": "Errors, alerts and incidents processed by an Incident Response automation",
+        "tooltipTitle": "Incidents Processed count",
+        "unitLabel": "INCIDENTS",
+        "valueLabel": "incidents"
+      },
+      "prValidations": {
+        "title": "PR Validations",
+        "unitLabel": "VALIDATIONS",
+        "valueLabel": "validations"
+      },
+      "prsMerged": {
+        "title": "PRs Merged",
+        "tooltipDescription": "Pull requests merged in this range.",
+        "tooltipTitle": "PRs Merged count",
+        "unitLabel": "PRS",
+        "valueLabel": "PRs"
+      },
+      "ticketsTriaged": {
+        "title": "Tickets Triaged",
+        "tooltipDescription": "Tickets classified, deduplicated, or routed by a Triage automation",
+        "tooltipTitle": "Tickets Triaged count",
+        "unitLabel": "TIX",
+        "valueLabel": "tickets"
+      }
+    },
+    "noData": "No data",
+    "noPeakData": "NO PEAK DATA",
+    "noPriorData": "No prior data",
+    "noRepositoryGroupsYet": "No repository groups yet",
+    "notConfigured": "Not configured",
+    "peak": "PEAK {{label}}",
+    "prValidationsTooltip": {
+      "breakdown": "{{qa}} QA + {{codeReviews}} code reviews = {{total}}",
+      "title": "PR Validations count",
+      "total": "Total: {{total}}"
+    },
+    "prsMergedCaption": "prs merged / {{range}}",
+    "repoCount": "{{formattedCount}} repos",
+    "saveGroup": "Save group",
+    "signal": "SIGNAL",
+    "signalsCaption": "signals / {{range}}",
+    "stageCount": {
+      "automations": "{{count}} automations",
+      "integrations": "{{count}} integrations"
+    },
+    "stages": {
+      "codeGen": {
+        "automationCountTooltip": "Number of connected code-gen integrations.",
+        "description": "Turn engineering requests into implementation sessions with product context, repo context, and progress updates carried forward.",
+        "title": "Code-gen"
+      },
+      "docs": {
+        "automationCountTooltip": "Number of documentation automations.",
+        "description": "Keep repository knowledge, setup notes, APIs, and implementation context aligned as code changes.",
+        "title": "Document"
+      },
+      "monitor": {
+        "automationCountTooltip": "Number of monitoring automations.",
+        "description": "Track errors, incidents, and automation effectiveness so operational issues feed back into engineering work.",
+        "title": "Monitor"
+      },
+      "release": {
+        "automationCountTooltip": "Release automation is coming soon.",
+        "description": "Coordinate release readiness, deployment gates, and ship workflows once release automation becomes available.",
+        "title": "Release"
+      },
+      "triage": {
+        "automationCountTooltip": "Number of triage automations.",
+        "description": "Classify incoming work, reduce duplicate requests, and route actionable items with the right context attached.",
+        "title": "Triage"
+      },
+      "validate": {
+        "automationCountTooltip": "Number of validation automations.",
+        "description": "Attach code review, security review, and QA automation to repositories so pull requests are checked before changes merge.",
+        "title": "Validate"
+      }
+    },
+    "trackHowAutomationIsScalingEngineering": "Track how automation is scaling engineering workflows across reviews, triage, shipping, and incident response. These metrics show where automation is creating leverage and where your team can invest next.",
+    "unknown": "UNKNOWN",
+    "yourSoftwareFactory": "Your Software Factory"
+  },
+  "softwareFactoryChart": {
+    "max": "MAX",
+    "mid": "MID",
+    "min": "MIN",
+    "now": "NOW",
+    "thisMonth": "This month",
+    "thisQuarter": "This quarter",
+    "thisWeek": "This week"
+  },
+  "softwareFactoryStageDetail": {
+    "back": "← Back",
+    "codeGen": {
+      "description": "Code-gen is where engineering intent turns into implementation work. Connect your planning and communication systems so requests can be delegated with requirements, decisions, and repository context carried into the session.",
+      "linear": {
+        "description": "Delegate implementation work from a connected ticket. Issue details, comments, labels, and acceptance criteria become context while progress stays tied back to the source item."
+      },
+      "slack": {
+        "description": "Delegate implementation work from a connected conversation. The surrounding discussion, files, and decisions become context for a session that reports progress back to the source."
+      },
+      "title": "Code-gen"
+    },
+    "codeValidation": {
+      "codeReview": {
+        "description": "Pull requests are reviewed for correctness, regressions, maintainability, and repository-specific conventions. Focused feedback helps teams catch issues while context is fresh.",
+        "title": "Code review"
+      },
+      "description": "Validate is the quality gate before merge. Automated review, security, and QA workflows attach to repositories so implementation work is checked for correctness, risk, and expected behavior before it ships.",
+      "qa": {
+        "description": "Plans validation around the changed behavior, runs the configured workflow, and reports failures with reproduction context. QA keeps implementation sessions tied to evidence that the user path still works.",
+        "title": "QA"
+      },
+      "securityAudit": {
+        "description": "Runs a scheduled deep security review across the repository, surfacing vulnerabilities, secret exposure, and risky dependencies on a recurring cadence rather than per pull request.",
+        "title": "Security audit"
+      },
+      "securityReview": {
+        "description": "Adds a security-focused pass for vulnerabilities, secret exposure, unsafe dependencies, and security-sensitive code paths. Use it on repositories where changes need extra scrutiny before they merge.",
+        "title": "Security review"
+      },
+      "title": "Validate"
+    },
+    "columns": {
+      "automations": "Automations",
+      "checks": "Checks",
+      "repository": "Repository"
+    },
+    "docs": {
+      "autoWiki": {
+        "description": "Reads the latest repository state and updates project knowledge with architecture notes, APIs, setup steps, and operational context. AutoWiki helps documentation stay close to the code instead of drifting over time."
+      },
+      "description": "Document is the knowledge layer after code changes land. Repository documentation, setup steps, APIs, and architecture context stay aligned so engineers and agents can rely on the latest implementation map.",
+      "title": "Document"
+    },
+    "emptyText": {
+      "agentEffectiveness": "No agent effectiveness check is available.",
+      "incidentResponse": "No incident response automations have been created yet.",
+      "repositories": "No repositories have this automation yet.",
+      "triage": "No triage automations have been created yet."
+    },
+    "lastRun": {
+      "daysAgo": "{{count}}d ago",
+      "hoursAgo": "{{count}}h ago",
+      "last7d": "Last 7d",
+      "minutesAgo": "{{count}}m ago",
+      "monthsAgo": "{{count}}mo ago",
+      "never": "Never",
+      "secondsAgo": "{{count}}s ago",
+      "weeksAgo": "{{count}}w ago",
+      "yearsAgo": "{{count}}y ago"
+    },
+    "observability": {
+      "agentEffectiveness": {
+        "description": "Checks whether recent automation activity has been measured against engineering outcomes. This gives teams a simple signal that agent work is being evaluated, not just counted.",
+        "noRecentRun": "No recent run",
+        "noRecentRunDetected": "No qualifying agent effectiveness run was detected in the last week.",
+        "recentRun": "Recent run",
+        "recentRunDetected": "A qualifying agent effectiveness run was detected in the last week.",
+        "title": "Agent Effectiveness"
+      },
+      "description": "Monitor closes the loop between errors, incidents, and engineering action. Incident response automations organize follow-up work, while Agent Effectiveness checks whether automation activity is producing useful engineering outcomes.",
+      "incidentResponse": {
+        "description": "Helps coordinate follow-up for incidents, errors, and alerts by gathering context, summarizing what changed, and tracking next steps. Use it to turn operational issues into structured engineering work.",
+        "title": "Incident Response"
+      },
+      "title": "Monitor"
+    },
+    "rowDetail": {
+      "lastRun": "Last run: {{status}}",
+      "status": "Status: {{status}}"
+    },
+    "securityReviewDisclaimer": "Run activity is scoped to repositories with security review enabled, but workflow runs include the full review job and cannot be split into security-only runs yet.",
+    "triage": {
+      "description": "Triage is the intake layer of the Software Factory. Incoming requests are reviewed, actionable engineering work is identified, duplicate items are checked, and the right work is routed to the right team before it reaches planning.",
+      "panelDescription": "These automations were created from the triage template and matched by their persisted template id. Each one turns inbound requests into structured work, preserves source context, and keeps duplicate items from fragmenting backlog ownership.",
+      "panelTitle": "Triage automations",
+      "title": "Triage"
+    },
+    "unitLabels": {
+      "automations": "automations",
+      "check": "check",
+      "repositories": "repositories"
+    },
+    "valueLabels": {
+      "audits": "audits",
+      "incidents": "incidents",
+      "ticketsTriaged": "tickets triaged",
+      "validations": "validations",
+      "wikiRefreshes": "wiki refreshes"
+    },
+    "viewOption": "view: {{name}}"
+  },
+  "stageDetailReusable": {
+    "createNew": "Create New",
+    "enabled": "Enabled",
+    "filterStagesBy": "Filter stages by {{integration}}",
+    "lastRun": "Last run",
+    "manageIntegrations": "Manage integrations",
+    "noPriorData": "No prior data",
+    "noRecentRun": "No recent run",
+    "noRowsToShow": "No rows to show.",
+    "notEnabled": "Not enabled",
+    "openIn": "Open in {{source}}",
+    "recentRun": "Recent run",
+    "setUpNow": "Set up now",
+    "sources": "Sources"
+  },
+  "stageMetricDetailContent": {
+    "back": "← Back"
+  },
+  "triggeredByPickerV2": {
+    "addAutomation": "Add automation…",
+    "chainedAfter": "Chained after",
+    "chainedAfterHelp": "Automations whose runs start this one when they end, whether they completed or failed.",
+    "loadingAutomations": "Loading automations…",
+    "noAutomationsMatch": "No automations match",
+    "noOtherAutomationsToPickFrom": "No other automations to pick from",
+    "onlyTheOwnerCanChangeWhich": "Only the owner can change which automations trigger this one: the sources have to come from the owner's automations.",
+    "removeName": "Remove {{name}}",
+    "searchAutomations": "Search automations…"
+  },
+  "triggersFieldV2": {
+    "addAtLeastOneGithubEvent": "Add at least one GitHub event to start runs.",
+    "addAtLeastOneGithubEventOrSchedule": "Add at least one GitHub event or schedule to start runs.",
+    "addSchedule": "Please add a schedule",
+    "editSchedule": "Edit schedule",
+    "eventsConfigured_one": "{{count}} event configured",
+    "eventsConfigured_other": "{{count}} events configured",
+    "fixedTriggers": "This workflow type's triggers cannot be modified",
+    "frequency": "Frequency",
+    "githubEvents": "GitHub events",
+    "other": "Other",
+    "runsOnAScheduleUseNaturalLanguage": "Runs on a schedule. Use natural language like \"every Monday at 9am\" or a 5-part cron expression.",
+    "schedule": "Schedule (CI)",
+    "scheduleOnly": "This workflow type only supports running on a schedule."
+  },
+  "useAutomationSessionV2": {
+    "authenticationRequired": "Authentication required",
+    "localAutomationsDesktopOnly": "Local automations can only be run from the desktop app"
+  },
+  "useCreateAutomationV2": {
+    "automationSetupDidNotComplete": "Automation setup did not complete.",
+    "ciAutomationRequiresAtLeastOneRepository": "CI automation requires at least one repository in \"owner/repo\" form.",
+    "couldNotRegisterTheAutomationSchedule": "Could not register the automation schedule. The setup session is still running, so open it to continue or cancel the creation.",
+    "failedToCreateAutomationPr": "Failed to create automation PR",
+    "failedToStartAutomationCreation": "Failed to start automation creation",
+    "noPrUrlReturned": "No PR URL returned",
+    "setupPrOpenedForRepo": "Setup PR opened for {{repo}}",
+    "setupPrsOpenedForRepositories": "Setup PRs opened for {{count}} repositories",
+    "viewPr": "View PR"
+  },
+  "useImproveAutomationV2": {
+    "recordPrompt": {
+      "focus": "What I want to change: {{focusArea}}",
+      "opening": "Edit the Factory automation with ID {{automationId}}.",
+      "review": "Review its prompt and settings, suggest improvements, and ask me which ones to apply before you change anything.",
+      "tools": "It is stored only in Factory, with no files on a computer, so read it with automations_read and change it with automations_edit (ReadAutomation and EditAutomation on an older Droid), both with executionLocation \"remote\"."
+    },
+    "startFailed": "Failed to start improvement session"
+  },
+  "useRunAutomationV2": {
+    "runFailed": "Failed to run automation"
+  },
+  "webhookCredentialsRevealModal": {
+    "connectYourSender": "Connect your sender",
+    "copyLabel": "Copy {{label}}",
+    "copyTheSecretNowItsStored": "Copy the secret now — it's stored as a hash and can't be shown again. If you lose it, rotate the secret to issue a new one: the receiver URL stays the same, but every sender still using the old secret stops working until you update it.",
+    "done": "Done",
+    "forToolsWithSeparateFieldsFor": "For tools with separate fields for the header name and value.",
+    "githubAndMostSaasWebhookSettings": "GitHub and most SaaS webhook settings have no field for custom headers.",
+    "identifiesTheStoredSecretWithoutRevealing": "Identifies the stored secret without revealing it. Copy it if you want a record of which secret is active.",
+    "ifYourSenderCanAddRequest": "If your sender can add request headers, use the following:",
+    "ifYourSenderOnlyAcceptsA": "If your sender only accepts a URL, use the following:",
+    "newWebhookSecret": "New webhook secret",
+    "recommendedKeepsTheSecretOutOf": "Recommended. Keeps the secret out of the URL.",
+    "runsAsIsAndShouldShow": "Runs as-is and should show up under Deliveries within seconds.",
+    "secret": "Secret",
+    "secretFingerprint": "Secret fingerprint",
+    "secretHeader": "Secret header",
+    "testCommand": "Test command",
+    "theSecretTravelsInTheUrl": "The secret travels in the URL, so it can appear in the sender's logs and delivery history. Rotate it if it leaks.",
+    "urlWithSecret": "URL with secret",
+    "webhookCreated": "Webhook created",
+    "webhookUrl": "Webhook URL"
+  },
+  "wikiMode": {
+    "branches": "Branches",
+    "commaSeparatedPushesToTheseBranches": "Comma-separated. Pushes to these branches refresh the wiki.",
+    "customInstructions": "Custom instructions",
+    "disableToKeepTheWikiWorkflow": "Disable to keep the wiki workflow on disk but skip every refresh.",
+    "eGIncludePackages": "e.g. --include packages/**",
+    "mainDev": "main, dev",
+    "optionalAppendedToTheSlashCommand": "Optional. Appended to the <code>/wiki</code> slash command."
+  },
+  "wikiModeV2": {
+    "addedToTheEndOfTheCommand": "Added to the end of the <code>/wiki</code> command.",
+    "branches": "Branches",
+    "commaSeparatedPushesToTheseBranches": "Comma-separated. Pushes to these branches refresh the wiki.",
+    "customInstructions": "Custom instructions",
+    "customInstructionsOptional": "Custom instructions (optional)",
+    "disableToKeepTheWikiWorkflow": "Disable to keep the wiki workflow on disk but skip every refresh.",
+    "eGIncludePackages": "e.g. --include packages/**",
+    "mainDev": "main, dev",
+    "optionalAppendedToTheSlashCommand": "Optional. Appended to the <code>/wiki</code> slash command.",
+    "summary": {
+      "branches": "Branches: {{branches}}",
+      "customInstructions": "Custom instructions: {{extras}}"
+    }
+  }
+}

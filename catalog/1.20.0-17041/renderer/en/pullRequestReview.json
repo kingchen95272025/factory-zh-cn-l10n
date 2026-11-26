@@ -1,0 +1,796 @@
+{
+  "commentChip": {
+    "conversation": "Conversation",
+    "tooltip": {
+      "byAuthorInConversation": "Comment by {{author}} in the conversation",
+      "byAuthorOnLocation": "Comment by {{author}} on {{location}}",
+      "inConversation": "Comment in the conversation",
+      "onLocation": "Comment on {{location}}",
+      "outdated": "{{tooltip}} (outdated)"
+    }
+  },
+  "pullRequestAccess": {
+    "approvalDescription": "A GitHub org owner needs to approve the Factory app. Once they do, check again.",
+    "checkAgain": "Check again",
+    "checksUnavailable": "Checks show here once Factory can read this pull request.",
+    "checksUnavailable_gitlab": "Checks show here once Factory can read this merge request.",
+    "connectDescription": "Pull requests are read with your own GitHub access. Connect your account to review this one here.",
+    "connectTitle": "Connect GitHub to see this pull request",
+    "copySetupLink": "Copy link for an admin",
+    "giveAccess": "Give access on GitHub",
+    "installApp": "Install Factory app",
+    "installAskAdminDescription": "Factory reads pull requests through the Factory app on GitHub. Send the setup link to a Factory admin in your org so they can install it on {{owner}}, then check again.",
+    "installDescription": "Factory reads pull requests through the Factory app on GitHub. Install it on {{owner}} with access to {{repository}}, then check again.",
+    "installStep": "Install the Factory app on {{owner}}",
+    "participantsUnavailable": "Reviews and labels show here once Factory can read this pull request.",
+    "participantsUnavailable_gitlab": "Reviews and labels show here once Factory can read this merge request.",
+    "repositoryAccessAskAdminDescription": "The Factory app is installed on {{owner}} but can't read {{repository}}. Send the setup link to a Factory admin in your org so they can give it access, then check again.",
+    "repositoryAccessDescription": "The Factory app is installed on {{owner}} but can't read {{repository}}. Give it access on GitHub, then check again.",
+    "repositoryStep": "Give the app access to {{repository}}",
+    "setupLink": "setup link",
+    "statusFailedDescription": "Factory couldn't check its GitHub setup, so it can't tell what is missing yet. Check again in a moment.",
+    "title": "Factory can't read {{repository}} yet"
+  },
+  "pullRequestCodeHostMenu": {
+    "connected": "Connected",
+    "current": "Current",
+    "heading": "Code hosts",
+    "label": "Code host: {{host}}",
+    "manageConnections": "Manage connections",
+    "notConnected": "Not connected",
+    "notConnectedTooltip": "Your {{host}} account isn't connected. Connect it from Manage connections."
+  },
+  "pullRequestCodeHostSetup": {
+    "connectionsDisabledManagerMessage": "Code Review lists pull requests through each person's own GitHub or GitLab account. Allow personal GitHub or GitLab connections in App Permissions to use it.",
+    "connectionsDisabledMemberMessage": "Code Review lists pull requests through your own GitHub or GitLab account, which your organization doesn't allow. Ask a Factory admin to allow personal GitHub or GitLab connections.",
+    "connectionsDisabledTitle": "Personal code host connections are turned off",
+    "githubAccountStep": "Connect your GitHub account",
+    "githubSteps": "Connect your account, then install the Factory app",
+    "gitlabAccountStep": "Connect your GitLab account",
+    "gitlabSelfHostedAccountStep": "Connect your GitLab Self-Hosted account",
+    "gitlabSelfHostedSetupStep": "Finish GitLab Self-Hosted setup in Settings, then connect your account",
+    "gitlabSteps": "Connect your GitLab group, then your account",
+    "needsAdmin": "Needs an admin",
+    "openAppPermissions": "Open App Permissions",
+    "useOtherHost": "Use {{provider}} instead"
+  },
+  "pullRequestCommentChatButton": {
+    "addToChat": "Add to chat"
+  },
+  "pullRequestConnectGithub": {
+    "changesLoadWithYourOwnGithub": "Changes load with your own GitHub access so reviews stay fast for everyone in the organization.",
+    "connectGithub": "Connect GitHub",
+    "connectGithubToReviewCodeHere": "Connect GitHub to review code here"
+  },
+  "pullRequestConnectGitlab": {
+    "changesLoadWithYourOwnGitlab": "Changes load with your own GitLab access so reviews stay fast for everyone in the organization.",
+    "connectGitlab": "Connect GitLab",
+    "connectGitlabToReviewCodeHere": "Connect GitLab to review code here"
+  },
+  "pullRequestConnectGitlabSelfHosted": {
+    "changesLoadWithYourOwnGitlabSelfHosted": "Changes load with your own {{host}} access so reviews stay fast for everyone in the organization.",
+    "connectGitlabSelfHosted": "Connect {{host}}",
+    "connectGitlabSelfHostedToReviewCodeHere": "Connect {{host}} to review code here",
+    "openSettings": "Open Settings",
+    "unavailableManagerDescription": "Add the GitLab Self-Hosted OAuth application's ID and secret in Settings so members can connect their own accounts.",
+    "unavailableMemberDescription": "Ask a Factory admin to finish GitLab Self-Hosted setup so you can connect your account.",
+    "unavailableTitle": "{{host}} isn't ready for personal connections"
+  },
+  "pullRequestDiffExpansion": {
+    "contextExpansionFailed": "Context could not be expanded. File contents must be available and match this diff. Try again."
+  },
+  "pullRequestFix": {
+    "chatHidden": "Go back to the chat to use Fix.",
+    "chatLoading": "Wait for the chat to load to use Fix.",
+    "missionUnavailable": "Fix isn't available in this mission.",
+    "readOnlySession": "Unavailable in a read-only session.",
+    "skillDisabled": "Turn on the fix-pull-request skill to use Fix.",
+    "updateDroid": "Update Droid to use Fix."
+  },
+  "pullRequestInbox": {
+    "authored": {
+      "title": "Your pull requests",
+      "title_gitlab": "Your merge requests"
+    },
+    "codeReviewNotEnabled": {
+      "managerMessage": "Contact your Factory account team to turn on Code Review for your organization.",
+      "memberMessage": "Ask a Factory admin in your organization to turn on Code Review.",
+      "title": "Code Review isn't turned on for your organization"
+    },
+    "connectGithubDescription": "Your review requests and pull requests are read with your own GitHub access.",
+    "connectGithubTitle": "Connect GitHub to see your pull requests",
+    "connectGitlabDescription": "Your review requests and merge requests are read with your own GitLab access.",
+    "connectGitlabSelfHostedDescription": "Your review requests and merge requests are read with your own {{host}} access.",
+    "connectGitlabSelfHostedTitle": "Connect {{host}} to see your merge requests",
+    "connectGitlabTitle": "Connect GitLab to see your merge requests",
+    "connectHostAccount": "Connect your account on {{host}} to see your pull requests.",
+    "connectHostAccount_gitlab": "Connect your account on {{host}} to see your merge requests.",
+    "loadFailedNoReason": "Something went wrong. Try again in a moment.",
+    "loadMoreFailed": "More pull requests could not be loaded.",
+    "loadMoreFailed_gitlab": "More merge requests could not be loaded.",
+    "loadingCodeHosts": "Loading code hosts",
+    "loadingSection": "Loading {{title}}",
+    "loadingYourPullRequests": "Loading your pull requests",
+    "loadingYourPullRequests_gitlab": "Loading your merge requests",
+    "noneLoadedListable": "None of the pull requests loaded so far can be shown here.",
+    "noneLoadedListable_gitlab": "None of the merge requests loaded so far can be shown here.",
+    "recentlyViewed": {
+      "emptyMessage": "None of the pull requests you viewed recently could be loaded.",
+      "emptyMessage_gitlab": "None of the merge requests you viewed recently could be loaded.",
+      "title": "Recently viewed"
+    },
+    "reviewRequested": {
+      "title": "Needs your review"
+    },
+    "sectionLoadFailed": "Pull requests couldn't be loaded",
+    "sectionLoadFailed_gitlab": "Merge requests couldn't be loaded",
+    "teamReviewRequested": {
+      "title": "Needs your team's review"
+    },
+    "yourPullRequestsLoadFailed": "Your pull requests couldn't be loaded",
+    "yourPullRequestsLoadFailed_gitlab": "Your merge requests couldn't be loaded"
+  },
+  "pullRequestInboxEmpty": {
+    "allMessage": "Open pull requests in repositories you can access show up here. To review one from somewhere else, paste its link in the search bar.",
+    "allMessage_gitlab": "Open merge requests in projects you can access show up here. To review one from somewhere else, paste its link in the search bar.",
+    "allTitle": "No open pull requests in your connected repositories",
+    "allTitle_gitlab": "No open merge requests in your connected projects",
+    "authoredMessage": "Pull requests you open in connected repositories show up here.",
+    "authoredMessage_gitlab": "Merge requests you open in connected projects show up here.",
+    "authoredTitle": "You have no open pull requests",
+    "authoredTitle_gitlab": "You have no open merge requests",
+    "clearSearch": "Clear search",
+    "filterNeededMessage": "Type some text or a filter, such as author:username or label:bug, to find merge requests in projects you can access.",
+    "filterNeededTitle": "Add a filter to search merge requests",
+    "goToAll": "Go to All",
+    "goToAll_gitlab": "Go to Search",
+    "noResultsMessage": "No pull requests match this search. Try fewer filters, or clear the search.",
+    "noResultsMessage_gitlab": "No merge requests match this search. Try fewer filters, or clear the search.",
+    "noResultsTitle": "No results",
+    "reviewRequestedMessage": "When someone asks you to review a pull request, it shows up here.",
+    "reviewRequestedMessage_gitlab": "When someone asks you to review a merge request, it shows up here.",
+    "reviewRequestedTitle": "No reviews requested",
+    "teamReviewRequestedMessage": "Pull requests that ask your teams for review show up here.",
+    "teamReviewRequestedMessage_gitlab": "GitLab merge requests ask people, not teams, for review. Merge requests that ask you show up in Review requests.",
+    "teamReviewRequestedTitle": "No team review requests",
+    "viewMessage": "Pull requests that match the view's search show up here. To widen the view, edit its search and save the changes.",
+    "viewMessage_gitlab": "Merge requests that match the view's search show up here. To widen the view, edit its search and save the changes.",
+    "viewTitle": "No pull requests match this view",
+    "viewTitle_gitlab": "No merge requests match this view"
+  },
+  "pullRequestInboxTabs": {
+    "all": "All",
+    "all_gitlab": "Search",
+    "label": "Pull request lists",
+    "label_gitlab": "Merge request lists",
+    "mine": "My PRs",
+    "mine_gitlab": "My MRs",
+    "recentlyViewed": "Recently viewed",
+    "reviewRequests": "Review requests",
+    "teamReviews": "Team reviews"
+  },
+  "pullRequestInboxViews": {
+    "queryTooLong": "Only searches up to {{max}} characters long can be saved.",
+    "viewLimitReached": "You can keep {{max}} saved views. Delete one to save another."
+  },
+  "pullRequestLayeredDiff": {
+    "architecture": "Architecture",
+    "diagram": "Diagram",
+    "howItAllFitsTogether": "How it all fits together",
+    "internalChanges": "Under the hood",
+    "noChangedLinesInTheCurrent": "No changed lines in the current diff match this layer.",
+    "overview": "Overview",
+    "productChanges": "Product changes",
+    "sublayerTitle": "{{layer}}: {{sublayer}}",
+    "unassignedChanges": "Unassigned changes",
+    "unassignedChangesSummary": "Changes not assigned to a walkthrough section."
+  },
+  "pullRequestMoreActions": {
+    "autoMerge": {
+      "connectProvider": "Connect your Git provider account in settings to change auto-merge.",
+      "disableFailure": "Auto-merge was not turned off.",
+      "disabled": "Auto-merge turned off.",
+      "draft": "Open the pull request for review to turn on auto-merge.",
+      "enableFailure": "Auto-merge was not turned on.",
+      "enabled": "Auto-merge turned on. The pull request merges once its requirements pass.",
+      "label": "Auto-merge",
+      "mergeable": "The pull request can merge now, so auto-merge has nothing to wait for.",
+      "method": "Merges once its requirements pass.",
+      "method_merge": "Merges with a merge commit once its requirements pass.",
+      "method_rebase": "Rebases and merges once its requirements pass.",
+      "method_squash": "Squashes and merges once its requirements pass.",
+      "unavailable": "Your Git provider does not let you change auto-merge for this pull request."
+    },
+    "connectGithubToChangeState": "Connect your Git provider account in settings to change the pull request state.",
+    "connectGithubToChangeState_gitlab": "Connect your GitLab account in settings to change the merge request state.",
+    "morePullRequestActions": "More pull request actions",
+    "morePullRequestActions_gitlab": "More merge request actions",
+    "stateAction": {
+      "close": {
+        "failure": "The pull request was not closed.",
+        "failure_gitlab": "The merge request was not closed.",
+        "label": "Close pull request",
+        "label_gitlab": "Close merge request",
+        "success": "Pull request closed.",
+        "success_gitlab": "Merge request closed."
+      },
+      "convertToDraft": {
+        "failure": "The pull request was not converted to a draft.",
+        "failure_gitlab": "The merge request was not converted to a draft.",
+        "label": "Convert to draft",
+        "success": "Pull request converted to a draft.",
+        "success_gitlab": "Merge request converted to a draft."
+      },
+      "readyForReview": {
+        "failure": "The pull request was not opened for review.",
+        "failure_gitlab": "The merge request was not opened for review.",
+        "label": "Open for review",
+        "success": "Pull request opened for review.",
+        "success_gitlab": "Merge request opened for review."
+      },
+      "reopen": {
+        "failure": "The pull request was not reopened.",
+        "failure_gitlab": "The merge request was not reopened.",
+        "label": "Reopen pull request",
+        "label_gitlab": "Reopen merge request",
+        "success": "Pull request reopened.",
+        "success_gitlab": "Merge request reopened."
+      }
+    },
+    "stateChangesGithubOnly": "This Git provider does not support pull request state changes."
+  },
+  "pullRequestOmittedFiles": {
+    "imageAlt": "{{side}} version of {{path}}",
+    "previewUnavailable": "Preview unavailable",
+    "side": {
+      "after": "After",
+      "before": "Before"
+    }
+  },
+  "pullRequestParticipantSelect": {
+    "assignees": {
+      "loadFailed": "The assignees could not be loaded.",
+      "loadMoreFailed": "More assignees could not be loaded.",
+      "loading": "Loading assignees…",
+      "loadingMore": "Loading more assignees",
+      "loadingMoreRow": "Loading more assignees…",
+      "noMatching": "No matching assignees",
+      "searchMoreFailed": "More assignees could not be searched.",
+      "searchPlaceholder": "Search assignees…",
+      "searching": "Searching assignees…"
+    },
+    "labels": {
+      "loadFailed": "The labels could not be loaded.",
+      "loadMoreFailed": "More labels could not be loaded.",
+      "loading": "Loading labels…",
+      "loadingMore": "Loading more labels",
+      "loadingMoreRow": "Loading more labels…",
+      "noMatching": "No matching labels",
+      "searchMoreFailed": "More labels could not be searched.",
+      "searchPlaceholder": "Search labels…",
+      "searching": "Searching labels…"
+    },
+    "reviewers": {
+      "loadFailed": "The reviewers could not be loaded.",
+      "loadMoreFailed": "More reviewers could not be loaded.",
+      "loading": "Loading reviewers…",
+      "loadingMore": "Loading more reviewers",
+      "loadingMoreRow": "Loading more reviewers…",
+      "noMatching": "No matching reviewers",
+      "searchMoreFailed": "More reviewers could not be searched.",
+      "searchPlaceholder": "Search reviewers…",
+      "searching": "Searching reviewers…"
+    }
+  },
+  "pullRequestParticipants": {
+    "addGithubOnly": "This Git provider does not support requesting reviews or adding labels.",
+    "checkingGithubAccess": "Checking your Git provider access…",
+    "collapseSection": "Collapse {{section}}",
+    "commentGroups": {
+      "bugs": "Bugs",
+      "comments": "Comments",
+      "mainConversation": "Main conversation",
+      "outdated": "Outdated",
+      "resolved": "Resolved",
+      "security": "Security",
+      "vulnerabilities": "Vulnerabilities"
+    },
+    "commentsFrom": "Comments from {{login}}",
+    "connectGithubToAdd": "Connect your Git provider account in settings to request reviews and add labels.",
+    "expandSection": "Expand {{section}}",
+    "labelNotRemoved": "The label was not removed.",
+    "labels": "Labels",
+    "mergeStatus": "Merge status",
+    "noCommentText": "No text",
+    "noLabels": "No labels",
+    "noOpenComments": "No open comments",
+    "noReviewsRequested": "No reviews are requested.",
+    "noReviewsYet": "No reviews yet",
+    "openComments": "Open comments",
+    "openCommentsSummary": "Open comments: {{counts}}",
+    "participantsLoadFailed": "Reviews and labels could not be loaded. Refresh to try again.",
+    "picker": {
+      "assignee": {
+        "add": "Add assignee",
+        "matchingSearch": "assignees matching the search",
+        "notAdded": "The assignee was not added."
+      },
+      "label": {
+        "add": "Add label",
+        "matchingSearch": "labels matching the search",
+        "notAdded": "The label was not added."
+      },
+      "reviewer": {
+        "add": "Add reviewer",
+        "matchingSearch": "reviewers matching the search",
+        "notAdded": "The reviewer was not added."
+      }
+    },
+    "requestReview": "Request review",
+    "requestedReviewers": "Requested reviewers",
+    "reviewCounts": {
+      "bugs_one": "{{count}} bug",
+      "bugs_other": "{{count}} bugs",
+      "comments_one": "{{count}} comment",
+      "comments_other": "{{count}} comments",
+      "openComments_one": "{{count}} open comment",
+      "openComments_other": "{{count}} open comments",
+      "security_one": "{{count}} security issue",
+      "security_other": "{{count}} security issues"
+    },
+    "reviewFrom": "Review from {{login}}",
+    "reviewerLimitReached": "This GitLab project allows only one reviewer.",
+    "reviewerState": {
+      "approved": "Approved",
+      "changesRequested": "Changes requested",
+      "commented": "Commented",
+      "dismissed": "Review dismissed",
+      "requested": "Review requested"
+    },
+    "reviews": "Reviews",
+    "sessions": "Sessions",
+    "shownGithubOnly": "This Git provider does not support review or label details."
+  },
+  "pullRequestReviewChatSession": {
+    "chatUnavailable": "This chat can't be shown.",
+    "loadingChat": "Loading pull request chat…",
+    "loadingChat_gitlab": "Loading merge request chat…",
+    "newChat": "New chat",
+    "tryAgain": "Try again"
+  },
+  "pullRequestReviewWorkspace": {
+    "branchName": "branch name",
+    "changesDetected": "Changes detected",
+    "changesUnavailableMessage": "Open it on GitHub to review the files it changes.",
+    "changesUnavailableMessage_gitlab": "Open it on GitLab to review the files it changes.",
+    "changesUnavailableTitle": "This pull request's changes can't be shown here",
+    "changesUnavailableTitle_gitlab": "This merge request's changes can't be shown here",
+    "codeFromEarlierRevision": "Code from an earlier revision.",
+    "codePreviewUnavailable": "Code preview unavailable.",
+    "collapseCommentAt": "Collapse comment at {{location}}",
+    "collapseThreadAt": "Collapse thread at {{location}}",
+    "commentKinds": {
+      "bug": "Bug",
+      "comment": "Comment",
+      "securityIssue": "Security issue"
+    },
+    "commentNotDeleted": "The comment was not deleted.",
+    "commentNotPosted": "The comment was not posted.",
+    "commentNotPostedStaleRevision": "The pull request changed, so your comment was not posted. Copy it, refresh, then post it again.",
+    "commentNotPostedStaleRevision_gitlab": "The merge request changed, so your comment was not posted. Copy it, refresh, then post it again.",
+    "commentNotSaved": "The comment was not saved.",
+    "commentOnEarlierRevision": "This comment is on an earlier revision.",
+    "commentsLoadFailed": "Comments could not be loaded. Refresh to try again.",
+    "connectProviderToMergeOrReview": "Connect your provider account in settings to merge or review as yourself.",
+    "copiedComment": "comment",
+    "copyComment": "Copy comment",
+    "diffLayers": "Diff layers",
+    "expandCommentAt": "Expand comment at {{location}}",
+    "expandThreadAt": "Expand thread at {{location}}",
+    "goToLocation": "Go to {{location}}",
+    "goToLocationInDiff": "Go to {{location}} in the diff",
+    "inlineCommentsLoadFailed": "Inline comments could not be loaded. Refresh to try again.",
+    "lineNotInCurrentDiff": "This line is not in the current diff.",
+    "linkedPullRequestRequired": "A linked pull request is required to view files.",
+    "mergeReviewUnsupportedProvider": "Merge and review are unavailable for this provider.",
+    "noAiSummary": "No AI summary was provided.",
+    "noCommentsOnThisPullRequest": "No comments on this pull request yet.",
+    "noCommentsOnThisPullRequest_gitlab": "No comments on this merge request yet.",
+    "noPullRequestYet": "No pull request yet",
+    "noWalkthrough": "No walkthrough for this pull request yet.",
+    "pendingReviewDiscarded": "Pending review discarded.",
+    "pendingReviewNotDiscarded": "The pending review was not discarded.",
+    "pullRequestMergeInProgress": "The provider is still merging. The pull request updates once it finishes.",
+    "pullRequestMergeQueued": "Pull request added to the merge queue.",
+    "pullRequestMerged": "Pull request merged.",
+    "pullRequestMerged_gitlab": "Merge request merged.",
+    "pullRequestNotMerged": "The pull request was not merged.",
+    "pullRequestNotMerged_gitlab": "The merge request was not merged.",
+    "pullRequestNotRefreshed": "The pull request could not be refreshed.",
+    "pullRequestNotRefreshed_gitlab": "The merge request could not be refreshed.",
+    "pullRequestUnavailableMessage": "Its repository may not be connected to your organization, or your Git provider account may not have access to it.",
+    "pullRequestUnavailableMessage_gitlab": "Its project may not be connected to your organization, or your GitLab account may not have access to it.",
+    "pullRequestUnavailableTitle": "This pull request can't be shown here",
+    "pullRequestUnavailableTitle_gitlab": "This merge request can't be shown here",
+    "pullRequestView": "Pull request view",
+    "pullRequestView_gitlab": "Merge request view",
+    "pullRequestsMerged_one": "{{count}} pull request merged.",
+    "pullRequestsMerged_other": "{{count}} pull requests merged.",
+    "rateLimitedMessage": "{{provider}} limits how many requests your account can make. Wait a minute, then retry.",
+    "reactionNotSaved": "The reaction was not saved.",
+    "refreshPullRequestData": "Refresh pull request data",
+    "refreshPullRequestData_gitlab": "Refresh merge request data",
+    "refreshToRetry": "Refresh the pull request to retry.",
+    "refreshToRetry_gitlab": "Refresh the merge request to retry.",
+    "replyToThreadAt": "Reply to thread at {{location}}",
+    "requestedChangesNotRecorded": "Your review was posted, but GitLab did not record requested changes. Request changes on GitLab.",
+    "resizeLayerSidebar": "Resize sidebar",
+    "resolveThread": "Resolve",
+    "reviewNotSubmitted": "The review was not submitted.",
+    "reviewSuccess": {
+      "approve": "Approval submitted.",
+      "comment": "Review comment submitted.",
+      "requestChanges": "Changes requested.",
+      "requestChangesDiscussion": "Review comment posted."
+    },
+    "summaryLoadFailed": "The pull request summary could not be loaded. Refresh to try again.",
+    "summaryLoadFailed_gitlab": "The merge request summary could not be loaded. Refresh to try again.",
+    "theProvidersChangedFileListMay": "The provider's changed-file list may be incomplete. Open the pull request to see all files.",
+    "theProvidersChangedFileListMay_gitlab": "GitLab's changed-file list may be incomplete. Open the merge request to see all files.",
+    "thePullRequestDiffCouldNot": "The pull request diff could not be loaded",
+    "thePullRequestDiffCouldNot_gitlab": "The merge request diff could not be loaded",
+    "threadReplyNotSaved": "Your reply was not posted. Refresh and try again.",
+    "threadResolutionNotSaved": "Could not update this review thread. Refresh and try again.",
+    "unknown": "Unknown",
+    "unresolveThread": "Unresolve",
+    "view": {
+      "diff": "Files changed",
+      "summary": "Conversation",
+      "validation": "Validation",
+      "walkthrough": "Walkthrough"
+    },
+    "walkthroughWrittenFromChat": {
+      "description": "Set up walkthroughs to get one on every pull request, updated with each new commit.",
+      "dismiss": "Dismiss",
+      "setUp": "Set up walkthroughs",
+      "title": "Droid wrote this walkthrough from your chat"
+    },
+    "walkthroughsUnavailableOnGitlabMessage": "The walkthrough automation runs on GitHub Actions, so merge requests don't get one yet.",
+    "walkthroughsUnavailableOnGitlabTitle": "Code walkthroughs aren't available for GitLab yet"
+  },
+  "pullRequestRowMenu": {
+    "addToChat": "Add to chat",
+    "autofix": "Auto-fix",
+    "autofixPaused": "Paused",
+    "autofixRecipient": "Follow-ups go to {{agent}}.",
+    "autofixSettings": "Auto-fix settings",
+    "autofixTooltipDescription": "Automatically addresses review comments, fixes failing CI checks, and rebases the PR by sending follow-up messages to the agent working on it.",
+    "autofixTooltipDescription_gitlab": "Automatically addresses review comments, fixes failing CI checks, and rebases the MR by sending follow-up messages to the agent working on it.",
+    "autofixTooltipTitle": "Automatic PR follow-ups",
+    "autofixTooltipTitle_gitlab": "Automatic MR follow-ups",
+    "autofixUnavailable": "Unavailable",
+    "copiedDesktopLink": "desktop link",
+    "copiedLink": "link",
+    "copiedProviderLink": "{{provider}} link",
+    "copyDesktopLink": "Copy desktop link",
+    "copyLink": "Copy link",
+    "copyProviderLink": "Copy {{provider}} link",
+    "off": "Off",
+    "on": "On",
+    "openInCodeReview": "Open in Code Review",
+    "openInNewTab": "Open in new tab",
+    "openInSidebar": "Open in sidebar",
+    "openOnProvider": "Open on {{provider}}"
+  },
+  "pullRequestSearch": {
+    "connectGithubDescription": "Connect GitHub to search pull requests.",
+    "connectGithubTitle": "Connect GitHub to search pull requests",
+    "connectGitlabDescription": "Connect GitLab to search merge requests.",
+    "connectGitlabSelfHostedDescription": "Connect {{host}} to search merge requests.",
+    "connectGitlabSelfHostedTitle": "Connect {{host}} to search merge requests",
+    "connectGitlabTitle": "Connect GitLab to search merge requests",
+    "noOtherLoadedMatches": "None of the other results loaded so far match this search.",
+    "noOtherMatches": "No other pull requests match this search.",
+    "noOtherMatches_gitlab": "No other merge requests match this search.",
+    "searchFailed": "Pull requests could not be searched.",
+    "searchFailedTitle": "Search failed",
+    "searchFailed_gitlab": "Merge requests could not be searched.",
+    "searchResultsTitle": "All pull requests",
+    "searchResultsTitle_gitlab": "All merge requests",
+    "searching": "Searching pull requests",
+    "searching_gitlab": "Searching merge requests"
+  },
+  "pullRequestSearchQuery": {
+    "dates": {
+      "format": "Type YYYY-MM-DD, optionally after >, >=, <, or <=, or a range like YYYY-MM-DD..YYYY-MM-DD.",
+      "pastMonth": "Past month",
+      "pastThreeMonths": "Past 3 months",
+      "pastWeek": "Past week",
+      "pastYear": "Past year",
+      "today": "Today"
+    },
+    "issues": {
+      "invalidValue": "{{value}} is not a value {{qualifier}}: takes.",
+      "missingValue": "{{qualifier}}: needs a value.",
+      "missingValueExamples": "{{qualifier}}: needs a value, such as {{examples}}.",
+      "notNegatable": "{{qualifier}}: cannot be excluded with -.",
+      "repeated": "{{qualifier}}: can be used only once on this code host.",
+      "textTooLong": "The search text is too long.",
+      "tooManyValues": "{{qualifier}}: can be used at most {{max}} times.",
+      "unknownQualifier": "{{qualifier}}: is not a search filter.",
+      "unsupported": "{{token}} cannot be searched on this code host yet."
+    },
+    "keys": {
+      "assignee": {
+        "description": "Pull requests assigned to someone",
+        "description_gitlab": "Merge requests assigned to someone",
+        "label": "Assignee",
+        "negatedDescription": "Leave out pull requests assigned to someone",
+        "negatedDescription_gitlab": "Leave out merge requests assigned to someone",
+        "negatedLabel": "Exclude assignee"
+      },
+      "author": {
+        "description": "Pull requests someone opened",
+        "description_gitlab": "Merge requests someone opened",
+        "label": "Author",
+        "negatedDescription": "Leave out pull requests someone opened",
+        "negatedDescription_gitlab": "Leave out merge requests someone opened",
+        "negatedLabel": "Exclude author"
+      },
+      "base": {
+        "description": "Pull requests merging into a branch",
+        "description_gitlab": "Merge requests targeting a branch",
+        "label": "Base branch"
+      },
+      "checks": {
+        "description": "Passing, failing, or pending checks",
+        "label": "Checks"
+      },
+      "closed": {
+        "description": "Closed on, before, after, or between dates",
+        "label": "Closed"
+      },
+      "commenter": {
+        "description": "Pull requests someone commented on",
+        "label": "Commenter",
+        "negatedDescription": "Leave out pull requests someone commented on",
+        "negatedLabel": "Exclude commenter"
+      },
+      "created": {
+        "description": "Opened on, before, after, or between dates",
+        "label": "Created"
+      },
+      "directReviewer": {
+        "description": "Pull requests requesting someone's review by name",
+        "description_gitlab": "Merge requests requesting someone's review by name",
+        "label": "Review requested directly",
+        "negatedDescription": "Leave out pull requests requesting someone's review by name",
+        "negatedDescription_gitlab": "Leave out merge requests requesting someone's review by name",
+        "negatedLabel": "Exclude direct review request"
+      },
+      "head": {
+        "description": "Pull requests merging from a branch",
+        "description_gitlab": "Merge requests from a branch",
+        "label": "Head branch"
+      },
+      "involves": {
+        "description": "Pull requests someone opened, is assigned to, commented on, or is mentioned in",
+        "label": "Involves",
+        "negatedDescription": "Leave out pull requests that involve someone",
+        "negatedLabel": "Exclude involvement"
+      },
+      "is": {
+        "description": "Open, closed, merged, unmerged, or draft",
+        "label": "State",
+        "negatedDescription": "Leave out pull requests in a state",
+        "negatedDescription_gitlab": "Leave out merge requests in a state",
+        "negatedLabel": "Exclude state"
+      },
+      "label": {
+        "description": "Pull requests with a label",
+        "description_gitlab": "Merge requests with a label",
+        "label": "Label",
+        "negatedDescription": "Leave out pull requests with a label",
+        "negatedDescription_gitlab": "Leave out merge requests with a label",
+        "negatedLabel": "Exclude label"
+      },
+      "mentions": {
+        "description": "Pull requests that mention someone",
+        "label": "Mentions",
+        "negatedDescription": "Leave out pull requests that mention someone",
+        "negatedLabel": "Exclude mention"
+      },
+      "merged": {
+        "description": "Merged on, before, after, or between dates",
+        "label": "Merged"
+      },
+      "milestone": {
+        "description": "Pull requests in a milestone",
+        "description_gitlab": "Merge requests in a milestone",
+        "label": "Milestone",
+        "negatedDescription": "Leave out pull requests in a milestone",
+        "negatedDescription_gitlab": "Leave out merge requests in a milestone",
+        "negatedLabel": "Exclude milestone"
+      },
+      "no": {
+        "description": "Pull requests without labels, an assignee, or a milestone",
+        "description_gitlab": "Merge requests without labels, an assignee, or a milestone",
+        "label": "Missing"
+      },
+      "repo": {
+        "description": "Pull requests in one repository",
+        "description_gitlab": "Merge requests in one project",
+        "label": "Repository",
+        "label_gitlab": "Project",
+        "negatedDescription": "Leave out pull requests in one repository",
+        "negatedDescription_gitlab": "Leave out merge requests in one project",
+        "negatedLabel": "Exclude repository",
+        "negatedLabel_gitlab": "Exclude project"
+      },
+      "review": {
+        "description": "Approved, changes requested, required, or none",
+        "label": "Review decision"
+      },
+      "reviewedBy": {
+        "description": "Pull requests someone reviewed",
+        "label": "Reviewed by",
+        "negatedDescription": "Leave out pull requests someone reviewed",
+        "negatedLabel": "Exclude reviewer"
+      },
+      "reviewer": {
+        "description": "Pull requests requesting someone's review, directly or through a team",
+        "description_gitlab": "Merge requests requesting someone's review",
+        "label": "Review requested"
+      },
+      "sort": {
+        "description": "The order results list in",
+        "label": "Sort"
+      },
+      "teamReviewer": {
+        "description": "Pull requests requesting a team's review",
+        "label": "Team review requested",
+        "negatedDescription": "Leave out pull requests requesting a team's review",
+        "negatedLabel": "Exclude team review request"
+      },
+      "updated": {
+        "description": "Updated on, before, after, or between dates",
+        "label": "Updated"
+      }
+    },
+    "options": {
+      "branches": {
+        "addRepository": "Add repo:owner/name to suggest its branches.",
+        "addRepository_gitlab": "Add repo:group/project to suggest its branches.",
+        "loadFailed": "The branches could not be loaded.",
+        "loadMoreFailed": "More branches could not be loaded.",
+        "loading": "Loading branches…",
+        "loadingMore": "Loading more branches",
+        "loadingMoreRow": "Loading more branches…",
+        "searchMoreFailed": "More branches could not be searched.",
+        "searching": "Searching branches…"
+      },
+      "labels": {
+        "addRepository": "Add repo:owner/name to suggest its labels.",
+        "addRepository_gitlab": "Add repo:group/project to suggest its labels."
+      },
+      "milestones": {
+        "addRepository": "Add repo:owner/name to suggest its milestones.",
+        "addRepository_gitlab": "Add repo:group/project to suggest its milestones.",
+        "loadFailed": "The milestones could not be loaded.",
+        "loadMoreFailed": "More milestones could not be loaded.",
+        "loading": "Loading milestones…",
+        "loadingMore": "Loading more milestones",
+        "loadingMoreRow": "Loading more milestones…",
+        "searchMoreFailed": "More milestones could not be searched.",
+        "searching": "Searching milestones…"
+      },
+      "people": {
+        "addRepository": "Add repo:owner/name to suggest its people.",
+        "addRepository_gitlab": "Add repo:group/project to suggest its people.",
+        "loadFailed": "The people could not be loaded.",
+        "loadMoreFailed": "More people could not be loaded.",
+        "loading": "Loading people…",
+        "loadingMore": "Loading more people",
+        "loadingMoreRow": "Loading more people…",
+        "searchMoreFailed": "More people could not be searched.",
+        "searching": "Searching people…"
+      },
+      "teams": {
+        "addRepository": "Add repo:owner/name to suggest its organization's teams.",
+        "loadFailed": "The teams could not be loaded.",
+        "loadMoreFailed": "More teams could not be loaded.",
+        "loading": "Loading teams…",
+        "loadingMore": "Loading more teams",
+        "loadingMoreRow": "Loading more teams…",
+        "searchMoreFailed": "More teams could not be searched.",
+        "searching": "Searching teams…"
+      }
+    },
+    "values": {
+      "approved": "Approved",
+      "changesRequested": "Changes requested",
+      "closed": "Closed, including merged",
+      "commentsAsc": "Fewest comments first",
+      "commentsDesc": "Most comments first",
+      "createdAsc": "Oldest first",
+      "createdDesc": "Newest first",
+      "draft": "Drafts, open or closed",
+      "failing": "A check failed",
+      "interactionsAsc": "Fewest comments and reactions first",
+      "interactionsDesc": "Most comments and reactions first",
+      "merged": "Merged",
+      "noAssignee": "No assignee",
+      "noLabel": "No labels",
+      "noMilestone": "No milestone",
+      "none": "No reviews yet",
+      "open": "Open, including drafts",
+      "passing": "Every check passed",
+      "pending": "Checks still running",
+      "reactionsAsc": "Fewest reactions first",
+      "reactionsDesc": "Most reactions first",
+      "required": "Review required",
+      "unmerged": "Open, or closed without merging",
+      "updatedAsc": "Least recently updated first",
+      "updatedDesc": "Recently updated first"
+    }
+  },
+  "pullRequestSlicedDiff": {
+    "noChangedLinesInTheCurrent": "No changed lines in the current diff match this layer."
+  },
+  "pullRequestStack": {
+    "connectProviderToUnstack": "Connect your provider account in settings to unstack as yourself.",
+    "keptInStack_one": "{{count}} pull request stayed in the stack, for example because it is queued to merge.",
+    "keptInStack_other": "{{count}} pull requests stayed in the stack, for example because they are queued to merge.",
+    "notStacked": "The pull requests were not stacked.",
+    "notUnstacked": "The pull requests were not unstacked.",
+    "stacked": "Pull requests stacked.",
+    "unstacked": "Pull requests unstacked without closing any of them."
+  },
+  "pullRequestValidation": {
+    "checksLoadFailed": "Checks could not be loaded. Refresh to try again.",
+    "collapseCommentBy": "Collapse comment by {{author}}",
+    "comment": "Comment",
+    "emptyCommentBody": "No comment body was provided.",
+    "expandCommentBy": "Expand comment by {{author}}",
+    "newCommentOnPullRequest": "New comment on this pull request",
+    "newCommentOnPullRequest_gitlab": "New comment on this merge request",
+    "noAutomatedQaCommentsYet": "No automated QA comments yet.",
+    "noQaDetailsWereReportedFor": "No QA details were reported for this section.",
+    "noQaReported": "No QA results were reported.",
+    "qaAppRecording": "{{app}} QA recording",
+    "qaCommentsLoadFailed": "QA comments could not be loaded. Refresh to try again.",
+    "qaRecording": "QA recording",
+    "reply": "Reply",
+    "replyToCommentBy": "Reply to comment by {{author}}",
+    "replyWithQuoteTo": "Replying to @{{author}} with a quoted comment",
+    "sendComment": "Send comment",
+    "writeComment": "Write a comment…"
+  },
+  "review": {
+    "codeHostsLoadFailed": "Code hosts couldn't be loaded",
+    "codeReview": "Code Review",
+    "loadingPullRequests": "Loading pull requests",
+    "loadingPullRequests_gitlab": "Loading merge requests",
+    "pullRequestChat": "Pull request chat",
+    "pullRequestChat_gitlab": "Merge request chat",
+    "searchOrPasteALink": "Search or paste a pull request link",
+    "searchOrPasteALink_gitlab": "Search or paste a merge request link",
+    "sessionWalkthroughKickoff": "Write a code walkthrough of this pull request: {{url}}\nRun `{{command}}` with a timeout of {{minutes}} minutes and wait for it to finish. The command may check out the pull request's head commit, so run it in a separate clone of the repository, such as a new worktree, and not in the checkout you are working in.",
+    "sessionWalkthroughKickoff_gitlab": "Write a code walkthrough of this merge request: {{url}}\nRun `{{command}}` with a timeout of {{minutes}} minutes and wait for it to finish. The command may check out the merge request's head commit, so run it in a separate clone of the repository, such as a new worktree, and not in the checkout you are working in.",
+    "walkthroughChatHidden": "Go back to the chat to try it.",
+    "walkthroughChatInputReplaced": "The chat isn't taking messages right now.",
+    "walkthroughKickoff": "Write a code walkthrough of this pull request: {{url}}\nIn a clone of its repository, run `{{command}}` with a timeout of {{minutes}} minutes, and wait for it to finish. If the command hands the walkthrough to an agent, that agent may check out the pull request's head commit in that clone.",
+    "walkthroughNeedsComputer": "Walkthroughs are written on a Droid Computer. Create one or open Factory Desktop to work locally.",
+    "walkthroughNeedsNewerDroid": "Update Droid on this computer to try it",
+    "walkthroughSharedSession": "You can't try it in a shared session.",
+    "workstreamWalkthroughKickoff": "Write a code walkthrough of this pull request: {{url}}\nHave an agent run `{{command}}` with a timeout of {{minutes}} minutes and wait for the command to finish. The command may check out the pull request's head commit, so the agent should run it in a clone of the repository that no other agent is working in, such as a new worktree."
+  },
+  "walkthroughReadError": {
+    "loadFailed": "Could not load the walkthrough. Refresh to try again.",
+    "noPullRequest": "The pull request could not be found.",
+    "notConnected": "Connect your Git provider account to load the walkthrough.",
+    "providerError": "The walkthrough is unavailable because the pull request diff could not be loaded. Refresh to try again.",
+    "providerNotConfigured": "Connect your Git provider to load the walkthrough.",
+    "unsupportedProvider": "Walkthroughs are not available for this Git provider."
+  }
+}

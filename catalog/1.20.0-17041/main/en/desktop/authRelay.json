@@ -1,0 +1,12 @@
+{
+  "confirmDetail": "Your browser asked to sign this app in. Continue only if this is your account and you just opened the app from your browser.",
+  "confirmMessage": "Sign in to Factory as {{email}}?",
+  "confirmTitle": "Sign in to Factory",
+  "continue": "Continue",
+  "credentialsUnavailable": "Couldn't check this app's sign-in. Check your connection and keychain, then try again from your browser.",
+  "linkExpired": "Sign-in link expired. Try again from your browser.",
+  "waitingDetail": "Signing in as {{email}}. Keep the browser tab open; this app signs in as soon as it finishes.",
+  "waitingMessage": "Finishing sign-in in your browser…",
+  "waitingTitle": "Finishing sign-in",
+  "wrongAccount": "That sign-in was for a different account. Try again."
+}

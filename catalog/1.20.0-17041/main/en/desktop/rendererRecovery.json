@@ -1,0 +1,6 @@
+{
+  "detail": "Factory reloaded this window, but it stopped again within a minute. This can happen when the computer is low on memory. Your sessions keep running in the background.",
+  "message": "This window keeps stopping unexpectedly",
+  "reload": "Reload Window",
+  "title": "Window stopped unexpectedly"
+}

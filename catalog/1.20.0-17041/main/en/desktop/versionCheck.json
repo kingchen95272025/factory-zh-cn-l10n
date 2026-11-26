@@ -1,0 +1,7 @@
+{
+  "checkForUpdates": "Check for Updates",
+  "detail": "Your version ({{version}}) is no longer supported.\n\nPlease install the latest version to continue.",
+  "message": "Your version is no longer supported",
+  "quit": "Quit",
+  "title": "Update Required"
+}

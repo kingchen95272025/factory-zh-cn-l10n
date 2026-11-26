@@ -1,0 +1,17 @@
+{
+  "customerDeployment": {
+    "authenticationMismatch": "Customer authentication does not match this deployment.",
+    "authenticationUnavailable": "Customer authentication is unavailable.",
+    "featureUnavailable": "This feature is not available on a private deployment.",
+    "identityMismatch": "Customer identity does not match this request.",
+    "networkRequestFailed": "Private deployment request failed. Check your network connection and try again.",
+    "organizationRequired": "Select an organization before making this request.",
+    "requestFailed": "Private deployment request failed: {{status}}",
+    "signInRequired": "Sign in to this customer deployment."
+  },
+  "notFound": {
+    "backToDashboard": "Back to Dashboard",
+    "description": "The page <path/> was moved, removed, renamed, or never existed.",
+    "title": "404 Error"
+  }
+}

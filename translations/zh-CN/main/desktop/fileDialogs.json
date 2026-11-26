@@ -1,0 +1,8 @@
+{
+  "audioFilter": "音频",
+  "saveBugReport": "保存错误报告",
+  "saveDownloadedFile": "保存下载的文件",
+  "selectSoundFile": "选择音频文件",
+  "selectWorkingDirectory": "选择工作目录",
+  "zipArchiveFilter": "Zip 压缩包"
+}

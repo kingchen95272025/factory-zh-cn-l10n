@@ -1,0 +1,340 @@
+{
+  "app": {
+    "asarSha256": "320c8a948e4806104d6e97dfbc253810fbfe2fef73c663fe7e233d50dfc93493",
+    "build": "17041",
+    "bundleId": "com.electron.factory",
+    "integrityHash": "1c9a18c6bf0c941da43935efa93a2c66aac190eb14315e92db2ae1984338863d",
+    "version": "1.20.0"
+  },
+  "generatedAt": "2026-11-26T02:18:24.458Z",
+  "main": {
+    "anchors": {
+      "enumName": "Ee",
+      "languages": [
+        "English",
+        "Japanese",
+        "Korean",
+        "German",
+        "Spanish",
+        "Italian",
+        "Polish",
+        "French"
+      ],
+      "resourceMapRange": [
+        234501,
+        234697
+      ]
+    },
+    "bundle": ".vite/build/initLifecycle-DVYcwnOG.js",
+    "bundleSha256": "81a82677bec0b5e7042ddd8b8a2e5a6fd3d75bb5442211bd0860b89b778d29c9",
+    "desktop": {
+      "auth": {
+        "file": "auth.json",
+        "strings": 4
+      },
+      "authRelay": {
+        "file": "authRelay.json",
+        "strings": 10
+      },
+      "cliInstall": {
+        "file": "cliInstall.json",
+        "strings": 3
+      },
+      "common": {
+        "file": "common.json",
+        "strings": 2
+      },
+      "contextMenu": {
+        "file": "contextMenu.json",
+        "strings": 7
+      },
+      "diagnostics": {
+        "file": "diagnostics.json",
+        "strings": 3
+      },
+      "fileDialogs": {
+        "file": "fileDialogs.json",
+        "strings": 6
+      },
+      "leavePage": {
+        "file": "leavePage.json",
+        "strings": 5
+      },
+      "mailtoFailure": {
+        "file": "mailtoFailure.json",
+        "strings": 3
+      },
+      "menu": {
+        "file": "menu.json",
+        "strings": 23
+      },
+      "menuBar": {
+        "file": "menuBar.json",
+        "strings": 39
+      },
+      "quitGuard": {
+        "file": "quitGuard.json",
+        "strings": 9
+      },
+      "remoteAccess": {
+        "file": "remoteAccess.json",
+        "strings": 1
+      },
+      "rendererRecovery": {
+        "file": "rendererRecovery.json",
+        "strings": 4
+      },
+      "updater": {
+        "file": "updater.json",
+        "strings": 26
+      },
+      "versionCheck": {
+        "file": "versionCheck.json",
+        "strings": 5
+      }
+    },
+    "strings": 150
+  },
+  "renderer": {
+    "anchors": {
+      "enumName": "zg",
+      "languageListRange": [
+        15334640,
+        15334726
+      ],
+      "languageListValues": [
+        "English",
+        "Japanese",
+        "Korean",
+        "German",
+        "Spanish",
+        "Italian",
+        "Polish",
+        "French"
+      ],
+      "languageListVariable": "QRt",
+      "loaderEntries": [
+        {
+          "importRange": [
+            16682480,
+            16682505
+          ],
+          "importSource": "./resources-D1B8zF61.js",
+          "keyRange": [
+            16682438,
+            16682449
+          ],
+          "language": "Japanese",
+          "propertyRange": [
+            16682437,
+            16682526
+          ]
+        },
+        {
+          "importRange": [
+            16682568,
+            16682593
+          ],
+          "importSource": "./resources-DzwJtQ96.js",
+          "keyRange": [
+            16682528,
+            16682537
+          ],
+          "language": "Korean",
+          "propertyRange": [
+            16682527,
+            16682614
+          ]
+        },
+        {
+          "importRange": [
+            16682656,
+            16682681
+          ],
+          "importSource": "./resources-DOv_uHWs.js",
+          "keyRange": [
+            16682616,
+            16682625
+          ],
+          "language": "German",
+          "propertyRange": [
+            16682615,
+            16682702
+          ]
+        },
+        {
+          "importRange": [
+            16682745,
+            16682770
+          ],
+          "importSource": "./resources-3n4FLGCz.js",
+          "keyRange": [
+            16682704,
+            16682714
+          ],
+          "language": "Spanish",
+          "propertyRange": [
+            16682703,
+            16682791
+          ]
+        },
+        {
+          "importRange": [
+            16682834,
+            16682859
+          ],
+          "importSource": "./resources-ChAEiMIl.js",
+          "keyRange": [
+            16682793,
+            16682803
+          ],
+          "language": "Italian",
+          "propertyRange": [
+            16682792,
+            16682880
+          ]
+        },
+        {
+          "importRange": [
+            16682922,
+            16682947
+          ],
+          "importSource": "./resources-rZ8IDCbC.js",
+          "keyRange": [
+            16682882,
+            16682891
+          ],
+          "language": "Polish",
+          "propertyRange": [
+            16682881,
+            16682968
+          ]
+        },
+        {
+          "importRange": [
+            16683010,
+            16683035
+          ],
+          "importSource": "./resources-mbpHuJKp.js",
+          "keyRange": [
+            16682970,
+            16682979
+          ],
+          "language": "French",
+          "propertyRange": [
+            16682969,
+            16683056
+          ]
+        },
+        {
+          "importRange": [
+            16683171,
+            16683199
+          ],
+          "importSource": "./pseudoLocale-BBT6M5ko.js",
+          "keyRange": [
+            16683058,
+            16683061
+          ],
+          "language": "unknown",
+          "propertyRange": [
+            16683057,
+            16683281
+          ]
+        }
+      ],
+      "loaderMapRange": [
+        16682436,
+        16683282
+      ]
+    },
+    "entry": ".vite/renderer/main_window/assets/index-Dpwn10hO.js",
+    "entrySha256": "98f7108f1b9bdd08369c0ecb37105c6f2a5a9aa6662b599eac3aec5dc7fa7880",
+    "namespaces": {
+      "academy": {
+        "file": "academy.json",
+        "strings": 136
+      },
+      "analytics": {
+        "file": "analytics.json",
+        "strings": 312
+      },
+      "analytics2": {
+        "file": "analytics2.json",
+        "strings": 808
+      },
+      "automations": {
+        "file": "automations.json",
+        "strings": 1588
+      },
+      "common": {
+        "file": "common.json",
+        "strings": 369
+      },
+      "components": {
+        "file": "components.json",
+        "strings": 8174
+      },
+      "errors": {
+        "file": "errors.json",
+        "strings": 11
+      },
+      "evaluations": {
+        "file": "evaluations.json",
+        "strings": 30
+      },
+      "hotkeys": {
+        "file": "hotkeys.json",
+        "strings": 42
+      },
+      "inbox": {
+        "file": "inbox.json",
+        "strings": 61
+      },
+      "lessons": {
+        "file": "lessons.json",
+        "strings": 2356
+      },
+      "missions": {
+        "file": "missions.json",
+        "strings": 490
+      },
+      "onboarding": {
+        "file": "onboarding.json",
+        "strings": 271
+      },
+      "pullRequestReview": {
+        "file": "pullRequestReview.json",
+        "strings": 616
+      },
+      "sessions": {
+        "file": "sessions.json",
+        "strings": 799
+      },
+      "settings": {
+        "file": "settings.json",
+        "strings": 4618
+      },
+      "sharing": {
+        "file": "sharing.json",
+        "strings": 11
+      },
+      "stats": {
+        "file": "stats.json",
+        "strings": 37
+      },
+      "wiki": {
+        "file": "wiki.json",
+        "strings": 128
+      }
+    },
+    "strings": 20857
+  },
+  "totals": {
+    "asarTopLevelEntries": 3,
+    "mainStrings": 150,
+    "namespaces": 35,
+    "rendererStrings": 20857,
+    "strings": 21007
+  }
+}

@@ -1,0 +1,698 @@
+{
+  "continueMission": {
+    "openingMessage": "Continue my mission \"{{title}}\" as this workstream.",
+    "progress_one": "{{completed}} of {{total}} feature done",
+    "progress_other": "{{completed}} of {{total}} features done",
+    "thisComputer": "this computer"
+  },
+  "docComments": {
+    "couldNotSendThread": "Failed to send thread",
+    "recipientUnreachable": "Can't reach the agent's computer.",
+    "signInExpired": "Your sign-in has expired. Sign in again and retry.",
+    "threadSent": "Sent to {{name}}",
+    "threadSentToOrchestrator": "Sent to orchestrator"
+  },
+  "missionChatComposer": {
+    "missionRunning": "Mission is running. Pause to send messages.",
+    "validatorCompleted": "Validator has completed. Return to the orchestrator to continue.",
+    "workerCompleted": "Worker has completed. Return to the orchestrator to continue."
+  },
+  "missionControl": {
+    "computer": "Computer",
+    "createANewMissionToStart": "Create a new mission to start planning and dispatching workers.",
+    "created": "Created",
+    "description": "Plan and ship long-horizon projects with a team of Droids working in parallel. Reach for a Mission when the work spans hours or days, multiple features, or more than one session can handle.",
+    "empty": {
+      "all": "No missions yet",
+      "completed": "No completed missions",
+      "paused": "No paused missions",
+      "running": "No running missions"
+    },
+    "failedToLoadMissions": "Failed to load missions",
+    "filter": {
+      "all": "All",
+      "completed": "Completed",
+      "paused": "Paused",
+      "running": "Running"
+    },
+    "localComputer": "Local",
+    "missionControl": "Mission Control",
+    "progress": "Progress",
+    "repository": "Repository",
+    "title": "Title",
+    "unregisteredComputer": "Unregistered computer"
+  },
+  "missionEntryBlockModal": {
+    "cancel": "Cancel",
+    "missionAccessBlocked": "Mission access blocked",
+    "overageRequiredDescription": "Missions are designed for complex, multi-step work and run autonomously for multiple hours or days. To run Missions, select what happens when your Standard Usage runs out by configuring an overage preference in Usage settings.",
+    "overageRequiredTitle": "Usage overage configuration required",
+    "restrictedDescription": "Missions have been restricted by your organization admin. Contact your admin to request access.",
+    "restrictedTitle": "Missions restricted",
+    "setOveragePreference": "Set overage preference"
+  },
+  "missionFeatureDetail": {
+    "backToChat": "Back to chat",
+    "description": "Description",
+    "expectedBehavior": "Expected Behavior",
+    "fulfills": "Fulfills",
+    "milestone": "Milestone: {{milestone}}",
+    "preconditions": "Preconditions",
+    "status": {
+      "cancelled": "Cancelled",
+      "completed": "Completed",
+      "inProgress": "In progress",
+      "notStarted": "Not started"
+    },
+    "unassignedMilestone": "Unassigned milestone"
+  },
+  "missionFeaturesSection": {
+    "features": "Features",
+    "milestoneHeading": "Milestone {{number}}: {{title}}",
+    "noFeaturesDefinedYet": "No features defined yet"
+  },
+  "missionHeader": {
+    "activeTime": "Active time: {{time}}",
+    "avgPerFeature": "Avg per feature: {{time}}",
+    "avgPerMilestone": "Avg per milestone: {{time}}",
+    "disconnected": "Disconnected",
+    "factoryStandardCredits": "Factory Standard Credits",
+    "fiveHourUsage": "5-hour usage: {{percent}}",
+    "mission": "⛬ MISSION",
+    "openSidebar": "Open sidebar",
+    "pause": "Pause",
+    "progress": "Progress",
+    "resetsIn": "Resets in {{time}}",
+    "resume": "Resume",
+    "resuming": "Resuming",
+    "time": "Time",
+    "untitledMission": "Mission",
+    "usage": "Usage"
+  },
+  "missionLaunch": {
+    "composerPlaceholder": "Setting up your workstream…",
+    "startFailed": "The workstream could not start.",
+    "step": {
+      "connectToComputer": "Connecting to the computer",
+      "connectToMachine": "Connecting to {{machine}}",
+      "connectToThisComputer": "Connecting to this computer",
+      "createComputer": "Creating a computer from {{environment}}",
+      "setUpComputer": "Setting up the computer",
+      "startMission": "Starting your workstream",
+      "turnOnRemoteControl": "Turning on Remote Control"
+    }
+  },
+  "missionOnboardingModal": {
+    "cancel": "Cancel",
+    "continue": "Continue",
+    "fixAgentReadinessReport": "Fix agent readiness report",
+    "howItWorks": "How it works:",
+    "keyConcepts": "Key concepts:",
+    "milestonesGroupsOfFeaturesWithValidation": "• Milestones — Groups of features with validation",
+    "missionsAutonomousMultiAgentExecution": "Missions - Autonomous Multi-Agent Execution",
+    "notForSimpleTasksDesignedFor": "• Not for simple tasks — designed for complex, multi-step work",
+    "orchestratorPlansAndManagesTheMission": "• Orchestrator — Plans and manages the mission",
+    "proceedAnyway": "Proceed anyway",
+    "repositoryNotAgentReady": "Repository not agent-ready",
+    "runAgentReadinessReport": "Run agent readiness report",
+    "runsForMultipleHoursOrDays": "• Runs for multiple hours or days autonomously",
+    "significantlyHigherTokenUsageComparedTo": "• Significantly higher token usage compared to regular sessions",
+    "text1DescribeYourGoal": "1. Describe your goal",
+    "text2ReviewAndApproveTheMission": "2. Review and approve the mission plan",
+    "text3DroidExecutesFeaturesAutonomously": "3. Droid executes features autonomously",
+    "text4ValidationOccursAtMilestones": "4. Validation occurs at milestones",
+    "warnings": "Warnings:",
+    "workersExecuteIndividualFeatures": "• Workers — Execute individual features"
+  },
+  "missionProgressLogSection": {
+    "noProgressEntriesYet": "No progress entries yet",
+    "progressLog": "Progress Log"
+  },
+  "missionSessionSidebar": {
+    "model": "Model",
+    "orchestrator": "Orchestrator",
+    "validator": "Validator",
+    "worker": "Worker"
+  },
+  "missionSessionsSidebar": {
+    "awaitingYourInput": "Awaiting your input",
+    "backToApp": "Back to App",
+    "fallbackSessionName": "Session {{id}}",
+    "filter": {
+      "all": "All",
+      "validators": "Validators",
+      "workers": "Workers"
+    },
+    "filterMissionSessionsByType": "Filter mission sessions by type",
+    "milestoneHeading": "Milestone {{number}}: {{title}}",
+    "noSessionsMatchThisFilter": "No sessions match this filter.",
+    "orchestrator": "Orchestrator",
+    "sessions": "Sessions",
+    "validatorNumber": "Validator #{{number}}",
+    "workerNumber": "Worker #{{number}}"
+  },
+  "missionSettings": {
+    "defaultOption": "Default ({{name}})",
+    "inviteeCannotUseAgentProfile": "They can't use this workstream's agent profile. Ask a Manager to share the profile with one of their groups.",
+    "lastMemberCannotLeave": "You're the last member. Archive the workstream instead.",
+    "machines": {
+      "agentsFailed": "Agent counts could not load. Removal still applies to all agents on the machine.",
+      "alreadyActive": "Already an active machine in this workstream.",
+      "alreadyOrchestrator": "This is the orchestrator’s computer.",
+      "loadingAgents": "Loading agent counts…",
+      "needConnection": "Connect to the workstream’s computer to change machines.",
+      "needOpenMission": "Open this workstream here to change its machines.",
+      "oneMachine": "{{reason}} New agents start on the orchestrator’s machine.",
+      "orchestratorComputer": "the orchestrator’s computer",
+      "remoteControlFailed": "Remote Control could not be enabled on this computer. Check its connection and try again.",
+      "saveFailed": "Could not change the workstream’s machines. Try again.",
+      "settingsSaving": "Wait for the settings change to finish.",
+      "thisComputer": "this computer",
+      "thisComputerHelp": "The workstream can start agents here that work in your files and run commands. Remote Control turns on for this computer and stays on until you turn it off in Settings.",
+      "thisComputerKeepAwake": "Keep Factory open and this computer awake while agents use it. Your Workstream Defaults don’t change.",
+      "updateDroid": "Update Droid on {{name}} to change machines."
+    },
+    "modelSaveFailed": "Couldn't change the model. Try again.",
+    "modelsNeedConnection": "Models can change only while a connected computer runs this workstream's orchestrator.",
+    "modelsNeedDaemonUpdate": "This workstream's computer needs a Droid update before members can change its models.",
+    "modelsNeedOpenMission": "Open the workstream once to change its models from here.",
+    "moveToAgentProfileNotShared": "{{name}} is not a shared computer. You can change this in Settings.",
+    "moveToAgentProfileUnavailable": "Only available when the orchestrator runs on a shared computer or environment.",
+    "runsAsAgentProfile": "Agent profile",
+    "symbolColorSaveFailed": "Couldn't change the icon color, so the previous one is back. Try again.",
+    "symbolNeedsConnection": "You can change the icon once this workstream is connected",
+    "symbolSaveFailed": "Couldn't change the icon, so the previous one is back. Try again.",
+    "workstreamAgentProfileNotFound": "This workstream's agent profile no longer exists, so no one can be added."
+  },
+  "missionStatus": {
+    "awaitingInput": "Awaiting input",
+    "completed": "Completed",
+    "initializing": "Initializing",
+    "orchestratorTurn": "Orchestrator turn",
+    "paused": "Paused",
+    "planning": "Planning",
+    "running": "Running"
+  },
+  "missionV2Agents": {
+    "activity": {
+      "computerGone": "Computer deleted; ask the orchestrator for a new agent",
+      "computerStatus": "Computer {{status}}",
+      "computerStatusUnavailable": "Computer status unavailable",
+      "settingUpComputer": "Setting up a computer",
+      "starting": "Starting",
+      "waitingOnBackgroundWork": "Waiting",
+      "working": "Working"
+    },
+    "fallbackAgentName": "Agent {{id}}",
+    "group": {
+      "archived": "Archived",
+      "idle": "Idle",
+      "waitingOnYou": "Waiting on you",
+      "working": "Working"
+    },
+    "hasQuestions_one": "Has {{count}} question for you",
+    "hasQuestions_other": "Has {{count}} questions for you",
+    "needsApprovalToRun": "Needs approval to run {{tool}}",
+    "needsApprovalToRunAndMore_one": "Needs approval to run {{tool}} and {{count}} more tool",
+    "needsApprovalToRunAndMore_other": "Needs approval to run {{tool}} and {{count}} more tools",
+    "needsSpecApproval": "Needs spec approval",
+    "needsYourApproval": "Needs your approval",
+    "newAgent": "New agent"
+  },
+  "newMissionButtonV2": {
+    "newMission": "New Mission"
+  },
+  "newMissionComputerStartup": {
+    "provisionFailed": "The orchestrator computer failed to provision. Choose another environment or retry.",
+    "startTimedOut": "The orchestrator computer is taking too long to start. Retry to check its progress."
+  },
+  "newMissionDialog": {
+    "aTemplateCreatesAFreshComputer": "An environment creates a fresh computer at workstream start.",
+    "branch": "Branch",
+    "branchSwitchInProgress": "The folder is still switching branches. Try again once it has finished.",
+    "branchValue": "Branch: {{branch}}",
+    "branchValueWorktree": "Branch: {{branch}}, in a new worktree",
+    "cancel": "Cancel",
+    "cannotVerifyMultiMachine": "Factory cannot verify whether your organization permits multi-machine workstreams. Agents run on the orchestrator machine. Ask an administrator to check Compliance Settings.",
+    "checkingWorkingDirectory": "Checking the folder…",
+    "chooseAvailableOrchestrator": "Choose an available orchestrator machine.",
+    "complianceKeepsOneMachine": "Factory has disabled cloud sync for your organization, so every agent runs on this machine.",
+    "computerNotRegistered": "This computer isn’t registered for Remote Control. Agents run on the orchestrator machine. Open Settings › This Computer to register it.",
+    "connectingToListFolders": "Connecting to {{computer}} to list its folders…",
+    "couldNotOpenFolderPicker": "The folder picker could not be opened.",
+    "environmentNudge": {
+      "newEnvironmentTooltip": "Add a new remote compute configuration",
+      "notNow": "Not now",
+      "setUp": "Set up an environment",
+      "setUpDescription": "Set up an environment with your repo so agents run on cloud computers that keep working after you close your laptop.",
+      "title": "Run this workstream in the cloud"
+    },
+    "folderPathOn": "Folder path on {{computer}}",
+    "loadingMachines": "Loading machines…",
+    "loadingOrganizationSettings": "Loading organization settings…",
+    "localComputersDisabled": "Your organization has disabled local computers.",
+    "localRequiresDesktopApp": "Local machines require the Factory desktop app.",
+    "locationBranchHelper": "The orchestrator starts in {{path}} on {{branch}}. Agents on this machine share that checkout.",
+    "locationDetachedHelper": "The orchestrator starts in {{path}} on its current checkout. Agents on this machine share it.",
+    "locationWorktreeExistingHelper": "The orchestrator starts in a new worktree of {{path}} on {{branch}}. Agents on this machine share it.",
+    "locationWorktreeFromTitleHelper": "The orchestrator starts in a new worktree of {{path}}, cut from {{base}} on a branch named after the workstream. Agents on this machine share it.",
+    "locationWorktreeHelper": "The orchestrator starts in a new worktree of {{path}} on {{branch}}, cut from {{base}}. Agents on this machine share it.",
+    "lostConnectionToComputer": "Lost the connection to {{computer}}. Pick the folder again once it reconnects.",
+    "machineSummary": {
+      "defaultAndYours_one": "Agents can also use {{defaultMachine}} and one of your machines.",
+      "defaultAndYours_other": "Agents can also use {{defaultMachine}} and {{count}} of your machines.",
+      "defaultOnly": "Agents can also use {{defaultMachine}}.",
+      "yoursOnly_one": "Agents can also use one of your machines.",
+      "yoursOnly_other": "Agents can also use {{count}} of your machines."
+    },
+    "machinesCouldNotLoad": "Your machines could not load, so agents will run on the orchestrator machine.",
+    "missionDefaultsCouldNotLoad": "Your Workstream Defaults could not load. Agents run on the orchestrator machine.",
+    "orchestratorCouldNotLoad": "This machine could not load. Choose Local or try again later.",
+    "orchestratorMachine": "Orchestrator machine",
+    "organizationKeepsOneMachine": "Your organization keeps shared folders off Factory’s servers, so every agent runs on this machine.",
+    "provisionedComputerRunsAsOther": "This workstream already has a computer that runs as someone else. Change Runs as back to start on it.",
+    "remoteAccessNotAllowed": "Your organization doesn’t allow Remote Control of this computer. Agents run on the orchestrator machine.",
+    "remoteAccessWillBeTurnedOn": "Remote Control will be turned on for this computer so agents on other machines can reach it.",
+    "selectOrchestratorMachine": "Select an orchestrator machine",
+    "start": "Start",
+    "startWithoutRemoteAgents": "Start without remote agents",
+    "syncSettingsCouldNotLoad": "Your organization’s sync settings could not load. Agents run on the orchestrator machine.",
+    "tryAgain": "Try again",
+    "useFolder": "Use folder",
+    "workingDirectory": "Working directory",
+    "workingDirectoryHelper": "The orchestrator starts in {{path}}. Agents on this machine start there too.",
+    "workingDirectoryValue": "Working directory: {{path}}"
+  },
+  "prAutofix": {
+    "githubAppMissing": "Install the Factory GitHub App for {{owner}} to use auto-fix.",
+    "gitlabMissing": "Connect GitLab in your integration settings to use auto-fix.",
+    "loading": "Loading…",
+    "missionIntegrationMissing": "Auto-fix needs the Factory GitHub App or a GitLab integration. Set one up in your integration settings.",
+    "missionPermissionsPending": "A GitHub org owner needs to accept Factory's pending permission request before auto-fix can run.",
+    "notSetUp": "Auto-fix works for PRs opened or pushed to by workstream agents on Droid Computers with Cloud Sync on.",
+    "optionOff": "Off",
+    "optionOn": "On",
+    "paused": "Paused after {{limit}} updates. Turn auto-fix off and on to resume.",
+    "permissionsPending": "A GitHub org owner needs to accept Factory's pending permission request for {{owner}}.",
+    "repoNotSynced": "Add {{repo}} to your synced repositories to use auto-fix.",
+    "unsupportedProvider": "Auto-fix supports GitHub pull requests and GitLab merge requests only.",
+    "updateTypesCustom": "Custom",
+    "updateTypesDefault": "Use my defaults"
+  },
+  "progressLog": {
+    "completed": "<role/> completed <target/>",
+    "failed": "<role/> failed",
+    "failedWithLabel": "<role/> failed <target/>",
+    "failedWithReason": "<role/> failed: <reason/>",
+    "failedWithReasonAndLabel": "<role/> failed: <reason/> <target/>",
+    "fallbackModel": "fallback model",
+    "handoffItemsDismissed": "Handoff items dismissed",
+    "missionAccepted": "Mission accepted",
+    "missionPaused": "Mission paused",
+    "missionResumed": "Mission resumed",
+    "paused": "<role/> paused <target/>",
+    "role": {
+      "orchestrator": "Orchestrator",
+      "validator": "Validator",
+      "worker": "Worker"
+    },
+    "roleWithNumber": "{{role}} #{{number}}",
+    "runStarted": "Run started",
+    "runStartedWithMessage": "Run started: {{message}}",
+    "selected": "<role/> selected <target/>",
+    "started": "<role/> started <target/>",
+    "startedSubstituted": "<role/> started <target/> (<fromModel/> blocked by org policy, using <toModel/>)",
+    "startedSubstitutedWithLabel": "<role/> started (<fromModel/> blocked by org policy, using <toModel/>) <target/>"
+  },
+  "sharedFolderRefusal": {
+    "oneMachine": "Your organization keeps shared folders off Factory's servers, so every agent in this workstream runs on one machine."
+  },
+  "workerSessionTitle": {
+    "fallback": "Worker {{id}}"
+  },
+  "workstreamAccessBlockedModal": {
+    "description": "Workstreams have been restricted by your organization admin. Contact your admin to request access.",
+    "title": "Workstreams restricted"
+  },
+  "workstreamSetup": {
+    "changeAccess": "Change access",
+    "changeTitle": "Change title",
+    "changeType": "Change type",
+    "chooseMachine": "Choose where I should run to continue.",
+    "custom": {
+      "name": "Custom"
+    },
+    "defaultTitle": "New workstream",
+    "facts": {
+      "access": "Access",
+      "agentProfile": "Agent profile",
+      "labelled": "{{label}}:",
+      "multiplayer": "Multiplayer",
+      "multiplayerDetail": "Members can view it",
+      "notChosen": "Not chosen",
+      "private": "Private",
+      "privateDetail": "Only you can view it",
+      "runsOn": "Runs on",
+      "title": "Title",
+      "type": "Type"
+    },
+    "machineForProfile": "<machine/> (for the <profile/> Agent Profile)",
+    "nameRequired": "Name your workstream to continue.",
+    "personas": {
+      "design": {
+        "defense": {
+          "description": "Finds UI regressions and accessibility failures in what shipped, then fixes them.",
+          "goal": "Keep the product accessible and visually consistent, and fix UI regressions within a week.",
+          "name": "UX Quality & Accessibility"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "DESIGN.md",
+            "2": "Brand guidelines",
+            "3": "Visual language",
+            "4": "Tokens and components",
+            "5": "Critique and handoff"
+          },
+          "description": "Maintains brand guidelines and keeps design files and code in sync.",
+          "goal": "Run our design operating system: maintain DESIGN.md, the brand guidelines, and our visual language, and keep tokens and components in sync between design files and code.",
+          "name": "Design Operating System"
+        },
+        "partner": {
+          "description": "A standing teammate that explores directions and prototypes in code.",
+          "goal": "Be our design partner: explore directions, prototype in code, and keep designs and shipped UI in sync.",
+          "name": "Design Partner"
+        },
+        "project": {
+          "description": "Moves a surface to the new design system, then hands off.",
+          "goal": "Move one area of the product to our new design system, with every screen on new components and the old styles removed.",
+          "name": "Redesign"
+        },
+        "research": {
+          "description": "Turns interviews, usability tests, and analytics into findings.",
+          "goal": "Find where new users get stuck in onboarding and test two fixes.",
+          "name": "Design Research"
+        }
+      },
+      "engineering": {
+        "defense": {
+          "description": "Discovers, tracks, and fixes vulnerabilities in your engineering system.",
+          "goal": "Find and fix exploitable vulnerabilities in our authorized targets, and keep critical findings fixed within 7 days.",
+          "name": "Vulnerability Discovery & Remediation"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Automated QA",
+            "2": "Code review",
+            "3": "Security review",
+            "4": "CI optimization",
+            "5": "Autonomous merging"
+          },
+          "description": "Automates QA, code and security review, and CI so more PRs merge on their own.",
+          "goal": "Automate each stage of our development lifecycle: QA, code review, security review, and CI under 10 minutes, so more PRs can merge on their own.",
+          "name": "AI Development Automation"
+        },
+        "partner": {
+          "description": "A standing teammate that plans work and runs agents across your codebase.",
+          "goal": "Be our core development partner: take issues from triage to merged PRs, keep main green, and run agents across our dev machines.",
+          "name": "Core Development Partner"
+        },
+        "project": {
+          "description": "Migrates code or infrastructure to a new platform, then retires the old one.",
+          "goal": "Move one of our services to its new platform with no customer-visible downtime, then remove the old setup.",
+          "name": "Migration"
+        },
+        "research": {
+          "description": "Runs experiments in performance, math, AI, model training, and science.",
+          "goal": "Find out what most improves the quality of our core feature, starting from the evals we already have.",
+          "name": "Automated Research & Discovery"
+        }
+      },
+      "finance": {
+        "defense": {
+          "description": "Watches spend, payments, and access for anomalies, then flags or fixes them.",
+          "goal": "Catch unusual spend, duplicate payments, and control gaps within a day.",
+          "name": "Controls & Anomaly Monitoring"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Month-end close",
+            "2": "Budgets",
+            "3": "Vendors and renewals",
+            "4": "Spend approvals",
+            "5": "Reporting"
+          },
+          "description": "Runs the close, budgets, vendor renewals, and spend approvals.",
+          "goal": "Run our finance operating system: the month-end close checklist, budget against actuals, vendor renewals, and spend approvals.",
+          "name": "Finance Operating System"
+        },
+        "partner": {
+          "description": "A standing teammate for finance questions, analyses, and spreadsheet work.",
+          "goal": "Be our finance partner: answer spend and revenue questions, prepare budget analyses, and draft monthly reporting.",
+          "name": "Finance Partner"
+        },
+        "project": {
+          "description": "Moves billing or accounting to a new system, then proves it reconciles.",
+          "goal": "Move our billing to a new system with revenue that reconciles to the cent for two closes in a row.",
+          "name": "Finance Systems Migration"
+        },
+        "research": {
+          "description": "Tests forecast models and explains margins with your own data.",
+          "goal": "Improve our revenue forecast accuracy and explain gross margin by plan.",
+          "name": "Forecast & Unit Economics Research"
+        }
+      },
+      "founder": {
+        "defense": {
+          "description": "Gets the basics right and keeps them right, from access to backups.",
+          "goal": "Get us to a solid security baseline and keep it: single sign-on everywhere, no leaked secrets, and tested backups.",
+          "name": "Security Baseline"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Goals and OKRs",
+            "2": "Planning",
+            "3": "Board prep",
+            "4": "Hiring",
+            "5": "Weekly update"
+          },
+          "description": "Runs the company cadence, from goals and planning to the weekly update.",
+          "goal": "Run our company operating system: goals, the weekly update, board prep, and the hiring pipeline.",
+          "name": "Company Operating System"
+        },
+        "partner": {
+          "description": "A chief of staff for priorities, follow-ups, and work nobody owns.",
+          "goal": "Be my company partner: keep priorities straight, follow up on decisions, and take the work nobody owns.",
+          "name": "Company Partner"
+        },
+        "project": {
+          "description": "Takes a new product from idea to a launched first version.",
+          "goal": "Go from idea to a launched first version of our new product, with early customers using it.",
+          "name": "New Product Build"
+        },
+        "research": {
+          "description": "Maps the market, competitors, and pricing, and tests positioning.",
+          "goal": "Map our market, competitors, and pricing, and test our positioning.",
+          "name": "Strategy & Market Research"
+        }
+      },
+      "marketing": {
+        "defense": {
+          "description": "Watches your site for broken pages, search drops, and off-brand copy.",
+          "goal": "Keep the website fast, findable, and on-brand: fix broken links, search regressions, and off-brand pages within a week.",
+          "name": "Site & Brand Health"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Content calendar",
+            "2": "Campaigns",
+            "3": "Attribution",
+            "4": "Reporting",
+            "5": "Brand"
+          },
+          "description": "Runs the content calendar, campaigns, attribution, and reporting.",
+          "goal": "Run our marketing operating system: the content calendar, campaign checklists, attribution, and the weekly pipeline report.",
+          "name": "Marketing Operating System"
+        },
+        "partner": {
+          "description": "Drafts and ships campaigns, posts, and pages in your voice.",
+          "goal": "Be our marketing partner: draft launches, posts, and pages in our voice and ship them through review.",
+          "name": "Marketing Partner"
+        },
+        "project": {
+          "description": "Rolls out a new brand everywhere it shows up, from the site to decks and docs.",
+          "goal": "Roll out our new brand everywhere it shows up (website, product, docs, sales decks, and social) with nothing left on the old brand by launch day.",
+          "name": "Rebrand"
+        },
+        "research": {
+          "description": "Finds which channels and messages work, and tests landing pages.",
+          "goal": "Find which channels and messages drive qualified signups and test landing page variants.",
+          "name": "Growth Research"
+        }
+      },
+      "operations": {
+        "defense": {
+          "description": "Watches access, devices, and infrastructure for risky drift, then fixes it.",
+          "goal": "Keep access least-privilege and infrastructure free of drift, and revoke stale access within a day.",
+          "name": "Infrastructure & Access Defense"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Onboarding",
+            "2": "Offboarding",
+            "3": "Devices",
+            "4": "Software rollout",
+            "5": "Deployments"
+          },
+          "description": "Runs onboarding, offboarding, devices, and software rollout.",
+          "goal": "Run our IT and deployment operating system: onboarding and offboarding in a day, devices patched, and new tools rolled out to every team.",
+          "name": "IT & Deployment Operating System"
+        },
+        "partner": {
+          "description": "Handles requests, runbooks, and the busywork that keeps things running.",
+          "goal": "Be our operations partner: handle IT and ops requests, keep runbooks current, and automate repeat work.",
+          "name": "Operations Partner"
+        },
+        "project": {
+          "description": "Moves the company to a new tool or platform without lockouts.",
+          "goal": "Move every app to our new sign-on provider with nobody locked out.",
+          "name": "Platform Migration"
+        },
+        "research": {
+          "description": "Finds where work waits and tests fixes.",
+          "goal": "Find where requests wait longest and test fixes.",
+          "name": "Process Research"
+        }
+      },
+      "product": {
+        "defense": {
+          "description": "Catches broken flows, regressions, and error spikes before customers do.",
+          "goal": "Find and fix the issues customers hit first, such as broken flows, regressions, and error spikes, before they become tickets.",
+          "name": "Product Quality & Trust"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Goals and OKRs",
+            "2": "Roadmap",
+            "3": "Issue tracking",
+            "4": "Customer feedback",
+            "5": "Weekly update"
+          },
+          "description": "Keeps goals, the roadmap, issue tracking, and feedback running.",
+          "goal": "Run our product operating system: keep goals, the roadmap, and issue tracking accurate, route feedback, and send the weekly product update.",
+          "name": "Product Operating System"
+        },
+        "partner": {
+          "description": "A standing teammate for specs, triage, prototypes, and open questions.",
+          "goal": "Be our product partner: turn feedback and requests into specs, keep the roadmap honest, and prototype ideas before we commit engineering time.",
+          "name": "Product Partner"
+        },
+        "project": {
+          "description": "Takes a feature from spec to launch, then wraps up.",
+          "goal": "Take our next feature from beta to general availability: rollout complete, docs and changelog out, and a launch dashboard live.",
+          "name": "Launch"
+        },
+        "research": {
+          "description": "Answers product questions with your usage data, experiments, and customer calls.",
+          "goal": "Find out where users drop off after their first weeks, using our analytics and customer conversations.",
+          "name": "Product Research & Analytics"
+        }
+      },
+      "sales": {
+        "defense": {
+          "description": "Answers security questionnaires and trust requests from your real controls.",
+          "goal": "Answer security questionnaires and trust requests within 2 days using our actual controls and docs.",
+          "name": "Trust & Security Response"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Pipeline",
+            "2": "Forecast",
+            "3": "Territories",
+            "4": "Handoffs",
+            "5": "Pricing"
+          },
+          "description": "Runs pipeline hygiene, forecasting, territories, and handoffs.",
+          "goal": "Run our revenue operating system: pipeline hygiene, the forecast roll-up, territory rules, and clean handoffs to customer success.",
+          "name": "Revenue Operating System"
+        },
+        "partner": {
+          "description": "Preps accounts, drafts follow-ups, updates the CRM, and builds demos.",
+          "goal": "Be our sales partner: prep every call, draft follow-ups, keep the CRM current, and build tailored demos.",
+          "name": "Sales Partner"
+        },
+        "project": {
+          "description": "Moves CRM data and automations to a new system without losing pipeline.",
+          "goal": "Move to our new CRM with clean data, pipeline totals that match, and every automation working.",
+          "name": "CRM Migration"
+        },
+        "research": {
+          "description": "Finds the accounts and segments worth your time, and why.",
+          "goal": "Find the accounts most likely to expand next quarter, and why.",
+          "name": "Account & Market Research"
+        }
+      },
+      "somethingElse": {
+        "defense": {
+          "description": "Watches your work for mistakes and risks, and fixes them.",
+          "goal": "Catch mistakes and risks in our work before anyone else does.",
+          "name": "Quality & Risk Watch"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "Planning",
+            "2": "Updates",
+            "3": "Tools",
+            "4": "Access",
+            "5": "Onboarding"
+          },
+          "description": "Runs your team's process and tools.",
+          "goal": "Run our team operating system: planning, updates, and the tools we use.",
+          "name": "Team Operating System"
+        },
+        "partner": {
+          "description": "A standing teammate for whatever your team does.",
+          "goal": "Be our team partner: take requests end to end and keep our work moving.",
+          "name": "Work Partner"
+        },
+        "project": {
+          "description": "Any project with a finish line, from kickoff to done.",
+          "goal": "Move our team onto a new way of working by the end of the quarter.",
+          "name": "Big Project"
+        },
+        "research": {
+          "description": "Runs experiments and keeps a record of what it learned.",
+          "goal": "Find what most improves our main metric.",
+          "name": "Research"
+        }
+      }
+    },
+    "privateOnlyReason": "Your organization doesn't allow shared workstreams right now, so only you can open this one.",
+    "profileComputerNotReady": "{{name}}'s Remote Control computer is not ready. Try again once it is, or choose Private.",
+    "profileComputersCouldNotLoad": "{{name}}'s computers could not load. Try again, or choose Private.",
+    "profileEnvironmentUnavailable": "{{name}}'s environment is no longer available. Choose another in its settings, or choose Private.",
+    "profileEnvironmentUnavailableItem": "Its environment is no longer available",
+    "profileNoMachine": "{{name}} has no Environment or Remote Control computer to run on.",
+    "profileNoMachineItem": "No Environment or Remote Control computer",
+    "profileNoPoolComputers": "{{name}} has no computers to run on.",
+    "profileNoPoolComputersItem": "No computers to run on",
+    "profilePlugins_one": "{{count}} plugin installed for every session",
+    "profilePlugins_other": "{{count}} plugins installed for every session",
+    "profilePoolComputersNotReady": "None of {{name}}'s computers are ready. Try again once one is, or choose Private.",
+    "profileRunsOn": "Runs on {{name}}, a fresh computer each time",
+    "profileRunsOnComputer": "Runs on {{name}}, its Remote Control computer",
+    "profileRunsOnPoolComputer": "Runs on {{name}}, one of its computers",
+    "profileSecrets_one": "{{count}} secret configured",
+    "profileSecrets_other": "{{count}} secrets configured",
+    "profileSeveralComputers": "{{name}} has more than one Remote Control computer. Workstreams on profiles with several computers aren't supported yet.",
+    "profileSeveralComputersItem": "More than one Remote Control computer",
+    "profilesLoading": "Loading agent profiles…",
+    "questions": {
+      "location": "Where should it run?",
+      "machine": "Who's this workstream for?",
+      "name": "What should we call it?",
+      "profile": "Which agent profile should it run as?",
+      "starter": "Start your workstream as"
+    },
+    "runAsUnavailable": "The agent profile picked to run this workstream is not available. Choose who it runs as."
+  }
+}

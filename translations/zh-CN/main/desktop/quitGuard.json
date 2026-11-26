@@ -1,0 +1,9 @@
+{
+  "activeAutomationsDetail": "定时自动化仅在 Factory 打开时运行。如果现在退出，它们要等到你重新打开应用后才会运行。",
+  "activeAutomations_other": "此计算机上有 {{count}} 个定时自动化正在运行。",
+  "activeSessionsDetail": "如果现在退出，活动会话将被中断，正在进行的工作也会停止。",
+  "activeSessions_other": "此计算机上有 {{count}} 个活动的 Droid 会话正在运行。",
+  "dontAskAgain": "不再询问",
+  "quit": "退出 Factory",
+  "title": "退出 Factory？"
+}

@@ -1,0 +1,46 @@
+{
+  "evaluationPresets": {
+    "cancel": "Cancel",
+    "deleteDescription": "Delete {{name}} for everyone in your organization? Existing runs are not affected.",
+    "deletePreset": "Delete preset",
+    "deletePresetTitle": "Delete preset?",
+    "duplicateName": "{{name}} copy"
+  },
+  "evaluationSkillFiles": {
+    "loading": "Loading skill files…",
+    "unavailable": "Skill files are unavailable."
+  },
+  "evaluationTaskFiles": {
+    "filesUnavailable": "Files unavailable",
+    "listingTooLarge": "The file listing exceeds the preview size limit.",
+    "loading": "Loading files…",
+    "noFiles": "No files",
+    "truncatedNotice": "Some files are omitted because the preview limit was reached."
+  },
+  "evaluations": {
+    "couldNotLoadVersion": "Could not load this version.",
+    "datasetNotFound": "Dataset not found",
+    "datasetNotInLibrary": "\"{{name}}\" is not in this dataset library.",
+    "latestVersion": "Latest version",
+    "listViews": {
+      "allDatasets": "All datasets",
+      "allRuns": "All runs",
+      "datasets": "Datasets",
+      "runs": "Runs"
+    },
+    "runNotFound": "Run not found",
+    "runNotReported": "This evaluation has not reported results yet.",
+    "tabs": {
+      "library": "Library",
+      "presets": "Presets"
+    },
+    "tasksUnavailable": "Tasks unavailable",
+    "versionNotFound": "Version not found",
+    "versionNotFoundDescription": "Version \"{{version}}\" was not found in {{dataset}}."
+  },
+  "filePreview": {
+    "binary": "Binary file. A text preview is not available.",
+    "symlink": "Symbolic links are not followed in file previews.",
+    "tooLarge": "This file exceeds the preview size limit."
+  }
+}

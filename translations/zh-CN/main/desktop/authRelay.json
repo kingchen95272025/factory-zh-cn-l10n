@@ -1,0 +1,12 @@
+{
+  "confirmDetail": "你的浏览器请求登录此应用。仅当你确认这是你的账号，且刚刚从浏览器打开了此应用时，才可继续。",
+  "confirmMessage": "以 {{email}} 身份登录 Factory？",
+  "confirmTitle": "登录 Factory",
+  "continue": "继续",
+  "credentialsUnavailable": "无法检查此应用的登录状态。请检查网络连接和钥匙串，然后从浏览器重试。",
+  "linkExpired": "登录链接已过期。请从浏览器重试。",
+  "waitingDetail": "正在以 {{email}} 身份登录。请保持浏览器标签页打开；浏览器端完成后，此应用会立即登录。",
+  "waitingMessage": "正在浏览器中完成登录…",
+  "waitingTitle": "正在完成登录",
+  "wrongAccount": "该登录对应的是其他账号。请重试。"
+}

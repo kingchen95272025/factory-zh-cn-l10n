@@ -1,0 +1,11 @@
+{
+  "activeAutomationsDetail": "Scheduled automations only run while Factory is open. If you quit now, they will not run until you reopen the app.",
+  "activeAutomations_one": "You have {{count}} scheduled automation running on this computer.",
+  "activeAutomations_other": "You have {{count}} scheduled automations running on this computer.",
+  "activeSessionsDetail": "If you quit now, active sessions will be interrupted and any in-progress work will stop.",
+  "activeSessions_one": "You have {{count}} active Droid session running on this computer.",
+  "activeSessions_other": "You have {{count}} active Droid sessions running on this computer.",
+  "dontAskAgain": "Don't ask again",
+  "quit": "Quit Factory",
+  "title": "Quit Factory?"
+}

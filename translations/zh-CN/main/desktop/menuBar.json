@@ -1,0 +1,33 @@
+{
+  "age": {
+    "day_other": "{{count}} 天",
+    "hour_other": "{{count}} 小时",
+    "minute_other": "{{count}} 分钟",
+    "month_other": "{{count}} 个月",
+    "now": "刚刚",
+    "week_other": "{{count}} 周",
+    "year_other": "{{count}} 年"
+  },
+  "askedQuestions_other": "提出了 {{count}} 个问题",
+  "daemonOffline": "Droid 守护进程未运行",
+  "loading": "加载中…",
+  "needsYou": "需要你处理",
+  "newMission": "新建任务",
+  "newWorkstream": "新建工作流",
+  "noRecentSessions": "暂无近期会话",
+  "noRepo": "无仓库",
+  "openFactory": "打开 Factory",
+  "quit": "退出",
+  "showAllSessions": "显示全部会话（{{total}}）",
+  "tooltip": "Factory",
+  "tooltipNeedsYou_other": "{{count}} 个需要你处理",
+  "tooltipSeparator": "，",
+  "tooltipSummary": "Factory：{{summary}}",
+  "tooltipUnread_other": "{{count}} 条未读",
+  "tooltipWorking_other": "{{count}} 个进行中",
+  "unauthenticated": "打开 Factory 以刷新会话状态",
+  "untitledSession": "未命名会话",
+  "waitingForApproval": "等待批准",
+  "waitingForYou": "等待你的回复",
+  "workstreams": "工作流"
+}
