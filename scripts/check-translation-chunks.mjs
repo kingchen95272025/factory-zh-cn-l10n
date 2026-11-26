@@ -1,4 +1,4 @@
-import { existsSync, readFileSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { normalizeChinesePlurals, validateNamespace } from './lib/text.mjs';
 
@@ -52,3 +52,23 @@ for (const result of failed) {
   for (const error of result.errors ?? []) console.log(`   - ${error}`);
 }
 if (!failed.length) console.log('全部分块结构与键集合通过');
+
+writeFileSync(
+  path.resolve('work/repair-plan.json'),
+  `${JSON.stringify(
+    {
+      generatedAt: new Date().toISOString(),
+      repairs: failed.map((result) => ({
+        index: plan.chunks.indexOf(result.chunk),
+        chunk: result.chunk,
+        status: result.status,
+        missing: result.missing,
+        errors: result.errors ?? [],
+      })),
+    },
+    null,
+    2,
+  )}\n`,
+  'utf8',
+);
+if (failed.length) console.log(`修复计划：work/repair-plan.json（${failed.length} 块）`);
