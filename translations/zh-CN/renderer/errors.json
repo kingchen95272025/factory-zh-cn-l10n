@@ -1,0 +1,17 @@
+{
+  "customerDeployment": {
+    "authenticationMismatch": "客户身份验证与此部署不匹配。",
+    "authenticationUnavailable": "客户身份验证不可用。",
+    "featureUnavailable": "此功能在私有部署中不可用。",
+    "identityMismatch": "客户身份与此请求不匹配。",
+    "networkRequestFailed": "私有部署请求失败。请检查网络连接后重试。",
+    "organizationRequired": "请先选择组织，再发起此请求。",
+    "requestFailed": "私有部署请求失败：{{status}}",
+    "signInRequired": "登录此客户部署。"
+  },
+  "notFound": {
+    "backToDashboard": "返回仪表盘",
+    "description": "页面 <path/> 已被移动、删除、重命名，或从未存在。",
+    "title": "404 错误"
+  }
+}

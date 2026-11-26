@@ -1,0 +1,151 @@
+{
+  "mermaidDiagram": {
+    "expandDiagram": "展开图表",
+    "failedToRenderMermaidDiagram": "无法渲染 Mermaid 图表",
+    "renderedMermaidDiagramPreview": "已渲染的 Mermaid 图表预览",
+    "renderingDiagram": "正在渲染图表…"
+  },
+  "useWikiRefresh": {
+    "failedToStartWikiRefresh": "无法在 {{computerName}} 上启动 Wiki 刷新。请重试。",
+    "startingRefresh": "正在 {{computerName}} 上启动刷新…",
+    "viewSession": "查看会话",
+    "wikiRefreshStarted_other": "已在 {{computerName}} 上为 {{count}} 个仓库启动 Wiki 刷新。"
+  },
+  "wiki": {
+    "anErrorOccurredWhileFetchingWiki": "获取 Wiki 仓库时出错。请稍后重试。",
+    "description": "浏览由 Droid 为你的仓库生成的文档。如需生成 Wiki，请在 Droid CLI 中运行 <command>/wiki</command> 命令。",
+    "failedToLoadWikiData": "无法加载 Wiki 数据",
+    "loading": "正在加载 Wiki",
+    "refresh": "刷新",
+    "wiki": "Wiki"
+  },
+  "wikiBatchRefreshModal": {
+    "loading": "正在加载…",
+    "noActiveComputersAvailable": "没有可用的活跃计算机",
+    "noComputersMatchYourSearch": "没有符合搜索条件的计算机",
+    "oneTimeDescription_other": "选择一台计算机，为 {{count}} 个仓库刷新 Wiki。Droid 会从默认分支克隆每个仓库并生成 Wiki。",
+    "oneTimeTitle_other": "一次性刷新 · {{count}} 个仓库",
+    "recurringDescription_other": "选择一台计算机，为 {{count}} 个仓库设置定期刷新。Droid 会克隆每个仓库，并安装一个 GitHub Action，在推送到默认分支时自动刷新 Wiki。",
+    "recurringTitle_other": "定期（推送时） · {{count}} 个仓库",
+    "searchComputers": "搜索计算机…"
+  },
+  "wikiBreadcrumbs": {
+    "wiki": "Wiki"
+  },
+  "wikiExportDropdown": {
+    "exportAllPagesZip": "导出所有页面（.zip）",
+    "exportFailed": "导出 Wiki 失败。请重试。"
+  },
+  "wikiMarkdownRenderer": {
+    "closeImagePreview": "关闭图片预览"
+  },
+  "wikiReader": {
+    "backToWikiIndex": "返回 Wiki 索引",
+    "copied": "已复制",
+    "copiedPageAsMarkdown": "已将页面复制为 Markdown",
+    "copyLink": "复制链接",
+    "copyPageAsMarkdown": "将页面复制为 Markdown",
+    "failedToCopyToClipboard": "无法复制到剪贴板。请检查浏览器权限。",
+    "linkCopiedToClipboard": "链接已复制到剪贴板",
+    "loading": "正在加载 Wiki 页面",
+    "next": "下一页",
+    "oneTimeRefresh": "一次性刷新",
+    "oneTimeTooltip": "刷新一次 Wiki",
+    "previous": "上一页",
+    "recurringOnPush": "定期（推送时）",
+    "recurringTooltip": "设置 GitHub Action，在推送到默认分支时刷新",
+    "refresh": "刷新",
+    "searchWiki": "搜索 Wiki…",
+    "share": "分享",
+    "shareWiki": "分享 Wiki",
+    "theWikiYoureLookingForDoesnt": "你要查找的 Wiki 不存在或已被删除，或者你可能没有访问权限。",
+    "unableToLoadPageContent": "无法加载页面内容",
+    "videoOverviewDescription": "观看此仓库的快速概览。",
+    "videoOverviewHeading": "视频概览",
+    "wikiNotFound": "未找到 Wiki",
+    "wikiVersionDeleted": "Wiki 版本已删除"
+  },
+  "wikiRefreshModal": {
+    "computerOneTimeDescription": "选择一台计算机，为 {{repoName}} 刷新 Wiki。Droid 会从默认分支克隆该仓库并生成 Wiki。",
+    "computerRecurringDescription": "选择一台计算机，为 {{repoName}} 设置定期刷新。Droid 会克隆该仓库，并安装一个 GitHub Action，在推送到默认分支时自动刷新 Wiki。",
+    "computerTab": "计算机",
+    "copyCommand": "复制命令",
+    "createAComputer": "创建计算机",
+    "generateWiki": "生成 Wiki",
+    "loading": "正在加载…",
+    "localOneTimeDescription": "在 {{repoName}} 的本地克隆中，通过 Droid CLI 运行此命令以刷新 Wiki",
+    "localRecurringDescription": "在 {{repoName}} 的本地克隆中，通过 Droid CLI 运行此命令。这会设置一个 GitHub Action，在每次推送到默认分支时刷新 Wiki",
+    "localTab": "本地",
+    "noActiveComputersAvailable": "没有可用的活跃计算机",
+    "noComputersMatchYourSearch": "没有符合搜索条件的计算机",
+    "oneTimeRefresh": "一次性刷新",
+    "recurringOnPush": "定期（推送时）",
+    "refreshTheWikiOnce": "刷新一次 Wiki",
+    "runLocation": "运行位置",
+    "searchComputers": "搜索计算机…",
+    "setUpAGithubActionTo": "设置 GitHub Action，在推送到默认分支时刷新"
+  },
+  "wikiRepositoriesSection": {
+    "connectYourPersonalSourceControlIntegration": "连接你的个人源代码管理集成，以查看你有权访问的仓库的 Wiki 文档。",
+    "connectYourSourceControl": "连接源代码管理",
+    "deselectAll": "取消全选",
+    "emptyStateDescription": "在 Droid CLI 中运行 <command>/wiki</command> 命令，为仓库生成文档。",
+    "exitSelectionMode": "退出选择模式",
+    "filterFresh": "较新",
+    "filterNoWiki": "无 Wiki",
+    "filterRepositories": "筛选仓库",
+    "filterStale": "已过期",
+    "freshCount": "{{freshCount}} 个较新",
+    "freshDescription": "在过去 {{days}} 天内生成。",
+    "freshTooltip": "在过去 {{days}} 天内生成",
+    "generate": "生成",
+    "goToSettings": "前往设置",
+    "lastUpdate": "上次更新：{{time}}",
+    "noRepositoriesMatchYourCurrentFilters": "没有符合当前筛选条件的仓库",
+    "noWikiGenerated": "尚未生成 Wiki",
+    "noWikisGeneratedYet": "尚未生成任何 Wiki",
+    "oneTimeRefresh": "一次性刷新",
+    "oneTimeTooltip": "刷新一次 Wiki",
+    "oneTimeTooltipSelected": "为每个选中的仓库刷新一次 Wiki",
+    "recurringOnPush": "定期（推送时）",
+    "recurringTooltip": "设置 GitHub Action，在推送到默认分支时刷新",
+    "recurringTooltipSelected": "为每个选中的仓库设置 GitHub Action，在推送到默认分支时刷新",
+    "refreshSelected": "刷新所选",
+    "searchRepositories": "搜索仓库…",
+    "selectAll": "全选",
+    "selectedCount": "已选择 {{selectedCount}} 个",
+    "staleCount": "{{staleCount}} 个已过期",
+    "staleDescription": "生成于 {{days}} 天前或更早。",
+    "staleTooltip": "生成于 {{days}} 天前或更早",
+    "wikiCount": "{{withWikis}} / {{total}} 个 Wiki",
+    "wikiCountTooltip": "已生成 Wiki 的已集成仓库数量"
+  },
+  "wikiSearchModal": {
+    "escClose": "esc 关闭",
+    "navigate": "↑↓ 导航",
+    "noResultsFound": "未找到结果。",
+    "results": "结果",
+    "searchFailedPleaseTryAgain": "搜索失败。请重试。",
+    "searchPlaceholder": "搜索 Wiki…",
+    "searchWiki": "搜索 Wiki",
+    "searching": "正在搜索…",
+    "select": "↵ 选择",
+    "typeToSearchWikiPages": "输入以搜索 Wiki 页面"
+  },
+  "wikiTableOfContents": {
+    "onThisPage": "本页内容"
+  },
+  "wikiVersionDropdown": {
+    "branch": "分支",
+    "cancel": "取消",
+    "commit": "提交",
+    "created": "创建时间",
+    "delete": "删除",
+    "deleteCurrentVersionDescription": "这将永久删除你当前正在查看的 Wiki 版本，且无法撤销。",
+    "deleteVersionDescription": "这将永久删除此 Wiki 版本，且无法撤销。",
+    "deleteWikiVersion": "删除 Wiki 版本？",
+    "deleting": "正在删除…",
+    "loading": "正在加载…",
+    "pages": "页面"
+  }
+}

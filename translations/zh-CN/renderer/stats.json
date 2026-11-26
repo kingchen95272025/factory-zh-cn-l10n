@@ -1,0 +1,58 @@
+{
+  "activityHeatmap": {
+    "activity": "活动",
+    "cellLabel_other": "{{month}} {{day}} — {{count}} 个会话",
+    "days": {
+      "fri": "周五",
+      "mon": "周一",
+      "wed": "周三"
+    },
+    "less": "较少",
+    "more": "较多"
+  },
+  "badgeGrid": {
+    "badges": "徽章"
+  },
+  "chronotype": {
+    "afternoonCoder": "午后编码者",
+    "earlyBird": "早鸟",
+    "nightHacker": "夜间黑客",
+    "nightOwl": "夜猫子"
+  },
+  "errors": {
+    "desktopOnly": "统计数据仅在桌面应用中可用"
+  },
+  "stats": {
+    "couldNotLoadStats": "无法加载统计数据",
+    "loading": "正在加载使用数据",
+    "noDataAvailable": "暂无数据。",
+    "noSessionsDescription": "在 Droid CLI 中运行几个会话，再回来查看你的统计数据。",
+    "noSessionsYet": "暂无会话",
+    "subtitle": "你的 Droid 使用情况概览。",
+    "yourDroidStats": "你的 Droid 统计"
+  },
+  "statsHero": {
+    "longestSession": "最长会话",
+    "longestStreak": "最长连续天数",
+    "member": "成员",
+    "sessions": "会话",
+    "totalTime": "总时长"
+  },
+  "topLanguagesFrameworks": {
+    "frameworks": "框架",
+    "languages": "语言",
+    "noDataYet": "暂无数据。",
+    "stack": "技术栈"
+  },
+  "topModelLine": {
+    "mostActiveTime": "最活跃时段",
+    "topModel": "最常用模型"
+  },
+  "topProjects": {
+    "languagesFrameworks": "语言 / 框架",
+    "project": "项目",
+    "sessions": "会话",
+    "time": "时长",
+    "title": "热门项目"
+  }
+}

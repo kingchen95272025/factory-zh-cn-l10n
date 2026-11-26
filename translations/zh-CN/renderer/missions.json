@@ -1,0 +1,691 @@
+{
+  "continueMission": {
+    "openingMessage": "以此工作流继续我的任务“{{title}}”。",
+    "progress_other": "已完成 {{completed}}/{{total}} 项功能",
+    "thisComputer": "此计算机"
+  },
+  "docComments": {
+    "couldNotSendThread": "发送评论串失败",
+    "recipientUnreachable": "无法连接到该智能体的计算机。",
+    "signInExpired": "登录已过期。请重新登录后重试。",
+    "threadSent": "已发送给 {{name}}",
+    "threadSentToOrchestrator": "已发送给编排器"
+  },
+  "missionChatComposer": {
+    "missionRunning": "任务运行中。请先暂停再发送消息。",
+    "validatorCompleted": "验证器已完成。请返回编排器继续。",
+    "workerCompleted": "执行者已完成。请返回编排器继续。"
+  },
+  "missionControl": {
+    "computer": "计算机",
+    "createANewMissionToStart": "创建新任务，开始规划并分配执行者。",
+    "created": "创建时间",
+    "description": "让一组 Droid 并行工作，规划并交付长期项目。当工作持续数小时或数天、涉及多个功能，或超出单个会话的处理能力时，请使用任务。",
+    "empty": {
+      "all": "暂无任务",
+      "completed": "没有已完成的任务",
+      "paused": "没有已暂停的任务",
+      "running": "没有运行中的任务"
+    },
+    "failedToLoadMissions": "加载任务失败",
+    "filter": {
+      "all": "全部",
+      "completed": "已完成",
+      "paused": "已暂停",
+      "running": "运行中"
+    },
+    "localComputer": "本地",
+    "missionControl": "Mission Control",
+    "progress": "进度",
+    "repository": "仓库",
+    "title": "标题",
+    "unregisteredComputer": "未注册的计算机"
+  },
+  "missionEntryBlockModal": {
+    "cancel": "取消",
+    "missionAccessBlocked": "任务访问受限",
+    "overageRequiredDescription": "任务专为复杂的多步骤工作设计，会自主运行数小时或数天。要运行任务，请在用量设置中配置超额偏好，以指定标准用量耗尽后的处理方式。",
+    "overageRequiredTitle": "需要配置用量超额",
+    "restrictedDescription": "任务已被你的组织管理员限制。请联系管理员申请访问权限。",
+    "restrictedTitle": "任务受限",
+    "setOveragePreference": "设置超额偏好"
+  },
+  "missionFeatureDetail": {
+    "backToChat": "返回聊天",
+    "description": "描述",
+    "expectedBehavior": "预期行为",
+    "fulfills": "满足的需求",
+    "milestone": "里程碑：{{milestone}}",
+    "preconditions": "前置条件",
+    "status": {
+      "cancelled": "已取消",
+      "completed": "已完成",
+      "inProgress": "进行中",
+      "notStarted": "未开始"
+    },
+    "unassignedMilestone": "未分配里程碑"
+  },
+  "missionFeaturesSection": {
+    "features": "功能",
+    "milestoneHeading": "里程碑 {{number}}：{{title}}",
+    "noFeaturesDefinedYet": "尚未定义功能"
+  },
+  "missionHeader": {
+    "activeTime": "活跃时间：{{time}}",
+    "avgPerFeature": "平均每项功能：{{time}}",
+    "avgPerMilestone": "平均每个里程碑：{{time}}",
+    "disconnected": "已断开连接",
+    "factoryStandardCredits": "Factory Standard Credits",
+    "fiveHourUsage": "5 小时用量：{{percent}}",
+    "mission": "⛬ 任务",
+    "openSidebar": "打开侧边栏",
+    "pause": "暂停",
+    "progress": "进度",
+    "resetsIn": "{{time}} 后重置",
+    "resume": "恢复",
+    "resuming": "正在恢复",
+    "time": "时间",
+    "untitledMission": "任务",
+    "usage": "用量"
+  },
+  "missionLaunch": {
+    "composerPlaceholder": "正在设置你的工作流…",
+    "startFailed": "工作流无法启动。",
+    "step": {
+      "connectToComputer": "正在连接计算机",
+      "connectToMachine": "正在连接 {{machine}}",
+      "connectToThisComputer": "正在连接此计算机",
+      "createComputer": "正在基于 {{environment}} 创建计算机",
+      "setUpComputer": "正在设置计算机",
+      "startMission": "正在启动你的工作流",
+      "turnOnRemoteControl": "正在开启远程控制"
+    }
+  },
+  "missionOnboardingModal": {
+    "cancel": "取消",
+    "continue": "继续",
+    "fixAgentReadinessReport": "修复智能体就绪报告",
+    "howItWorks": "工作方式：",
+    "keyConcepts": "核心概念：",
+    "milestonesGroupsOfFeaturesWithValidation": "• 里程碑 — 带验证的功能分组",
+    "missionsAutonomousMultiAgentExecution": "任务 - 自主多智能体执行",
+    "notForSimpleTasksDesignedFor": "• 不适用于简单任务 — 专为复杂的多步骤工作而设计",
+    "orchestratorPlansAndManagesTheMission": "• 编排器 — 负责规划和管理任务",
+    "proceedAnyway": "仍然继续",
+    "repositoryNotAgentReady": "仓库尚未准备好供智能体使用",
+    "runAgentReadinessReport": "运行智能体就绪报告",
+    "runsForMultipleHoursOrDays": "• 可自主运行数小时或数天",
+    "significantlyHigherTokenUsageComparedTo": "• 与常规会话相比，Token 用量显著更高",
+    "text1DescribeYourGoal": "1. 描述你的目标",
+    "text2ReviewAndApproveTheMission": "2. 审核并批准任务计划",
+    "text3DroidExecutesFeaturesAutonomously": "3. Droid 自主执行各项功能",
+    "text4ValidationOccursAtMilestones": "4. 在里程碑处进行验证",
+    "warnings": "警告：",
+    "workersExecuteIndividualFeatures": "• 执行者 — 负责执行单项功能"
+  },
+  "missionProgressLogSection": {
+    "noProgressEntriesYet": "暂无进度记录",
+    "progressLog": "进度日志"
+  },
+  "missionSessionSidebar": {
+    "model": "模型",
+    "orchestrator": "编排器",
+    "validator": "验证器",
+    "worker": "执行者"
+  },
+  "missionSessionsSidebar": {
+    "awaitingYourInput": "等待你的输入",
+    "backToApp": "返回应用",
+    "fallbackSessionName": "会话 {{id}}",
+    "filter": {
+      "all": "全部",
+      "validators": "验证器",
+      "workers": "执行者"
+    },
+    "filterMissionSessionsByType": "按类型筛选任务会话",
+    "milestoneHeading": "里程碑 {{number}}：{{title}}",
+    "noSessionsMatchThisFilter": "没有符合此筛选条件的会话。",
+    "orchestrator": "编排器",
+    "sessions": "会话",
+    "validatorNumber": "验证器 #{{number}}",
+    "workerNumber": "执行者 #{{number}}"
+  },
+  "missionSettings": {
+    "defaultOption": "默认（{{name}}）",
+    "inviteeCannotUseAgentProfile": "对方无法使用此工作流的智能体配置。请让管理者将该配置共享给其所在的分组。",
+    "lastMemberCannotLeave": "你是最后一名成员。请改为归档该工作流。",
+    "machines": {
+      "agentsFailed": "无法加载智能体数量。移除操作仍会应用于该计算机上的所有智能体。",
+      "alreadyActive": "已是此工作流中的活动计算机。",
+      "alreadyOrchestrator": "这是编排器的计算机。",
+      "loadingAgents": "正在加载智能体数量…",
+      "needConnection": "请连接到该工作流的计算机以更改机器。",
+      "needOpenMission": "请在此处打开该工作流以更改其机器。",
+      "oneMachine": "{{reason}} 新智能体将在编排器的计算机上启动。",
+      "orchestratorComputer": "编排器的计算机",
+      "remoteControlFailed": "无法在此计算机上启用远程控制。请检查其连接后重试。",
+      "saveFailed": "无法更改该工作流的机器。请重试。",
+      "settingsSaving": "请等待设置更改完成。",
+      "thisComputer": "此计算机",
+      "thisComputerHelp": "工作流可在此计算机上启动智能体，这些智能体将操作你的文件并运行命令。远程控制会为此计算机开启，并持续开启，直到你在设置中将其关闭。",
+      "thisComputerKeepAwake": "智能体使用此计算机期间，请保持 Factory 打开并让计算机保持唤醒。你的工作流默认值不会改变。",
+      "updateDroid": "请更新 {{name}} 上的 Droid 以更改机器。"
+    },
+    "modelSaveFailed": "无法更改模型。请重试。",
+    "modelsNeedConnection": "仅当有已连接的计算机运行此工作流的编排器时，才能更改模型。",
+    "modelsNeedDaemonUpdate": "此工作流的计算机需要更新 Droid，成员才能更改其模型。",
+    "modelsNeedOpenMission": "请先打开一次该工作流，才能从这里更改其模型。",
+    "moveToAgentProfileNotShared": "{{name}} 不是共享计算机。你可以在设置中更改此项。",
+    "moveToAgentProfileUnavailable": "仅当编排器在共享计算机或环境中运行时可用。",
+    "runsAsAgentProfile": "智能体配置",
+    "symbolColorSaveFailed": "无法更改图标颜色，已恢复为之前的颜色。请重试。",
+    "symbolNeedsConnection": "此工作流连接后即可更改图标",
+    "symbolSaveFailed": "无法更改图标，已恢复为之前的图标。请重试。",
+    "workstreamAgentProfileNotFound": "此工作流的智能体配置已不存在，因此无法添加任何人。"
+  },
+  "missionStatus": {
+    "awaitingInput": "等待输入",
+    "completed": "已完成",
+    "initializing": "正在初始化",
+    "orchestratorTurn": "编排器轮次",
+    "paused": "已暂停",
+    "planning": "规划中",
+    "running": "运行中"
+  },
+  "missionV2Agents": {
+    "activity": {
+      "computerGone": "计算机已删除；请向编排器请求新的智能体",
+      "computerStatus": "计算机 {{status}}",
+      "computerStatusUnavailable": "计算机状态不可用",
+      "settingUpComputer": "正在设置计算机",
+      "starting": "正在启动",
+      "waitingOnBackgroundWork": "等待中",
+      "working": "工作中"
+    },
+    "fallbackAgentName": "智能体 {{id}}",
+    "group": {
+      "archived": "已归档",
+      "idle": "空闲",
+      "waitingOnYou": "等待你处理",
+      "working": "工作中"
+    },
+    "hasQuestions_other": "有 {{count}} 个问题需要你回答",
+    "needsApprovalToRun": "需要批准才能运行 {{tool}}",
+    "needsApprovalToRunAndMore_other": "需要批准才能运行 {{tool}} 及另外 {{count}} 个工具",
+    "needsSpecApproval": "需要规格审批",
+    "needsYourApproval": "需要你的批准",
+    "newAgent": "新建智能体"
+  },
+  "newMissionButtonV2": {
+    "newMission": "新建任务"
+  },
+  "newMissionComputerStartup": {
+    "provisionFailed": "编排器计算机预配失败。请选择其他环境或重试。",
+    "startTimedOut": "编排器计算机启动耗时过长。请重试以检查其进度。"
+  },
+  "newMissionDialog": {
+    "aTemplateCreatesAFreshComputer": "环境会在工作流启动时创建一台全新的计算机。",
+    "branch": "分支",
+    "branchSwitchInProgress": "文件夹仍在切换分支。请等待切换完成后重试。",
+    "branchValue": "分支：{{branch}}",
+    "branchValueWorktree": "分支：{{branch}}，位于新工作树中",
+    "cancel": "取消",
+    "cannotVerifyMultiMachine": "Factory 无法验证你的组织是否允许多机器工作流。智能体将在编排器机器上运行。请让管理员检查合规设置。",
+    "checkingWorkingDirectory": "正在检查文件夹…",
+    "chooseAvailableOrchestrator": "选择一台可用的编排器机器。",
+    "complianceKeepsOneMachine": "Factory 已为你的组织禁用云同步，因此每个智能体都在此机器上运行。",
+    "computerNotRegistered": "此计算机未注册远程控制。智能体将在编排器机器上运行。请打开设置 › 此计算机进行注册。",
+    "connectingToListFolders": "正在连接 {{computer}} 以列出其文件夹…",
+    "couldNotOpenFolderPicker": "无法打开文件夹选择器。",
+    "environmentNudge": {
+      "newEnvironmentTooltip": "添加新的远程计算配置",
+      "notNow": "暂不",
+      "setUp": "设置环境",
+      "setUpDescription": "设置一个包含仓库的环境，让智能体在云端计算机上运行；即使你合上笔记本电脑，它们也会继续工作。",
+      "title": "在云端运行此工作流"
+    },
+    "folderPathOn": "{{computer}} 上的文件夹路径",
+    "loadingMachines": "正在加载机器…",
+    "loadingOrganizationSettings": "正在加载组织设置…",
+    "localComputersDisabled": "你的组织已禁用本地计算机。",
+    "localRequiresDesktopApp": "本地机器需要 Factory 桌面应用。",
+    "locationBranchHelper": "编排器将在 {{path}} 的 {{branch}} 上启动。此机器上的智能体共享该检出。",
+    "locationDetachedHelper": "编排器将在 {{path}} 的当前检出上启动。此机器上的智能体共享该检出。",
+    "locationWorktreeExistingHelper": "编排器将在 {{path}} 的新工作树中、{{branch}} 分支上启动。此机器上的智能体共享该工作树。",
+    "locationWorktreeFromTitleHelper": "编排器将在 {{path}} 的新工作树中启动，该工作树从 {{base}} 切出，分支以工作流命名。此机器上的智能体共享该工作树。",
+    "locationWorktreeHelper": "编排器将在 {{path}} 的新工作树中、{{branch}} 分支上启动，该工作树从 {{base}} 切出。此机器上的智能体共享该工作树。",
+    "lostConnectionToComputer": "与 {{computer}} 的连接已断开。请在重新连接后再次选择文件夹。",
+    "machineSummary": {
+      "defaultAndYours_other": "智能体还可以使用 {{defaultMachine}} 以及你的 {{count}} 台机器。",
+      "defaultOnly": "智能体还可以使用 {{defaultMachine}}。",
+      "yoursOnly_other": "智能体还可以使用你的 {{count}} 台机器。"
+    },
+    "machinesCouldNotLoad": "无法加载你的机器，因此智能体将在编排器机器上运行。",
+    "missionDefaultsCouldNotLoad": "无法加载你的工作流默认值。智能体将在编排器机器上运行。",
+    "orchestratorCouldNotLoad": "无法加载此机器。请选择本地或稍后重试。",
+    "orchestratorMachine": "编排器机器",
+    "organizationKeepsOneMachine": "你的组织不允许共享文件夹存放在 Factory 的服务器上，因此每个智能体都在此机器上运行。",
+    "provisionedComputerRunsAsOther": "此工作流已有一台以其他用户身份运行的计算机。请将运行身份改回后，再在其上启动。",
+    "remoteAccessNotAllowed": "你的组织不允许远程控制此计算机。智能体将在编排器机器上运行。",
+    "remoteAccessWillBeTurnedOn": "将为此计算机开启远程控制，以便其他机器上的智能体可以访问它。",
+    "selectOrchestratorMachine": "选择编排器机器",
+    "start": "启动",
+    "startWithoutRemoteAgents": "在没有远程智能体的情况下启动",
+    "syncSettingsCouldNotLoad": "无法加载你组织的同步设置。智能体将在编排器机器上运行。",
+    "tryAgain": "重试",
+    "useFolder": "使用文件夹",
+    "workingDirectory": "工作目录",
+    "workingDirectoryHelper": "编排器将在 {{path}} 中启动。此机器上的智能体也在同一位置启动。",
+    "workingDirectoryValue": "工作目录：{{path}}"
+  },
+  "prAutofix": {
+    "githubAppMissing": "要为 {{owner}} 使用自动修复，请安装 Factory GitHub App。",
+    "gitlabMissing": "请在集成设置中连接 GitLab 以使用自动修复。",
+    "loading": "加载中…",
+    "missionIntegrationMissing": "自动修复需要 Factory GitHub App 或 GitLab 集成。请在你的集成设置中进行配置。",
+    "missionPermissionsPending": "GitHub 组织所有者需要先接受 Factory 待处理的权限请求，自动修复才能运行。",
+    "notSetUp": "自动修复适用于工作流智能体在已开启云同步的 Droid 计算机上打开或推送的 PR。",
+    "optionOff": "关闭",
+    "optionOn": "开启",
+    "paused": "更新 {{limit}} 次后已暂停。请关闭再开启自动修复以恢复。",
+    "permissionsPending": "GitHub 组织所有者需要先接受 Factory 针对 {{owner}} 待处理的权限请求。",
+    "repoNotSynced": "请将 {{repo}} 添加到你的同步仓库，以使用自动修复。",
+    "unsupportedProvider": "自动修复仅支持 GitHub 拉取请求和 GitLab 合并请求。",
+    "updateTypesCustom": "自定义",
+    "updateTypesDefault": "使用我的默认值"
+  },
+  "progressLog": {
+    "completed": "<role/> 已完成 <target/>",
+    "failed": "<role/> 失败",
+    "failedWithLabel": "<role/> 处理 <target/> 失败",
+    "failedWithReason": "<role/> 失败：<reason/>",
+    "failedWithReasonAndLabel": "<role/> 失败：<reason/> <target/>",
+    "fallbackModel": "回退模型",
+    "handoffItemsDismissed": "已忽略交接项",
+    "missionAccepted": "任务已接受",
+    "missionPaused": "任务已暂停",
+    "missionResumed": "任务已恢复",
+    "paused": "<role/> 已暂停 <target/>",
+    "role": {
+      "orchestrator": "编排器",
+      "validator": "验证器",
+      "worker": "执行者"
+    },
+    "roleWithNumber": "{{role}} #{{number}}",
+    "runStarted": "运行已开始",
+    "runStartedWithMessage": "运行已开始：{{message}}",
+    "selected": "<role/> 已选择 <target/>",
+    "started": "<role/> 已启动 <target/>",
+    "startedSubstituted": "<role/> 已启动 <target/>（<fromModel/> 被组织策略阻止，改用 <toModel/>）",
+    "startedSubstitutedWithLabel": "<role/> 已启动（<fromModel/> 被组织策略阻止，改用 <toModel/>）<target/>"
+  },
+  "sharedFolderRefusal": {
+    "oneMachine": "你的组织不允许共享文件夹存放在 Factory 的服务器上，因此此工作流中的每个智能体都在同一台机器上运行。"
+  },
+  "workerSessionTitle": {
+    "fallback": "执行者 {{id}}"
+  },
+  "workstreamAccessBlockedModal": {
+    "description": "工作流已被你的组织管理员限制。请联系管理员申请访问权限。",
+    "title": "工作流受限"
+  },
+  "workstreamSetup": {
+    "changeAccess": "更改访问权限",
+    "changeTitle": "更改标题",
+    "changeType": "更改类型",
+    "chooseMachine": "请选择运行位置以继续。",
+    "custom": {
+      "name": "自定义"
+    },
+    "defaultTitle": "新建工作流",
+    "facts": {
+      "access": "访问权限",
+      "agentProfile": "智能体配置",
+      "labelled": "{{label}}：",
+      "multiplayer": "多人共享",
+      "multiplayerDetail": "成员可以查看",
+      "notChosen": "未选择",
+      "private": "私有",
+      "privateDetail": "仅你可以查看",
+      "runsOn": "运行于",
+      "title": "标题",
+      "type": "类型"
+    },
+    "machineForProfile": "<machine/>（用于 <profile/> 智能体配置）",
+    "nameRequired": "请为工作流命名以继续。",
+    "personas": {
+      "design": {
+        "defense": {
+          "description": "在已发布的内容中发现 UI 回归和无障碍缺陷，并加以修复。",
+          "goal": "保持产品可访问且视觉一致，并在一周内修复 UI 回归。",
+          "name": "UX 质量与无障碍"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "DESIGN.md",
+            "2": "品牌规范",
+            "3": "视觉语言",
+            "4": "设计令牌与组件",
+            "5": "评审与交接"
+          },
+          "description": "维护品牌规范，并保持设计文件与代码同步。",
+          "goal": "运营我们的设计操作系统：维护 DESIGN.md、品牌规范和视觉语言，并保持设计令牌与组件在设计文件与代码之间同步。",
+          "name": "设计操作系统"
+        },
+        "partner": {
+          "description": "一位常驻队友，负责探索方向并用代码制作原型。",
+          "goal": "成为我们的设计伙伴：探索方向、用代码制作原型，并保持设计与已发布 UI 同步。",
+          "name": "设计伙伴"
+        },
+        "project": {
+          "description": "将某个界面迁移到新设计系统，然后交接。",
+          "goal": "将产品的一个区域迁移到新设计系统，让每个屏幕都使用新组件，并移除旧样式。",
+          "name": "重新设计"
+        },
+        "research": {
+          "description": "将访谈、可用性测试和分析数据转化为研究发现。",
+          "goal": "找出新用户在引导流程中受阻的环节，并测试两项修复。",
+          "name": "设计研究"
+        }
+      },
+      "engineering": {
+        "defense": {
+          "description": "发现、跟踪并修复工程系统中的漏洞。",
+          "goal": "在授权目标中发现并修复可利用的漏洞，确保关键发现在 7 天内完成修复。",
+          "name": "漏洞发现与修复"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "自动化 QA",
+            "2": "代码审查",
+            "3": "安全审查",
+            "4": "CI 优化",
+            "5": "自主合并"
+          },
+          "description": "自动化 QA、代码与安全审查以及 CI，让更多 PR 能够自行合并。",
+          "goal": "自动化开发生命周期的每个阶段：QA、代码审查、安全审查，并将 CI 控制在 10 分钟以内，让更多 PR 能够自行合并。",
+          "name": "AI 开发自动化"
+        },
+        "partner": {
+          "description": "一位常驻队友，负责规划工作并在代码库中运行智能体。",
+          "goal": "成为我们的核心开发伙伴：将问题从分诊推进到 PR 合并，保持 main 分支通过，并在我们的开发机器上运行智能体。",
+          "name": "核心开发伙伴"
+        },
+        "project": {
+          "description": "将代码或基础设施迁移到新平台，然后下线旧平台。",
+          "goal": "将我们的一个服务迁移到其新平台，不出现客户可见的停机，然后移除旧环境。",
+          "name": "迁移"
+        },
+        "research": {
+          "description": "在性能、数学、AI、模型训练和科学领域开展实验。",
+          "goal": "从我们现有的评估结果出发，找出最能提升核心功能质量的方案。",
+          "name": "自动化研究与探索"
+        }
+      },
+      "finance": {
+        "defense": {
+          "description": "监控支出、付款和访问权限中的异常，并标记或修复。",
+          "goal": "在一天内发现异常支出、重复付款和控制缺失。",
+          "name": "控制与异常监控"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "月末结账",
+            "2": "预算",
+            "3": "供应商与续约",
+            "4": "支出审批",
+            "5": "报表"
+          },
+          "description": "负责结账、预算、供应商续约和支出审批。",
+          "goal": "运营我们的财务操作系统：月末结账清单、预算与实际对比、供应商续约和支出审批。",
+          "name": "财务操作系统"
+        },
+        "partner": {
+          "description": "一位常驻队友，负责财务问题、分析和表格工作。",
+          "goal": "成为我们的财务伙伴：解答支出与收入问题，准备预算分析，并起草月度报表。",
+          "name": "财务伙伴"
+        },
+        "project": {
+          "description": "将计费或会计迁移到新系统，并验证对账无误。",
+          "goal": "将计费迁移到新系统，确保连续两个结账周期的收入对账精确到分。",
+          "name": "财务系统迁移"
+        },
+        "research": {
+          "description": "用你自己的数据检验预测模型并解释利润率。",
+          "goal": "提升收入预测的准确性，并按方案解释毛利率。",
+          "name": "预测与单位经济研究"
+        }
+      },
+      "founder": {
+        "defense": {
+          "description": "把基础工作做对并持续保持，从访问权限到备份。",
+          "goal": "让我们达到稳固的安全基线并持续保持：全面启用单点登录、无密钥泄露，并验证备份可用。",
+          "name": "安全基线"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "目标与 OKR",
+            "2": "规划",
+            "3": "董事会准备",
+            "4": "招聘",
+            "5": "每周更新"
+          },
+          "description": "负责公司的运营节奏，从目标和规划到每周更新。",
+          "goal": "运营我们的公司操作系统：目标、每周更新、董事会准备和招聘流程。",
+          "name": "公司操作系统"
+        },
+        "partner": {
+          "description": "一位幕僚长，负责优先级、跟进和无人负责的工作。",
+          "goal": "成为我的公司伙伴：理清优先级、跟进决策，并承担无人负责的工作。",
+          "name": "公司伙伴"
+        },
+        "project": {
+          "description": "将新产品从想法推进到首个版本上线。",
+          "goal": "将我们的新产品从想法推进到首个版本上线，并有早期客户在使用。",
+          "name": "新产品构建"
+        },
+        "research": {
+          "description": "梳理市场、竞争对手和定价，并检验定位。",
+          "goal": "梳理我们的市场、竞争对手和定价，并检验我们的定位。",
+          "name": "战略与市场研究"
+        }
+      },
+      "marketing": {
+        "defense": {
+          "description": "监控网站中的失效页面、搜索排名下滑和不符合品牌调性的文案。",
+          "goal": "保持网站快速、易于被发现且符合品牌：一周内修复失效链接、搜索排名回退和不符合品牌调性的页面。",
+          "name": "网站与品牌健康"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "内容日历",
+            "2": "营销活动",
+            "3": "归因",
+            "4": "报表",
+            "5": "品牌"
+          },
+          "description": "负责内容日历、营销活动、归因和报表。",
+          "goal": "运营我们的营销操作系统：内容日历、营销活动清单、归因和每周营销管道报告。",
+          "name": "营销操作系统"
+        },
+        "partner": {
+          "description": "以你的语气起草并发布营销活动、帖子和页面。",
+          "goal": "成为我们的营销伙伴：以我们的语气起草发布活动、帖子和页面，并推动其通过评审后上线。",
+          "name": "营销伙伴"
+        },
+        "project": {
+          "description": "在品牌出现的所有地方推行新品牌，从网站到演示文稿和文档。",
+          "goal": "在品牌出现的所有地方（网站、产品、文档、销售演示文稿和社交媒体）推行新品牌，到发布日不遗留任何旧品牌内容。",
+          "name": "品牌重塑"
+        },
+        "research": {
+          "description": "找出有效的渠道和信息，并测试落地页。",
+          "goal": "找出能带来优质注册的渠道和信息，并测试落地页变体。",
+          "name": "增长研究"
+        }
+      },
+      "operations": {
+        "defense": {
+          "description": "监控访问权限、设备和基础设施中的风险漂移，并予以修复。",
+          "goal": "保持访问权限最小化和基础设施无漂移，并在一天内撤销过期权限。",
+          "name": "基础设施与访问防护"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "入职",
+            "2": "离职",
+            "3": "设备",
+            "4": "软件发布",
+            "5": "部署"
+          },
+          "description": "负责入职、离职、设备和软件发布。",
+          "goal": "运营我们的 IT 与部署操作系统：一天内完成入职和离职，设备完成补丁，并将新工具推广到每个团队。",
+          "name": "IT 与部署操作系统"
+        },
+        "partner": {
+          "description": "处理请求、运维手册以及维持运转的琐碎工作。",
+          "goal": "成为我们的运营伙伴：处理 IT 与运营请求，保持运维手册最新，并自动化重复工作。",
+          "name": "运营伙伴"
+        },
+        "project": {
+          "description": "将公司迁移到新工具或平台，且无人被锁定在外。",
+          "goal": "将每个应用迁移到新的登录服务商，且无人被锁定在外。",
+          "name": "平台迁移"
+        },
+        "research": {
+          "description": "找出工作中等待最久的地方并测试修复方案。",
+          "goal": "找出请求等待最久的环节并测试修复方案。",
+          "name": "流程研究"
+        }
+      },
+      "product": {
+        "defense": {
+          "description": "在客户之前发现中断的流程、回归和错误激增。",
+          "goal": "在问题变成工单之前，发现并修复客户最先遇到的问题，例如中断的流程、回归和错误激增。",
+          "name": "产品质量与信任"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "目标与 OKR",
+            "2": "路线图",
+            "3": "问题跟踪",
+            "4": "客户反馈",
+            "5": "每周更新"
+          },
+          "description": "保持目标、路线图、问题跟踪和反馈流程正常运转。",
+          "goal": "运营我们的产品操作系统：保持目标、路线图和问题跟踪准确，转交反馈，并发送每周产品更新。",
+          "name": "产品操作系统"
+        },
+        "partner": {
+          "description": "一位常驻队友，负责规格、分诊、原型和待决问题。",
+          "goal": "成为我们的产品伙伴：将反馈和请求转化为规格，保持路线图真实可信，并在投入工程时间之前为想法制作原型。",
+          "name": "产品伙伴"
+        },
+        "project": {
+          "description": "将一个功能从规格推进到上线，然后收尾。",
+          "goal": "将我们的下一个功能从 Beta 推进到正式可用：完成全量推送，文档与更新日志同步发布，发布仪表盘上线。",
+          "name": "发布"
+        },
+        "research": {
+          "description": "用你的使用数据、实验和客户通话回答产品问题。",
+          "goal": "利用我们的分析和客户对话，找出用户在最初几周后流失的环节。",
+          "name": "产品研究与分析"
+        }
+      },
+      "sales": {
+        "defense": {
+          "description": "基于你的实际控制措施回答安全问卷和信任请求。",
+          "goal": "使用我们的实际控制措施和文档，在 2 天内回答安全问卷和信任请求。",
+          "name": "信任与安全响应"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "销售管道",
+            "2": "预测",
+            "3": "区域划分",
+            "4": "交接",
+            "5": "定价"
+          },
+          "description": "负责销售管道维护、预测、区域划分和交接。",
+          "goal": "运营我们的收入操作系统：销售管道维护、预测汇总、区域规则，以及与客户成功团队的顺畅交接。",
+          "name": "收入操作系统"
+        },
+        "partner": {
+          "description": "准备客户资料、起草跟进内容、更新 CRM 并构建演示。",
+          "goal": "成为我们的销售伙伴：为每次通话做准备、起草跟进内容、保持 CRM 最新，并构建定制演示。",
+          "name": "销售伙伴"
+        },
+        "project": {
+          "description": "将 CRM 数据和自动化迁移到新系统，且不丢失销售管道。",
+          "goal": "迁移到新的 CRM，确保数据干净、销售管道总额一致，并且每个自动化都能正常工作。",
+          "name": "CRM 迁移"
+        },
+        "research": {
+          "description": "找出值得投入时间的客户和细分市场，并说明原因。",
+          "goal": "找出下个季度最有可能扩展的客户，并说明原因。",
+          "name": "客户与市场研究"
+        }
+      },
+      "somethingElse": {
+        "defense": {
+          "description": "监控工作中的错误和风险，并予以修复。",
+          "goal": "比任何人都更早发现我们工作中的错误和风险。",
+          "name": "质量与风险监控"
+        },
+        "operatingSystem": {
+          "areas": {
+            "1": "规划",
+            "2": "更新",
+            "3": "工具",
+            "4": "访问权限",
+            "5": "入职"
+          },
+          "description": "负责团队的流程和工具。",
+          "goal": "运营我们的团队操作系统：规划、更新以及我们使用的工具。",
+          "name": "团队操作系统"
+        },
+        "partner": {
+          "description": "一位常驻队友，可承担你团队的各类工作。",
+          "goal": "成为我们的团队伙伴：端到端承接请求，并推动工作持续进展。",
+          "name": "工作伙伴"
+        },
+        "project": {
+          "description": "任何有终点的项目，从启动到完成。",
+          "goal": "在季度末之前让我们的团队转向新的工作方式。",
+          "name": "大型项目"
+        },
+        "research": {
+          "description": "开展实验并记录所学所得。",
+          "goal": "找出最能提升我们核心指标的方案。",
+          "name": "研究"
+        }
+      }
+    },
+    "privateOnlyReason": "你的组织目前不允许共享工作流，因此只有你可以打开这个工作流。",
+    "profileComputerNotReady": "{{name}} 的远程控制计算机尚未就绪。请在其就绪后重试，或选择“私有”。",
+    "profileComputersCouldNotLoad": "{{name}} 的计算机无法加载。请重试，或选择“私有”。",
+    "profileEnvironmentUnavailable": "{{name}} 的环境已不可用。请在其设置中选择其他环境，或选择“私有”。",
+    "profileEnvironmentUnavailableItem": "其环境已不可用",
+    "profileNoMachine": "{{name}} 没有可用于运行的环境或远程控制计算机。",
+    "profileNoMachineItem": "没有环境或远程控制计算机",
+    "profileNoPoolComputers": "{{name}} 没有可用于运行的计算机。",
+    "profileNoPoolComputersItem": "没有可用于运行的计算机",
+    "profilePlugins_other": "每个会话安装 {{count}} 个插件",
+    "profilePoolComputersNotReady": "{{name}} 的所有计算机均未就绪。请在一台就绪后重试，或选择“私有”。",
+    "profileRunsOn": "运行于 {{name}}，每次使用全新计算机",
+    "profileRunsOnComputer": "运行于 {{name}}，即其远程控制计算机",
+    "profileRunsOnPoolComputer": "运行于 {{name}}，即其计算机之一",
+    "profileSecrets_other": "已配置 {{count}} 个密钥",
+    "profileSeveralComputers": "{{name}} 有多台远程控制计算机。目前尚不支持在拥有多台计算机的智能体配置上运行工作流。",
+    "profileSeveralComputersItem": "多台远程控制计算机",
+    "profilesLoading": "正在加载智能体配置…",
+    "questions": {
+      "location": "它应在何处运行？",
+      "machine": "此工作流面向谁？",
+      "name": "要如何命名？",
+      "profile": "应以哪个智能体配置运行？",
+      "starter": "以何种身份启动工作流"
+    },
+    "runAsUnavailable": "所选用于运行此工作流的智能体配置不可用。请选择其他运行身份。"
+  }
+}

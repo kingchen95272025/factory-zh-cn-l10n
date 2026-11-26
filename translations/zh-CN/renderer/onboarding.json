@@ -1,0 +1,392 @@
+{
+  "addModels": {
+    "customName": "自定义端点",
+    "discardFailed": "无法移除已勾选的密钥。请重试。",
+    "factoryPlan": "Factory 方案",
+    "modelCount_other": "{{count}} 个模型",
+    "planActive": "生效中",
+    "saveFailed": "无法保存这些模型。请重试。",
+    "signInTimedOut": "登录超时",
+    "signedIn": "已登录",
+    "subtitles": {
+      "anthropic": "API 密钥",
+      "bedrock": "网关",
+      "chatgpt": "Plus、Pro 或 Team 方案",
+      "custom": "任意 OpenAI 兼容的 URL",
+      "factoryPlan": "Pro 或 Max",
+      "githubCopilot": "Pro、Pro+ 或 Business",
+      "ollama": "本地模型",
+      "openai": "API 密钥",
+      "openrouter": "你的 OpenRouter 额度"
+    },
+    "unavailable": {
+      "blockedByPolicy": "你的组织不允许使用 {{provider}} 模型。请选择其他选项。",
+      "needsReconnect": "你的 {{provider}} 登录已过期。重新连接以使用其模型。",
+      "noModels": "Factory 目前还无法通过你的 {{provider}} 方案运行任何模型。请选择其他选项。",
+      "notAvailable": "{{provider}} 目前对你的账户不可用。请选择其他选项。"
+    }
+  },
+  "byokSetup": {
+    "cloudTargetHint": "本地模型密钥不会同步到云端计算机。如需使用云端会话，请连接提供商方案或升级。",
+    "loadFailed": "无法加载已保存的模型。请重试。",
+    "otherProvider": "其他提供商",
+    "saveFailed": "无法保存此模型。请重新打开编辑器后重试。",
+    "updateDaemon": "更新并重启 Droid 以添加模型密钥。"
+  },
+  "constants": {
+    "starterIdeas": {
+      "accountBrief": {
+        "description": "调研潜在客户并整理谈话要点。",
+        "prompt": "为首次销售电话准备一份关于 Shopify 的客户简报：他们的业务、近期新闻、可能的优先事项、关键人物，以及五条量身定制的谈话要点。使用最新的公开来源并注明出处。",
+        "title": "准备客户简报"
+      },
+      "budgetTemplate": {
+        "description": "一份可直接填写的电子表格，包含差异分析和图表。",
+        "prompt": "为一个 20 人团队创建预算与实际对比表：按部门列出每月预算和实际支出、金额与百分比差异、超支的条件格式，以及一张汇总图表。用示例数据填充。",
+        "title": "创建预算与实际对比表"
+      },
+      "buildMiniApp": {
+        "description": "Droid 构建一个精致的习惯追踪器，运行它并演示如何打开。",
+        "prompt": "在新文件夹中从零构建一个精致的单页习惯追踪器：支持添加、勾选和删除习惯，显示连续七天的记录，并将数据保存在本地存储中。运行它，确认可用，然后告诉我如何打开。",
+        "title": "从零构建一个小应用"
+      },
+      "competitorScan": {
+        "description": "调研竞争对手，找出你的取胜空间。",
+        "prompt": "先问我要分析哪个竞争对手，然后调研他们交付的产品、定价与定位方式，以及较小团队可以取胜的空间。请引用最新来源。",
+        "title": "评估竞争对手"
+      },
+      "competitorTeardown": {
+        "description": "针对你指定的产品，分析其工作流、定价和定位，并附来源。",
+        "prompt": "对 Notion 做一次产品拆解：核心工作流、定价档位、定位，以及用户抱怨最多的地方，使用最新的公开来源。引用来源，并在最后给出竞争对手可以利用的三个机会。",
+        "title": "拆解一款产品"
+      },
+      "contentCalendar": {
+        "description": "每周主题、渠道，以及第一周草稿。",
+        "prompt": "为一个 B2B SaaS 品牌规划一个月的内容：在电子表格中列出每周主题、渠道和帖子创意，并提供第一周的完整草稿。",
+        "title": "规划一个月的内容"
+      },
+      "craftDeliverable": {
+        "description": "生成精美的文档、PDF 或电子表格。",
+        "prompt": "创建一份精美的一页 PDF 指南，讲解如何高效开会，包含简短清单和一张简单示意图。告诉我你把它保存在哪里。",
+        "title": "制作交付物"
+      },
+      "critiqueSite": {
+        "description": "对任意公开页面做 UX 评审，并给出具体修改建议。",
+        "prompt": "对 https://stripe.com 做一次 UX 评审：信息层级、文案、导航、可访问性和转化。按重要性列出十个最重要的问题，并为每个问题给出具体修改方案。",
+        "title": "评审线上网站"
+      },
+      "designSystemStarter": {
+        "description": "在一个参考页面上展示颜色、字体和间距令牌。",
+        "prompt": "创建一个入门设计系统，作为一个 HTML 参考页面：以 CSS 变量形式定义颜色、字体和间距令牌，并包含浅色和深色主题下的按钮、输入框和卡片。运行它，然后告诉我如何打开。",
+        "title": "搭建设计系统"
+      },
+      "draftOutreach": {
+        "description": "撰写简短、有针对性的邮件序列。",
+        "prompt": "给一家中型物流公司的运营副总裁写一组三封的拓展邮件，推销一款工作流自动化工具。每封邮件控制在 120 词以内，内容具体，并包含一个明确的请求。",
+        "title": "撰写有效的拓展邮件"
+      },
+      "draftPrd": {
+        "description": "将一句话的功能想法转化为结构化规格。",
+        "prompt": "将以下功能想法转化为 PRD：“让用户可以定时每周通过邮件发送报告。”涵盖问题、用户、目标与非目标、需求、成功指标和待定问题，并保存为 Markdown 文件。",
+        "title": "根据想法起草 PRD"
+      },
+      "explorePublicRepo": {
+        "description": "粘贴任意公开的 GitHub URL，Droid 会讲解代码的工作原理。",
+        "prompt": "克隆这个公开的 GitHub 仓库并讲解其工作原理：主要部分、它们如何连接，以及一个结合文件引用进行追踪的核心流程。然后指出一个看起来容易出 Bug 的地方。你可以将链接换成任意喜欢的公开仓库：https://github.com/expressjs/express",
+        "title": "探索公开仓库"
+      },
+      "interviewGuide": {
+        "description": "一份筛选问卷、一份访谈指南和一份综合分析提纲。",
+        "prompt": "为一款 B2B 报销工具规划客户发现访谈：编写一份包含五个问题的筛选问卷、一份 30 分钟的访谈指南（含追问要点），以及一份综合分析提纲，全部放在同一个 Markdown 文档中。",
+        "title": "规划客户访谈"
+      },
+      "investorUpdate": {
+        "description": "将你的亮点整理成一份简洁、自信的更新。",
+        "prompt": "帮我起草一份月度投资人更新。用一条简短消息向我询问本月亮点、指标、不足和诉求，然后将其整理成一份简洁、自信、今天就能发出的更新。",
+        "title": "起草投资人更新"
+      },
+      "landingPagePrototype": {
+        "description": "一个精美、响应式的页面，可直接在浏览器中打开。",
+        "prompt": "为一个虚构的咖啡订阅品牌制作一个精美、响应式的落地页原型，作为单个 HTML 文件：首屏、功能、定价、用户评价和页脚。运行它，然后告诉我如何在浏览器中打开。",
+        "title": "制作落地页原型"
+      },
+      "launchPost": {
+        "description": "为你描述的产品撰写一份简洁的发布公告。",
+        "prompt": "为一个名为 Tidy 的虚构产品写一篇发布博客，这是一款自动整理收件箱的应用。给我一个有力的标题、400 词正文、三条社交帖子，以及一封发给现有客户的简短邮件。",
+        "title": "撰写发布文章"
+      },
+      "mapProcess": {
+        "description": "步骤与负责人的流程图，以及一个更简单的版本。",
+        "prompt": "用 Mermaid 流程图描绘一个典型的采购订单审批流程，标注负责人和交接环节，指出瓶颈，并在旁边提出一个更简单的版本。",
+        "title": "梳理流程"
+      },
+      "objectionHandling": {
+        "description": "常见异议及针对每个异议的简洁回应。",
+        "prompt": "为销售 B2B SaaS 产品创建一份异议处理指南：十个最常见的异议（价格、时机、竞争对手、安全等）、针对每个异议的简洁回应，以及一个推动交易继续的问题。",
+        "title": "准备异议应对"
+      },
+      "pitchOutline": {
+        "description": "一个 10 页的故事，以及每页必须证明的内容。",
+        "prompt": "列出一份十页的种子轮路演文稿大纲：故事脉络、每页必须证明的内容，以及投资人可能就此提出的问题。先向我要一句公司简介。",
+        "title": "列出路演文稿大纲"
+      },
+      "researchMarket": {
+        "description": "调研竞争对手或主题，并附来源。",
+        "prompt": "调研 AI 会议记录工具市场：主要参与者、他们的定位和定价，以及市场空白。使用最新来源并注明出处，最后总结新入局者应该怎么做。",
+        "title": "调研市场"
+      },
+      "researchTopic": {
+        "description": "针对你感兴趣的话题提供一份有来源的简报。",
+        "prompt": "给我一份关于核聚变能源现状的有来源简报：技术进展、主要参与者，以及未来五年值得关注的事项。控制在一页以内，并引用最新来源。",
+        "title": "调研任意主题"
+      },
+      "saasModel": {
+        "description": "一个 24 个月的 SaaS 模型，输入参数可调整。",
+        "prompt": "为一个 SaaS 初创公司构建一份 24 个月营收模型，保存为 Excel 文件：包含初始客户数、增长率、流失率和各档位价格等输入项，并附每月 MRR、ARR 和一张图表。使用合理的示例数字，方便我修改。",
+        "title": "构建营收模型"
+      },
+      "statusTemplate": {
+        "description": "一份可复用的状态格式，并附填写示例。",
+        "prompt": "为一个运营团队设计一份可复用的每周状态更新：各部分、每部分应回答的问题，以及一个填写好的示例，篇幅控制在两分钟内读完。",
+        "title": "设计每周更新"
+      },
+      "tourDroid": {
+        "description": "一段无需准备即可进行的简短现场演示。",
+        "prompt": "快速介绍一下你能做什么。建议三件你现在就能做、无需我这边做任何准备且令人印象深刻的事，然后现场完成其中最令人印象深刻的一件。",
+        "title": "看看 Droid 能做什么"
+      },
+      "unitEconomics": {
+        "description": "基于示例数字的 CAC、LTV 和回收期，附计算公式。",
+        "prompt": "用示例数字为我讲解订阅业务的单位经济模型：计算 CAC、LTV、LTV 与 CAC 之比和回收期，展示每个公式，并整理成一份可复用的电子表格。",
+        "title": "梳理单位经济模型"
+      },
+      "weighTechChoice": {
+        "description": "借助最新来源比较两个方案，并获得明确推荐。",
+        "prompt": "帮我为一个新的多租户 SaaS 应用在 Postgres 和 MongoDB 之间做选择。调研最新来源，从数据建模、扩展性、运维和成本方面进行比较，最后给出明确的推荐以及我需要接受的取舍。",
+        "title": "权衡技术选型"
+      },
+      "writeSop": {
+        "description": "清晰的流程说明，包含负责人、步骤和检查清单。",
+        "prompt": "编写一份新员工第一周入职的标准操作流程：负责人、按天划分的逐步任务、检查清单和常见陷阱，整理为一份整洁的 Markdown 文档。",
+        "title": "编写标准操作流程"
+      }
+    },
+    "workspaceIdeas": {
+      "addTests": {
+        "description": "为尚无测试的重要代码补充测试。",
+        "prompt": "在 {{repo}} 中找到最重要且尚无测试的代码，为其添加有针对性的测试并运行。告诉我你覆盖了哪些内容以及原因。",
+        "title": "为 {{repo}} 添加测试"
+      },
+      "branchReview": {
+        "description": "对照 {{defaultBranch}} 检查其改动中的 Bug 和遗漏。",
+        "prompt": "对照 {{defaultBranch}} 审查分支 {{branch}}：阅读其提交，查找 Bug、缺失的测试和未完成的工作，并修复发现的问题。最后给出一段我可以直接粘贴的简短拉取请求描述。",
+        "title": "在提交 PR 前审查 {{branch}}"
+      },
+      "dirtyBranch": {
+        "description": "已更改文件：{{fileCount}}。Droid 完成剩余工作并运行检查。",
+        "prompt": "我在分支 {{branch}} 上有 {{fileCount}} 个文件存在未提交的改动。请审查这些改动，弄清我做到哪一步，完成剩余工作，并运行相关测试和检查。总结你所做的更改。",
+        "promptWithoutBranch": "我在 {{repo}} 中有 {{fileCount}} 个文件存在未提交的改动。请审查这些改动，弄清我做到哪一步，完成剩余工作，并运行相关测试和检查。总结你所做的更改。",
+        "title": "完成 {{branch}} 上的工作",
+        "titleWithoutBranch": "完成你在 {{repo}} 中的改动"
+      },
+      "explainRepo": {
+        "description": "主要部分、它们如何连接，以及从哪里开始阅读。",
+        "prompt": "讲解 {{repo}} 的结构：主要部分、它们如何连接，以及请求或命令如何流经整个系统。告诉我应该先阅读哪些文件。",
+        "promptWithLanguage": "讲解 {{repo}} 的结构：主要部分、它们如何连接，以及在这个 {{primaryLanguage}} 代码库中请求或命令如何流经整个系统。告诉我应该先阅读哪些文件。",
+        "title": "讲解 {{repo}} 的工作原理"
+      },
+      "findBug": {
+        "description": "找出真实 Bug，解释它，并通过测试修复。",
+        "prompt": "在 {{repo}} 中查找一个真实 Bug：崩溃、错误结果或未处理的边界情况。解释它、修复它，并添加一个本可发现它的测试。",
+        "title": "在 {{repo}} 中查找并修复 Bug"
+      },
+      "lint": {
+        "description": "运行 {{command}} 并修复其报告的问题。",
+        "prompt": "在 {{repo}} 中运行 `{{command}}`，在不改变行为的前提下修复它报告的所有问题。再次运行以确认已无问题。",
+        "title": "修复 {{repo}} 中的 lint 错误"
+      },
+      "multiRepo": {
+        "description": "以图表形式呈现它们之间的 API、调用和共享代码。",
+        "prompt": "此环境包含 {{repositories}}。追踪它们之间的连接方式：API、调用和共享代码。用 Mermaid 图绘制出来，并指出任何脆弱之处。",
+        "title": "追踪 {{first}} 与 {{second}} 的连接方式"
+      },
+      "runTests": {
+        "description": "找出测试的运行方式，运行测试并修复失败项。",
+        "descriptionWithCommand": "运行 {{command}} 并修复失败项。",
+        "descriptionWithToolchain": "找出使用 {{toolchain}} 时测试的运行方式，运行测试并修复失败项。",
+        "prompt": "弄清 {{repo}} 中测试的运行方式，运行测试并修复所有失败。总结你修复的内容。",
+        "promptWithCommand": "使用 `{{command}}` 运行 {{repo}} 中的测试。如果有失败，找出原因并修复，然后再次运行，直到全部通过。总结你修复的内容。",
+        "promptWithToolchain": "弄清 {{repo}} 中测试的运行方式（该项目使用 {{toolchain}} 配置），运行测试并修复所有失败。总结你修复的内容。",
+        "title": "运行 {{repo}} 的测试"
+      }
+    }
+  },
+  "desktopAuthCallback": {
+    "authenticationFailed": "身份验证失败",
+    "backToFactory": "返回 Factory",
+    "goToSessions": "前往会话",
+    "manageAccount": "管理账户",
+    "missingSignInDetails": "此页面缺少登录信息。请重启 Factory Desktop 并重新登录。",
+    "relayFailedSubtitle": "打开 Factory 应用以完成登录。",
+    "relaySentSubtitle": "返回 Factory 应用。",
+    "youreAllSetReturnToYour": "一切就绪。返回你的会话继续工作。",
+    "youreAlreadyInTheDesktopApp": "你已在桌面应用中"
+  },
+  "linuxDesktopInstall": {
+    "copied": "安装命令已复制。请在终端中运行。",
+    "copyFailed": "无法复制安装命令。请在终端中运行："
+  },
+  "onboarding": {
+    "checkingYourAccount": "正在检查你的账户",
+    "finishSettingUpInYourBrowser": "在浏览器中完成设置",
+    "openBrowser": "打开浏览器",
+    "wellOpenYourBrowserToComplete": "我们会打开浏览器以完成设置，完成后带你回到桌面应用。"
+  },
+  "onboardingDesktopFirst": {
+    "cliFinishSubtitle": "命令已复制。你的 Factory 免费账户已就绪。",
+    "cliFinishTitle": "安装 CLI",
+    "finishDownloadTitle": "下载已开始",
+    "finishInstallTitle": "安装桌面应用",
+    "finishOpenTitle": "在桌面应用中继续",
+    "finishSubtitle": "你的 Factory 免费账户已就绪。",
+    "paidFinishSubtitle": "你的方案已就绪。获取桌面应用，开始与 Droid 一起构建。",
+    "planCheckout": {
+      "freeTitle": "开始使用免费方案",
+      "subtitle": "立即开始与 Droids 一起构建。可随时在账单设置中更改或取消。",
+      "title": "开始使用 {{planName}} 方案"
+    },
+    "retryCli": "命令已复制。请重试以完成设置。",
+    "retryDownload": "下载已开始。请重试以完成设置。",
+    "retryOpen": "请重试以完成设置并打开 Factory。"
+  },
+  "onboardingFinish": {
+    "accountOnlyMobileSubtitle": "你的账户可在终端和桌面应用中使用 Droid。请在你的电脑上登录，以分别完成设置。",
+    "accountOnlySubtitle": "你的账户可在终端和桌面应用中使用 Droid。安装其中一个即可开始。",
+    "allSet": "一切就绪",
+    "backToPlans": "返回方案",
+    "desktopReturnSubtitle": "返回桌面应用，开始与 Droid 协作。",
+    "finishingSetup": "正在完成设置",
+    "getStartedWithApiKeys": "使用你的 API 密钥开始",
+    "mobileSubtitle": "你现在可以继续在浏览器中操作，之后再在你的电脑上设置 CLI 或桌面应用。",
+    "pickWhereToWork": "选择你想在何处与 Droid 协作。你可以全部使用。",
+    "providerPlanNextStep": "打开 CLI 或桌面应用，开始与 Droid 协作。",
+    "providerPlanReady": "你已完成 {{provider}} 方案的设置"
+  },
+  "onboardingNewPlan": {
+    "adminSettingUp": "你的管理员正在设置你的组织。",
+    "autoStart": {
+      "paymentConfirmed": "你的支付方式已确认。请重试开始订阅。",
+      "retry": "重试开始订阅",
+      "starting": "正在开始订阅"
+    },
+    "defaultOrgName": "{{firstName}} 的组织",
+    "defaultOrgNameFallback": "我的组织",
+    "domainMembership": {
+      "signedInAs": "已登录为 {{email}}",
+      "subtitle": "你的邮箱域名由现有的 Factory 组织管理。请联系你的组织管理员获取邀请。",
+      "title": "向管理员申请访问权限",
+      "useDifferentAccount": "使用其他账户"
+    },
+    "final": {
+      "subtitle": "你的 Droids 已就绪。"
+    },
+    "name": {
+      "couldNotSetUp": "无法设置你的组织",
+      "createFailed": "我们无法创建你的组织。请检查网络连接后重试。",
+      "createFailedServer": "由于我们这边出现问题，无法创建你的组织。请稍后重试。",
+      "createRejected": "我们无法创建你的组织。请重试；如果问题持续出现，请联系支持。",
+      "openFailed": "你的组织已创建，但我们无法打开它。请重试以继续。",
+      "retry": "重试"
+    },
+    "payment": {
+      "removePromoAndUseApiKeys": "移除优惠并使用你的 API 密钥",
+      "subtitle": "选择一个方案，或使用自己的 API 密钥免费开始。无需信用卡，可随时在账单设置中升级。",
+      "title": "选择你的方案",
+      "useApiKeysInstead": "改用你的 API 密钥"
+    },
+    "welcomeToFactory": "欢迎使用 Factory"
+  },
+  "onboardingPaymentForm": {
+    "billingAddress": "账单地址",
+    "changePaymentMethod": "更改支付方式",
+    "chargeConsent": {
+      "billingAnnually": "除非你取消，否则将按年持续计费。",
+      "billingMonthly": "除非你取消，否则将按月持续计费。",
+      "firstPaymentAnnually": "你今天支付 ${{amount}}，之后按年计费，直到你取消。",
+      "firstPaymentMonthly": "你今天支付 ${{amount}}，之后按月计费，直到你取消。",
+      "firstPaymentPerSeatAnnually": "你今天支付 ${{amount}}，包含平台费用和首位成员费用，之后按年计费，直到你取消。",
+      "firstPaymentPerSeatMonthly": "你今天支付 ${{amount}}，包含平台费用和首位成员费用，之后按月计费，直到你取消。",
+      "priceAnnual": "${{amount}}/年",
+      "priceMonthly": "${{amount}}/月",
+      "pricePerSeat": "${{basePrice}}/月，另加 ${{seatPrice}}/成员/月",
+      "summary": "点击开始订阅，即表示你将按 {{price}} 开通新的 Factory {{planName}} 订阅。{{paymentTerms}}",
+      "voucherMonthsTeam_other": "按你当前的团队规模，你的优惠码可为此方案提供约 {{count}} 个月的抵扣额度。",
+      "voucherMonths_other": "你的优惠码可为此方案提供约 {{count}} 个月的抵扣额度。",
+      "voucherPartialMonth": "你的优惠码可抵扣此方案首月的部分费用。",
+      "voucherPartialMonthTeam": "按你当前的团队规模，你的优惠码可抵扣此方案首月的部分费用。",
+      "voucherPartialYear": "你的优惠码可抵扣此方案首年的部分费用。",
+      "voucherPartialYearTeam": "按你当前的团队规模，你的优惠码可抵扣此方案首年的部分费用。",
+      "voucherTerms": "{{coverage}} {{billing}}",
+      "voucherYearsTeam_other": "按你当前的团队规模，你的优惠码可为此方案提供约 {{count}} 年的抵扣额度。",
+      "voucherYears_other": "你的优惠码可为此方案提供约 {{count}} 年的抵扣额度。"
+    },
+    "clearVoucher": "清除优惠码",
+    "continue": {
+      "applyVoucher": "应用优惠码",
+      "continueToBilling": "继续前往账单",
+      "retryPaymentSetup": "重试支付设置",
+      "retryStartSubscription": "重试开始订阅",
+      "startSubscription": "开始订阅",
+      "validatingVoucher": "正在验证优惠码"
+    },
+    "enterYourVoucherCode": "输入你的优惠码",
+    "errors": {
+      "actions": {
+        "reloadPaymentForm": "重新加载支付表单",
+        "useAnotherCard": "使用其他银行卡",
+        "useFreePlan": "选择免费方案",
+        "useVoucher": "使用优惠码"
+      },
+      "connectionFailed": "我们无法连接 Factory。请检查网络连接后重试。",
+      "paymentFormLoadFailed": "安全支付表单未能加载。请重新加载后重试。",
+      "paymentMethodNeedsReplacement": "此支付方式无法使用。你的订阅尚未开始。",
+      "paymentNotConfirmed": "无法确认支付",
+      "reasonSubscriptionNotStarted": "{{reason}} 你的订阅尚未开始。",
+      "requestFailed": "我们无法完成此步骤。请重试；如果问题持续出现，请联系支持。",
+      "serverUnavailable": "我们这边出现了问题。请稍后重试。",
+      "voucherNotValidated": "无法验证优惠码",
+      "withUsBankAccount": "{{message}} 你也可以通过美国银行账户支付。"
+    },
+    "factoryCurrentlyDoesNotSupportPayments": "Factory 目前不支持需要 3D Secure (3DS) 验证的支付。请使用不需要 3D Secure 的支付方式。",
+    "finishingSetup": "正在完成设置…",
+    "freePlan": {
+      "continue": "继续",
+      "notStarted": "无法完成免费方案的设置",
+      "providerLogoLabel": "{{provider}} 徽标",
+      "signInStartFailed": "无法打开 {{provider}} 登录页。请重试。",
+      "useOwnKeys": "改用你自己的密钥",
+      "useProviderPlan": "改用你的 AI 方案"
+    },
+    "invalidVoucher": "优惠码无效 · {{message}}",
+    "paymentDetails": "支付方式",
+    "paymentMethodConfirmed": "支付方式已确认",
+    "retryStartingYourSubscriptionOrChoose": "请重试开始订阅，或选择其他支付方式。",
+    "startingYourSubscription": "正在开始订阅…",
+    "stripeNotConfirmed": "Stripe 未能确认你的支付方式。请重试。",
+    "useVoucherCode": "使用优惠码",
+    "validVoucher": "优惠码有效",
+    "validatingVoucher": "正在验证优惠码…",
+    "voucherCode": "优惠码"
+  },
+  "webEnvironmentSetup": {
+    "createFailed": "无法创建环境。请重试。",
+    "privateRepository": "私有",
+    "reposFailed": "无法加载你的仓库。",
+    "welcome": {
+      "capabilities": "我可以探索代码、修复 Bug、编写测试并创建拉取请求，你可以在这里跟进每一步。",
+      "intro": "你好，我是 Droid。你的云端计算机正在配置 {{repositories}}。",
+      "introWithMore": "你好，我是 Droid。你的云端计算机正在配置 {{repositories}} +{{count}}。",
+      "question": "我们先从什么开始？"
+    }
+  }
+}

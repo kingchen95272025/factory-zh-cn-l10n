@@ -1,10 +1,1041 @@
 {
+  "activeSession": {
+    "accessOptions": "访问选项",
+    "accessOptions2": "访问选项",
+    "ambientSendLeadIn_other": "请回复以下消息：",
+    "autonomyNeedsConnection": "只有在本次会话的计算机已连接时，才能更改自主级别。",
+    "autonomyNeedsDaemonUpdate": "本次会话的计算机需要更新 Droid，之后其所有者才能更改自主级别。",
+    "compactingConversation": "正在压缩对话…",
+    "compactingConversationTheSessionWill": "正在压缩对话。完成后会话将自动继续。",
+    "compactingConversationWithInstructions": "正在按指令压缩对话…",
+    "compressInterruptWarning": "对话会在同一会话中压缩为摘要。",
+    "compressionAlreadyRunning": "会话压缩已在进行中。",
+    "compressionContinuesInBackground": "压缩耗时比平时更长，将继续在后台进行。",
+    "computerUnavailable": "本次会话的计算机不可用，因此会话无法在此继续。你仍可阅读对话记录。",
+    "connectingForLatestMessages": "正在连接你的计算机以获取最新消息…",
+    "continue": "继续",
+    "copy": {
+      "clipboardFailed": "复制到剪贴板失败。你的浏览器可能不支持此功能。",
+      "copiedLines_other": "已将 {{count}} 行复制到剪贴板。",
+      "failed": "复制失败",
+      "noContent": "暂无可复制的智能体消息内容。"
+    },
+    "couldNotConnect": "Factory 无法连接到本次会话。请重试；如果问题持续，请携带会话 ID 联系支持团队。",
+    "cwd": {
+      "changed": "工作目录已更改为 {{path}}",
+      "daemonNeedsUpdate": "本次会话的 Droid 守护进程需要更新或重启，Desktop 才能更改 cwd。",
+      "failedToChange": "更改目录失败。",
+      "invalid": "工作目录无效。",
+      "notConnected": "会话未连接。",
+      "pickerDesktopOnly": "目录选择器仅在 Factory Desktop 中可用。",
+      "required": "工作目录为必填项。",
+      "unavailableForSession": "本次会话不支持更改 cwd。"
+    },
+    "environment": {
+      "cloudWorkspace": "云端工作区",
+      "droidComputer": "Droid 计算机",
+      "local": "本地"
+    },
+    "errors": {
+      "computerDisconnected": "计算机已断开连接。请重试。",
+      "failedToAskDroidToReply": "请求 Droid 回复失败",
+      "failedToCompactSession": "压缩会话失败",
+      "failedToDismissQueuedQuestions": "忽略排队问题失败",
+      "failedToHandOffSession": "交接会话失败",
+      "failedToOpenDirectoryPicker": "打开目录选择器失败",
+      "failedToReconnect": "重新连接失败",
+      "failedToRenameSession": "重命名会话失败",
+      "failedToSendQueuedAnswers": "发送排队问题的回答失败",
+      "failedToStartChatFlow": "启动请求的对话流程失败",
+      "failedToStartSpecHandoff": "无法在新对话中继续规格",
+      "failedToStopAgent": "停止智能体失败",
+      "failedToUpdateLoop": "更新循环失败",
+      "failedToUpdateReaction": "更新回应失败",
+      "unknownError": "未知错误",
+      "uploadFailed": "上传失败"
+    },
+    "fastMode": "快速模式",
+    "files": {
+      "ambiguousPathCount_other": "{{count}} 个文件或文件夹与 {{path}} 匹配。请使用更完整的路径。",
+      "cannotOpenFolder": "此文件夹无法在本次会话中打开。",
+      "cannotOpenInSession": "此文件无法在本次会话中打开。",
+      "connectToOpen": "请连接计算机以打开此文件。",
+      "couldNotResolveHtml": "无法为浏览器解析此 HTML 文件。",
+      "failedToFind": "找不到该文件。",
+      "failedToPrepareGenerated": "准备生成的文件失败。",
+      "generatedNotReadyToOpen": "生成的文件尚未就绪，无法打开。",
+      "generatedNotReadyToReveal": "生成的文件尚未就绪，无法在文件夹中显示。",
+      "pathNotChecked": "无法在工作区中检查 {{path}}。",
+      "pathNotFound": "没有文件与 {{path}} 匹配。",
+      "updateDroidToOpen": "请更新此计算机上的 Droid 以打开此链接。"
+    },
+    "hidePanel": "隐藏面板（{{shortcut}}）",
+    "manageBilling": "管理账单",
+    "mcp": {
+      "cloudOnlyRemoteServers": "云端会话仅支持远程 HTTP/SSE MCP 服务器",
+      "failedToUpdateConfig": "更新 MCP 配置失败",
+      "managedCannotRemove": "无法移除受管理的 MCP 服务器",
+      "notYetAvailableForCloud": "云端会话暂不支持 MCP 服务器管理。此功能即将推出。",
+      "orgCannotRemove": "无法移除组织 MCP 服务器",
+      "orgManagedCannotModify": "无法在此修改组织管理的 MCP 服务器。请联系管理员更改此设置。",
+      "sessionNotConnected": "会话未连接。请等待连接。"
+    },
+    "missionDetails": "任务详情",
+    "missionFallbackTitle": "任务",
+    "missionSettingsLocked": "提案获批后，任务设置将锁定。",
+    "needsYourAttention": "需要你关注",
+    "onlyOwnerCanChangeAutonomy": "只有所有者可以更改自主级别",
+    "onlyOwnerCanChangeModel": "只有所有者可以更改模型",
+    "providerReconnect": {
+      "desktopOnly": "请从 Factory 桌面应用重新连接 {{provider}}。",
+      "retryFailed": "无法再次发送你的消息。请重试。",
+      "signInStartFailed": "无法打开 {{provider}} 登录。请重试。"
+    },
+    "queue": {
+      "cannotEdit": "无法编辑排队中的消息",
+      "failedToClear": "清空排队消息失败",
+      "failedToEdit": "编辑排队消息失败",
+      "failedToRemove": "移除排队消息失败",
+      "failedToSend": "发送排队消息失败"
+    },
+    "remoteSessionLimitReached": "已达到远程会话上限。",
+    "retryConnection": "重试连接",
+    "rewindOnlyWhenIdle": "仅在 Droid 空闲时可以使用回退。",
+    "sessionId": "会话 ID：{{sessionId}}",
+    "sessionUnavailable": "会话不可用",
+    "sharedProjectLabel": "共享",
+    "sharedTranscriptAgent": "Droid",
+    "sharedTranscriptOrchestrator": "编排器",
+    "showPanel": "显示面板（{{shortcut}}）",
+    "skillCreationUserMessage": "创建可复用的技能：{{description}}",
+    "stopAgent": "停止智能体？",
+    "stopAgentConfirm": "停止智能体",
+    "stopAndRunCommand": "停止并运行 /{{command}}",
+    "stopAndRunCommandPrompt": "Droid 仍在工作 — 是否停止当前运行并执行 /{{command}}？",
+    "stoppingAgent": "正在停止智能体…",
+    "subscription": {
+      "byokDefault": "Factory 管理的模型已达到用量上限。你仍可继续使用自己的自定义模型。",
+      "byokFreePlan": "你当前处于免费计划，因此本次会话使用你自己的模型。订阅计划后即可使用 Factory 管理的模型。",
+      "byokNoActiveSubscription": "你对 Factory 管理模型的订阅已结束。你仍可继续使用自己的自定义模型。",
+      "byokOverLimit": "你的组织已达到 Factory 管理模型的用量上限。你仍可继续使用自己的自定义模型。",
+      "byokUserOverQuota": "你已达到 Factory 管理模型的用量配额。你仍可继续使用自己的自定义模型。",
+      "freePlanAddKeyOrUpgrade": "你当前处于免费计划。<byokLink>添加你自己的密钥</byokLink>或<upgradeLink>升级</upgradeLink>以继续对话。",
+      "freePlanUpgrade": "你当前处于免费计划。<upgradeLink>升级</upgradeLink>以继续对话。",
+      "remoteRequiresPro": "远程会话需要 Pro 订阅。你可以在本地使用自己的 API 密钥，或升级到 Pro。",
+      "remoteRequiresProUpgrade": "远程会话需要 Pro 订阅。<upgradeLink>升级到 Pro</upgradeLink>即可使用托管模型和云端功能。"
+    },
+    "templateFallbackName": "环境",
+    "theCurrentTurnWillEndChanges": "当前轮次将结束。已做出的更改将被保留。",
+    "thisIsAReadOnlyLegacy": "这是一个只读的旧版会话。",
+    "thisSessionIsAContinuationFrom": "本次会话是压缩会话的延续：",
+    "toggleTerminal": "切换终端（{{shortcut}}）",
+    "tryAgain": "重试",
+    "untitledSession": "未命名会话",
+    "usage": {
+      "missionOrganizationLimit": "你已达到组织设置的用量上限。请联系管理员提高上限。",
+      "orgOverLimit": "你的组织已达到用量上限。",
+      "userOverQuota": "你已达到组织管理员设置的用量配额。"
+    },
+    "wakeDelayed": "Droid 唤醒所需时间比平时稍长…",
+    "wakingForLatestMessages": "正在唤醒你的计算机以获取最新消息…"
+  },
+  "activeSessionBtw": {
+    "failedToAsk": "提问失败"
+  },
+  "activeSessionSettings": {
+    "failedToUpdateInteractionSettings": "更新交互设置失败",
+    "failedToUpdateMissionSettings": "更新任务设置失败",
+    "failedToUpdateSettings": "更新设置失败"
+  },
+  "allSessions": {
+    "addFilter": "添加筛选条件",
+    "allSessions": "全部会话",
+    "archiveNeedsLoadedSession": "请打开此会话以归档。其详情尚未在此加载。",
+    "clearFilters": "清除筛选",
+    "empty": {
+      "checkingSessionsForMatches": "正在检查符合条件的会话。",
+      "clearFiltersToSeeAll": "清除筛选条件以查看全部会话。",
+      "clearSearchToSeeAll": "清除搜索以查看全部会话。",
+      "couldNotBeFetched": "无法获取你的会话。",
+      "noLoadedSessionsMatchFilters": "没有已加载的会话符合这些筛选条件",
+      "noSessionsMatchFilters": "没有会话符合这些筛选条件",
+      "noSessionsMatchSearch": "没有会话符合此搜索条件",
+      "noSessionsYet": "暂无会话",
+      "searchingSessions": "正在搜索会话…",
+      "sessionsLoadedSoFar": "已加载 {{loadedCount}} 个会话，可能还有更多匹配。",
+      "startASession": "启动会话后，它将显示在这里。",
+      "unableToLoad": "无法加载会话"
+    },
+    "failedToRenameSession": "重命名会话失败",
+    "filterSessions": "筛选会话",
+    "filterSessionsApplied": "筛选会话，已应用 {{appliedCount}} 项",
+    "filters": {
+      "activity": {
+        "day": "最近 24 小时",
+        "month": "7–30 天前",
+        "older": "超过 30 天前",
+        "threeDays": "1–3 天前",
+        "week": "3–7 天前"
+      },
+      "artifact": {
+        "document": "文档",
+        "issue": "议题",
+        "pullRequest": "拉取请求"
+      },
+      "facet": {
+        "activity": "活动",
+        "artifacts": "产出物",
+        "machine": "机器",
+        "mission": "工作流 / 任务",
+        "project": "项目",
+        "status": "状态",
+        "type": "类型"
+      },
+      "none": {
+        "artifacts": "无产出物",
+        "machine": "无机器",
+        "mission": "无工作流或任务",
+        "project": "无项目"
+      },
+      "status": {
+        "idle": "空闲",
+        "unread": "未读",
+        "waitingForYou": "等待你处理",
+        "working": "工作中"
+      },
+      "type": {
+        "automations": "自动化",
+        "evaluations": "评估",
+        "exec": "执行",
+        "interactive": "交互式",
+        "missionAgents": "工作流智能体",
+        "missionOrchestrators": "工作流编排器",
+        "subagents": "子智能体"
+      }
+    },
+    "loadMoreSessions": "加载更多会话",
+    "newSession": "新建会话",
+    "removeFilter": "移除 {{filterLabel}} 筛选",
+    "retry": "重试",
+    "untitledSession": "未命名会话"
+  },
+  "archiveSession": {
+    "couldNotArchiveFromHere": "此会话只能在其运行所在的计算机上归档。",
+    "couldNotArchiveOnMachine": "无法在此计算机上归档该会话。请重试。",
+    "couldNotArchiveWhileOffline": "此会话的计算机未连接，且归档无法保存到你的账户。请重试，或从该计算机上归档。",
+    "couldNotSaveArchive": "无法保存归档。请检查连接后重试。",
+    "failedToArchive": "归档会话失败",
+    "workstreamConfirm": {
+      "cancel": "取消",
+      "confirm": "归档",
+      "description": "“{{title}}”及其智能体将从侧边栏移除。",
+      "descriptionUntitled": "此工作流及其智能体将从侧边栏移除。",
+      "discardConfirm": "丢弃",
+      "discardDescription": "你为此工作流已完成的设置将丢失。",
+      "discardTitle": "丢弃工作流设置？",
+      "hideConfirm": "隐藏",
+      "hideTitle": "隐藏工作流？",
+      "restoreHint": "你可以随时从“设置 > 会话管理 > 已归档”中恢复。",
+      "title": "归档工作流？"
+    }
+  },
+  "composerDefaults": {
+    "autoNeedsCustomModel": "自动模式需要订阅或你自己的模型。",
+    "autonomy": "自主级别",
+    "failedToLoad": "无法加载你的默认设置。",
+    "failedToSaveProviderChoice": "无法保存你对 {{model}} 的推理服务商选择。",
+    "managedByFolder": "由文件夹设置管理",
+    "managedByOrganization": "由组织设置管理",
+    "managedByProject": "由项目设置管理",
+    "managedBySettings": "由设置管理",
+    "managedByUser": "由用户设置管理",
+    "modeMission": "任务",
+    "modeNormal": "普通",
+    "modeSpec": "规格",
+    "modeWorkstream": "工作流",
+    "noModelsAvailable": "暂无可用模型",
+    "reasoning": "推理级别",
+    "requiresPlan": "需要订阅计划"
+  },
+  "composerDraftRequests": {
+    "description": "发送此请求将替换你正在撰写的消息，随附的文件也会一并发送。",
+    "keepDraft": "保留草稿",
+    "send": "发送",
+    "title": "覆盖草稿并发送？"
+  },
+  "computerMcpSetup": {
+    "configure": "配置",
+    "configureMcpServers": "配置 MCP 服务器",
+    "connectTimeout": "计算机连接用时过长。请稍后重试。",
+    "connecting": "正在连接计算机…",
+    "connectingWithRetry": "正在连接计算机… 重试 {{attempt}}/{{max}}",
+    "couldNotPrepare": "无法在此计算机上准备 MCP 设置。请重试。",
+    "defaultDescription": "在此计算机上添加并验证 MCP 服务器，以便自动化运行时随时可用。MCP 服务器按计算机分别配置。",
+    "errorWithSelectDifferentComputer": "{{message}} 你也可以选择其他计算机。",
+    "mcpServers": "MCP 服务器",
+    "mcpSetupError": "MCP 设置错误",
+    "preparing": "正在准备 MCP 设置…"
+  },
+  "cwdValidation": {
+    "daemonNotConnected": "未连接到守护进程。请启动 Desktop 应用。",
+    "enterWorkingDirectory": "请输入工作目录。",
+    "failedToSaveTrust": "保存信任决定失败。",
+    "unableToVerifyFolderTrust": "无法验证文件夹信任。请重试。"
+  },
+  "diffViewerData": {
+    "failedToFetchDiff": "获取 git diff 失败"
+  },
+  "diffViewerPanel": {
+    "unavailable": {
+      "missingSessionCwd": "会话尚未就绪或没有工作目录。",
+      "unknown": "本次会话无法使用 Git diff。"
+    }
+  },
+  "emailDraftActions": {
+    "saveReplyDraftFailed": "无法请求 Droid 保存回复草稿"
+  },
+  "fastModeCommand": {
+    "alreadyBase": "已在使用基础模型（{{model}}）",
+    "alreadyFast": "已处于快速模式（{{model}}）",
+    "baseUnavailable": "无法切回基础模型（{{model}}）",
+    "disabledByPolicy": "快速模式已被你组织的模型策略禁用",
+    "failedToSwitch": "切换模型失败",
+    "fastUnavailable": "{{model}} 不支持快速模式",
+    "invalidArgument": "参数“{{args}}”无效。用法：/fast、/fast on 或 /fast off",
+    "noFastVariant": "{{model}} 没有可用的快速模式",
+    "noModel": "本次会话当前未设置模型",
+    "switched": "已切换到 {{model}}"
+  },
+  "fileActions": {
+    "downloadFailed": "下载失败",
+    "noDaemonConnection": "没有可用的守护进程连接",
+    "preparingDownload": "正在准备下载…",
+    "saveFailed": "保存失败"
+  },
+  "filePreviewPanel": {
+    "binaryFile": "这是一个二进制文件",
+    "binaryFileDownload": "请下载该文件，以便在你的计算机上打开。",
+    "binaryFileOpenElsewhere": "请在应用外打开该文件以查看。",
+    "cannotSendCommentsNotConnected": "无法发送评论，因为 Droid 未连接。",
+    "couldNotExportPowerPoint": "无法导出 PowerPoint",
+    "failedToSendComment": "发送评论失败",
+    "folder": "无法在此打开文件夹",
+    "folderDescription": "请改为打开其中的文件。",
+    "pptxSlidesBlank_other": "已导出 {{name}}，{{count}} 页幻灯片中有 {{failed}} 页留空 — 这些幻灯片无法渲染。",
+    "refreshingPowerPoint": "正在刷新 PowerPoint…",
+    "sourceReadOnly": "从对话中打开的文件在此处为只读。",
+    "unableToLoad": "无法加载"
+  },
+  "filesPanel": {
+    "binaryFile": "这是一个二进制文件，无法在此编辑。",
+    "copiedItemPath": "路径",
+    "copyPath": "复制路径",
+    "couldNotLoadWorkspaceFiles": "无法加载工作区文件。",
+    "couldNotPreview": "无法预览此文件",
+    "download": "下载",
+    "downloadToOpen": "请下载该文件，以便在你的计算机上打开。",
+    "downloading": "正在下载…",
+    "editFile": "编辑文件",
+    "failedToPrepareMarkdown": "准备 Markdown 文件失败。",
+    "migrationRoot": "迁移",
+    "openFile": "打开文件",
+    "openInEditorInstead": "请改为在你的编辑器中打开该文件。",
+    "openInNewTab": "在新标签页中打开",
+    "openOrDownload": "请打开或下载该文件以查看。",
+    "outsideWorkspaceWriteUnsupported": "在当前计算机上保存工作区之外的文件需要更新版本的 droid。",
+    "reloadBeforePreview": "预览前请重新加载已更改的文件",
+    "saveAs": "另存为…",
+    "saveConflict": "保存失败：文件已在工作区中更改。",
+    "selectAFileFromTheWorkspace": "从工作区树中选择文件",
+    "viewInBrowser": "在浏览器中查看",
+    "viewPreview": "查看预览",
+    "viewSource": "查看源代码",
+    "workspaceRoot": "工作区",
+    "writeUnsupported": "在此计算机上保存文件需要更新版本的 droid。"
+  },
+  "gitActions": {
+    "failureTitle": "无法启动 Git 操作",
+    "machineNotConnected": "会话所在机器未连接。",
+    "noPrompt": "未为 {{action}} 操作定义提示词。",
+    "noPullRequestUrl": "此分支没有受支持的拉取请求 URL。",
+    "noWorkingDirectory": "会话尚无 Git 工作目录。"
+  },
+  "gitBranches": {
+    "failedToSwitchBranches": "切换分支失败",
+    "failures": {
+      "anotherGitProcess": "此仓库中正在运行另一个 git 进程。请等待其完成后再重试。",
+      "branchAlreadyExists": "该分支已存在。请切换到该分支，而不是创建它。",
+      "branchNoLongerExists": "该分支已不在此仓库中。",
+      "invalidBranchName": "Git 不接受该分支名称。",
+      "notAGitRepository": "此工作目录不是 git 仓库。",
+      "unresolvedMergeConflicts": "此仓库存在未解决的合并冲突。请先解决冲突再切换分支。",
+      "workingTreeBlocksSwitch": "工作树中的文件仍会阻止此次切换。请提交、贮藏或移动这些文件，然后重试。"
+    }
+  },
+  "launchBlocked": {
+    "couldNotConnect": "无法连接到计算机。它可能仍在启动中 — 请稍后重试。",
+    "preferenceConflict": "请解决此计算机的偏好设置冲突，然后重试。",
+    "preferencesInvalid": "此计算机的偏好设置无效。请修正其设置，然后重试。",
+    "preferencesRefreshFailed": "无法刷新此计算机的偏好设置。请检查连接后重试。",
+    "preferencesUnauthenticated": "此计算机未通过偏好设置同步的验证。请检查其验证状态，然后重试。",
+    "selectionChanged": "所选计算机或账户已更改。请检查你的选择并重试。"
+  },
+  "localSessions": {
+    "checkingOrganizationSettings": "正在检查组织设置…",
+    "disabledByOrganization": "你的组织已禁用本地计算机。请在远程计算机上新建会话。",
+    "disabledByOrganizationPrivate": "你的组织已禁用本地计算机。请联系管理员。"
+  },
+  "mcpAuth": {
+    "failedFor": "{{serverName}} 验证失败。"
+  },
+  "missionAutomationsPane": {
+    "openInAutomations": "在自动化中打开",
+    "runNowUnavailableTooltip": "手动运行尚无法投递到工作流会话中",
+    "trigger": "触发器"
+  },
+  "missionComposer": {
+    "agentPlaceholder": "向此智能体发送消息…",
+    "leadPlaceholder": "向编排器发送消息…"
+  },
+  "missionTasks": {
+    "cannotRequestChanges": "请重新连接到工作流以请求更改。",
+    "closeTab": "关闭标签页",
+    "loading": "正在加载任务…",
+    "missingDescription": "工作流对首批发现项完成分类后，任务会显示在这里。",
+    "missingTitle": "暂无任务",
+    "openTasksFile": "打开 {{path}}",
+    "requestChangesMessage": "已对任务 {{taskId}}（{{title}}）请求更改：\n\n{{note}}",
+    "showTasks": "显示任务",
+    "signInToDecide": "请登录以发送决定。",
+    "taskGoneDescription": "其文件已从共享文件夹中移除。",
+    "taskGoneTitle": "此任务已不在工作流中",
+    "taskMissingDescription": "它可能已合并到其他任务中。请从任务中选择一个，或关闭此标签页。",
+    "taskMissingTitle": "此任务已不在看板中",
+    "taskNotListedDescription": "共享文件夹中的文件数量超出可列出的上限，因此此任务可能仍存在。",
+    "taskNotListedTitle": "当前无法显示此任务",
+    "taskUnreadableDescription": "其在共享文件夹中的详情缺失，或格式不受此应用支持。",
+    "taskUnreadableTitle": "无法读取此任务",
+    "truncatedDescription": "共享文件夹中的文件数量超出可列出的上限。",
+    "truncatedTitle": "部分任务可能缺失",
+    "unavailableDescription": "当前无法访问共享文件夹。我们将稍后重试。",
+    "unavailableTitle": "任务加载失败",
+    "unreadableDescription": "共享文件夹中的任务列表格式不受此应用支持。",
+    "unreadableFilesDescription": "格式不受此应用支持的任务文件不会列入列表中。",
+    "unreadableFilesTitle_other": "{{count}} 个任务文件无法读取",
+    "unreadableTitle": "无法读取任务"
+  },
+  "missionV2AgentsPanel": {
+    "agentsShowUpHereAsThe": "编排器分配工作时，智能体会出现在这里。",
+    "couldNotLoadAgents": "无法加载智能体",
+    "loadingAgents": "正在加载智能体…",
+    "noAgentsYet": "暂无智能体",
+    "noMatchingAgents": "没有符合搜索条件的智能体",
+    "searchAgents": "搜索智能体…"
+  },
+  "missionV2PullRequestList": {
+    "emptyDescription": "此工作流中由智能体打开的 PR 会显示在这里。",
+    "emptyTitle": "暂无拉取请求。",
+    "filter": "筛选",
+    "filterPullRequests": "筛选拉取请求",
+    "filterPullRequestsApplied_other": "筛选拉取请求，已应用 {{count}} 项",
+    "filters": {
+      "appliedLabel": "{{facet}}：{{value}}",
+      "facet": {
+        "age": "时长",
+        "review": "评审"
+      },
+      "linesChanged": {
+        "l": "500–999 行",
+        "m": "100–499 行",
+        "s": "10–99 行",
+        "xl": "1,000+ 行",
+        "xs": "少于 10 行"
+      }
+    },
+    "loadingPullRequests": "正在加载拉取请求…",
+    "noMatchingPullRequests": "没有拉取请求符合这些筛选条件",
+    "noMatchingSearch": "没有拉取请求符合此搜索条件",
+    "noMatchingSearchAndFilters": "没有拉取请求符合此搜索和筛选条件",
+    "searchPullRequests": "搜索拉取请求…",
+    "statusUnknown": "状态未知"
+  },
+  "moveWorkstreamDialog": {
+    "failed": "无法移动此工作流",
+    "incomplete": "工作流已移动，但部分步骤未完成。请重试以完成剩余步骤。",
+    "moveInProgress": "此前对此工作流或你的另一个工作流的移动尚未完成。请几分钟后重试。",
+    "moved": "工作流已移至智能体配置",
+    "moving": "正在移动工作流。其计算机会重启，可能需要几分钟。你可以关闭此窗口；移动将继续进行…",
+    "planFailed": "无法检查将要移动的内容",
+    "profilesFailed": "无法加载智能体配置",
+    "sessionsBusy": "此工作流中的部分会话仍在工作。请先停止它们，然后重试。",
+    "stopping": "正在停止此工作流中的会话…",
+    "untitledAutomation": "未命名自动化",
+    "untitledSession": "未命名会话",
+    "workstreamChanged": "工作流在移动过程中发生了变化。请重试。"
+  },
+  "networkDiagnosticsModal": {
+    "checkNetwork": "检查网络",
+    "close": "关闭",
+    "copied": "已复制！",
+    "copyAsText": "复制为文本",
+    "couldNotAccessClipboard": "无法访问剪贴板。",
+    "desktopIntegration": "桌面集成",
+    "desktopOnlyDetail": "网络诊断仅在 Factory 桌面应用中可用。",
+    "durationMs": "{{durationMs}}毫秒",
+    "failedToRunDiagnostics": "运行诊断失败",
+    "groups": {
+      "connectivity": "连通性",
+      "daemon": "守护进程",
+      "diagnostics": "诊断",
+      "environment": "环境",
+      "factoryEndpoints": "Factory 端点",
+      "itActions": "IT 操作"
+    },
+    "reRun": "重新运行",
+    "reportBug": "报告 Bug",
+    "runningDiagnostics": "正在运行诊断…",
+    "runsASeriesOfChecksAgainst": "对网络和 Factory 服务执行一系列检查。如果下方某项显示为 FAIL 或 WARN，请将结果分享给你的 IT 支持团队，以便他们调整防火墙、代理或端点防护规则。",
+    "summary": "{{ok}} 正常 · {{warning}} 警告 · {{fail}} 失败 · {{unknown}} 未知"
+  },
   "newSession": {
+    "addModelBeforeSending": "添加你自己的模型密钥以开始对话。",
+    "addModelBeforeSendingCloud": "在桌面应用中连接服务商计划、升级，或添加你自己的密钥。",
+    "computer": {
+      "connected": "已连接到 {{computerName}}。",
+      "connecting": "正在连接到 {{computerName}}…"
+    },
+    "connectYourOrganizationToASource": "将你的组织连接到源代码管理服务商，以创建基于仓库的环境。",
+    "createADroidComputer": "创建 Droid 计算机",
+    "defaultTag": "默认",
+    "droidComputers": "Droid 计算机",
+    "errors": {
+      "couldNotStartOnComputer": "无法在此计算机上启动会话",
+      "failedToCreateSession": "创建会话失败",
+      "failedToOpenDirectoryPicker": "打开目录选择器失败",
+      "localFilesNotAllowedWithTemplate": "从本地文件系统附加的文件无法与环境一起使用。请移除这些文件，并在选择环境后重新附加。",
+      "noAvailableModelSelected": "未选择可用模型。请在启动会话前配置可用模型。",
+      "pleaseSelectAComputer": "请选择计算机",
+      "pleaseSelectAComputerPeriod": "请选择计算机。",
+      "selectTemplateToUploadFiles": "请选择环境以上传这些文件，或移除这些文件后为所选计算机重新附加。",
+      "setLocalWorkingDirectory": "请为你的本地计算机设置工作目录。",
+      "waitForSavedDefaults": "请等待已保存的默认设置加载完成。"
+    },
+    "freeCloudHoursUnavailable": "没有可用的计算额度，因此此会话无法在云端启动。",
+    "generalPurposeEnvironment": "{{environmentName}} 是一个不含仓库的通用环境。",
+    "loadingSavedDefaults": "正在加载已保存的默认设置…",
+    "local": {
+      "connected": "已连接到你的本地计算机。",
+      "connecting": "正在连接到你的本地计算机…",
+      "notConnected": "未连接到本地计算机。请启动桌面应用。"
+    },
+    "machineName": {
+      "chooseComputer": "选择计算机",
+      "chooseEnvironment": "选择环境",
+      "loading": "正在加载",
+      "local": "本地",
+      "noComputers": "暂无可用计算机",
+      "noTemplatesOrComputers": "暂无可用环境或计算机",
+      "preparingTemplate": "正在准备环境",
+      "selectComputer": "选择计算机",
+      "selectTemplateOrComputer": "选择环境或计算机"
+    },
+    "manageSourceControl": "管理源代码管理",
+    "manageTemplates": "管理环境",
+    "noModels": {
+      "airgap": "未配置自定义模型。请在启动隔离会话前，在设置中添加自定义模型。",
+      "default": "此会话没有可用模型。你的组织可能已屏蔽所有已配置的模型——请联系管理员。"
+    },
+    "noTargets": {
+      "adminDisabledLocal": "你的组织管理员已禁用 Droid 计算机。请打开 <desktopLink>Factory Desktop</desktopLink> 以在本地工作。",
+      "adminDisabledNoLocal": "你的组织管理员已禁用 Droid 计算机和本地计算机。请联系管理员以启动会话。",
+      "createComputerLocal": "暂无可用 Droid 计算机。请在下方创建一个，或打开 <desktopLink>Factory Desktop</desktopLink> 以在本地工作。",
+      "createComputerNoLocal": "暂无可用 Droid 计算机。请在下方创建一个。你的组织已禁用本地计算机。",
+      "droidComputersLocal": "前往 <droidComputersLink>Droid 计算机</droidComputersLink> 添加计算机，或打开 <desktopLink>Factory Desktop</desktopLink> 以在本地工作。",
+      "droidComputersNoLocal": "前往 <droidComputersLink>Droid 计算机</droidComputersLink> 添加计算机。你的组织已禁用本地计算机。",
+      "templatesLocal": "在 <templatesLink>环境</templatesLink> 中创建环境以启动会话，或打开 <desktopLink>Factory Desktop</desktopLink> 以在本地工作。",
+      "templatesNoLocal": "在 <templatesLink>环境</templatesLink> 中创建环境以启动会话。你的组织已禁用本地计算机。"
+    },
+    "organizationDefault": "组织默认",
     "placeholder": {
       "describeTask": "描述任务或提问"
     },
-    "machineName": {
-      "local": "本地"
+    "remoteSessionLimitReached": "已达到远程会话上限。",
+    "retryDefaults": "重试默认设置",
+    "savedDefaultsCouldNotBeLoaded": "无法加载已保存的默认设置。请检查你的选择或重试。",
+    "sessionLimitReached": "已达到会话上限",
+    "shared": {
+      "profileDefault": "配置默认"
+    },
+    "submit": {
+      "agentProfilesUnavailable": "无法加载智能体配置",
+      "checkingMissionReadiness": "正在检查任务就绪状态…",
+      "chooseFolderTrust": "选择是否信任此文件夹",
+      "connectLocalMachine": "连接你的本地计算机",
+      "connectSelectedComputer": "连接到所选计算机",
+      "connectingToComputer": "正在连接计算机…",
+      "couldNotConnect": "无法连接到计算机 — 请重试",
+      "creatingSession": "正在创建会话…",
+      "enterValidWorkingDirectory": "请输入有效的工作目录",
+      "loadingAgentProfiles": "正在加载智能体配置…",
+      "loadingComputerDefaults": "正在加载计算机默认设置…",
+      "loadingOrganizationDefault": "正在加载组织默认值…",
+      "loadingSessionSettings": "正在加载会话设置…",
+      "lookingUpComputer": "正在查找计算机连接…",
+      "selectAvailableModel": "选择可用模型",
+      "selectComputer": "选择计算机",
+      "selectWorkingDirectory": "选择工作目录",
+      "startingComputer": "正在启动计算机…"
+    },
+    "templateBeingPrepared": "你的环境正在准备中。",
+    "templateBeingPreparedCustomize": "你的环境正在准备中。你可以在 <settingsLink>设置</settingsLink> 中对其进行自定义。",
+    "templateLabel": "环境",
+    "tryAgain": "重试"
+  },
+  "notifications": {
+    "finishedTitle": "Droid 已完成",
+    "needsInputBody": "{{title}} — 等待你的批准",
+    "needsInputTitle": "Droid 需要输入",
+    "untitledSession": "会话"
+  },
+  "occupiedWorktree": {
+    "goThere": "前往",
+    "message": "此分支已被现有工作树占用。是否前往继续？"
+  },
+  "panelDirectory": {
+    "changing": "正在更改目录…",
+    "connectToSelect": "请连接计算机以选择目录。",
+    "couldNotChange": "无法更改面板目录。",
+    "unavailable": "目录不可用。",
+    "updateDroid": "请更新 Droid 以选择变更面板的目录。"
+  },
+  "pinSession": {
+    "failedToPin": "固定会话失败",
+    "failedToUnpin": "取消固定会话失败"
+  },
+  "pluginSettingsModal": {
+    "addMarketplaceFailed": "添加插件市场失败",
+    "addMarketplaceFailedNoMessage": "添加插件市场失败（无错误信息）",
+    "addedMarketplace": "已添加插件市场",
+    "addedMarketplaceNamed": "已添加插件市场“{{name}}”",
+    "disabledPlugin": "已禁用插件“{{name}}”",
+    "enabledPlugin": "已启用插件“{{name}}”",
+    "installPluginFailed": "安装插件失败",
+    "installedPlugin": "已安装插件“{{name}}”",
+    "invalidMarketplaceSource": "插件市场来源无效",
+    "removeMarketplaceFailed": "移除插件市场失败",
+    "removedMarketplace": "已移除插件市场“{{name}}”",
+    "setPluginEnabledFailed": "设置插件启用状态失败",
+    "uninstallPluginFailed": "卸载插件失败",
+    "uninstalledPlugin": "已卸载插件“{{name}}”",
+    "updateMarketplaceFailed": "更新插件市场失败",
+    "updatePluginFailed": "更新插件失败",
+    "updatedAllMarketplaces": "已更新所有插件市场",
+    "updatedMarketplace": "已更新插件市场“{{name}}”",
+    "updatedPlugin": "已更新插件“{{name}}”"
+  },
+  "preInitCapabilities": {
+    "configError": "配置错误。打开以查看详情",
+    "failedToAddMcpServer": "添加 MCP 服务器失败",
+    "failedToRemoveMcpServer": "移除 MCP 服务器失败",
+    "failedToUpdateMcpSettings": "更新 MCP 设置失败",
+    "loadingConnectors": "正在加载连接器信息…",
+    "loadingSkills": "正在加载技能…",
+    "updateComputerDaemonForMcp": "请先更新此计算机的守护进程以便管理 MCP，然后再发送消息。你仍可立即启动此会话，待其加载后即可使用 MCP。",
+    "updateDesktopForMcp": "请先更新桌面应用以便管理 MCP，然后再发送消息。你仍可立即启动此会话，待其加载后即可使用 MCP。"
+  },
+  "projectArchive": {
+    "archivedWithFailures_other": "已归档 {{count}} 个会话，{{failedCount}} 个失败",
+    "archived_other": "已归档 {{count}} 个会话"
+  },
+  "remoteAccess": {
+    "connectTimedOut": "远程控制未能及时连接。请检查设置 › 此计算机后重试。",
+    "desktopOnly": "远程控制只能在 Factory 桌面应用中更改。",
+    "didNotConnect": "远程控制未连接。请检查设置 › 此计算机后重试。"
+  },
+  "remoteLocalhost": {
+    "retry": "重试",
+    "unreachable": "无法访问远程计算机上的端口 {{port}}。",
+    "unreachableOnComputer": "无法访问 {{computer}} 上的端口 {{port}}。"
+  },
+  "renameSession": {
+    "computerOffline": "此会话的计算机已离线。",
+    "unsupported": "此会话的计算机运行的 Droid 版本较旧，成员无法重命名。"
+  },
+  "reportBugModal": {
+    "copied": "已复制",
+    "copyBugReportId": "复制 Bug 报告 ID",
+    "failedToExport": "导出 Bug 报告失败",
+    "failedToSubmit": "提交 Bug 报告失败",
+    "savedArchiveToDownloads": "已将诊断归档保存到下载文件夹。未向 Factory 发送任何数据。",
+    "savedArchiveToPath": "已将诊断归档保存到 {{savedPath}}。未向 Factory 发送任何数据。"
+  },
+  "reportBugModalV2": {
+    "addContext": "还有其他需要我们了解的信息吗？（可选）",
+    "bugReportId": "Bug 报告 ID",
+    "bugReportSubmitted": "Bug 报告已提交",
+    "cancel": "取消",
+    "close": "关闭",
+    "copyErrorDetails": "复制错误详情",
+    "describeTheIssue": "描述问题",
+    "done": "完成",
+    "errorDetails": "错误详情",
+    "errorDetailsIncluded": "这些详情将随报告一并提交。",
+    "pleaseShareThisIdWithThe": "请将此 ID 分享给 Factory 团队以便调查。",
+    "reportABug": "报告 Bug",
+    "saveReportToFile": "将报告保存到文件",
+    "sendingYourBugReport": "正在发送你的 Bug 报告…",
+    "submit": "提交",
+    "thisMayTakeAMomentNo": "这可能需要一些时间，请勿重复提交。",
+    "uploadingBugReportsToFactoryIs": "此部署已禁用向 Factory 上传 Bug 报告。你可以在下方描述问题，并将诊断归档（日志和你的描述）保存到文件，然后分享给你的 IT 或支持团队。",
+    "whatWentWrongPleaseDescribeThe": "出了什么问题？请描述你遇到的问题…",
+    "whatWereYouDoing": "发生此情况时你正在做什么？",
+    "yourBugReportHasBeenSubmitted": "你的 Bug 报告已成功提交。"
+  },
+  "rewindConversationModal": {
+    "failedToRewind": "回退对话失败"
+  },
+  "rightPaneInteractions": {
+    "chromeImportDatabaseBusy": "Chrome 正忙于保存 Cookie。请稍候，然后重试导入。",
+    "chromeImportDecryptionFailed": "无法读取 Chrome 的 Cookie。请退出并重新打开 Chrome，然后重试导入。",
+    "chromeImportFailed": "无法从 Chrome 导入。请重试导入。",
+    "chromeImportKeyMissing": "找不到 Chrome 的加密密钥。请打开 Chrome，然后重试导入。",
+    "chromeImportKeychainDenied": "无法从 Chrome 导入。请再次点击导入，并在 macOS 请求访问 Chrome Safe Storage 时选择“允许”。",
+    "chromeImportKeychainTimedOut": "由于未收到 macOS 的响应，无法从 Chrome 导入。请再次点击导入，并在 macOS 请求访问 Chrome Safe Storage 时选择“允许”。",
+    "chromeImportProfileNotFound": "未找到 Chrome 的 Cookie。请打开 Chrome 并登录某个网站，然后重试导入。",
+    "chromeImportSucceeded_other": "已从 Chrome 导入 {{count}} 个 Cookie",
+    "screenshotCopied": "截图已复制到剪贴板"
+  },
+  "rightPaneToolDescriptions": {
+    "agents": "正在处理此工作流的智能体",
+    "artifacts": "此会话的链接与产出物",
+    "browser": "预览本地页面和网页",
+    "changes": "审阅此会话的代码变更",
+    "computer": "查看并控制计算机的桌面",
+    "files": "浏览此会话的工作区",
+    "pullRequest": "审阅此会话的拉取请求",
+    "pullRequest_gitlab": "审阅此会话的合并请求",
+    "sideChat": "在不打断当前工作的情况下提问",
+    "subagents": "跟踪此会话的子智能体",
+    "terminal": "会话计算机上的 shell"
+  },
+  "rightPaneTools": {
+    "agents": "智能体",
+    "artifacts": "产出物",
+    "browser": "浏览器",
+    "changes": "变更",
+    "computer": "计算机",
+    "filePreview": "文件预览",
+    "files": "文件",
+    "plan": "计划",
+    "pullRequest": "拉取请求",
+    "pullRequest_gitlab": "合并请求",
+    "sideChat": "侧边对话",
+    "subagents": "子智能体",
+    "terminal": "终端"
+  },
+  "rightPaneV2Launcher": {
+    "agents": {
+      "description": "编排器委派的智能体",
+      "label": "智能体"
+    },
+    "automations": {
+      "description": "此工作流的定时与触发运行",
+      "label": "自动化"
+    },
+    "browser": {
+      "description": "工作流站点与预览",
+      "label": "浏览器",
+      "unavailableDescription": "远程计算机上不可用"
+    },
+    "files": {
+      "description": "工作流文件与产出物",
+      "label": "文件",
+      "unavailableDescription": "此工作流中不可用"
+    },
+    "progress": {
+      "description": "当前进展",
+      "label": "目标"
+    },
+    "prs": {
+      "description": "工作流打开的每个 PR",
+      "label": "PR"
+    },
+    "settings": {
+      "description": "此工作流的设置与用量",
+      "label": "设置",
+      "unknownMachine": "未知机器"
+    },
+    "tasks": {
+      "description": "CVE 修复以及需要你处理的事项",
+      "label": "任务",
+      "workstreamDescription": "此工作流正在处理的内容"
+    },
+    "terminal": {
+      "description": "工作流计算机上的 shell",
+      "label": "终端"
     }
+  },
+  "sandboxEnvironmentLaunch": {
+    "attachmentUploadFailed": "附件上传失败。请重试，或移除文件后重新附加。",
+    "attachmentsNoLongerAvailable": "已附加的文件在此应用窗口中不再可用。请重试并重新附加这些文件。",
+    "cloningRepositories": "正在克隆仓库",
+    "creatingComputerFrom": "正在基于 {{environmentName}} 创建计算机",
+    "installingDependencies": "正在安装依赖",
+    "provisioningFailed": "环境预配失败",
+    "settingUpComputer": "正在设置你的计算机",
+    "startingSession": "正在启动你的会话",
+    "uploadingAttachments": "正在上传附件"
+  },
+  "sessionCapabilities": {
+    "failedToUpdateSkill": "更新技能失败"
+  },
+  "sessionDetail": {
+    "automations": "自动化",
+    "backToAutomation": "返回自动化",
+    "backToAutomations": "返回自动化列表",
+    "backToMission": "返回工作流：{{name}}",
+    "backToNamedAutomation": "返回自动化：{{name}}",
+    "backToParentSession": "返回父会话：{{name}}",
+    "catalogSyncFailed": "已连接的机器未返回其会话列表。请重新连接该机器后重试。",
+    "cloudSyncOfflineComputer": {
+      "body": "你的组织已关闭云端同步，因此此会话仅存储在运行它的计算机上，而该计算机已离线。请在该计算机上启动新会话以将其唤醒，然后重新加载此页面。",
+      "header": "会话不可用：计算机离线"
+    },
+    "missingMachineId": "由于缺少必需的机器标识符，无法连接此会话。工作区沙箱或计算机可能已不可用。",
+    "notFound": {
+      "bodyV2": "会话可能已被删除，或者你无权访问。",
+      "header": "未找到会话"
+    },
+    "parentSession": "父会话",
+    "serviceAccountSession": {
+      "body": "此会话属于服务账号，因此无法在此打开。可在“自动化”页面查看自动化运行记录。",
+      "header": "服务账号会话"
+    },
+    "sharedSession": {
+      "accessDenied": {
+        "body": "你不是此共享会话的成员，或者它已不再与你共享。",
+        "cannotContinue": "你无法继续此会话。",
+        "cannotContinueWithDetail": "你无法继续此会话。{{detail}}",
+        "header": "无权访问共享会话"
+      },
+      "checkingAccess": "正在检查访问权限…",
+      "computeLimit": {
+        "body": "你的组织已达到用量上限，因此运行此共享会话的计算机无法启动。",
+        "header": "已达到用量上限"
+      },
+      "computerName": "共享计算机",
+      "linkUnavailable": {
+        "body": "你无权访问此会话。它可能启动于你尚未加入的私有频道，或属于其他组织。请申请加入该频道，然后再次打开链接。",
+        "header": "无法打开此会话"
+      },
+      "members": {
+        "label_other": "已与 {{count}} 人共享",
+        "unknownMember": "未知成员"
+      },
+      "startFailed": {
+        "body": "无法启动运行此共享会话的计算机。请重新加载后重试。",
+        "header": "无法打开共享会话",
+        "retryBody": "运行此共享会话的计算机未能启动它。请重试，以通过新的预留资源启动。"
+      },
+      "unavailable": {
+        "body": "运行此共享会话的计算机不可用。请稍后重试。",
+        "header": "共享会话不可用"
+      }
+    },
+    "unavailable": "会话不可用"
+  },
+  "sessionDetailChrome": {
+    "loadingSession": "正在加载会话"
+  },
+  "sessionDetailLayout": {
+    "missionLeadFileTabName": "负责人",
+    "specificationReview": "规格审阅",
+    "toggleTerminal": "切换终端"
+  },
+  "sessionLoad": {
+    "failedToLoadPreviousMessages": "加载之前的消息失败",
+    "failedToLoadSession": "加载会话失败"
+  },
+  "sessionManager": {
+    "automationCount_other": "{{count}} 个自动化",
+    "droidComputer": "Droid 计算机",
+    "failedToAddProject": "添加项目失败",
+    "failedToChangeMissionSymbol": "无法更改工作流图标，已恢复为之前的图标",
+    "failedToChangeMissionSymbolColor": "无法更改工作流图标颜色，已恢复为之前的颜色",
+    "failedToForkSession": "派生会话失败",
+    "failedToRenameSession": "重命名会话失败",
+    "missionMustBeAvailableToChangeSymbol": "此工作流的计算机不可用，因此无法更改其图标",
+    "missionSymbolColorNeedsDaemonUpdate": "此工作流的计算机需要更新 Droid，之后成员才能更改其图标颜色",
+    "sessionArchived": "会话已归档",
+    "sessionHidden": "会话已隐藏",
+    "sessionMustBeAvailableToFork": "会话必须可用后才能派生",
+    "sessionRestored": "会话已恢复",
+    "signInToChangeMissionSymbol": "请重新登录以更改工作流图标",
+    "undoArchive": "撤销",
+    "undoArchiveWithKey": "撤销 {{key}}",
+    "unregisteredComputer": "未注册的计算机",
+    "unregisteredComputerNumbered": "未注册的计算机 {{index}}"
+  },
+  "sessionMarkdownImage": {
+    "previewFile": "预览 {{fileName}}"
+  },
+  "sessionShareDialog": {
+    "sharedCopyCodeBlocked": "本次会话的代码更改无法随会话共享",
+    "sharedCopyCodeCheckFailed": "无法检查未推送的更改",
+    "sharedCopyCodeGitNotAvailable": "本次会话的计算机上没有可用的 Git",
+    "sharedCopyCodeLfsChanges": "本次会话更改了 Git LFS 文件，无法随会话共享",
+    "sharedCopyCodeNoRemote": "本次会话的仓库未配置 origin 远程",
+    "sharedCopyCodeNotApplicable": "本次会话的代码更改无法应用到智能体配置的计算机",
+    "sharedCopyCodeOperationInProgress": "请先完成合并或变基",
+    "sharedCopyCodeRepositoryNotInProfile": "{{profile}} 中没有 {{repository}}",
+    "sharedCopyCodeSubmoduleChanges": "本次会话更改了子模块，无法随会话共享",
+    "sharedCopyCodeTooLarge": "本次会话的代码更改过大，无法随会话共享",
+    "sharedCopyFailed": "无法创建共享会话",
+    "sharedCopyMachineNotConnected": "请重新连接本次会话的计算机以共享会话",
+    "sharedCopyProfileComputerOutdated": "此智能体配置的计算机需要更新 Droid 才能接收副本",
+    "sharedCopyProfilesFailed": "无法加载智能体配置",
+    "sharedCopyRepositoryNotFound": "此智能体配置的计算机上没有本次会话的仓库",
+    "sharedCopySourceOutdated": "请更新本次会话计算机上的 Droid 以共享会话",
+    "sharedCopySummaryFailed": "无法总结此对话",
+    "sharedCopySummarySourceOutdated": "请更新本次会话计算机上的 Droid 以共享摘要",
+    "sharedCopyTitle": "{{title}}（共享）",
+    "sharedCopyTooLong": "本次会话过长，无法共享",
+    "sharedCopyTurnInProgress": "请等待 Droid 完成工作",
+    "workstream": {
+      "sharedCopyCodeBlocked": "此工作流的代码更改无法随工作流共享",
+      "sharedCopyCodeGitNotAvailable": "此工作流的计算机上没有可用的 Git",
+      "sharedCopyCodeLfsChanges": "此工作流更改了 Git LFS 文件，无法随工作流共享",
+      "sharedCopyCodeNoRemote": "此工作流的仓库未配置 origin 远程",
+      "sharedCopyCodeNotApplicable": "此工作流的代码更改无法应用到智能体配置的计算机",
+      "sharedCopyCodeSubmoduleChanges": "此工作流更改了子模块，无法随工作流共享",
+      "sharedCopyCodeTooLarge": "此工作流的代码更改过大，无法随工作流共享",
+      "sharedCopyFailed": "无法共享此工作流",
+      "sharedCopyMachineNotConnected": "请重新连接此工作流的计算机以共享工作流",
+      "sharedCopyRepositoryNotFound": "此智能体配置的计算机上没有此工作流的仓库",
+      "sharedCopySourceOutdated": "请更新此工作流计算机上的 Droid 以共享工作流",
+      "sharedCopyTooLong": "此工作流过长，无法共享",
+      "unjoinable": "此共享工作流无法通过链接加入"
+    }
+  },
+  "sessionSubagentsPanel": {
+    "activity": {
+      "cancelled": "已取消",
+      "failed": "失败",
+      "waitingOnYou": "等待你处理",
+      "working": "工作中"
+    },
+    "fallbackName": "子智能体 {{id}}",
+    "group": {
+      "done": "已完成",
+      "waitingOnYou": "等待你处理",
+      "working": "工作中"
+    },
+    "noSubagentsYet": "暂无子智能体",
+    "subagentsShowUpHere": "本次会话启动的子智能体会显示在这里。",
+    "typeActivity": "{{type}} · {{activity}}"
+  },
+  "sharableLink": {
+    "unjoinable": "此共享会话无法通过链接加入"
+  },
+  "sharedCopyInvites": {
+    "addFailed": "无法将 {{name}} 添加到共享会话",
+    "switchOrganizationLeave": "离开",
+    "switchOrganizationStay": "留下",
+    "switchOrganizationTitle": "切换组织？",
+    "unaddedPeople_other": "{{count}} 人尚未添加到共享会话。"
+  },
+  "sharedSessionLaunch": {
+    "startingComputer": "正在启动共享计算机"
+  },
+  "sideChatPanel": {
+    "closeChatPanel": "关闭聊天面板",
+    "openChatPanel": "打开聊天面板"
+  },
+  "slashCommands": {
+    "descriptions": {
+      "account": "前往账户设置",
+      "billing": "前往账单设置",
+      "btw": "在侧边聊天中提问，不干扰主对话记录",
+      "bug": "报告 Bug",
+      "cd": "/cwd 的别名",
+      "clear": "/new 的别名",
+      "compact": "就地压缩当前会话。可附加指令以自定义摘要（别名：compress）",
+      "compress": "/compact 的别名",
+      "connectors": "打开连接器和 MCP 设置",
+      "context": "显示上下文窗口用量明细",
+      "copy": "将最后一条助手消息复制到剪贴板",
+      "cost": "显示 token 用量和费用详情",
+      "createSkill": "从本次会话创建可复用的技能",
+      "cwd": "更改当前会话的工作目录",
+      "fast": "为当前模型启用快速模式（/fast off 可禁用）",
+      "favorite": "/pin 的别名",
+      "fork": "将此会话派生为新的独立会话",
+      "handoff": "用本次对话的摘要启动新会话",
+      "help": "打开帮助弹窗，查看快捷键和提示",
+      "limits": "显示额度速率上限和用量",
+      "mcp": "打开 MCP 设置",
+      "model": "打开模型选择器",
+      "new": "新建会话",
+      "pin": "切换当前会话的固定状态（别名：favorite）",
+      "plugins": "打开插件设置",
+      "readinessFix": "修复最新报告中未通过的智能体就绪度信号",
+      "readinessReport": "评估当前仓库的智能体就绪度并生成报告",
+      "rename": "重命名当前会话（例如 /rename My Title）",
+      "rewindConversation": "将对话回退到之前的消息",
+      "settings": "前往设置页面",
+      "share": "打开共享会话弹窗",
+      "skills": "打开技能设置",
+      "stats": "查看你的本地 Droid 统计"
+    },
+    "skillFallback": "技能"
+  },
+  "terminal": {
+    "cannotOpenTerminal": "无法打开终端",
+    "failedToCreateTerminal": "创建终端失败。请重试。",
+    "openAgentToUseTerminal": "打开智能体以使用其终端。",
+    "sessionFolderMissing": "本次会话的文件夹已不存在：{{path}}",
+    "tabLabel": "终端 {{number}}"
+  },
+  "toolFiles": {
+    "cannotOpenInEditor": "无法在所选编辑器中打开此文件。",
+    "defaultAppRequiresDesktop": "使用默认应用打开文件需要桌面应用。",
+    "localSessionsOnly": "打开工具文件仅适用于本地会话。",
+    "openInDefaultAppFailed": "无法使用默认应用打开文件。",
+    "relativePathWithoutCwd": "没有工作目录时无法打开相对路径文件。",
+    "revealFailed": "无法在文件夹中显示文件。",
+    "revealRequiresDesktop": "在文件夹中显示文件需要桌面应用。"
+  },
+  "useComputerSessionActions": {
+    "manageComputer": "管理计算机…",
+    "openInVsCode": "在 VS Code 中打开",
+    "sshInstructions": "SSH 说明"
+  },
+  "useProjectArchiveAction": {
+    "archiveAllSessionsInThisProject": "归档此项目中的所有会话？",
+    "archivingHidesTheseSessionsButDoes": "归档会隐藏这些会话，但不会停止它们。仍在工作的会话会继续运行；如需停止，请先手动停止。",
+    "cancel": "取消",
+    "failedToArchiveProject": "归档项目失败"
+  },
+  "workspaceAttachments": {
+    "failedToPrepare": "准备附件失败",
+    "failedToQueue": "无法将附件加入队列"
+  },
+  "workspaceFiles": {
+    "uploadComplete": "上传完成",
+    "uploadConflict": "上传冲突",
+    "uploadFailed": "上传失败"
+  },
+  "worktreeDelete": {
+    "couldNotBeRemoved": "无法移除工作树。请使用 git worktree remove 手动移除。",
+    "deletedWithWarnings": "工作树已删除，但有警告：{{warnings}}",
+    "failedToDelete": "删除工作树失败",
+    "inUse": "工作树已保留：另一个 Droid 进程正在使用它。请关闭该会话，然后再次删除。",
+    "keptUncommittedChanges": "工作树已保留：其中有未提交的更改。请提交或贮藏这些更改，或使用 git worktree remove --force 移除。"
+  },
+  "worktreeSessionSetup": {
+    "cannotOccupyRootBranch": "工作树不能占用根分支。",
+    "failedToLoadManagedWorktrees": "加载受管理工作树失败",
+    "failedToLoadProfiles": "加载工作树设置方案失败",
+    "useExistingBranchUnavailable": "「使用现有分支」不适用于新建的工作树分支。请改为选择已存在的分支。"
   }
 }

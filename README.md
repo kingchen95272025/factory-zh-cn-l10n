@@ -109,8 +109,9 @@ dist/                             构建产物：app.asar、资源分块副本�
 - [x] 补丁链路（渲染层语言开关 + 资源分块 + 主进程白名单/资源表）
 - [x] 完整性哈希与 ad-hoc 重签名
 - [x] PoC：隔离副本启动、`html lang=zh-CN`、界面中文截图
-- [x] PoC 翻译：`common`、`components.layout` 可见子集、主进程 desktop 全部
-- [ ] 全量翻译（settings / sessions / chat / automations / lessons 等）
+- [x] 全量翻译：19 个渲染层命名空间，20,584 / 20,584（100%）
+- [x] 正式安装：`/Applications/Factory.app` 已更新；设置页、主界面、原生菜单已验证中文
+- [x] 跨平台 CLI：macOS 实测；Windows/Linux 路径与安装分支已实现（未实机验证）
 
 ## 边界与声明
 

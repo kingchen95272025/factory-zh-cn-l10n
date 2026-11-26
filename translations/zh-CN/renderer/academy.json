@@ -1,0 +1,259 @@
+{
+  "academyCallout": {
+    "danger": "危险",
+    "info": "信息",
+    "tip": "提示",
+    "tryIt": "试一试",
+    "warning": "警告"
+  },
+  "academyLanding": {
+    "description": "通过实操课程掌握 Factory Droid——从基础到高级工作流，按自己的节奏学习。循序渐进完成三个层级的课程——Droid Essentials、Droid Specialist 和 Droid Master，每完成一个层级即可获得认证。满足前面模块的先修要求后，对应模块的测验才会解锁。",
+    "factoryAcademy": "Factory 学院",
+    "yourCertifications": "你的认证"
+  },
+  "academyLesson": {
+    "academy": "学院",
+    "failedToLoadLessonContent": "加载课程内容失败。",
+    "lessonNotFound": "未找到课程。"
+  },
+  "academyLessonNav": {
+    "next": "下一课：{{title}}",
+    "previous": "上一课：{{title}}",
+    "takeQuiz": "参加测验"
+  },
+  "academyModule": {
+    "moduleNotFound": "未找到模块。",
+    "retakeQuiz": "重新参加 {{title}} 测验",
+    "takeQuiz": "参加 {{title}} 测验"
+  },
+  "academyModuleCard": {
+    "completed": "已完成",
+    "lessonsAndDuration": "{{lessonCount}} 节课 · {{duration}}",
+    "locked": "已锁定",
+    "lockedUnlocksAfter": "已锁定。通过 {{title}} 后解锁。",
+    "unlocksAfter": "通过 {{title}} 后解锁。"
+  },
+  "academyQuiz": {
+    "academy": "学院",
+    "failedToLoadQuiz": "加载测验失败。",
+    "moduleNotFound": "未找到模块。",
+    "quiz": "测验",
+    "title": "{{title}} 测验"
+  },
+  "academyQuizRunner": {
+    "beforeYouStart": "开始之前",
+    "certificationEarned": "🎓 已获得 {{name}} 认证！",
+    "congratulations": "恭喜！",
+    "ifYouLeaveBeforeFinishingYour": "如果在完成前离开，你的答案将不会保存，需要重新从头参加测验。",
+    "needToPass": "你需要答对 {{passScore}} 题（{{percent}}%）才能通过。",
+    "nextQuestion": "下一题",
+    "noQuestionsAvailable": "暂无可用题目",
+    "notQuiteThereYet": "还差一点",
+    "passRequirement": "你需要答对 {{passScore}}/{{total}} 题（{{percent}}%）才能通过。",
+    "questionPrefix": "题目：{{question}}",
+    "questionProgress": "第 {{current}} 题，共 {{total}} 题",
+    "retakeQuiz": "重新参加测验",
+    "runningScore": "得分：{{score}}/{{answered}}",
+    "scoreSummary": "你的得分为 {{score}}/{{total}}（{{percent}}%）",
+    "seeResults": "查看结果",
+    "startQuiz": "开始测验",
+    "submitAnswer": "提交答案",
+    "submitting": "提交中…",
+    "thisQuizDoesntHaveAnyQuestions": "此测验暂无任何题目，请稍后回来查看。",
+    "youPassed": "你通过了测验！"
+  },
+  "certificationsSection": {
+    "earned": "于 {{date}} 获得",
+    "modulesPassed": "已通过 {{passed}} / {{total}} 个模块"
+  },
+  "difficultyBadge": {
+    "advanced": "高级",
+    "beginner": "基础",
+    "intermediate": "中级"
+  },
+  "duration": {
+    "minutes_other": "{{count}}分钟"
+  },
+  "lessons": {
+    "agentReadiness": {
+      "readinessLevels": {
+        "description": "借助 Droid 和就绪度报告识别差距，并采取可执行的步骤提升代码库成熟度。",
+        "title": "如何提升你的智能体就绪度级别"
+      },
+      "whatIsAgentReadiness": {
+        "description": "了解智能体就绪度模型及其对自主软件开发的愿景。",
+        "title": "什么是智能体就绪度"
+      }
+    },
+    "automations": {
+      "eventTriggers": {
+        "description": "将 Droid 接入你的系统，让入站事件——PR、告警、webhook 或工单更新——触发相应的自动化。",
+        "title": "事件触发的自动化"
+      },
+      "scheduledAutomations": {
+        "description": "按固定周期运行 Droid，保持仪表盘数据最新、分诊问题、轮换凭据并生成周期性报告。",
+        "title": "定时自动化"
+      },
+      "whatAreAutomations": {
+        "description": "了解 Droid 自动化如何按计划或响应事件代你运行，处理重复性工作。",
+        "title": "什么是自动化"
+      },
+      "writingAutomationPrompts": {
+        "description": "为自动化编写持久可靠的提示词，明确输入范围、成功标准和失败模式。",
+        "title": "编写有效的自动化提示词"
+      }
+    },
+    "customizations": {
+      "agentsMd": {
+        "description": "了解如何编写有效的 AGENTS.md 文件，并使用 /init 命令快速初始化项目上下文。",
+        "title": "AGENTS.md 与 /init"
+      },
+      "customDroids": {
+        "description": "创建具有受限工具集的专用子智能体，用于代码审查、安全扫描和文档编写等专注任务。",
+        "title": "自定义 Droid"
+      },
+      "hooks": {
+        "description": "使用 Hooks 配置确定性的生命周期操作，用于格式化、日志记录、通知和自定义权限。",
+        "title": "Hooks"
+      },
+      "marketplace": {
+        "description": "订阅外部市场，或创建内部市场，在整个组织内共享和发现插件。",
+        "title": "市场"
+      },
+      "plugins": {
+        "description": "安装和管理插件——包含技能、命令、智能体、Hooks 与 MCP 服务器的可分发包。",
+        "title": "插件"
+      },
+      "skills": {
+        "description": "学习创建和管理技能——扩展 Droid 能力的可复用功能。",
+        "title": "技能"
+      }
+    },
+    "exec": {
+      "autonomyAndOutput": {
+        "description": "配置自主级别以实现安全的自动化，并为你的工作流选择合适的输出格式。",
+        "title": "自主级别与输出格式"
+      },
+      "codeReview": {
+        "description": "配置 Factory GitHub App，实现带自定义指令和严重级别的自动代码审查。",
+        "title": "自动化代码审查"
+      },
+      "codeReviewPowerUser": {
+        "description": "使用 /review 命令进行 AI 驱动的代码分析，支持多种审查类型、自定义指令和严重级别。",
+        "title": "使用 Droid 进行代码审查"
+      },
+      "githubActions": {
+        "description": "将 Droid Exec 与 GitHub Actions 集成，实现自动化 PR 审查、文档更新和安全扫描。",
+        "title": "GitHub Actions 集成"
+      },
+      "interactiveApps": {
+        "description": "学习构建交互式应用的核心模式，实时流式传输 Droid 的响应。",
+        "title": "构建交互式应用"
+      },
+      "whatIsDroidExec": {
+        "description": "了解 Droid Exec 无头模式及其执行模型，并从基础命令开始上手。",
+        "title": "什么是 Droid Exec"
+      }
+    },
+    "fundamentals": {
+      "bestPractices": {
+        "description": "学习编写提示词、实现大型功能以及有效使用自动运行的最佳实践。",
+        "title": "使用 Droid 的通用最佳实践"
+      },
+      "droidSettings": {
+        "description": "了解 Droid 中可用于定制体验的各项设置与配置。",
+        "title": "了解 Droid 设置"
+      },
+      "firstSession": {
+        "description": "学习如何启动 Droid、提问、进行代码更改以及管理会话上下文。",
+        "title": "你的第一个 Droid 会话"
+      },
+      "installation": {
+        "description": "安装 Factory CLI、完成账号认证，并启动你的第一个 Droid 会话。",
+        "title": "安装与设置"
+      },
+      "specMode": {
+        "description": "学习如何使用规格模式改进规划并产生更好的结果。",
+        "title": "规格模式"
+      },
+      "toolsMcp": {
+        "description": "了解什么是 MCP、如何添加服务器以及如何使用 CLI 工具。",
+        "title": "通过 MCP 与 CLI 实用程序连接工具"
+      }
+    },
+    "missions": {
+      "execution": {
+        "description": "了解任务如何通过 Worker 会话、功能分配和技能感知的编排来执行工作。",
+        "title": "任务执行与 Workers"
+      },
+      "missionControl": {
+        "description": "了解如何通过任务控制监控、介入并调整任务方向，以及配置继承的工作方式。",
+        "title": "使用任务控制"
+      },
+      "planningPhase": {
+        "description": "了解规划阶段为何对任务成功至关重要，以及如何通过里程碑和验证契约制定有效的计划。",
+        "title": "规划阶段"
+      },
+      "validation": {
+        "description": "了解任务如何通过自动验证器、里程碑检查点以及严格审查与用户测试工作流来确保质量。",
+        "title": "验证与质量"
+      },
+      "whatAreMissions": {
+        "description": "了解任务——通过协作规划与编排执行来处理大规模工作的结构化方法。",
+        "title": "什么是任务"
+      }
+    },
+    "useCases": {
+      "debugging": {
+        "description": "将 Droid 用作调试伙伴，隔离故障、分析堆栈跟踪并缩小根本原因范围。",
+        "title": "使用 Droid 调试"
+      },
+      "exploringCodebases": {
+        "description": "借助 Droid 梳理架构、追踪调用路径并总结关键模块，更快熟悉新仓库。",
+        "title": "探索陌生的代码库"
+      },
+      "refactoring": {
+        "description": "借助 Droid 重构大型或陌生的代码，通过测试、增量修改和显式契约保持行为不变。",
+        "title": "安全重构"
+      },
+      "writingProductionCode": {
+        "description": "与 Droid 协作，以清晰的规格、迭代式实现和可审查的变更交付生产级代码。",
+        "title": "编写生产代码"
+      },
+      "writingTests": {
+        "description": "使用 Droid 生成并维护单元测试、集成测试和端到端测试，同时保持测试套件快速可靠。",
+        "title": "编写测试"
+      }
+    }
+  },
+  "modules": {
+    "agentReadiness": {
+      "description": "了解代码库成熟度，为自主 AI 辅助开发做好准备。",
+      "title": "Droid 302：智能体就绪度"
+    },
+    "automations": {
+      "description": "按计划或响应事件运行 Droid，自动化重复性的工程与运营工作。",
+      "title": "Droid 202：自动化"
+    },
+    "customizations": {
+      "description": "掌握 Factory 的自定义功能：AGENTS.md、技能、自定义 Droid、Hooks、插件、市场以及高级用户技巧。",
+      "title": "Droid 201：Droid 自定义"
+    },
+    "exec": {
+      "description": "掌握使用 Droid Exec 的无头自动化，覆盖 CI/CD 流水线、GitHub Actions 和交互式应用。",
+      "title": "Droid 301：Droid Exec"
+    },
+    "fundamentals": {
+      "description": "学习使用 Droid 的基础知识，从安装到高级自主级别设置。",
+      "title": "Droid 101：基础"
+    },
+    "missions": {
+      "description": "掌握面向大型开发项目的多智能体编排，实现结构化规划与执行。",
+      "title": "Droid 203：任务"
+    },
+    "useCases": {
+      "description": "探索使用 Droid 的常见工程场景：编写生产代码、调试、重构、探索代码库和编写测试。",
+      "title": "Droid 102：使用场景"
+    }
+  }
+}

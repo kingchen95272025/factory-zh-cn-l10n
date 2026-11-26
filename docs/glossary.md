@@ -46,6 +46,10 @@
 | Exec | 执行 | 会话类型名；如 `exec session` → 执行会话 |
 | Bug | Bug | 保留英文，如“报告 Bug”“保存 Bug 报告” |
 | Cloud | 云端 | 如 `Cloud session` → 云端会话 |
+| Plan | 方案 | 如 Free plan → 免费方案；统一使用“方案”，不用“套餐” |
+| Service Account | 服务账号 | 统一使用“服务账号”，不用“服务账户” |
+| Voucher | 优惠码 | 统一使用“优惠码”，不用“代金券” |
+| Code Review | 代码审查 | 作为功能名统一译为“代码审查” |
 | Beta | Beta | 保留 |
 | Unpin | 取消固定 | |
 

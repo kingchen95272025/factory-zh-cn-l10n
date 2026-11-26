@@ -1,0 +1,110 @@
+{
+  "cta": {
+    "askUser": {
+      "answer": "在此回答",
+      "connecting": "连接中…",
+      "description": "在此回答，Droid 会从会话中断处继续。",
+      "title": "Droid 正在等待你的回答"
+    },
+    "skillSuggestion": {
+      "description": "该技能运行所在会话的派生会话会在新的工作树中修复问题并打开 PR，原会话不受影响。",
+      "openFix": "打开包含修复的 PR",
+      "title": "修复此技能？"
+    },
+    "suggestion": {
+      "decline": "拒绝",
+      "declineReason": "为什么要拒绝？",
+      "notWorthIt": "不值得",
+      "wrong": "内容有误"
+    },
+    "workstreamInvite": {
+      "description": "打开工作流可查看团队正在开展的工作，也可忽略此条目。",
+      "ignore": "忽略",
+      "open": "打开工作流",
+      "title": "{{inviter}} 将你加入了工作流",
+      "titleUnnamed": "你已被加入工作流"
+    },
+    "workstreamSuggestion": {
+      "machine": {
+        "apply": "用智能体修复",
+        "description": "系统会请求工作流的编排器启动一个智能体，在工作流的机器上实施此更改。",
+        "title": "修复此机器设置？"
+      },
+      "sharedNote": {
+        "added": "已将笔记添加到共享文件夹中的 {{path}}。",
+        "apply": "添加到共享笔记",
+        "description": "笔记将添加到工作流共享文件夹中的 {{path}}，后续智能体在开始前会读取该笔记。不会向正在运行的智能体发送消息。",
+        "failed": "无法将笔记添加到共享文件夹",
+        "title": "添加此笔记？"
+      }
+    }
+  },
+  "desktopNotifications": {
+    "summaryBody": "打开收件箱查看。",
+    "summaryTitle_other": "{{count}} 个新条目需要你关注"
+  },
+  "inbox": {
+    "emptyState": {
+      "all": {
+        "primary": "收件箱为空",
+        "secondary": "会话、工作流和任务中需要你关注的内容会显示在这里。"
+      },
+      "needsAction": {
+        "primary": "没有需要你处理的事项",
+        "secondary": "问题和权限请求会显示在这里。"
+      },
+      "typeFilter": {
+        "primary": "暂无这些类型的条目",
+        "secondary": "重置筛选条件以查看其他条目",
+        "secondaryMore": "加载更多或重置筛选条件"
+      }
+    },
+    "inboxRefreshFailedShowingTheLatest": "收件箱刷新失败，当前显示最近保存的数据。",
+    "loadingInbox": "正在加载收件箱",
+    "loadingInboxEllipsis": "正在加载收件箱…",
+    "retryInbox": "重试收件箱",
+    "unableToLoadYourInbox": "无法加载你的收件箱"
+  },
+  "sessionEntity": {
+    "answerFailed": "无法发送你的回答",
+    "failures": {
+      "connectionFailed": "与会话所在机器的连接失败。",
+      "loadFailed": "无法在会话所在机器上加载该会话。",
+      "noAccessToken": "你的登录已过期，请重新登录后重试。",
+      "readFailed": "无法读取该会话。"
+    },
+    "question": "问题",
+    "unavailable": {
+      "answered": {
+        "description": "Droid 已不再等待此问题，因此这里无需作答。",
+        "title": "此问题已回答"
+      },
+      "sent": {
+        "description": "Droid 已根据你的回答继续会话。",
+        "title": "回答已发送"
+      },
+      "unreachable": {
+        "description": "提出此问题的机器无法从此设备访问。请打开会话并在那里作答。",
+        "title": "此问题已无法在此作答"
+      }
+    }
+  },
+  "skillSuggestionPrompt": {
+    "alreadyFixed": "先检查默认分支上被引用的代码行；如果其中已不再包含此内容，请停止操作并报告问题已修复，不要打开 PR。",
+    "instructions": "在新的 git 工作树中，对此技能文件做能防止该问题的最小修改，提交到新分支，并按仓库规范打开 PR。在 PR 描述中包含 {{trailer}}。",
+    "intro": "本会话早些时候，某个仓库技能造成了阻碍。请修复该技能，避免再次发生。"
+  },
+  "snooze": {
+    "nextWeek": "下周",
+    "oneHour": "1 小时",
+    "tomorrowMorning": "明天 9:00"
+  },
+  "updateHint": {
+    "desktop": "更新 Factory 以查看此条目的完整内容。",
+    "web": "重新加载以查看此条目的完整内容。"
+  },
+  "workstreamMachineFixPrompt": {
+    "instructions": "在需要此更改的机器上启动一个智能体来实施更改，然后报告有哪些变更。如果该机器会为每个智能体分配全新的计算机，安装不会保留：还需在共享文件夹的 {{path}} 中添加一条笔记，说明后续智能体该如何设置。",
+    "intro": "此工作流的一个智能体发现其机器设置存在缺失。"
+  }
+}

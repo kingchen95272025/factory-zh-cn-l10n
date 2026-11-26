@@ -1,0 +1,4192 @@
+{
+  "content": {
+    "agentReadiness": {
+      "completion": {
+        "headline": "你的仓库已有得分和行动计划",
+        "nextStep": "修复一处缺口并合并，然后再次运行 /readiness-report，查看得分变化。",
+        "recapItems": {
+          "0": "用 /readiness-report 为仓库完成评分",
+          "1": "了解智能体受阻的三大原因：上下文、访问权限、检查",
+          "2": "弄清级别如何确定，以及最快的提升路径",
+          "3": "逐项阅读评分卡中的缺口",
+          "4": "让 Droid 修复一处缺口"
+        }
+      },
+      "docsLink": {
+        "label": "了解智能体就绪度"
+      },
+      "levelOptions": {
+        "level2": {
+          "label": "级别 2"
+        },
+        "level3": {
+          "label": "级别 3"
+        },
+        "level4": {
+          "label": "级别 4"
+        }
+      },
+      "levelScenarios": {
+        "cheapest": {
+          "explanation": "每个检查项权重相同，所以先做更快的修复。AGENTS.md 只需几分钟。",
+          "options": {
+            "agentsMd": {
+              "explanation": "它确实更快，但并不会因此多算分。每个检查项权重相同。",
+              "label": "AGENTS.md"
+            },
+            "same": {
+              "label": "两者相同"
+            },
+            "tracing": {
+              "explanation": "级别更高的检查项也不会多算分。每个检查项权重相同。",
+              "label": "追踪"
+            }
+          },
+          "prompt": "你只够时间做一项修复：添加 AGENTS.md（级别 2）或设置追踪（级别 3）。哪一项对得分提升更大？"
+        },
+        "half": {
+          "explanation": "50% 已达到级别 3 的 40% 门槛，但未达到级别 4 的 60%。",
+          "options": {
+            "0": {
+              "explanation": "级别 2 从 20% 起算。通过全部检查的一半，就能超过它。"
+            },
+            "2": {
+              "explanation": "级别 4 需要达到全部检查的 60%，而你只通过了 50%。"
+            }
+          },
+          "prompt": "你的仓库通过了一半的检查。它处于哪个级别？"
+        }
+      },
+      "pillars": "能解决它的支柱",
+      "readinessPageTour": {
+        "tourReadinessNav": {
+          "body": "智能体就绪度位于“分析”页面。每次修复后重新评分，看着级别逐步提升。",
+          "title": "每次修复后回来看看"
+        },
+        "tourReadinessRepositories": {
+          "body": "选择仓库可查看每项检查及其失败原因，也可刷新以重新评分。",
+          "title": "每个仓库的级别"
+        },
+        "tourReadinessSummary": {
+          "body": "组织得分取所有已评分仓库级别的平均值。“已跟踪仓库”显示纳入测量的范围。",
+          "title": "你所在组织的级别"
+        }
+      },
+      "steps": {
+        "climbReadinessLevels": {
+          "activity": {
+            "heading": "检验你的理解"
+          },
+          "instructions": "你的级别等于你通过的检查在全部检查中的占比：20%、40%、60% 和 80% 分别解锁级别 2 至 5。每个检查项权重相同。",
+          "summary": "了解级别如何确定",
+          "tip": "由于每个检查项权重相同，修复成本最低的未通过检查就是最快的提升途径。添加一份 lint 配置与搭建分布式追踪对得分的推动相同。在开始大项目之前，先算一算你与下一个 20% 区间之间还隔着多少检查项"
+        },
+        "fixReadinessGap": {
+          "confirmLabel": "我已发送",
+          "instructions": "在未通过的检查项上选择“修复”，发送它生成的 /readiness-fix，然后阅读 Droid 的改动。",
+          "skip": {
+            "label": "暂时跳过",
+            "note": "之后可在评分卡中运行 /readiness-fix。"
+          },
+          "summary": "让 Droid 修复一项未通过的检查",
+          "tip": "一次修复既能提升得分，也让你看到就绪度改进是什么样。/readiness-fix 会指明未通过的检查项，因此 Droid 只改动该项所需的部分，而不会重写你的配置。如果还没有报告，可以让 Droid 编写 AGENTS.md——多数仓库中收益最高的修复"
+        },
+        "learnAgentReadiness": {
+          "activity": {
+            "heading": "智能体为何受阻",
+            "noun": {
+              "one": "原因",
+              "other": "原因"
+            },
+            "placeholder": "选择一个原因，查看能解决它的支柱。"
+          },
+          "instructions": "当 Droid 在仓库中受阻时，通常是因为缺少上下文、访问权限或检查。逐一展开，查看报告中评估了哪些支柱。",
+          "summary": "了解智能体受阻的三大原因",
+          "tip": "了解 Droid 受阻的原因，就能判断哪种修复最有回报。没有 AGENTS.md，Droid 会猜测构建和测试命令，浪费轮次；没有测试或 linter，它就无法检查自己的工作。报告中的每个支柱都可追溯到这三类原因之一"
+        },
+        "reviewReadinessReport": {
+          "coachmarks": {
+            "askAboutReport": {
+              "body": "让 Droid 用通俗的话解释你的级别，并挑出最先要修的地方。",
+              "example": "简单解释我的就绪度级别，并告诉我先修什么",
+              "title": "询问你的报告"
+            }
+          },
+          "instructions": "在评分卡上找到三件事：你的级别、距下一级别还差多少，以及最薄弱的支柱。",
+          "skip": {
+            "label": "不看报告，继续",
+            "note": "可以继续或离开。评分卡就绪后，侧边栏会标记本课，届时回来阅读即可。"
+          },
+          "summary": "阅读你的级别和最薄弱支柱",
+          "tip": "最薄弱的支柱正是 Droid 在这个仓库中浪费最多时间的地方，因此最适合作为起点。展开未通过的检查项，阅读失败原因，例如缺少 pre-commit 钩子。遇到不认识的检查项，先问 Droid，再动手修复",
+          "waitLabel": "Droid 正在为你的仓库评分"
+        },
+        "runReadinessReport": {
+          "coachmarks": {
+            "runReadinessReport": {
+              "body": "发送 /readiness-report，然后回到本课。Droid 会自行完成仓库评分。",
+              "example": "/readiness-report",
+              "title": "运行就绪度报告"
+            }
+          },
+          "instructions": "在配置了 origin 远程的 Git 项目中新建会话，发送 /readiness-report。过程需要几分钟，就绪后侧边栏会显示。",
+          "summary": "开始为你的仓库评分",
+          "tip": "评分卡会显示仓库未通过哪些检查，让你针对真实缺口修复，而不是凭猜测。Droid 会查找 README、lint 配置、pre-commit 钩子等，然后把结果保存到智能体就绪度。大型仓库可能需要长达一小时，所以现在就启动，然后继续学习"
+        },
+        "tourReadinessPage": {
+          "instructions": "“分析”中的智能体就绪度会跟踪每个已评分的仓库和组织的级别。请跟随导览。",
+          "summary": "跟踪各仓库的就绪度",
+          "tip": "{{tourPanelTipPrefix}} 此页面展示每个已评分的仓库，便于你找出哪些仓库拖慢了 Droid。合并修复后，刷新该仓库以确认检查现已通过；Droid 保存报告后，报告会显示在这里。"
+        }
+      },
+      "stumbleReasons": {
+        "access": {
+          "description": "Droid 无法构建或运行你的代码，也就看不到代码的实际行为。有文档的构建流程、环境模板和日志能打开这扇门。",
+          "label": "访问权限",
+          "tags": {
+            "0": "构建",
+            "1": "开发环境",
+            "2": "调试"
+          }
+        },
+        "checks": {
+          "description": "在你指出之前，没有任何东西会告诉 Droid 它错了。Linter、测试、分支保护和分析能在评审前发现错误。",
+          "label": "检查",
+          "tags": {
+            "0": "风格",
+            "1": "测试",
+            "2": "安全",
+            "3": "产品"
+          }
+        },
+        "context": {
+          "description": "Droid 不了解你的约定，也不知道任务的含义，只能靠猜。AGENTS.md、README 和 issue 模板能把猜测换成事实。",
+          "label": "上下文",
+          "tags": {
+            "0": "文档",
+            "1": "任务"
+          }
+        }
+      }
+    },
+    "autoWiki": {
+      "completion": {
+        "headline": "你的仓库 Wiki 正在生成",
+        "nextStep": "Wiki 就绪后先读一读，再发送 /install-wiki，让它在每次推送时保持最新。",
+        "recapItems": {
+          "0": "用 /wiki 为仓库启动 Wiki",
+          "1": "了解 Wiki 页面能回答什么，以及内容从何而来",
+          "2": "在 Wiki 页面找到你的 Wiki 及其新鲜度",
+          "3": "为每种场景选择了合适的刷新方式"
+        }
+      },
+      "docsLink": {
+        "label": "了解 AutoWiki"
+      },
+      "oneTime": {
+        "label": "一次性"
+      },
+      "recurring": {
+        "label": "定期"
+      },
+      "refreshScenarios": {
+        "beforeDemo": {
+          "explanation": "现在刷新一次就够了。",
+          "options": {
+            "1": {
+              "explanation": "定期刷新会为每次推送配置 CI，超出一次演示所需。"
+            }
+          },
+          "prompt": "你希望明天演示前，一个仓库的 Wiki 是最新的。"
+        },
+        "everyMerge": {
+          "explanation": "定期刷新在每次推送时运行，无需任何人惦记。",
+          "options": {
+            "0": {
+              "explanation": "一次性刷新只执行一次，下次合并后又会过时。"
+            }
+          },
+          "prompt": "你希望每次合并后 Wiki 都与 main 保持一致。"
+        },
+        "laptopClosed": {
+          "explanation": "云端刷新在 Droid 计算机上运行，不占用你的笔记本电脑。",
+          "options": {
+            "cloud": {
+              "label": "云端"
+            },
+            "local": {
+              "explanation": "本地方式会给你一条命令，在你自己的机器上运行。",
+              "label": "本地"
+            }
+          },
+          "prompt": "有二十个 Wiki 需要刷新，而你的笔记本电脑马上就要合上。"
+        }
+      },
+      "sampleWikiPage": {
+        "flow": {
+          "items": {
+            "0": "`api/checkout.ts` 接收购物车",
+            "1": "`payments/charge.ts` 调用支付服务商",
+            "2": "`jobs/receipt.ts` 发送收据邮件"
+          }
+        },
+        "flowHeading": {
+          "text": "一次支付如何流转"
+        },
+        "purpose": {
+          "text": "接收客户的购物车，从其银行卡扣款，并发送收据邮件。"
+        },
+        "runHeading": {
+          "text": "在本地运行"
+        },
+        "sources": {
+          "text": "来源：`api/checkout.ts:12`、`payments/charge.ts:40`"
+        },
+        "title": {
+          "text": "结算服务"
+        }
+      },
+      "steps": {
+        "automateWiki": {
+          "activity": {
+            "heading": "哪种刷新方式合适？"
+          },
+          "confirmLabel": "知道了",
+          "instructions": "刷新会更新受最新代码改动影响的页面。请为每种场景选择正确的刷新方式。",
+          "summary": "选择合适的刷新方式",
+          "tip": "自动刷新能让 Wiki 与代码保持一致，无需任何人记得手动运行。/install-wiki 会添加一个 GitHub Actions 或 GitLab CI 作业，在每次推送到默认分支时刷新。请将 FACTORY_API_KEY 保存为 CI 密钥，绝不要写进工作流文件"
+        },
+        "browseWiki": {
+          "activity": {
+            "heading": "向你的 Wiki 提问"
+          },
+          "instructions": "Wiki 就绪后，在 Wiki 页面打开它。要就它提问，请在该仓库中新建会话。",
+          "summary": "向你的 Wiki 提一个问题",
+          "tip": "先问 Wiki，能得到附有源码链接的答案，比自己读代码更快。请在同一仓库中启动会话，以便 Droid 使用该仓库的 Wiki。如果它仍在生成，可以先完成本课；生成完成后，Wiki 会出现在 Wiki 页面"
+        },
+        "generateWiki": {
+          "coachmarks": {
+            "generateWiki": {
+              "body": "Droid 阅读代码、编写 Wiki 并上传到 Factory。",
+              "example": "/wiki",
+              "title": "发送 /wiki"
+            }
+          },
+          "instructions": "在熟悉的仓库中新建会话并发送 /wiki。这需要 15 到 20 分钟，运行期间可以继续学习。",
+          "summary": "为熟悉的仓库启动 Wiki",
+          "tip": "Wiki 为人和 Droid 提供一份仓库地图，让问题从成文的答案出发，而不必重新搜索代码。选一个你熟悉的仓库，以便判断页面是否准确。首次运行需要 15 到 20 分钟；之后的刷新只更新受改动影响的页面"
+        },
+        "learnAutoWiki": {
+          "activity": {
+            "caption": "内容根据你的代码编写。请对照来源核对重要细节。",
+            "heading": "一个 Wiki 页面",
+            "pins": {
+              "architecture": {
+                "label": "架构",
+                "note": "各部分如何连接，让你知道改动会落在哪里。"
+              },
+              "gettingStarted": {
+                "label": "快速上手",
+                "note": "如何运行和测试，让你能动手修改。"
+              },
+              "purpose": {
+                "label": "用途",
+                "note": "每个页面用通俗的语言解释仓库的一个部分。"
+              },
+              "sources": {
+                "label": "来源",
+                "note": "指向代码的链接，便于核对页面内容。"
+              }
+            }
+          },
+          "confirmLabel": "知道了",
+          "instructions": "Droid 编写期间，先读这个示例页面。点击各部分，查看你的 Wiki 将回答什么。",
+          "summary": "了解 Wiki 页面包含什么",
+          "tip": "了解页面包含什么，就知道 Wiki 能回答哪些问题。每个页面都链接到它描述的代码文件，便于你对照代码核实说法。如果组织关闭了 Wiki 同步，Droid 会把页面改为保存到仓库中的 droid-wiki/ 目录"
+        },
+        "tourWikiPage": {
+          "instructions": "Wiki 都在 Wiki 页面。跟随导览找到你的 Wiki，检查新鲜度并刷新。",
+          "summary": "找到你的 Wiki 及其新鲜度",
+          "tip": "{{tourPanelTipPrefix}} 新鲜度表明 Wiki 是否仍与代码一致，因为过时的页面可能把你引向已经移动的文件。在你选择仓库和刷新方式之前，不会执行任何刷新。"
+        }
+      },
+      "wikiPageTour": {
+        "tourWikiRefresh": {
+          "body": "选择仓库，然后选择一次性刷新或每次推送时刷新，可选择在你的机器上或云端运行。",
+          "title": "一次刷新多个"
+        },
+        "tourWikiRepositories": {
+          "body": "选择一个仓库以阅读其 Wiki。/wiki 完成后，你的 Wiki 会出现在这里。",
+          "title": "所有可阅读的仓库"
+        },
+        "tourWikiStats": {
+          "body": "最新的 Wiki 与最新代码一致，过时的则未必。用筛选找出需要刷新的 Wiki。",
+          "chips": {
+            "0": "最新",
+            "1": "过时",
+            "2": "无 Wiki"
+          },
+          "title": "新鲜度一览"
+        }
+      },
+      "wikiQuestions": {
+        "architecture": {
+          "action": {
+            "text": "使用此仓库的 Wiki 解释架构。"
+          },
+          "description": "借助 Wiki 了解各部分如何组合。",
+          "title": "解释架构"
+        },
+        "authentication": {
+          "action": {
+            "text": "关于身份验证，此仓库的 Wiki 怎么说？"
+          },
+          "description": "询问 Wiki 是怎么说明登录的。",
+          "title": "理解身份验证"
+        },
+        "gettingStarted": {
+          "action": {
+            "text": "在此仓库的 Wiki 中找到快速上手指南。"
+          },
+          "description": "找到运行和测试此仓库的方法。",
+          "title": "找到设置指南"
+        }
+      }
+    },
+    "automatedCode": {
+      "completion": {
+        "headline": "你已学会让 Droid 审查并修复代码",
+        "nextStep": "下次推送前，先让 Droid 审查你的更改。",
+        "recapItems": {
+          "0": "让 Droid 审查了你的更改",
+          "1": "阅读了一条发现项：优先级、位置、影响与修复",
+          "2": "让 Droid 修复最优先的发现项并添加测试",
+          "3": "学会从 CI 和每个拉取请求触发审查"
+        }
+      },
+      "docsLink": {
+        "label": "了解代码审查"
+      },
+      "droidExecExample": {
+        "useCase": {
+          "text": "一个 CI 作业会审查每个分支并修复发现的问题，全程无需人工操作。"
+        },
+        "warning": {
+          "text": "high 级别允许 Droid 不经询问即可编辑、提交和推送。请在 CI 中或可随时丢弃的分支上使用。"
+        }
+      },
+      "reviewSetup": {
+        "install": {
+          "action": {
+            "text": "/install-code-review"
+          },
+          "description": "/install-code-review 会在你的 GitHub 或 GitLab 仓库中配置 Droid。",
+          "title": "审查每个拉取请求"
+        },
+        "rules": {
+          "action": {
+            "text": "创建 .factory/skills/review-guidelines/SKILL.md，写入我们团队的代码审查规则"
+          },
+          "description": "Droid 会在每次审查中遵循这些规则。",
+          "title": "添加团队的审查规则"
+        },
+        "template": {
+          "description": "改为在自动化中开启审查。",
+          "title": "使用代码审查模板"
+        }
+      },
+      "sampleFinding": {
+        "body": {
+          "text": "重试的支付会再次执行此分支，导致 10% 的优惠码被叠加成 20%，订单少收了款。"
+        },
+        "fix": {
+          "text": "当已设置 `order.discountApplied` 时跳过折扣，并在首次扣款之后再设置它。"
+        },
+        "title": {
+          "tags": {
+            "0": {
+              "label": "P1"
+            }
+          },
+          "text": "每个订单只应用一次折扣"
+        }
+      },
+      "steps": {
+        "fixReviewFinding": {
+          "activity": {
+            "choices": {
+              "fixAndTest": {
+                "action": {
+                  "text": "修复优先级最高的发现项，并添加能捕获该问题的测试"
+                },
+                "description": "测试既能证明已修复，也能防止问题复发。",
+                "title": "修复最优先的发现项"
+              }
+            },
+            "heading": "修复并验证"
+          },
+          "instructions": "在下方起草修复并发送。Droid 完成后，打开“变更”，检查修复及其测试。",
+          "skip": {
+            "label": "暂时跳过",
+            "note": "Droid 完成后查看“变更”。",
+            "whileWorkingLabel": "无需等待，继续"
+          },
+          "summary": "让 Droid 修复最优先的发现项",
+          "tip": "测试能证明修复有效，并在有人重新引入该 Bug 时报错。在“变更”中，确认测试覆盖了发现项所描述的具体场景。如果 Droid 没有发现问题，可改为让它为你的更改添加测试",
+          "waitLabel": "Droid 正在修复问题"
+        },
+        "learnDroidExec": {
+          "activity": {
+            "heading": "在 CI 中审查并修复",
+            "pins": {
+              "autonomy": {
+                "label": "自主级别",
+                "note": "不带 --auto 标志时，Droid 只读取。high 还允许编辑、提交和 git push。"
+              },
+              "where": {
+                "label": "在哪里运行",
+                "note": "CI 运行器或可丢弃的分支能让错误的改动远离你的主要工作。"
+              }
+            }
+          },
+          "confirmLabel": "知道了",
+          "instructions": "droid exec 无需对话即可运行单个任务，因此脚本或 CI 作业也能调用。请阅读 CI 审查会使用的命令。",
+          "summary": "从脚本或 CI 运行审查",
+          "tip": "droid exec 让 Droid 在无人值守的 CI 或脚本中运行，因此 --auto 级别就是你的安全网。不带标志时它只读取；low 允许编辑文件，medium 增加安装与提交，high 允许 git push。如果任务需要更高权限，它会停下并保留已做的改动"
+        },
+        "learnPullRequestReview": {
+          "activity": {
+            "heading": "开始设置"
+          },
+          "instructions": "Droid 可以审查每个拉取请求，并针对真实 Bug 发表评论。可从会话或自动化中设置，并添加你的规则。",
+          "summary": "自动审查每个拉取请求",
+          "tip": "自动审查会检查每个拉取请求，包括无人主动请求审查的那些。将 review_depth 设为 deep 可进行细致审查，设为 shallow 则更快。把团队规则写入 .factory/skills/review-guidelines/SKILL.md，Droid 就会标记出你们的审查者会指出的问题"
+        },
+        "readCodeReview": {
+          "activity": {
+            "caption": "从最高优先级开始。合并前先修复 P0 和 P1。",
+            "heading": "一条审查发现项",
+            "pins": {
+              "fix": {
+                "label": "修复",
+                "note": "建议的修复方案，可让 Droid 应用。"
+              },
+              "impact": {
+                "label": "影响",
+                "note": "对用户造成的影响。Droid 会跳过风格上的吹毛求疵。"
+              },
+              "location": {
+                "label": "位置",
+                "note": "出问题的文件和行号，下方附有相关代码。"
+              },
+              "priority": {
+                "label": "优先级",
+                "note": "P0 会阻止合并。P1 是 Droid 有把握的真实 Bug。"
+              }
+            }
+          },
+          "confirmLabel": "知道了",
+          "instructions": "Droid 审查期间，先阅读这条示例发现项。点击各部分，然后在你自己的审查中找出最高优先级的问题。",
+          "summary": "了解发现项的组成部分",
+          "tip": "优先级告诉你合并前要修什么、什么可以等。P0 会阻止合并，P1 是 Droid 有把握的真实 Bug，P2 看似可能但尚未证实，P3 较为轻微。没有发现项的审查就是好结果"
+        },
+        "startSession": {
+          "coachmarks": {
+            "askForCodeReview": {
+              "body": "用平常的话提出即可。Droid 关注真实 Bug，而不是代码风格。",
+              "example": "审查我尚未提交的更改",
+              "title": "请求代码审查"
+            }
+          },
+          "instructions": "在有未提交更改的项目中新建会话，发送提示中的示例。在 CLI 中，/review 也能达到同样效果。",
+          "noComputerInstructions": "先设置计算机，然后在有未提交更改的项目中启动会话，并发送：审查我尚未提交的更改",
+          "summary": "让 Droid 审查你的更改",
+          "tip": "推送前审查，能在更改还新鲜、修复成本还低时发现 Bug。Droid 会阅读你的 diff 及其周边代码，只报告它能解释清楚的 Bug。如果没有未提交的更改，可以让 Droid 改为审查你最近一次提交"
+        }
+      }
+    },
+    "automations": {
+      "automationDrafts": {
+        "myPullRequests": {
+          "action": {
+            "text": "创建一个私有的定时自动化。每个工作日按我的本地时间上午 9 点，列出需要我处理的已开启拉取请求及其链接。仅在本次运行中回复；不要发布到任何地方，也不要更改任何内容。如果都不需要我处理，请回复“一切正常。” {{confirmFirst}}"
+          },
+          "description": "每个工作日列出需要你处理的 PR。",
+          "title": "我的拉取请求"
+        },
+        "myTask": {
+          "action": {
+            "text": "我想自动化一个我反复执行的任务：<describe it>。请先询问它应由什么触发、结果发送到哪里，以及绝对不能做什么。然后编写私有的自动化指令，包含来源、任务、输出和限制。{{confirmFirst}}"
+          },
+          "description": "Droid 会先向你提问，再起草。",
+          "title": "我反复执行的任务"
+        },
+        "weeklyTickets": {
+          "action": {
+            "text": "创建一个私有的定时自动化。每周一按我的本地时间上午 9 点，把 <project> 中上周有变更的工单汇总为“已阻塞”“待审查”和“其他”。仅在本次运行中回复；不要编辑工单或发帖。如果没有任何变化，请回复“无更新。” {{confirmFirst}}"
+          },
+          "description": "每周一汇总某个项目的工单。",
+          "title": "每周工单汇总"
+        }
+      },
+      "completion": {
+        "headline": "你已准备好自动化一项任务",
+        "nextStep": "阅读每个新自动化的首次运行。若一周内表现稳定，就分享给团队。",
+        "recapItems": {
+          "0": "将任务匹配到定时、Slack 和 Webhook 触发器",
+          "1": "了解可独立运行的提示词包含哪四个部分",
+          "2": "学会在检查提示词之后才批准自动化",
+          "3": "找到自动化和其运行记录所在的位置"
+        }
+      },
+      "confirmFirst": "创建之前，先把指令给我看。",
+      "docsLink": {
+        "label": "自动化文档"
+      },
+      "starterGalleryTour": {
+        "tourStarters": {
+          "body": "每个起始模板都会填好触发器和提示词。模板中的计划时间均为 UTC，请注意核对。",
+          "chips": {
+            "0": "每日状态摘要",
+            "1": "PR 审查",
+            "2": "错误分诊"
+          },
+          "title": "借用现成的可靠任务"
+        }
+      },
+      "steps": {
+        "browseAutomationTemplates": {
+          "instructions": "新建自动化会打开起始模板库。浏览几个，为自己的自动化找灵感。",
+          "summary": "看看团队已经在自动化什么",
+          "tip": "{{tourPanelTipPrefix}} 起始模板展示了常见任务的可用提示词、触发器和输出，你可以照搬其结构，而不必从空白开始。浏览是安全的；在你创建自动化之前，什么都不会运行。"
+        },
+        "chooseAutomationTrigger": {
+          "activity": {
+            "heading": "应由什么启动这次运行？"
+          },
+          "instructions": "自动化是 Droid 自行运行的指令集，触发器决定何时运行。请为每个任务选择触发器。",
+          "summary": "为每个任务匹配触发器",
+          "tip": "触发器决定了运行结果送达时，这项工作是否仍然重要。定时运行使用 UTC，因此纽约上午 9 点的摘要需要设为 13:00 或 14:00，具体取决于夏令时。Slack、GitHub 和 Webhook 触发器会在事件触发的那一刻启动，因此应优先使用它们，而不是按计划轮询事件。"
+        },
+        "createAutomation": {
+          "coachmarks": {
+            "tightenAutomation": {
+              "body": "缺少限制或无变化日的规则？让 Droid 在创建任何内容之前补上。",
+              "example": "添加一条限制：绝不发布或编辑任何内容。如果没有任何变化，请回复“无更新。”",
+              "title": "批准前先收紧"
+            }
+          },
+          "instructions": "回答 Droid 的问题。检查其提示词是否包含来源、任务、输出和限制，然后批准创建。",
+          "readyLabel": "Droid 已回复。批准前请检查其提示词。",
+          "skip": {
+            "label": "暂时跳过",
+            "note": "Droid 仍可在本次会话中创建它。",
+            "whileWorkingLabel": "无需等待，继续"
+          },
+          "summary": "检查提示词，然后批准",
+          "tip": "批准是你在改动即将无人值守运行之前做出调整的最后机会。Droid 会通过 CreateAutomation 工具创建它，而 Droid 计算机上的定时自动化会立即运行一次，所以请先阅读提示词。在一次良好的运行证明它可靠之前，请保持“私有”；“运行身份”决定它使用谁的身份和计费。",
+          "waitLabel": "Droid 正在起草你的自动化"
+        },
+        "learnAutomationPrompt": {
+          "activity": {
+            "blocks": {
+              "limits": {
+                "text": "限制：无变化的日子给出固定回复，访问失败时不猜测。"
+              },
+              "output": {
+                "text": "输出：最多 10 个工单，不做编辑或发布。"
+              },
+              "parts": {
+                "text": "四个部分"
+              },
+              "prompt": {
+                "text": "读取 Launch 项目中自上次成功运行以来有变更的工单。将它们分组：已阻塞、待审查、其他。每项包含：标题、负责人、变更内容、链接。\n最多回复 10 个工单。不要编辑工单，也不要发布到任何地方。如果没有任何变化，请回复“无更新。”如果访问失败，请说明。绝不猜测。"
+              },
+              "source": {
+                "text": "来源：Launch 项目中自上次成功运行以来有变更的工单。"
+              },
+              "task": {
+                "text": "任务：三个分组，每个工单四个字段。"
+              }
+            },
+            "caption": "来源、任务、输出、限制：你写的每个提示词都要对照这四项检查。",
+            "heading": "一个无需你在场也能运行的提示词",
+            "pins": {
+              "limits": {
+                "label": "限制",
+                "note": "涵盖无变化和失败的情况，让 Droid 绝不编造答案。"
+              },
+              "output": {
+                "label": "输出",
+                "note": "限制长度，并说明结果发往哪里、不得发往哪里。"
+              },
+              "source": {
+                "label": "来源",
+                "note": "精确指明要读取什么，且只读取上次运行以来的变更。"
+              },
+              "task": {
+                "label": "任务",
+                "note": "明确写出分组和字段，让每次运行的格式保持一致。"
+              }
+            }
+          },
+          "instructions": "运行过程中没有人能回答问题。点击每个标记，看看是什么让这个提示词可以独立运行。",
+          "summary": "阅读一个可独立运行的提示词",
+          "tip": "自动化运行时无人回答提问，因此提示词没写到的部分，Droid 只能猜测。写明来源、任务、输出和限制，就能把这些猜测变成可在每次运行中检查的规则。明确 Droid 绝不能发布、编辑或删除什么，并把令牌放在“设置 › 密钥”中，而不是提示词里。"
+        },
+        "startSession": {
+          "activity": {
+            "heading": "从草稿开始"
+          },
+          "coachmarks": {
+            "sendAutomationRequest": {
+              "body": "在课程面板中选择一个草稿，改成你的内容，然后发送。",
+              "title": "发送你的请求"
+            }
+          },
+          "instructions": "新建会话，选择下方的一个草稿，填写 <placeholders> 后发送。",
+          "summary": "让 Droid 帮你设置一个",
+          "tip": "无需先弄懂各项设置，就能得到一个可用的自动化。草稿中没有明确的地方，Droid 会主动询问，例如计划时间、发布到哪个频道，或什么算作变更，然后写好提示词和触发器供你审查。描述你希望看到的结果，让 Droid 自行梳理步骤。"
+        },
+        "tourAutomationsPage": {
+          "coachmarks": {
+            "tourAutomationFilters": {
+              "body": "按名称搜索，或按你在开头匹配过的触发器筛选。",
+              "title": "按触发器筛选"
+            },
+            "tourAutomationList": {
+              "body": "打开你的自动化，在“事件”中查看每次运行。行菜单可立即运行或暂停它。",
+              "title": "打开它的首次运行"
+            },
+            "tourAutomationOwnership": {
+              "body": "私有自动化只属于你。当它赢得信任后，可从行菜单分享。",
+              "title": "在“私有”下找到它"
+            }
+          },
+          "instructions": "你的自动化现在位于“自动化”页面。找到它并打开首次运行。",
+          "summary": "找到你的自动化及其运行记录",
+          "tip": "{{tourPanelTipPrefix}} 首次运行能说明你的指令是否经得起真实数据的检验。每次运行都会列出结果，点开即可查看 Droid 做了什么；“立即运行”无需等待计划时间，就能测试修改。"
+        }
+      },
+      "triggerOptions": {
+        "github": {
+          "label": "GitHub"
+        },
+        "scheduled": {
+          "label": "定时"
+        },
+        "slack": {
+          "label": "Slack"
+        },
+        "webhook": {
+          "label": "Webhook"
+        }
+      },
+      "triggerScenarios": {
+        "channelMessage": {
+          "explanation": "频道中的每条消息都会启动一次运行，Droid 在消息串中回复。",
+          "prompt": "回答发布在 #ask-platform 中的新问题。",
+          "whyNot": {
+            "github": "问题来自 Slack，而不是仓库。",
+            "scheduled": "定时方式会延迟回复且成批处理。每条消息都应启动各自的运行。",
+            "webhook": "Slack 已内置。Webhook 用于没有自带触发器的服务。"
+          }
+        },
+        "externalAlert": {
+          "explanation": "监控工具把每条告警发送到自动化的 Webhook URL，从而启动一次运行。",
+          "prompt": "调查监控工具发送的每条告警。",
+          "whyNot": {
+            "github": "告警来自监控工具，而不是仓库。",
+            "scheduled": "定时轮询发现告警的时间偏晚。Webhook 会在每条告警触发时立即启动运行。",
+            "slack": "仅当告警进入 Slack 时才可行。这里工具会直接调用 Factory。"
+          }
+        },
+        "weekdaySummary": {
+          "explanation": "这次运行由时钟启动，所以属于“定时”。除非指定时区，否则定时按 UTC 运行。",
+          "prompt": "每个工作日早上 9 点汇总有变更的工单。",
+          "whyNot": {
+            "github": "上午 9 点不会发生任何仓库事件，变化的只有时钟。",
+            "slack": "没有人发消息来启动它，触发它的是时间。",
+            "webhook": "没有外部服务调用进来，触发它的是时间。"
+          }
+        }
+      }
+    },
+    "droidComputers": {
+      "completion": {
+        "headline": "你已经知道 Droid 可以在哪里工作",
+        "nextStep": "阅读就绪度报告，修复所有差距，然后把一项真实任务交给这台计算机。",
+        "recapItems": {
+          "0": "在 Droid 计算机和远程控制之间做出选择",
+          "1": "了解了在设置中哪里可以创建和管理计算机",
+          "2": "练习了密钥、长时任务和清理相关的决策",
+          "3": "学会了在正式工作前检查新计算机是否就绪"
+        }
+      },
+      "computerSettingsTour": {
+        "tourManagedComputers": {
+          "body": "托管计算机页面会列出你的 Droid 计算机。它们会在会话之间保留文件和工具，闲置的计算机会暂停，直到需要时再唤醒。",
+          "title": "认识你的 Droid 计算机"
+        },
+        "tourNewManagedComputer": {
+          "body": "为它命名并选择仓库。运行时长会计入方案的计算额度；请参阅“设置 › 用量”。",
+          "title": "创建你的计算机"
+        },
+        "tourYourComputers": {
+          "body": "“你的计算机”页面会列出通过远程控制连接的机器。在桌面应用中，请在“设置 › 此计算机”中开启远程控制。",
+          "title": "连接你自己的机器"
+        }
+      },
+      "docsLink": {
+        "label": "Droid 计算机文档"
+      },
+      "habitScenarios": {
+        "apiKey": {
+          "explanation": "你的 Droid 计算机上的新会话会以环境变量形式获得已保存的密钥，之后任何人都无法再次查看该值。",
+          "options": {
+            "envFile": {
+              "explanation": "一旦提交，所有拥有仓库访问权限的人都能读取它；即使你将其删除，Git 历史中仍会保留。",
+              "label": "让 Droid 将其保存到仓库中"
+            },
+            "paste": {
+              "explanation": "这样密钥会留在你的会话历史中，而后续会话将无法获得它。",
+              "label": "将其粘贴到聊天中"
+            },
+            "secrets": {
+              "label": "在“设置 › 密钥”中添加"
+            }
+          },
+          "prompt": "你在新计算机上运行的测试需要一个 API 密钥。"
+        },
+        "delete": {
+          "explanation": "这台计算机的磁盘是其文件的唯一副本。删除前，请推送或复制你需要的任何内容。",
+          "options": {
+            "delete": {
+              "explanation": "会话保留的是对话，而不是文件。删除计算机会连同修复一起删除。",
+              "label": "删除它；会话中已有修复"
+            },
+            "push": {
+              "label": "先让 Droid 提交并推送"
+            }
+          },
+          "prompt": "Droid 在你即将删除的 Droid 计算机上完成了一项修复。"
+        },
+        "longJob": {
+          "explanation": "处于工作状态的会话会让计算机保持唤醒。暂停的计算机会保留内存和文件，但在唤醒前不会运行任何内容。",
+          "options": {
+            "background": {
+              "explanation": "如果没有会话在工作且没有任何连接，计算机会在大约 5 分钟后暂停，数据导入也会随之中断。",
+              "label": "在后台启动并关闭标签页"
+            },
+            "watch": {
+              "label": "让 Droid 运行并等到完成"
+            }
+          },
+          "prompt": "一项耗时两小时的数据导入应该能在你开会期间完成。"
+        }
+      },
+      "steps": {
+        "checkComputerDecisions": {
+          "activity": {
+            "heading": "你会怎么做？"
+          },
+          "instructions": "在你的计算机进行设置期间，判断每种情况下你会怎么做。",
+          "summary": "练习第一周的三个决策"
+        },
+        "chooseDroidComputer": {
+          "activity": {
+            "heading": "Droid 应该在哪里工作？"
+          },
+          "instructions": "Droid 可以在 Factory 云端的 Droid 计算机上工作，也可以通过远程控制在你自己的机器上工作。请为每项工作选择一种方式。",
+          "summary": "选择 Droid 计算机或远程控制",
+          "tip": "Droid 的工作位置决定了它可以访问哪些文件、工具和网络。Droid 计算机是 Factory 云端的一台 Linux 机器，即使你的笔记本电脑休眠也能继续工作；远程控制则让 Droid 使用你已在运行的机器，包括其硬件和私有网络。请根据任务需要访问什么来选择。"
+        },
+        "startSession": {
+          "activity": {
+            "choices": {
+              "readinessCheck": {
+                "action": {
+                  "text": "检查这台计算机是否已准备好处理 <repository>：如果尚未克隆，请先克隆它，再安装依赖并运行测试。报告缺失或失败的内容。不要修改任何代码。"
+                },
+                "description": "克隆、安装、运行测试，并报告差距。",
+                "title": "检查是否就绪"
+              }
+            },
+            "heading": "新计算机的第一项任务"
+          },
+          "coachmarks": {
+            "1": {
+              "body": "选择你刚创建的计算机，然后选择它上面的一个文件夹。",
+              "title": "选择你的计算机"
+            },
+            "readinessCheck": {
+              "body": "在课程面板中选择这份草稿，填入你的仓库名称，然后发送。",
+              "title": "发送就绪度检查"
+            }
+          },
+          "instructions": "在你的新计算机上启动一个新会话并发送草稿，即可完成本课。Droid 会检查它是否已为你的仓库做好准备。",
+          "skip": {
+            "label": "不发送，直接完成",
+            "note": "在任何新计算机上进行正式工作前，先运行这项检查。"
+          },
+          "summary": "让 Droid 检查它是否就绪",
+          "tip": "就绪度检查能在缺失的工具导致真实任务中途失败之前发现它们。新计算机上的依赖安装只能尽力而为，因此通过一次克隆、安装和测试运行，几分钟内就能看出哪里失败。把这些差距修复一次，之后在这台计算机上启动的每个会话都能从干净状态开始。"
+        },
+        "tourComputerSettings": {
+          "instructions": "设置中的“Droid 计算机”页面列出了你可以使用的每一台计算机。按照提示操作，然后创建一台。",
+          "skip": {
+            "label": "暂时跳过",
+            "note": "稍后可在“设置 › Droid 计算机”中创建。"
+          },
+          "summary": "创建一台 Droid 计算机",
+          "tip": "{{tourPanelTipPrefix}} Droid 计算机会在会话之间保留其文件、软件包和服务，因此你只需设置一次仓库。闲置的计算机会自行暂停，并在会话需要时唤醒；运行时长会计入方案的计算额度，可在“设置 › 用量”中查看。"
+        }
+      },
+      "whereOptions": {
+        "managed": {
+          "label": "Droid 计算机"
+        },
+        "remoteControl": {
+          "label": "远程控制"
+        }
+      },
+      "whereScenarios": {
+        "cleanSetup": {
+          "explanation": "Factory 会为你预置它，文件、软件包和服务会在会话之间持久保留。",
+          "prompt": "你想要一个全新、独立的位置来设置仓库，并让它保持就绪。",
+          "whyNot": {
+            "remote-control": "那会把设置混入你已在使用的机器。Droid 计算机可以将其隔离开来。"
+          }
+        },
+        "gpuBox": {
+          "explanation": "远程控制会连接你已在运行的机器，并沿用其硬件、工具和网络。",
+          "prompt": "这项任务需要你团队的 GPU 服务器及其私有网络。",
+          "whyNot": {
+            "managed": "Droid 计算机是 Factory 云端的一台标准 Linux 机器，无法访问你服务器的硬件。"
+          }
+        },
+        "laptopClosed": {
+          "explanation": "Droid 计算机位于 Factory 云端，因此即使你的笔记本电脑休眠，它仍会继续运行。",
+          "prompt": "今晚你的笔记本电脑合上时，Droid 应该继续工作。",
+          "whyNot": {
+            "remote-control": "远程控制会使用你的机器。如果机器休眠或离线，Droid 就会停止。"
+          }
+        }
+      }
+    },
+    "droidSdk": {
+      "completion": {
+        "headline": "你构建并修改了第一个 SDK 脚本",
+        "nextStep": "选一个你团队手工重复执行的步骤，问问 Droid 是否适合用 SDK 脚本实现。",
+        "recapItems": {
+          "0": "为每项工作选择了自动化或 SDK",
+          "1": "了解了 Droid 的判断在哪里结束、你代码的规则从哪里开始",
+          "2": "让 Droid 构建并运行了一个真实的 SDK 脚本，并展示了其输出",
+          "3": "在代码中修改了一条规则，并检查了新的输出"
+        }
+      },
+      "docsLink": {
+        "label": "Droid SDK 文档"
+      },
+      "sdkBuildChoices": {
+        "python": {
+          "action": {
+            "text": "在新文件夹 sdk-practice 中，使用 droid-sdk 包构建并运行一个小型 Python 脚本。把下面这个虚构 Bug 交给 Droid：“搜索在查询为空时会崩溃。”以结构化输出获取摘要和严重程度（low、medium、high）；将 high 路由到 Priority，其余路由到 Standard。使用我现有的登录信息。运行脚本并显示命令、退出状态和打印输出。"
+          },
+          "description": "使用 droid-sdk 包。",
+          "title": "Python"
+        },
+        "typescript": {
+          "action": {
+            "text": "在新文件夹 sdk-practice 中，使用 @factory/droid-sdk 构建并运行一个小型 Node 脚本。把下面这个虚构 Bug 交给 Droid：“搜索在查询为空时会崩溃。”以结构化输出获取摘要和严重程度（low、medium、high）；将 high 路由到 Priority，其余路由到 Standard。使用我现有的登录信息。运行脚本并显示命令、退出状态和打印输出。"
+          },
+          "description": "在 Node 上使用 @factory/droid-sdk。",
+          "title": "TypeScript"
+        }
+      },
+      "sdkExample": "import asyncio, sys\nfrom typing import Literal\nfrom pydantic import BaseModel\nfrom droid_sdk import run\n\nclass Triage(BaseModel):\n    summary: str\n    severity: Literal[\"low\", \"medium\", \"high\"]\n\nbug_report = open(sys.argv[1]).read()\nresult = asyncio.run(run(f\"Triage this bug report: {bug_report}\", output=Triage))\nif not result.success:\n    raise SystemExit(result.subtype)\nqueue = \"Priority\" if result.output.severity == \"high\" else \"Standard\"\nprint(queue, result.output.summary)",
+      "steps": {
+        "chooseSdkWorkflow": {
+          "activity": {
+            "heading": "自动化还是 SDK？"
+          },
+          "instructions": "自动化会在触发时运行已保存的指令。SDK 则从你自己的代码中运行 Droid。请选择最简单的适用方式。",
+          "summary": "为每项工作选择最简单的适用方式",
+          "tip": "选对工具可以避免维护你并不需要的代码。自动化在触发时运行提示词，无需自己维护代码；而 SDK 脚本让你的代码检查 Droid 的回答并决定下一步，例如把一个 Bug 路由到哪里。当某条规则必须在每次运行时都成立时，就应使用 SDK。"
+        },
+        "customizeSdkWorkflow": {
+          "activity": {
+            "choices": {
+              "mediumToPriority": {
+                "action": {
+                  "text": "修改路由，使 medium 和 high 严重程度都进入 Priority；low 仍留在 Standard。保持发给 Droid 的提示词不变。重新运行脚本，用全部三种严重程度测试该规则，并将新输出与第一次运行并排展示。"
+                },
+                "description": "medium 和 high 进入 Priority。",
+                "title": "也升级 medium"
+              }
+            },
+            "heading": "修改一条规则"
+          },
+          "coachmarks": {
+            "customizeSdkWorkflow": {
+              "body": "在课程面板中选择草稿并发送。",
+              "title": "修改一条规则"
+            }
+          },
+          "instructions": "第一次运行的输出出来后，发送草稿以修改路由规则。将新输出与第一次运行进行比较。",
+          "readyLabel": "Droid 已完成。检查退出状态和输出，然后发送修改。",
+          "summary": "修改规则，保留提示词",
+          "tip": "把规则放在代码中意味着只需改一处，而且每次运行行为一致。在这里，把 medium 严重程度送入 Priority 只需在路由代码中改一行，而判断严重程度的提示词保持不变。把判断交给提示词，把固定规则放在代码中；混在一起会让运行结果难以比较。",
+          "waitLabel": "Droid 正在安装并运行脚本"
+        },
+        "learnDroidSdk": {
+          "activity": {
+            "blocks": {
+              "useCase": {
+                "text": "Bug 报告会从表单、Slack 或你的跟踪系统以自由文本形式到达。这个脚本让 Droid 读取一份报告，返回摘要和严重程度。随后由普通代码把 high 严重程度送入 Priority 队列，每次都完全一致。"
+              }
+            },
+            "caption": "Droid 判断每份报告。你的代码以相同方式路由每份报告，队列则为团队的分诊看板提供输入。",
+            "heading": "自动分诊收到的 Bug 报告",
+            "pins": {
+              "failures": {
+                "label": "检查是否运行成功",
+                "note": "失败的运行会体现为一个值，而不是异常。使用输出前请先检查它。"
+              },
+              "judgment": {
+                "label": "Droid 负责判断",
+                "note": "脚本从你传入的文件中读取一份收到的报告。摘要和严重程度由 Droid 决定。"
+              },
+              "rule": {
+                "label": "代码负责决策",
+                "note": "你的代码会应用路由规则，每次运行都完全一致。"
+              },
+              "shape": {
+                "label": "结构",
+                "note": "由你定义回答的结构。Droid 必须准确返回这些字段。"
+              }
+            }
+          },
+          "instructions": "阅读这个脚本的用途，然后点击每个标注，查看哪些由 Droid 决定、哪些由你的代码决定。",
+          "skip": {
+            "label": "暂时跳过"
+          },
+          "summary": "看清 Droid 的判断到哪里结束、代码从哪里开始",
+          "tip": "阅读脚本能看清 Droid 的判断在哪里结束、你的规则从哪里开始。在 Python 中，run(prompt, output=Triage) 会返回一个 result，其 output 与你定义的 Pydantic 模型一致，result.success 和 result.subtype 告诉你运行是否成功。TypeScript SDK 的工作方式相同，使用 run() 和 outputFormat JSON schema。"
+        },
+        "startSession": {
+          "activity": {
+            "heading": "构建分诊脚本"
+          },
+          "coachmarks": {
+            "buildSdkExample": {
+              "body": "在课程面板中选择一种语言，然后发送草稿。",
+              "title": "发送构建请求"
+            }
+          },
+          "instructions": "在任意项目中启动一个新会话。在下方选择一种语言并发送草稿。Droid 会构建它，并显示退出状态和输出。",
+          "summary": "让 Droid 构建并运行它",
+          "tip": "退出状态和打印输出才能证明脚本运行过；仅仅描述它应该做什么并不能证明什么。草稿要求 Droid 显示命令、其退出状态和真实输出；运行失败时，result.success 会报告为 false，result.subtype 则说明原因。请将 API 密钥放在环境变量中，绝不要放在聊天里。"
+        }
+      },
+      "workflowOptions": {
+        "automation": {
+          "label": "自动化"
+        },
+        "sdk": {
+          "label": "SDK"
+        }
+      },
+      "workflowScenarios": {
+        "dashboardInvestigation": {
+          "explanation": "你的应用启动会话并掌控界面。只有 SDK 能把 Droid 嵌入你的产品。",
+          "prompt": "在你自己的仪表盘中添加一个“调查”按钮，用于流式展示 Droid 的进度。",
+          "whyNot": {
+            "automation": "自动化在 Factory 中报告，而不是在你的应用中。你的仪表盘需要自行驱动 Droid。"
+          }
+        },
+        "enforcedRouting": {
+          "explanation": "Droid 返回结构化的发现，你的代码会验证这些发现，并在每次运行时应用规则。",
+          "prompt": "按照严重程度把每个发现路由到相应的审查队列，规则由你的团队维护。",
+          "whyNot": {
+            "automation": "自动化可以遵循规则，但只有代码能在每次运行时保证这一点。"
+          }
+        },
+        "weekdaySummary": {
+          "explanation": "一个时间表和已保存的指令就够了。代码只会增加维护成本。",
+          "prompt": "每个工作日早上汇总未关闭的工单。",
+          "whyNot": {
+            "sdk": "这里不需要你的代码参与其中。自动化无需维护就能完成。"
+          }
+        }
+      }
+    },
+    "factory101": {
+      "completion": {
+        "headline": "你已完成 Factory 101 的探索",
+        "nextStep": "准备好后，试试文档练习，并选择一个你会经常使用的技能。",
+        "recapIntro": "本课涵盖：",
+        "recapItems": {
+          "connections": "通过连接器和 MCP 连接真实工具",
+          "instructions": "AGENTS.md、导入实用技能，以及斜杠命令速查表",
+          "practice": "清晰的请求、审查发现，以及规划、检查和共享更改",
+          "repository": "何时使用 Wiki 和智能体就绪度",
+          "workspace": "使用 Droid、选择文件夹和模型，以及设置自主级别"
+        }
+      },
+      "connections": {
+        "summary": "让 Droid 真正访问相关上下文",
+        "tip": "外部上下文能帮助 Droid 回答正确的问题，而不仅仅是搜索代码。只连接任务需要的内容，并在依赖它之前用只读请求检查访问权限。"
+      },
+      "description": "了解 Droid 的工作方式，探索你的工具，并练习规划、检查和共享一项小改动",
+      "instructions": {
+        "cheatSheet": {
+          "createSkill": "把可重复的工作流转化为候选技能，然后在保存前审查。",
+          "help": "在不确定从哪里开始时，查找可用的帮助和快捷键。",
+          "init": "在 AGENTS.md 中起草仓库指南。这个内置技能可以写入文件；请先检查现有指南。",
+          "mcp": "管理 MCP 连接以使用更多工具。",
+          "model": "当任务需要不同的速度或推理权衡时，打开模型选择。",
+          "readinessReport": "评估仓库设置，找出妨碍智能体工作的差距。",
+          "review": "在共享更改前，请让审查技能检查这些更改。",
+          "skills": "查看可用的技能及其来源；CLI 也支持从 Claude 导入。",
+          "wiki": "使用 Wiki 技能生成仓库文档；/browse-wiki 用于搜索现有 Wiki。"
+        },
+        "cheatSheetHeading": "斜杠命令速查表",
+        "prompt": "帮我为一个经常重复的任务选择一个技能。先询问任务情况，查看可用的技能，如有需要再推荐可信的来源。说明它的操作和安装范围。在导入或替换任何内容前先征求我的同意。",
+        "tip": "可复用的指南能让你不必在每个会话中重复同样的说明。长期有效的仓库规则要保持简短；当任务需要可重复的流程时，使用有针对性的技能。"
+      },
+      "modules": {
+        "commands": {
+          "coachmarkBody": "输入 / 浏览命令和技能。选择一个即可在你的会话中使用。",
+          "coachmarkTitle": "打开斜杠菜单",
+          "instructions": "选择一个命令，了解它何时有帮助。在输入框中输入 /，查找你的会话中可用的命令和技能。",
+          "placeholder": "选择一个命令，查看它的作用",
+          "summary": "为任务找到合适的快捷方式",
+          "tip": "有些斜杠命令会打开控件，另一些会启动能实际执行工作的技能。借助这份参考有意识地选择，并在发送前检查草稿。",
+          "title": "探索斜杠命令"
+        },
+        "connections": {
+          "heading": "让连接发挥作用",
+          "instructions": "连接你使用的一个应用，或添加你团队的 MCP 服务器。然后检查 Droid 能否读取你熟悉的内容。",
+          "title": "连接你的工具"
+        },
+        "instructions": {
+          "createDescription": "根据项目的实际文件和命令起草仓库指南",
+          "createPrompt": "/init 先检查现有的 AGENTS.md 文件。如果已有指南，请保留它并提出一项有针对性的改进。否则，根据此仓库实际的设置和测试命令起草简洁的说明。写入前先征求我的同意。",
+          "createTitle": "从 /init 开始",
+          "improveDescription": "在不替换整份指南的前提下，找出一条缺失或过时的说明",
+          "improvePrompt": "阅读此仓库的 AGENTS.md 和相关配置。找出一条缺失或过时、但补上或更新后能帮助 Droid 在此工作的说明。展示证据并提出一项小改进。在我批准前不要编辑。",
+          "improveTitle": "改进现有说明",
+          "summary": "让项目的规则易于遵循",
+          "title": "为 Droid 提供仓库说明"
+        },
+        "plan": {
+          "coachmarkBody": "使用起始模板，或描述你自己的文档修复。保持范围小，并说明如何验证。",
+          "coachmarkTitle": "描述更改",
+          "summary": "在 Droid 编辑前就更改达成一致"
+        },
+        "repository": {
+          "readinessDescription": "运行 /readiness-report 评估仓库设置、测试和文档。这可能需要一些时间并消耗额度。",
+          "readinessTitle": "找出就绪度差距",
+          "wikiDescription": "找到某个功能背后的架构、入口点和源文件",
+          "wikiPrompt": "/browse-wiki 帮我理解这个仓库。总结其主要组件，并引用相关的 Wiki 页面和源文件。如果尚不存在 Wiki，请说明 /wiki 如何生成一个，并在开始生成前征求我的同意。",
+          "wikiTitle": "探索现有的 Wiki"
+        },
+        "review": {
+          "heading": "采取下一步行动",
+          "prDescription": "起草标题和摘要。Droid 在提交、推送或创建 PR 前会征求你的同意。",
+          "prTitle": "准备 PR",
+          "reviewDescription": "在共享前使用 /review 再看一遍差异",
+          "reviewTitle": "审查更改",
+          "summary": "检查结果并决定要共享什么",
+          "verifyDescription": "要求进行有针对性的检查，并如实说明哪些通过、哪些失败、哪些未运行",
+          "verifyTitle": "检查结果"
+        },
+        "skills": {
+          "chooseDescription": "告诉 Droid 你经常做什么，并查看已有可用的技能",
+          "chooseTitle": "为我的工作寻找技能",
+          "heading": "选择你的起点",
+          "importDescription": "引入完整的技能文件夹，检查它，并选择个人或项目范围",
+          "importPrompt": "帮我导入一个我会经常使用的技能。询问它的可信来源和预期用途。检查 SKILL.md 及配套文件，说明依赖和副作用，并检查是否重复。安装前确认个人（~/.factory/skills/）或项目（.factory/skills/）范围。保留现有技能，然后帮我验证其可被发现并试用。",
+          "importTitle": "导入我信任的技能",
+          "instructions": "选择一个你重复执行的任务，例如审查更改或更新文档。找到合适的技能，或从可信来源引入一个。",
+          "summary": "复用你日后还会用到的工作流",
+          "tip": "技能是可复用的工作流，而不是又一个应用连接。导入前检查它的作用和所需访问权限，然后在一项小任务上试用。",
+          "title": "添加实用的技能"
+        }
+      },
+      "practice": {
+        "changesBody": "在共享前，将编辑内容与你的计划和验证结果进行比较。",
+        "changesTitle": "检查差异",
+        "planPrompt": "在此仓库的文档中找出一条不清晰的设置或测试说明。根据实际配置提出一项小修正。暂不编辑。保留现有工作，并说明你将如何验证此修正。",
+        "prPrompt": "只为这项已审查的文档更改准备一个 PR。检查分支、差异、相关验证和仓库的 PR 规则。保留无关的工作。展示拟定的标题和摘要，然后在提交、推送或创建 PR 前征求我的批准。",
+        "spec": "发送请求前，在输入框中启用规格模式。Droid 会先研究并提出计划，然后再实施。当范围不明确或你想先就方案达成一致时使用它。",
+        "tip": "一项小的文档更改能让你在较窄的范围内练习完整流程。对照仓库验证它，检查差异，并自行决定是否发布 PR。",
+        "verifyPrompt": "对照实际配置和相关的仓库说明验证这项文档更改。运行相应的针对性检查，报告哪些通过或失败，并说明哪些检查无法运行。不要提交或推送。"
+      },
+      "rich": {
+        "agents": {
+          "callouts": {
+            "boundaries": {
+              "label": "边界",
+              "note": "记录应跨会话长期适用的规则。"
+            },
+            "checks": {
+              "label": "检查",
+              "note": "告诉 Droid 如何在你审查其工作前发现错误。"
+            },
+            "setup": {
+              "label": "设置",
+              "note": "写明真实的命令，以便 Droid 能复现环境。"
+            }
+          },
+          "caption": "这是示例性指南，并非适用于你仓库的命令。请根据真实配置使用 /init 或改进现有文件。",
+          "code": "设置：使用仓库的包管理器安装依赖。\n检查：在审查前运行相关测试和 linter。\n边界：保留现有工作；发布前征求同意。",
+          "heading": "一份精简的仓库指南",
+          "instructions": "选择这份示例 AGENTS.md 中的标注。使用“演示给我看”起草 /init，或在不替换现有说明的前提下改进它们。"
+        },
+        "commands": {
+          "examples": {
+            "createSkill": "在重复使用某个有用的工作流后，将其稳定的流程转化为技能，并审查结果。",
+            "help": "不确定从哪里开始？查找可用的命令和键盘快捷键。",
+            "init": "在新仓库中起草设置和测试指南；在现有仓库中保留其规则。",
+            "mcp": "在依赖内部服务前，检查服务器的连接和可用工具。",
+            "model": "快速解释可用更快的模型，困难的调查可用更深入的推理。",
+            "readinessReport": "当 Droid 在构建或测试上遇到困难时，找出缺失的环境支持。",
+            "review": "完成一项小更改后，要求给出与具体文件和行号相关的发现。",
+            "skills": "在再次编写相同说明前，先找找已安装的工作流。",
+            "wiki": "需要代码库文档？生成一个 Wiki；使用 /browse-wiki 查阅已有的 Wiki。"
+          }
+        },
+        "connections": {
+          "appDescription": "使用 Factory 连接器处理工单、消息或文档。完成登录并审查其访问权限。",
+          "appPrompt": "帮我连接一个我工作中使用的应用。先询问是哪个应用，并检查现有连接。使用真实的连接器设置，完成身份验证，并说明请求的权限。不要创建或更新外部记录。设置完成后，帮我检查对所选项目的访问权限。",
+          "appTitle": "连接应用",
+          "checkDescription": "已连接的账户可能仍无法访问某个特定的工单、频道或文档。",
+          "checkPrompt": "检查我对某个已连接服务中一个项目的访问权限。先询问是哪个服务和哪个项目，然后发起只读请求。指出数据来源，并报告身份验证和项目访问是否成功。如果访问失败，请说明缺少哪项权限，而不要声称设置已完成。",
+          "checkTitle": "检查 Droid 能读取什么",
+          "mcpDescription": "使用团队批准的服务器来获取更多工具。检查其来源、配置和身份验证。",
+          "mcpPrompt": "帮我添加一个团队批准的 MCP 服务器。询问服务和可信的设置说明。在运行任何命令前检查配置和命令内容，说明访问权限和依赖关系，并在安装或更改设置前征求同意。在不暴露密钥的前提下完成真实身份验证，然后测试一个只读工具。",
+          "mcpTitle": "添加 MCP 服务器"
+        },
+        "finding": {
+          "instructions": "探索这条来自“使用 Droid 进行代码审查”的示例发现。选择每个标注，然后在审查你自己的更改时使用同样的问题。",
+          "summary": "把优先级、位置、影响和修复方案串联起来",
+          "tip": "一条发现是需要核实的论断。阅读被引用的代码行，理解其影响，验证建议的修复，而不是盲目接受。",
+          "title": "读懂一条审查发现"
+        },
+        "finish": {
+          "instructions": "将你的差异与计划进行比较。要求进行有针对性的检查，检查所有发现，并决定是否共享 PR。你可以不发布任何内容就完成本课。",
+          "title": "验证与共享"
+        },
+        "plan": {
+          "cards": {
+            "approval": {
+              "description": "如果计划不清晰，请要求修改。只有当你希望开始实施时才批准。",
+              "example": "在批准前先问：“哪些文件会更改，你将如何验证它们？”",
+              "label": "你的决定"
+            },
+            "evidence": {
+              "description": "拟议的更改应以 Droid 在仓库中读到的内容为依据，并附带验证方法。",
+              "example": "将 README 与实际脚本对照，然后运行相关检查。",
+              "label": "依据"
+            },
+            "scope": {
+              "description": "计划应指明一个结果及其预计更改的文件。请 Droid 缩小无关的清理工作。",
+              "example": "只修正一条设置命令，而不是整份入门指南。",
+              "label": "范围"
+            }
+          },
+          "heading": "计划中要检查什么",
+          "instructions": "切换到规格模式，在编辑前就方案达成一致。探索计划卡片，然后使用“演示给我看”起草你的文档任务。",
+          "placeholder": "选择计划的一部分，查看应检查什么",
+          "title": "编辑前先规划"
+        },
+        "readiness": {
+          "instructions": "探索来自智能体就绪度的三张卡片。选择一项能改善你仓库的差距；如需请求报告，使用“演示给我看”。",
+          "summary": "区分缺失的上下文、访问权限和检查",
+          "tip": "分数只是起点，不是目标。修复阻碍有效工作的差距；生成报告可能需要时间并消耗额度。",
+          "title": "找出拖慢 Droid 的因素"
+        },
+        "request": {
+          "caption": "从一个结果开始。补充上下文和边界，然后要求提供证据。",
+          "instructions": "选择四个标注，了解一个有用的请求包含什么。使用示例，或描述你自己的小型文档改进。",
+          "parts": {
+            "constraints": "先提出计划。保留现有工作，并在编辑前征求同意。",
+            "context": "使用 AGENTS.md、README 和实际的项目脚本。",
+            "outcome": "澄清此仓库中的一条设置或测试说明。",
+            "verify": "展示修正后的说明如何与配置相符。"
+          },
+          "summary": "把模糊的任务变成可检查的结果",
+          "tip": "一个有用的请求会告诉 Droid 完成的标准是什么、去哪里查找、要保留什么，以及如何证明结果。",
+          "title": "给 Droid 一个清晰的请求"
+        },
+        "skills": {
+          "testDescription": "确认 Droid 能找到它，然后选择一个结果可供检查的小任务",
+          "testPrompt": "帮我测试一个可用于我重复性工作的技能。确认 Droid 能发现它，并说明何时使用。与我一起选择一个小示例，描述预期结果和副作用，并在执行写入文件或外部记录的操作前征求同意。报告哪些部分有效、哪些还需要设置。",
+          "testTitle": "试用一个可用技能"
+        },
+        "wiki": {
+          "instructions": "探索来自 AutoWiki 的示例页面。选择其中的标注，然后使用“演示给我看”提出一个关于你自己仓库的问题。",
+          "summary": "结合架构、设置和源代码一起阅读",
+          "tip": "Wiki 帮助你在更改文件之前找到正确的文件。对照源代码核实重要论断，尤其是设置命令和行为。",
+          "title": "用 Wiki 理解你的仓库"
+        },
+        "workspace": {
+          "instructions": "探索设置卡片，然后选择你的文件夹、模型和自主级别。按自己的节奏继续；本课中的每项练习都是可选的。"
+        }
+      },
+      "title": "Factory 101",
+      "workspace": {
+        "coachmarkBody": "输入框是你向 Droid 下达目标的地方。在聊天中跟随它的工具调用和提问。",
+        "coachmarkTitle": "从清晰的请求开始",
+        "exampleLabel": "试一试",
+        "heading": "了解你的环境设置",
+        "noun": {
+          "one": "概念",
+          "other": "概念"
+        },
+        "placeholder": "选择一张卡片，查看它的作用和适用时机",
+        "prompt": "解释此仓库的用途和主要文件夹。引用你阅读过的文件，不要编辑任何内容。",
+        "summary": "选择项目并让 Droid 准备就绪",
+        "tiles": {
+          "autonomy": {
+            "description": "自主级别控制 Droid 何时请求许可。它与模型选择和规格模式相互独立。",
+            "example": "打开自主级别控件。学习时保持紧密控制，熟悉任务后可给予更多自由。",
+            "label": "自主级别"
+          },
+          "droid": {
+            "description": "Droid 是读取文件、使用工具并检查自身工作的智能体。给它一个目标结果和足够的上下文，它就能开始工作。",
+            "example": "请 Droid 解释一个不熟悉的函数，或找出一条不清晰的设置说明。",
+            "label": "Droid"
+          },
+          "model": {
+            "description": "模型驱动 Droid 的推理。可用时从 Auto 开始，或使用你团队的默认模型；在速度、成本和深度之间取得平衡。",
+            "example": "打开模型选择器。快速解释和复杂的调查可能需要不同的选择。",
+            "label": "模型"
+          },
+          "project": {
+            "description": "文件夹为 Droid 提供工作上下文。发送任务前，请同时检查计算机和仓库。",
+            "example": "使用项目选择器选择你想要改进文档的仓库。",
+            "label": "项目"
+          }
+        },
+        "tip": "项目告诉 Droid 在哪里工作；模型决定它如何推理。自主级别是独立的选项：它控制哪些操作需要你的批准，而不是 Droid 的能力高低。",
+        "title": "选择你的工作区"
+      }
+    },
+    "factory102": {
+      "completion": {
+        "examples": "结合证据阅读代码审查、安全审查和 Wiki 示例",
+        "headline": "你已规划好下一个工作流！",
+        "nextStep": "选择一个工作流进行尝试，确认其权限，并检查其首次运行。",
+        "plan": "已审阅自动化方案，但未启用",
+        "readiness": "已了解 Droid 为何需要上下文、访问权限和检查",
+        "triggers": "已了解触发器类型以及首次运行的设置检查",
+        "workflows": "已探索代码审查、安全审查、AutoWiki 和 PR Babysitter",
+        "workspace": "已对比 Droid 计算机与可复用环境"
+      },
+      "description": "选择 Droid 的工作位置，探索审查与文档工作流，并起草安全的自动化方案",
+      "plan": {
+        "choice": {
+          "description": "讨论触发器、范围、身份、计算资源、隐私、安全限制、重复项处理和首次运行检查。",
+          "title": "每周仓库健康报告"
+        },
+        "composer": {
+          "body": "发送下方的规划草稿。回答后续问题时，请保留其中“不创建任何内容”的限制。",
+          "title": "请求方案，不要运行"
+        },
+        "heading": "规划你的第一个周期工作流",
+        "instructions": "启动一个会话并发送规划草稿。回答 Droid 的问题，对照示例检查方案，然后选择“完成课程”",
+        "prompt": "仅制定方案：每周一次的只读仓库健康报告。询问要使用的仓库、时间表与时区、运行身份、计算资源和私有输出目标。涵盖范围、权限、重复项处理、失败处理和首次运行检查。在此讨论方案。不要创建、启用或运行自动化，不要编辑文件、发布消息或更改设置。",
+        "readyLabel": "查看 Droid 的回复；回答所有待解决的问题",
+        "summary": "讨论方案但不启用",
+        "tip": "清晰的任务会指明结果、上下文、约束和验证依据。让 Droid 补齐缺失的细节，然后将其方案与四部分示例对照。保持“不创建任何内容”的限制，不要批准执行；只有方案说明了如何检查后续运行后，才完成本课。",
+        "title": "起草安全的自动化方案",
+        "waitLabel": "Droid 正在讨论你的方案"
+      },
+      "readCodeReview": {
+        "instructions": "阅读示例发现，并依次选择每个标记点：优先级、位置、影响和修复。然后选择“继续”。无需运行任何审查",
+        "tip": "有价值的发现会指出代码在哪里出错、对用户有何影响，而不只是风格偏好。先检查优先级最高的发现，并将建议的修复与实际代码对比。处理真实工作时，要求提供能复现该 Bug 的测试，并在接受修复前检查“变更”。",
+        "title": "阅读代码审查发现"
+      },
+      "readSecurityFinding": {
+        "instructions": "阅读示例发现。依次选择每个标记点，以追踪输入、攻击、优先级和修复，然后选择“继续”。不要运行该攻击",
+        "tip": "安全审查关注的是他人可能如何利用代码，而不只是代码能否正常运行。沿输入追踪到敏感操作，检查切合实际的攻击方式和受影响的数据。扫描结果干净并不是安全保证；真正的修复需要一项能证明攻击不再奏效的测试。",
+        "title": "阅读安全审查发现"
+      },
+      "readWiki": {
+        "instructions": "探索示例 Wiki 的用途、架构、设置和来源。依次选择每个标记点，然后选择“继续”。无需生成 Wiki",
+        "tip": "Wiki 为你和 Droid 提供仓库地图，其中的链接可与代码逐一核对。在 Wiki 页面找到它，并检查内容是新是旧。可针对特定任务刷新一次，或使用 /install-wiki 在推送到默认分支后更新。",
+        "title": "阅读 Wiki 页面"
+      },
+      "readiness": {
+        "access": "确认 Droid 能访问你的仓库并运行其设置命令。将凭据存储在密钥中，不要放在聊天或仓库文件里。",
+        "checks": "向 Droid 提供构建、测试和 lint 命令。说明成功结果应达到的效果，以便它在接受你审查之前自行检查工作。",
+        "context": "说明你想要的结果。让 Droid 阅读 README、AGENTS.md 和相关文件，以便它了解你的项目与约定。",
+        "heading": "在首个任务之前",
+        "instructions": "打开每张卡片，了解需要准备的内容：上下文、访问权限和检查。然后选择“继续”。无需运行就绪扫描",
+        "nounOne": "设置区域",
+        "nounOther": "设置区域",
+        "placeholder": "打开一张卡片查看设置指引。",
+        "summary": "准备上下文、访问权限和检查",
+        "tip": "准备充分的工作区能让 Droid 专注于你的任务，而不必猜测项目如何运作。清晰的说明、可用的工具和可运行的检查为它提供有用的起点，也为你提供可审查的具体结果。",
+        "title": "为首个任务做好准备"
+      },
+      "startingPoint": {
+        "caption": "在 Droid 计算机上创建定时自动化后可能会立即触发运行。本课仅止于方案。",
+        "confirmLabel": "我知道从哪里开始",
+        "heading": "示例方案，而非已启用的自动化",
+        "instructions": "阅读设置提示和示例的四个部分。依次选择每个标记点，然后选择“我知道从哪里开始”。不要创建任何内容",
+        "limits": {
+          "text": "限制：只读。不要编辑代码、发表评论、重新运行工作流或合并。如果访问失败，请报告缺口而不是猜测；保留上一个检查点供下次运行使用。"
+        },
+        "output": "输出：在私有运行会话中最多 10 条。如果没有任何符合条件的条目，请回复“无更新”。不要公开发布。",
+        "source": "来源：某个仓库自上次成功运行以来发生变化的已开启 PR 和失败的检查项。记录检查点；不要重复未变化的发现。",
+        "summary": "对比内置设置与自定义设置",
+        "task": "任务：将条目分为“失败的检查”或“需要审查”。每条包含标题、负责人、需要关注的原因和证据链接。",
+        "tips": {
+          "gallery": {
+            "body": "内置设置涵盖常见作业。自定义自动化让你选择触发器并编写自己的指令。",
+            "title": "选择一条设置路径"
+          }
+        },
+        "title": "找到你的起点",
+        "when": {
+          "text": "触发器：每周一 09:00 UTC。启用前检查时间表预览。"
+        },
+        "where": {
+          "text": "以你自己的身份运行，并具备该仓库的访问权限。使用可访问的 Droid 计算机或就绪环境。将自动化及其会话保持为私有。"
+        }
+      },
+      "title": "Factory 102",
+      "triggers": {
+        "alert": {
+          "answer": "Webhook：外部投递会启动运行。此触发器必须为你的组织启用。"
+        },
+        "channel": {
+          "answer": "Slack：匹配的频道顶层消息会启动运行。请配置机器人消息和筛选条件；线程回复不会启动运行。"
+        },
+        "heading": "自动化如何启动",
+        "instructions": "触发器命中时，自动化会运行已保存的指令。阅读每种触发器的工作方式和设置检查清单，然后选择“继续”",
+        "pullRequest": {
+          "answer": "GitHub：仓库事件会在 GitHub Actions 中启动审查。在依赖它之前，请审阅并合并设置工作流的 PR。"
+        },
+        "setup": {
+          "access": "检查运行身份、仓库或连接器权限、计算资源和私有输出目标。如触发器不可用，请咨询管理员。",
+          "heading": "启用前做好准备",
+          "scope": "从一个仓库或频道开始。在上方选择时间表或事件，然后记下相应的筛选条件和预期输出。",
+          "verify": "启用任何内容之前，先检查时间表或事件筛选条件。首次运行获批后，在投入周期性使用前查看“事件”及其会话。"
+        },
+        "summary": "了解触发器并准备首次运行",
+        "tip": "自动化会运行已保存的指令，无需有人在运行过程中回答问题。触发器决定何时启动；指令说明要做什么；身份和计算资源决定访问权限与运行位置。请分别检查自动化可见性和会话隐私，然后在“事件”中查看首次运行。",
+        "tips": {
+          "events": {
+            "body": "自动化的“事件”信息流会链接到各次运行并说明告警。在信任周期性工作之前，先阅读首次运行。",
+            "title": "了解在何处检查运行"
+          },
+          "filter": "按名称或触发器查找自动化。可用的触发器类型取决于你的组织。",
+          "visibility": {
+            "body": "“私有”和“共享”控制自动化的可见性。会话隐私则单独控制谁可以打开其运行。",
+            "title": "检查谁可以看到这项工作"
+          }
+        },
+        "title": "了解自动化触发器",
+        "weekly": {
+          "answer": "定时：由时钟启动运行。Cron 使用 UTC；转换后的本地时间不会自动跟随夏令时变化。"
+        }
+      },
+      "workflows": {
+        "autoWiki": {
+          "description": "使用 /wiki 生成可浏览的架构与代码库文档。使用 /install-wiki 在推送到默认分支后自动刷新，具体受组织管控限制。",
+          "example": "新工程师在 Wiki 中找到身份验证模块。细节重要时请核对代码；未记录的业务意图可能缺失。",
+          "label": "AutoWiki"
+        },
+        "babysitter": {
+          "description": "按时间表监视已开启的 PR，并尝试修复失败的 CI 检查。CI 指自动化测试和构建；PR Babysitter 不负责自动合并。",
+          "example": "PR 开启后类型检查失败。PR Babysitter 会调查并尝试针对性修复；结果由你审查。",
+          "label": "PR Babysitter",
+          "start": "新建自动化 → PR Babysitter"
+        },
+        "codeReview": {
+          "description": "查找更改中值得修复的正确性 Bug。可在本地运行审查，或安装自动 PR 审查；请检查发现的内容，而不要将其视为部署保证。",
+          "example": "一次支付重试可能导致重复扣款。代码审查会说明 Bug 及其位置；修复是另一项单独操作。",
+          "label": "代码审查"
+        },
+        "example": "示例",
+        "heading": "围绕拉取请求的四项作业",
+        "instructions": "打开全部四张卡片，对比它们的用途、示例和限制。然后选择“继续”",
+        "nounOne": "工作流",
+        "nounOther": "工作流",
+        "placeholder": "选择一个工作流以查看详情",
+        "securityReview": {
+          "description": "查找切合实际的代码利用方式，例如缺失的访问检查。审查本地更改，在 PR 上使用已配置的 Droid Action，或运行更深入的审计。",
+          "example": "已登录用户可以读取其他客户的记录。安全审查会追踪该访问路径；但这并不代表整个应用都安全。",
+          "label": "安全审查"
+        },
+        "start": "启动方式",
+        "summary": "根据目标选择工作流",
+        "tip": "这些工作流解决不同的问题：代码审查查找 Bug，安全审查追踪攻击路径，AutoWiki 讲解代码，PR Babysitter 尝试修复 CI。CI 指自动化构建和测试；拉取请求用于提出待审查的更改。后续示例将展示如何在信任输出之前作出判断。",
+        "title": "探索四个工作流"
+      },
+      "workspace": {
+        "heading": "你的工作区设置指南",
+        "instructions": "Droid 计算机保存工作区；环境准备可复用的起点。阅读指南，然后使用“演示给我看”探索设置",
+        "options": {
+          "environment": "环境"
+        },
+        "parallel": {
+          "answer": "环境为每个实例提供相同的预备基线。在一个实例中的工作不会改变另一个实例。"
+        },
+        "rebuild": {
+          "answer": "后续启动会使用新的基线。现有 Droid 计算机保留各自的状态；请通过 Git 保存需要长期保留的工作。"
+        },
+        "return": {
+          "answer": "Droid 计算机跨会话保留自身状态。Droid 是执行者；计算机是它工作的场所。"
+        },
+        "safetyHeading": "保障工作区安全",
+        "setup": {
+          "environment": "如果环境功能可用，请在其中准备仓库和设置命令，并等待状态变为“就绪”。如果缺少访问权限，请咨询管理员。",
+          "find": "在“设置 › Droid 计算机”中，先查看现有计算机，再创建新的计算机。使用“演示给我看”定位“创建”和“你的计算机”。",
+          "finish": "处理真实任务时，在新会话中选择该计算机并检查其工具。本演练无需创建计算机。",
+          "heading": "准备你的第一个工作区",
+          "launch": "在“创建”中选择就绪环境或仓库。为真实工作创建计算机之前，请检查名称和规格。",
+          "secrets": "将 API 密钥存放在“设置 › 密钥”中，绝不要放在聊天或已提交的文件里。确认仓库和网络访问权限。"
+        },
+        "summary": "了解计算资源并准备你的设置",
+        "tip": "Droid 的工作位置决定了它可以访问哪些文件、工具和网络。Droid 计算机维护云端工作区；远程控制使用你的机器；环境准备可复用的起点。开始真实工作前检查访问权限和工具，并在删除计算机前保存重要文件。",
+        "tips": {
+          "computer": {
+            "body": "Droid 计算机跨会话保留文件和工具。它们可以在空闲时暂停，并在需要时恢复。",
+            "title": "回到同一个工作区"
+          },
+          "create": {
+            "body": "“创建”会基于就绪环境或仓库搭建一台持久计算机。此处无需创建。",
+            "title": "找到创建流程"
+          },
+          "environment": {
+            "body": "环境为相互独立的实例准备仓库和工具。仅当你的组织有访问权限时，此页面才会显示。",
+            "title": "复用预备基线"
+          }
+        },
+        "title": "了解你的工作区"
+      }
+    },
+    "factory103": {
+      "capstoneHeading": "从结账故障到可靠的工作流",
+      "capstoneTitle": "设计你团队的工作流",
+      "cardOne": "张卡片",
+      "cardOther": "张卡片",
+      "completion": {
+        "automation": "已匹配触发器，并学会检查、编辑和暂停周期性工作流",
+        "coordination": "已对比工作流与任务，并练习引导协同工作",
+        "delegation": "已了解委派设置、身份检查以及工单和对话交接",
+        "headline": "你已准备好用 Droid 协调工作",
+        "nextStep": "选择一个规模较小的团队工作流，完成其设置，并检查其首个真实结果。",
+        "sdk": "已探索 SDK 结果、持久会话、权限以及代码中的规则"
+      },
+      "contextLabel": "上下文",
+      "conversations": {
+        "context": "示例请求：“@Factory 调查 storefront 中的结账故障。使用下方的错误信息，找出原因，并报告文件引用。不要编辑代码或在其他地方发布。”请先进行调查，再授权修复。",
+        "contextNote": "范围明确的调查比含糊地要求修复一切更安全。",
+        "first": "在 Slack 中，将 Factory 邀请到频道，并在线程中选择它的提及项。在 Teams 中，将应用安装到团队，并从提及选择器中选择 @Factory。",
+        "practice": "使用一个训练线程请求只读调查，回答一个澄清问题，并检查一处引用的来源。不要向更广泛的频道发布敏感材料。",
+        "review": "阅读被引用的文件，并区分发现与假设。Slack 私信使用你的个人身份和连接器；共享频道中的请求使用服务账号。不同任务应开启单独的对话。",
+        "reviewNote": "在同一对话中跟进，以保留任务的上下文。",
+        "second": "注明仓库、错误、预期结果和限制。Factory 在有权限时会读取线程中较早的消息，因此请避免使用含敏感材料的线程；如果它无法读取，请粘贴相关上下文。",
+        "third": "在当前对话中回复；队友也可以跟进。在 Teams 中，请再次提及 @Factory。示例：“检查空购物车是否会进入此路径；保持调查为只读。”",
+        "tip": "当 Factory 能够读取时，Slack 和 Teams 可以将周围的线程内容传递给 Droid。请让请求本身保持可独立理解，以防该上下文不可用",
+        "title": "让对话转化为行动"
+      },
+      "coordination": {
+        "agents": {
+          "description": "编排器负责协调；每个智能体负责一项聚焦的任务。拆分独立工作，明确依赖关系，并确定共享文件的负责人。更多智能体也会消耗更多资源。",
+          "example": "一个智能体追踪 API；另一个检查 UI 处理逻辑。在任一方更改依赖行为之前，先就 API 约定达成一致。",
+          "label": "编排器与智能体"
+        },
+        "compute": {
+          "description": "在可用的情况下选择就绪环境、Droid 计算机、远程控制机器或本地环境。在实际执行机器上检查仓库、依赖、网络访问和密钥。",
+          "example": "云端工作使用 Droid 计算机。保持远程控制机器在线；不要指望本地运行在桌面应用关闭后继续。",
+          "label": "机器与上下文"
+        },
+        "mission": {
+          "description": "范围明确的工作，事先规划好功能、里程碑和验证。在新会话中启动 /missions，完善计划，然后在任务控制中批准执行。",
+          "example": "将结账迁移到新 API，并设定明确的兼容性里程碑。在批准长期项目之前，检查仓库设置和可运行的测试。",
+          "label": "任务"
+        },
+        "workstream": {
+          "description": "持续的对话式协同。选择“新建工作流”，写明目标，选择机器，并说明约束和完成标准。编排器会随着工作推进分配任务。",
+          "example": "跨服务协调结账调查。如果功能不可用，请向管理员或 Factory 联系人咨询访问权限；不要因为缺少按钮就认为设置已完成。",
+          "label": "工作流"
+        }
+      },
+      "coordinationTip": "工作流随着工作推进持续协调；任务则以功能和里程碑为起点。两者都需要清晰的边界和证据，你才能接受结果",
+      "coordinationTitle": "规划协同工作",
+      "description": "从工单和对话发起委派，协调更大的项目，自动化周期性工作，并从代码中使用 Droid",
+      "docsLabel": "委派文档",
+      "exampleLabel": "试一试",
+      "exploreInstructions": "打开全部四张卡片，对比协同、规划、智能体和计算资源。然后选择“继续”",
+      "explorePlaceholder": "选择一张卡片，了解何时以及如何使用它",
+      "finishInstructions": "为项目的每个阶段选择最简单的工作流。正确回答所有情境，然后选择“完成课程”",
+      "identity": {
+        "installation": {
+          "explanation": "组织的委派应用必须已安装，并已针对工作区/团队完成授权。个人连接器并不等于该安装。",
+          "label": "委派应用安装",
+          "scenario": "你的个人 Linear 连接器工作正常，但工单的智能体选择器中没有 Factory。需要检查什么？"
+        },
+        "personal": {
+          "explanation": "Factory 的 Slack 私信以你的身份、使用你的个人连接器运行。共享频道和工单请求则使用服务账号。",
+          "label": "你的个人访问权限",
+          "scenario": "向 Factory 应用发送的 Slack 私信无法读取你需要的文档。应检查谁的连接器访问权限？"
+        },
+        "shared": {
+          "explanation": "共享工作以所分配智能体配置（默认为 Apps）的服务账号身份运行。你的个人访问权限不会授予它访问该环境中仓库的权限。",
+          "label": "服务账号访问权限",
+          "scenario": "你个人可以克隆仓库，但共享频道中的委派却不行。哪个身份需要仓库访问权限？"
+        }
+      },
+      "identityTitle": "检查 Droid 使用的是谁的访问权限",
+      "issues": {
+        "context": "示例：空购物车导致结账失败。工单中写明了 storefront 仓库、复现步骤、预期行为和回归测试。Droid 可以调查、实现并测试，然后提交 PR。",
+        "contextNote": "同时说明预期的更改和必须保持不变的行为。",
+        "first": "编写交接说明：修复空购物车错误；保持支付行为不变；添加回归测试；运行针对性测试；提交 PR 和测试证据。附上相关错误和链接。",
+        "practice": "选择一个低风险的训练工单。添加验收标准和验证步骤，准备好之后再发起委派，并在审查其 PR 之前要求提供复现信息和测试结果。",
+        "review": "如果测试被跳过或失败，请询问还有哪些内容未经验证。停止运行不会撤销编辑或 PR。委派不能替代你所在仓库的审查要求。",
+        "reviewNote": "摘要不是测试证据。请检查实际结果。",
+        "second": "在 Linear 中，将工单分配给 Factory，或在评论中选择 @Factory。在 Jira 中，使用“智能体 → Factory”，或在工单评论中选择 @Factory。",
+        "third": "在工单的智能体对话中查看进度。在那里回答问题，并在合并前检查返回的代码差异和测试。你组织中的队友也可以在同一对话中跟进。",
+        "tip": "沿用“你的第一个会话”中的清晰任务模式：结果、上下文、约束和验证。自包含的工单可以减少澄清，让审查更轻松",
+        "title": "委派工单"
+      },
+      "operations": {
+        "context": "示例：“每个工作日 09:00 UTC，汇总此仓库中新增的 TODO 评论，并将结果返回到这里。不要编辑文件或在其他地方发布。没有变化时回复‘无更新’；遇到访问失败时如实报告，不要猜测。”",
+        "contextNote": "周期性提示词必须能够独立成立，无需有人回答问题。",
+        "first": "先让编排器起草自动化方案。批准创建之前，检查仓库、时区、投递会话、身份、计算资源和重复与去重规则。创建后可能会立即启动一次运行。",
+        "practice": "仅在获得批准后，创建一个范围窄且私有的练习自动化。检查一次运行，编辑一条无害的指令，重新运行，然后暂停它。如果工作流不可用，请使用独立的“自动化”页面。",
+        "review": "状态成功并不能证明报告有用。检查访问缺失、空白日期、重复发现和投递目标错误。出现意外行为时，请先暂停，再更改指令并重新测试。",
+        "reviewNote": "在信任下一次定时运行之前，先检查首次运行。",
+        "second": "在工作流的右侧面板中选择“+ → 自动化”。打开该自动化，选择“立即运行”，并检查“事件”和关联的运行。核实证据链接以及是否投递到预期的会话。",
+        "third": "使用“编辑”更改时间表，使用行菜单暂停。云端执行可在你关闭笔记本电脑后继续；远程控制必须保持在线，本地运行则需要桌面应用保持开启。",
+        "tip": "沿用自动化的来源、任务、输出和限制检查清单。阅读首个结果，并在结束后暂停训练用的时间表",
+        "title": "运维周期性工作流"
+      },
+      "optionalPractice": "可选的实际练习",
+      "practiceBody": "使用下方的练习提示词。发送前审阅草稿；保留其中的审批和安全限制。",
+      "practiceCaption": "示例不会运行任何内容。实际设置和练习需要额外时间，并可能消耗额度。",
+      "practiceTitle": "让 Droid 指导你",
+      "quizInstructions": "为每个情境选择最佳答案。阅读解释，然后选择“继续”",
+      "readInstructions": "阅读示例并选择其中的标记点。如有需要，可使用可选练习，然后选择“继续”",
+      "reviewLabel": "检查结果",
+      "sdk": {
+        "context": "Python 和 TypeScript SDK 将 Droid 的智能体能力提供给应用。此 TypeScript 示例使用 run() 汇总仓库，检查最终结果并打印答案。",
+        "contextNote": "调用、权限和结果处理均由应用负责。",
+        "first": "准备 Node.js 18+，并确保 Droid CLI 位于 PATH 中。在单独的练习文件夹中安装 @factory/droid-sdk，并从 @factory/droid-sdk/node 导入 Node API。",
+        "practice": "帮我在新的练习文件夹中编写一个 TypeScript 仓库摘要脚本。查看已安装的 SDK 文档和先决条件。通过环境变量安全地进行认证；绝不要在聊天中索要我的密钥。在执行安装或运行之前先询问我。展示命令、退出状态、输出和错误处理。不要发布或更改仓库文件。",
+        "review": "在针对真实数据运行之前，审查工具权限。提示词中写着“只读”并不构成安全边界；请使用适用的工具控制和权限处理，不要盲目批准每一个请求。",
+        "reviewNote": "实际输出和退出状态才能证明执行；仅有生成的代码不能。",
+        "second": "通过进程环境安全地提供 FACTORY_API_KEY。绝不要将密钥粘贴到聊天中或提交它。将工作目录设置为你打算检查的仓库。",
+        "third": "运行脚本并检查其命令、退出状态和输出。使用文本之前先检查 result.success；同时捕获启动/传输异常。run() 会自动关闭其会话。",
+        "tip": "当触发器和指令足以满足需求时，请使用自动化。当应用需要启动 Droid 并控制其结果的后续处理时，请使用 SDK",
+        "title": "从代码中运行 Droid"
+      },
+      "sessions": {
+        "context": "createSession() 支持带共享历史记录的后续提示。下方的第二个提示会使用第一个摘要的上下文询问测试情况。每一轮都会在下一轮开始前读取完毕。",
+        "contextNote": "后续提示共享历史记录；独立调用 run() 不会构成同一次对话。",
+        "first": "创建会话时，慎重设置工作目录和权限。一个会话一次处理一轮；通过最终结果读取其流。",
+        "practice": "为练习脚本添加后续问题和安全的清理逻辑。然后让 Droid 提出结构化的发现 schema 和路由测试。在连接任何真实目标之前检查结果。",
+        "review": "示例规则：经验证的高严重度发现进入“优先级”队列；其他发现进入“标准”队列。测试所有严重度级别和格式错误的输出。更改该规则不应需要修改 Droid 的判断提示词。",
+        "reviewNote": "Droid 负责解读输入；由你验证过的代码执行固定规则。",
+        "second": "检查每个结果是否失败。使用 finally 等待 session.close()，即使某一轮失败也要执行。缺少权限处理程序可能导致审批请求被拒绝。",
+        "third": "对于程序化路由，请请求结构化输出，验证其结构，然后在代码中应用规则。仅凭运行成功并不能证明结构化输出存在或对你的应用有效。",
+        "tip": "持久会话保留的是对话上下文，而不是正确性保证。将固定的业务规则放在代码中，并在出错后也关闭会话",
+        "title": "保留上下文并执行规则"
+      },
+      "setup": {
+        "context": "委派应用将工作发送给 Droid。连接器为 Droid 提供工作时可用的工具。共享请求使用请求方所分配的智能体配置（默认为 Apps）：其指令、插件、服务账号和计算资源。",
+        "contextNote": "个人连接器不会安装组织的委派应用。",
+        "first": "由管理者或所有者打开“设置 → 委派 → 为组织设置”。授权所选应用；该应用的管理员可能还需要批准安装。",
+        "practice": "帮我设置一个委派应用。询问是哪个应用和仓库，检查已配置的内容，并指导完成授权设置。说明需要管理员执行的操作。绝不要在聊天中索要密钥。在更改设置或发送测试请求之前先询问我；通过一项经我批准的只读任务验证访问权限。",
+        "review": "如果设置不可用，请向管理员申请应用安装、仓库/连接器访问权限和可用的计算资源。然后发送一个小型只读请求。能打开“设置”并不能证明访问正常。",
+        "reviewNote": "以实际执行工作的身份验证访问权限。",
+        "second": "在“智能体配置”下，检查委派使用的配置（默认为 Apps）：指令和插件、有效的服务账号、对每个环境仓库的 Git 访问权限，以及任务所需的连接器。",
+        "third": "选择动态计算搭配就绪环境，或持久计算搭配服务账号所有的计算机。确保 Factory 账户与已连接应用账户的邮箱一致。",
+        "tip": "安装委派应用和连接个人连接器是两个不同的步骤。请检查实际运行该请求的身份和机器",
+        "title": "准备委派访问权限"
+      },
+      "steering": {
+        "context": "两个智能体调查空购物车错误：一个追踪 API，一个检查 UI。编排器在提出编辑之前，会将发现和依赖关系记录在共享笔记中。",
+        "contextNote": "独立调查可以并行进行；有依赖的编辑需要达成一致的约定。",
+        "first": "打开“智能体”以跟进进度。当某个智能体出现在“等待你处理”下时，回答具体决策。如果答案改变了另一个智能体的范围，请告知编排器。",
+        "practice": "在可用的工作流中，请求两项归属明确的只读调查。让智能体将发现保存到“文件”中，并由编排器汇总依赖关系。仅在审阅范围后批准执行。",
+        "review": "工作停滞时，询问阻塞点、最新证据和下一个安全步骤。暂停或缩小任务范围，而不是启动重复的智能体。接受结果前检查代码差异和测试证据。",
+        "reviewNote": "既要审查各个智能体的产出，也要审查它们协同产生的行为。",
+        "second": "使用“文件”共享计划和发现。在有依赖的编辑之前确定 API 约定。精准调整方向：“保留当前 API；只更改空购物车处理逻辑。”",
+        "third": "打开 PR 查看变更与各项检查。要求提供集成结账测试以及支付行为未变的证据。不要从实现权限推断出合并权限。",
+        "tip": "并行工作需要明确的归属和共享决策。审查集成后的行为，而不只是每个智能体各自声称的成功",
+        "title": "引导智能体并审查结果"
+      },
+      "title": "Factory 103",
+      "triggerReasons": {
+        "github": "GitHub 触发器会响应仓库事件。在依赖运行之前，请完成并审查工作流设置；时间表不是事件触发器。",
+        "scheduled": "定时运行遵循时钟。验证时区和时间表预览；固定的 UTC 时间不会跟随本地夏令时变化。",
+        "slack": "Slack 触发器会响应匹配的消息。配置筛选条件和机器人消息行为；这与为单个任务直接提及 Factory 不同。",
+        "webhook": "Webhook 接收来自外部服务的事件。确认你的组织是否可用此功能，并在提示词之外妥善保管端点凭据。"
+      },
+      "triggerTitle": "选择自动化触发器",
+      "triggers": {
+        "github": "当拉取请求开启或有新提交时，运行仓库审查。",
+        "scheduled": "每个工作日 09:00 UTC 发送一份私有的工作流健康摘要。",
+        "slack": "每当匹配的告警发布到已配置的 Slack 频道时，启动调查。",
+        "webhook": "当监控服务直接向 Factory 发送事件时，启动工作。"
+      },
+      "workflowTitle": "选择合适的工作流",
+      "workflows": {
+        "automation": {
+          "explanation": "自动化会在触发器命中时运行已保存的指令。固定的报告和时间表无需自定义应用。",
+          "label": "自动化",
+          "scenario": "完成结账相关修复后，你希望每个工作日 09:00 UTC 收到一份私有摘要，汇总失败的检查。"
+        },
+        "delegation": {
+          "explanation": "委派从工单或对话开始工作。明确的一次性请求不需要自动化。",
+          "label": "委派",
+          "scenario": "工单中已包含 Bug 详情。你希望不离开 Linear 就将它交给 Droid。"
+        },
+        "mission": {
+          "explanation": "任务围绕预先制定的计划组织范围明确的工作。工作流则通过不断演进的对话来协调工作。",
+          "label": "任务",
+          "scenario": "范围明确的迁移需要在执行前获得批准的功能计划、里程碑和验证。"
+        },
+        "sdk": {
+          "explanation": "SDK 让你的应用驱动 Droid 并处理其结果。将固定的路由规则放在代码中，而不只是放在提示词里。",
+          "label": "Droid SDK",
+          "scenario": "你的结账仪表板需要一个“调查”按钮、流式进度，以及由代码强制执行经验证发现的路由规则。"
+        },
+        "session": {
+          "explanation": "普通会话处理一项聚焦的任务。额外的编排只会增加成本，对这项小作业没有帮助。",
+          "label": "普通会话",
+          "scenario": "你需要解释一个不熟悉的函数，不涉及持续的协同。"
+        },
+        "workstream": {
+          "explanation": "工作流让编排器能够协调智能体，并随时间接受新工作。在并行执行之前，定义归属和依赖关系。",
+          "label": "工作流",
+          "scenario": "你的结账项目横跨多个服务。新的调查和实现任务不断到来，需要协同的智能体。"
+        }
+      }
+    },
+    "firstSession": {
+      "completion": {
+        "headline": "你已批准第一份规格。",
+        "nextStep": "Droid 现在会依据你的规格开始构建。下一个任务也可以这样开始。",
+        "recap": {
+          "approve": "引导规划方向并批准了它",
+          "read": "阅读了 Droid 为此编写的规格",
+          "task": "在规格模式下编写了清晰的任务"
+        },
+        "sessionLabel": "你的规格"
+      },
+      "description": "连接你的工具，在规格模式下向 Droid 下达清晰的任务，然后阅读并批准它编写的规格",
+      "example": {
+        "caption": "当你的任务点明每个部分时，输入框下方的提示词教练会亮起。",
+        "constraints": {
+          "label": "约束条件",
+          "note": "说明哪些内容不能改动，让规格排除风险最高的修改。",
+          "text": "约束条件：{{part}}"
+        },
+        "context": {
+          "label": "上下文",
+          "note": "说明从哪里入手，让 Droid 阅读你的资料而不是靠猜测。",
+          "text": "上下文：{{part}}"
+        },
+        "heading": "Droid 能规划的任务",
+        "outcome": {
+          "label": "结果",
+          "note": "点明要达成的结果，让规格聚焦于一件完成后你能确认的事。",
+          "text": "结果：{{part}}"
+        },
+        "verify": {
+          "label": "如何验证",
+          "note": "要求提供证据，让你能亲自核实结果，而不只是相信一份总结。",
+          "text": "如何验证：{{part}}"
+        },
+        "whyItWorks": "为什么有效"
+      },
+      "personas": {
+        "design": {
+          "parts": {
+            "constraints": "不使用硬编码值，也不重新设计布局。",
+            "context": "你的设计令牌和组件。",
+            "outcome": "在一个设置页面上完成最重要的两项一致性修复。",
+            "verify": "修改前后的截图。"
+          },
+          "sampleTask": {
+            "description": "一处小而直观的改动，一眼即可判断。",
+            "prompt": "检查一个设置页面中不一致的间距、颜色、字体，以及空状态、加载状态和错误状态。使用我们的设计令牌和组件，不要使用硬编码值。只修复最重要的两个问题，不要重新设计布局。提供修改前后的截图。",
+            "title": "按设计系统检查一个页面"
+          },
+          "taskTip": {
+            "body": "指定一个页面。Droid 会按你的设计系统进行检查，并规划出最需要修复的两个问题。",
+            "title": "让 Droid 做界面检查"
+          }
+        },
+        "engineering": {
+          "parts": {
+            "constraints": "不改变行为，也不新增依赖。",
+            "context": "仓库现有的测试风格和运行器。",
+            "outcome": "为一个尚无测试的小函数补充测试。",
+            "verify": "运行测试并展示它们通过。"
+          },
+          "sampleTask": {
+            "description": "真实的代码，范围小，并通过运行测试来验证。",
+            "prompt": "在此仓库中找出一个重要但尚无测试的小函数。遵循现有的测试风格和运行器。不要改变该函数的行为，也不要新增依赖。运行测试并向我展示它们通过。",
+            "title": "为一个未测试的函数补充针对性测试"
+          }
+        },
+        "finance": {
+          "parts": {
+            "constraints": "源文件保持不变。",
+            "context": "你指定的 CSV，或一份标注清楚的虚构 CSV。",
+            "outcome": "包含 3 个最大趋势和一张图表的 readout.md。",
+            "verify": "每个数字背后的计算公式。"
+          },
+          "sampleTask": {
+            "description": "一份简短的分析报告和一张图表。你的文件保持不变。",
+            "prompt": "分析我指定的 CSV，并编写 readout.md，包含 3 个最大趋势和一张图表。如果我没有提供文件，请先创建一份标注清楚的虚构 12 个月营收 CSV。不要修改源文件。展示每个数字背后的计算公式。",
+            "title": "分析电子表格"
+          },
+          "taskTip": {
+            "body": "让 Droid 处理一份电子表格。它会规划分析和一张图表，供你批准。",
+            "title": "让 Droid 输出分析报告"
+          }
+        },
+        "founder": {
+          "parts": {
+            "constraints": "400 词以内，不夸大。",
+            "context": "你粘贴的亮点和指标。",
+            "outcome": "根据你的亮点和指标生成的 investor-update.md。",
+            "verify": "对每个你未提供的数字明确标注。"
+          },
+          "sampleTask": {
+            "description": "平实简短，所有数字都来自你。",
+            "prompt": "根据我接下来粘贴的亮点和指标起草 investor-update.md。控制在 400 词以内，不夸大，并标注任何需要我未提供的数字的内容。结尾列出 3 项具体的请求事项。",
+            "title": "起草投资人更新"
+          },
+          "taskTip": {
+            "body": "粘贴亮点和指标。Droid 会规划一份更新，并标注任何缺失的数字。",
+            "title": "让 Droid 起草投资人更新"
+          }
+        },
+        "marketing": {
+          "parts": {
+            "constraints": "300 词以内，不包含无法支撑的说法。",
+            "context": "你的文档和更新日志。",
+            "outcome": "launch.md，一份面向客户的一页式公告。",
+            "verify": "每项说法都列出其来源。"
+          },
+          "sampleTask": {
+            "description": "简短且有出处的文案，可逐条核对每项说法。",
+            "prompt": "编写 launch.md：为我要指定的功能写一份面向客户的一页式公告。内容基于我们的文档和更新日志。不包含我们无法支撑的说法，控制在 300 词以内。在结尾列出每项事实性说法及其来源。",
+            "title": "起草一页式发布公告"
+          },
+          "taskTip": {
+            "body": "指定功能和受众。Droid 会基于你的文档规划一份一页式公告。",
+            "title": "让 Droid 撰写发布文案"
+          }
+        },
+        "operations": {
+          "parts": {
+            "constraints": "除你描述的内容外，不做任何杜撰。",
+            "context": "你描述的流程。",
+            "outcome": "包含步骤、负责人、输入和停滞点的 process.md。",
+            "verify": "任何推断之处都会标注出来，供你核对。"
+          },
+          "sampleTask": {
+            "description": "一份清晰的流程图，以及一份可直接发送的状态更新。",
+            "prompt": "将我描述的周期性流程整理为 process.md：步骤、负责人、输入以及停滞环节。标注任何推断之处。结尾附上一份关于该流程的每周状态更新草稿，供我直接发送。",
+            "title": "梳理周期性流程"
+          },
+          "taskTip": {
+            "body": "描述一个你负责的流程。Droid 会规划一份包含步骤、负责人和瓶颈的流程图。",
+            "title": "让 Droid 梳理流程"
+          }
+        },
+        "product": {
+          "parts": {
+            "constraints": "不修改代码。",
+            "context": "当前的工作方式，基于真实代码并附文件链接。",
+            "outcome": "在 docs/specs/ 中为一个功能想法编写的一页式规格。",
+            "verify": "待决问题和 3 条可测试的验收标准。"
+          },
+          "sampleTask": {
+            "description": "Droid 只写一个 Markdown 文件，不修改任何代码。",
+            "prompt": "在 docs/specs/ 中为我接下来描述的一个小功能想法编写一页式规格。“当前实现方式”需基于真实代码，并链接相关文件。不要修改任何代码。结尾列出待决问题和 3 条可测试的验收标准。",
+            "title": "基于当前代码编写规格"
+          },
+          "taskTip": {
+            "body": "描述一个功能想法。Droid 会阅读代码，然后规划一份一页式规格供你批准。",
+            "title": "让 Droid 编写有依据的规格"
+          }
+        },
+        "sales": {
+          "parts": {
+            "constraints": "标注假设，不把猜测当作事实。",
+            "context": "公开来源，每个都附链接。",
+            "outcome": "为下次会议准备的 account-brief.md。",
+            "verify": "每项事实都链接到你可以打开的来源。"
+          },
+          "sampleTask": {
+            "description": "基于公开来源的一页内容，每项事实都附链接。",
+            "prompt": "为我要指定的公司与我的下次会议创建 account-brief.md。使用公开来源并附链接。标注假设，不把猜测当作事实。结尾列出 3 个探索性问题和一句我可以用作开场的话。",
+            "title": "准备客户简报"
+          },
+          "taskTip": {
+            "body": "指定公司和会议。Droid 会规划简报及其来源，供你批准。",
+            "title": "让 Droid 准备客户简报"
+          }
+        },
+        "somethingElse": {
+          "parts": {
+            "constraints": "不杜撰负责人或日期。",
+            "context": "你粘贴的笔记。",
+            "outcome": "包含决策、行动项和问题的 notes-summary.md。",
+            "verify": "任何不清晰之处都会标注出来，供你核对。"
+          },
+          "sampleTask": {
+            "description": "决策和行动项，不含任何杜撰内容。",
+            "prompt": "将我接下来粘贴的会议笔记整理为 notes-summary.md：决策、带负责人的行动项以及待决问题。不要杜撰负责人或日期；标注任何不清晰之处。结尾附上一段我可以发给参会者的简短消息。",
+            "title": "将会议笔记整理为决策"
+          },
+          "taskTip": {
+            "body": "粘贴笔记或文档。Droid 会规划一份决策与行动摘要供你查看。",
+            "title": "让 Droid 处理你的笔记"
+          }
+        }
+      },
+      "steps": {
+        "connectTools": {
+          "instructions": "连接用于跟踪工作的应用，例如 Linear 或 Jira，然后选择“继续”",
+          "skipLabel": "暂时跳过",
+          "summary": "让 Droid 获取来自你应用的上下文",
+          "tip": "Droid 与你使用相同的来源。连接 Linear 或 Jira 后，你可以粘贴工单链接，Droid 会在编写规格前阅读该工单，从而省去重复解释任务。请先连接用于跟踪工作的应用；Slack、Notion 或 Google Drive 可以稍后在设置中添加。",
+          "title": "连接你的工具"
+        },
+        "giveTask": {
+          "instructions": "Droid 会调研并编写规格。请阅读，对任何不妥之处发表评论，然后选择“批准规格”",
+          "readyLabel": "你的规格已可供审阅",
+          "restartLabel": "不是这个任务",
+          "summary": "阅读规划、引导方向并批准",
+          "tip": "修改规划只需一条评论，而修改代码需要再运行一次。批准前，请确认规格的目标正确、包含你预期的文件、采用你认可的方案，并有验证结果的方法。如果某部分有误，请在该行发表评论或选择“继续迭代”，Droid 会修订规格。",
+          "title": "审阅并批准规格",
+          "waitLabel": "Droid 正在编写你的规格"
+        },
+        "startSession": {
+          "folderInstructions": "在一个空文件夹中新建会话，选择模型，切换到规格模式并发送任务，或使用下面的示例",
+          "instructions": "在一个项目中新建会话，选择模型，切换到规格模式并发送任务，或使用下面的示例",
+          "summary": "在规格模式下向 Droid 下达清晰的任务",
+          "tip": "清晰的任务能让你一次就批准规格。请点明结果、Droid 应查看的位置、它不能改动的内容，以及你将如何核对结果，或从下面的示例开始。含糊的任务会让 Droid 猜测，你则要在审阅时逐一纠正它的猜测。",
+          "title": "开始规格会话"
+        }
+      },
+      "title": "你的第一个会话"
+    },
+    "fisAgentReadyWiki": {
+      "completion": {
+        "headline": "你的仓库已达到智能体就绪状态！",
+        "nextStep": "设置 PR 合并后，从 Actions 标签页启动首次 Wiki 刷新，并审阅滚动更新的 Wiki PR。",
+        "recapItems": {
+          "0": "了解了 agentic-repo-init 和 auto-wiki 的作用",
+          "1": "测量了基线就绪度级别",
+          "2": "让 Droid 验证命令并编写 AGENTS.md",
+          "3": "审阅了修改内容和就绪度报告",
+          "4": "运行了 /install-auto-wiki 并开启了草稿设置 PR",
+          "5": "了解了刷新的运行方式和停止方法"
+        }
+      },
+      "description": "让 Droid 验证仓库的命令并编写 AGENTS.md，然后安装 auto-wiki 以保持其 Wiki 常新",
+      "docsLink": {
+        "label": "AIEE Runbook 2"
+      },
+      "headerTitle": "智能体就绪的仓库与 Wiki",
+      "steps": {
+        "afterMerge": {
+          "instructions": "将每种情况与相应的操作配对。所有答案都正确后，选择 {{confirmLabel}}。",
+          "quiz": {
+            "heading": "设置 PR 合并之后",
+            "options": {
+              "actions": "从 Actions 标签页运行",
+              "admin": "联系 Factory 组织管理员",
+              "disable": "禁用工作流",
+              "wikiPr": "审阅滚动更新的 Wiki PR"
+            },
+            "scenarios": {
+              "first": {
+                "explanation": "使用 Run workflow，对于大型仓库请关闭视频，并观察运行过程。",
+                "prompt": "你想观察首次刷新"
+              },
+              "pages": {
+                "explanation": "每次刷新都会更新同一个滚动 PR，它写入的页面不会触发另一次刷新。",
+                "prompt": "你想查看某次刷新写入的页面"
+              },
+              "stop": {
+                "explanation": "gh workflow disable peai-auto-wiki.yml 可停止新的运行。然后关闭 Wiki PR 并删除 factory/droid-wiki。",
+                "prompt": "你的团队想停止刷新"
+              },
+              "upload": {
+                "explanation": "由 Factory 组织管理员为你的组织开启云端 Wiki 同步。",
+                "prompt": "运行在 Factory 云端上传阶段失败"
+              }
+            }
+          },
+          "summary": "运行、查看和停止刷新",
+          "tip": "合并后，auto-wiki 会在每次向默认分支推送时运行，因此从第一天起就会消耗 Factory 额度。请观察首次运行；如果它在 Vault 登录处失败，说明工具包的 Vault 绑定尚未完成。",
+          "title": "合并之后"
+        },
+        "checkApproval": {
+          "example": {
+            "find": "列出仓库的工作流以进行检查：",
+            "heading": "安装之前",
+            "list": {
+              "0": "你的技术负责人同意将此仓库的代码和文档上传到 Factory 云端 Wiki",
+              "1": "Factory 组织管理员已开启云端 Wiki 同步",
+              "2": "没有其他 Wiki 刷新工作流，例如 `droid-wiki-refresh.yml`"
+            },
+            "repo": "安装器的仓库规则同样适用：仓库干净、不是 fork，且你有写入权限。"
+          },
+          "instructions": "auto-wiki 会将你的代码和文档上传到 Factory 云端 Wiki。请检查以下三项，然后选择 {{confirmLabel}}。",
+          "summary": "确认允许云端上传",
+          "tip": "每次刷新都会将代码和文档发送到仓库之外，因此这一决定应由你的负责人做出，而不是安装器。两个 Wiki 工作流会争抢相同的页面，因此安装器在发现另一个工作流时会给出警告。",
+          "title": "确认可以上传"
+        },
+        "feeds": {
+          "example": {
+            "heading": "哪些内容会使用 AGENTS.md",
+            "uses": {
+              "0": "第 3 课的 PR 审阅机器人会从基础分支读取它，以获取你仓库的规则",
+              "1": "第 2 课的 SAST 修复：/setup-ai-workflows 需要其中已验证的构建和测试命令，并会添加“自动修复”章节",
+              "2": "所有编码智能体（包括 Droid）都会在每个会话开始时先读取它"
+            },
+            "wiki": "auto-wiki 就是你刚刚开启的草稿设置 PR。它合并后，每次向默认分支推送都会刷新 Wiki。",
+            "wikiHeading": "auto-wiki：在本课中完成设置"
+          },
+          "instructions": "没有工作流会运行 agentic-repo-init。请了解它的产出如何为实际运行的工作流提供输入，然后选择 {{confirmLabel}}。",
+          "summary": "了解 AGENTS.md 如何为自动化提供输入",
+          "tip": "agentic-repo-init 需要有人确认范围和工具链，而且它会在你的机器上运行你的工具链，因此保持交互式。审阅和修复工作流所依赖的正是它验证过的命令。",
+          "title": "没有工作流，但为其提供输入"
+        },
+        "measure": {
+          "coachmark": {
+            "body": "仅评估就绪度不会改动任何文件。Droid 会运行 /readiness-report，并将结果保存在 Factory 应用中。",
+            "example": "让此仓库达到智能体就绪，仅评估就绪度。告诉我基线级别以及未通过的基础标准。",
+            "title": "先测量"
+          },
+          "example": {
+            "heading": "先测量",
+            "note": "仅评估就绪度不会改动任何文件。报告会保存在 Factory 应用中，并关联到你的 origin 仓库。",
+            "prompt": "让此仓库达到智能体就绪，仅评估就绪度。告诉我基线级别以及未通过的基础标准。"
+          },
+          "instructions": "在一个带有 origin 远程的干净克隆中新建会话。仅请求就绪度评估。发送消息后此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法新建会话，请使用此项"
+          },
+          "summary": "获取仓库的基线级别",
+          "tip": "基线能指出需要修复的内容，也便于你日后证明改进。报告会保存在 Factory 应用中并关联到源仓库，因此在发送前请与你的负责人确认这是否允许。",
+          "title": "测量就绪度"
+        },
+        "openDraftPr": {
+          "example": {
+            "heading": "Droid 会做什么",
+            "steps": {
+              "0": "从你的默认分支创建 `peai/install-auto-wiki`",
+              "1": "以 `ci: add auto-wiki workflow` 提交 `.github/workflows/peai-auto-wiki.yml`",
+              "2": "在 `git push` 前再次询问",
+              "3": "开启草稿 PR，然后询问是否创建 `droid-wiki` 标签"
+            },
+            "stopHeading": "日后停止刷新的方法",
+            "stopNote": "然后关闭 Wiki PR 并删除其 factory/droid-wiki 分支。"
+          },
+          "instructions": "依次批准分支、提交，然后批准推送。droid-wiki 标签是可选的。看到链接后，选择 {{confirmLabel}}。",
+          "summary": "批准分支，再批准推送",
+          "tip": "与 PR 审阅的设置类似，此 PR 只修改一个工作流文件，并保持草稿状态。在它合并前，需要由管理员添加 ARTIFACTORY_NPM_TOKEN，由工具包的 Vault 负责人绑定 auto-wiki.yml 和 auto-wiki-compute.yml，并由 Factory 组织管理员开启云端 Wiki 同步。",
+          "title": "开启草稿设置 PR"
+        },
+        "readReport": {
+          "example": {
+            "heading": "智能体就绪度",
+            "parts": {
+              "0": "前后对比：就绪度级别以及发生变化的标准",
+              "1": "已验证的命令，每条都附带退出状态和耗时",
+              "2": "所做的更改，按文件逐项列出",
+              "3": "留给负责人和管理员的后续事项，例如分支保护"
+            },
+            "pr": "想要一个 PR？告诉 Droid：",
+            "prompt": "提交这些更改，并开启一个包含就绪度报告的草稿 PR。"
+          },
+          "instructions": "Droid 最后会生成一份智能体就绪度报告。对比级别、检查后续事项，然后选择 {{confirmLabel}}。除非你要求，否则不会提交任何内容。",
+          "summary": "对比前后的级别",
+          "tip": "这份报告正是审阅者需要的 PR 描述，而后续事项是技能不会代你完成的工作。分支保护和密钥扫描等仓库设置需要由仓库管理员处理。",
+          "title": "阅读就绪度报告"
+        },
+        "reviewChanges": {
+          "coachmark": {
+            "body": "请先阅读 AGENTS.md。Droid 已在本会话中运行过其中的每条命令。",
+            "title": "打开“更改”"
+          },
+          "example": {
+            "files": {
+              "0": "`AGENTS.md`：200 至 400 词，包含已验证的命令",
+              "1": "`.env.example`：只包含变量名，绝不含值",
+              "2": "`.gitignore`：确保真实的 `.env` 文件不会进入 Git",
+              "3": "可选：在现有任务运行器中添加精简的目标"
+            },
+            "heading": "需要关注的内容"
+          },
+          "instructions": "Droid 完成后，打开“更改”并阅读差异。打开后此步骤即完成。",
+          "skip": {
+            "note": "如果 Droid 未修改任何文件，或你已打开“更改”但此步骤仍未完成，请使用此项"
+          },
+          "summary": "阅读 AGENTS.md 及其他修改",
+          "tip": "AGENTS.md 是每个编码智能体首先读取的文件，因此其中错误的命令会影响之后的所有会话。如果 Droid 替换了已有文件，请在继续之前用 git diff -- AGENTS.md 恢复你需要的内容。",
+          "title": "审阅更改内容"
+        },
+        "runSetup": {
+          "coachmark": {
+            "body": "Droid 会先在新分支上提出范围。请确认或缩小范围。",
+            "example": "使用 agentic-repo-init 为此仓库做好智能体开发准备。跳过 Wiki。",
+            "title": "开始设置"
+          },
+          "example": {
+            "heading": "开始设置",
+            "mono": "在此单体仓库（monorepo）上使用 agentic-repo-init。验证 apps/api 和 apps/web 的设置、构建、针对性测试和 Lint 命令，合并到现有的 AGENTS.md，并跳过 Wiki。",
+            "monoHeading": "适用于单体仓库",
+            "prompt": "使用 agentic-repo-init 为此仓库做好智能体开发准备。跳过 Wiki。",
+            "swap": "替换为你自己的内容：将 apps/api 和 apps/web 换成你的应用文件夹。"
+          },
+          "instructions": "发送设置提示词。Droid 会在新分支上工作，并在添加任何工具前征求同意。发送后此步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法运行，或 Droid 已完成但此步骤仍未完成，请使用此项"
+          },
+          "summary": "让 Droid 验证命令并编写 AGENTS.md",
+          "tip": "Droid 会运行它记录的每条命令，例如设置、构建、单个测试、完整测试和 Lint，并记录每条命令的耗时。它不会修复失败的测试，也不会更改仓库设置；这些会成为留给你和管理员的后续事项。",
+          "title": "运行设置"
+        },
+        "startInstaller": {
+          "coachmark": {
+            "body": "关闭视频可让首次刷新保持快速。然后批准云端上传。",
+            "title": "发送 /install-auto-wiki"
+          },
+          "example": {
+            "caption": "你的默认分支取代 main。",
+            "heading": "工作流的运行时机",
+            "pins": {
+              "loop": {
+                "label": "无循环",
+                "note": "它写入的 Wiki 页面不会触发另一次刷新。"
+              },
+              "manual": {
+                "label": "手动",
+                "note": "在 Actions 标签页运行 Run workflow 会启动一次刷新。"
+              },
+              "push": {
+                "label": "每次推送",
+                "note": "每次向默认分支推送时运行，一次只执行一个刷新。"
+              }
+            }
+          },
+          "instructions": "发送 /install-auto-wiki --video off，并对云端上传回答 yes；回答 no 会停止安装。发送后此步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法新建会话，或已经运行过安装器，请使用此项"
+          },
+          "summary": "运行 /install-auto-wiki 并批准上传",
+          "tip": "传入 --video off 会预先回答视频相关的问题：智能视频只会在较大改动后渲染带解说的概览，而大型仓库在开启它时可能达到 55 分钟上限。Droid 会检查仓库和最新版本，然后询问云端上传。该工作流唯一的仓库密钥是 ARTIFACTORY_NPM_TOKEN。",
+          "title": "启动安装器"
+        },
+        "what": {
+          "example": {
+            "about": {
+              "0": "插件：sdlc",
+              "1": "技能：agentic-repo-init。用平实的语言提出请求即可；它会通过 /readiness-report 测量前后就绪度",
+              "2": "安装器：/install-auto-wiki 会写入 .github/workflows/peai-auto-wiki.yml，该文件会调用工具包的 auto-wiki.yml"
+            },
+            "goal": "它让仓库为任何编码智能体做好准备：覆盖设置、构建、针对性测试、完整测试和 Lint 的已验证命令，以及一份简短的 AGENTS.md。",
+            "goalHeading": "用途",
+            "heading": "agentic-repo-init 与 auto-wiki",
+            "never": {
+              "0": "修复失败的测试",
+              "1": "更改分支保护等仓库设置",
+              "2": "在未经你要求时提交、推送或开启 PR",
+              "3": "未经你的负责人同意便上传到云端 Wiki"
+            },
+            "neverHeading": "它绝不会做的事",
+            "when": "在仓库上使用 Droid 或工具包的工作流之前，或 AGENTS.md 缺失、过时时。当团队希望无需手动刷新即可保持 Wiki 常新时，可添加 auto-wiki。",
+            "whenHeading": "何时使用",
+            "wikiGoal": "auto-wiki 让 Factory Wiki 保持最新：每次向默认分支推送都会刷新 droid-wiki/，将其上传到 Factory 云端 Wiki，并更新同一个滚动 PR。"
+          },
+          "instructions": "了解技能和安装器是什么、用途何在以及绝不会做什么。准备好后，选择 {{confirmLabel}}。",
+          "summary": "了解智能体就绪和 auto-wiki 的含义",
+          "tip": "每个智能体以及每个运行你的检查的工具包工作流都从 AGENTS.md 开始，因此技能会在记录每条命令前先运行它。请使用 FIS 的 auto-wiki 安装器，而不是 Factory 自带的：它的工作流会固定工具包版本，并从工具包的 Vault 获取 Factory 密钥。",
+          "title": "智能体就绪和 auto-wiki 的含义"
+        },
+        "wrap": {
+          "example": {
+            "heading": "回顾",
+            "recap": {
+              "0": "技能：来自 sdlc 插件的 agentic-repo-init；用平实的语言提出请求",
+              "1": "先测量：仅评估就绪度不会改动任何文件",
+              "2": "提交前先在“更改”中审阅 AGENTS.md",
+              "3": "auto-wiki：由负责人批准上传，然后运行 /install-auto-wiki --video off",
+              "4": "运行：在 Actions 标签页运行，然后审阅滚动更新的 Wiki PR",
+              "5": "停止：gh workflow disable peai-auto-wiki.yml",
+              "6": "供给：PR 审阅机器人和 SAST 修复会使用 AGENTS.md"
+            }
+          },
+          "instructions": "阅读回顾。完成后选择 {{finishLabel}}。",
+          "summary": "回顾技能及后续步骤",
+          "tip": "就绪度报告很适合作为 PR 描述，因为它展示了更改了什么以及验证了哪些命令。请在 Actions 标签页观察首次 Wiki 刷新；如需停止刷新，请禁用工作流、关闭 Wiki PR 并删除 factory/droid-wiki 分支。",
+          "title": "总结"
+        }
+      },
+      "title": "让仓库达到智能体就绪并保持 Wiki 常新"
+    },
+    "fisAiPrReview": {
+      "completion": {
+        "headline": "你可以按需获得 AI 审查！",
+        "nextStep": "接下来学习“让仓库为智能体做好准备，并保持其 wiki 最新”，为 Droid 提供经过验证的命令。",
+        "recapItems": {
+          "0": "了解了 AI PR 审查能做什么、绝不会做什么",
+          "1": "在你的机器上使用 Droid 审查了一个 PR",
+          "2": "运行了 /install-pr-review 并开启了草稿设置 PR",
+          "3": "了解了由谁完成设置",
+          "4": "了解了如何向机器人提问、追问以及关闭它"
+        }
+      },
+      "description": "在你的机器上使用 Droid 审查 PR，然后安装 FIS 审查机器人，并学会向它提问和关闭它",
+      "docsLink": {
+        "label": "AIEE Runbook 4"
+      },
+      "headerTitle": "AI PR 审查",
+      "steps": {
+        "answerQuestions": {
+          "explore": {
+            "heading": "五个问题",
+            "items": {
+              "automatic": {
+                "description": "默认关闭：仅当有人请求时才运行审查。使用标签或每次推送都需要主动开启，而每次推送的费用最高。",
+                "label": "何时审查",
+                "tags": {
+                  "0": "关闭（默认）",
+                  "1": "标签",
+                  "2": "每次推送"
+                },
+                "tagsLabel": "选项"
+              },
+              "depth": {
+                "description": "标准模式审查 diff。深度模式还会读取调用方和被调用方，速度更慢，并消耗更多 Factory 额度。",
+                "label": "审查深度",
+                "tags": {
+                  "0": "标准（默认）",
+                  "1": "深度"
+                },
+                "tagsLabel": "选项"
+              },
+              "focus": {
+                "description": "通用模式查找正确性、可靠性和测试问题。安全优先模式会追踪不可信输入，直到其使用位置。",
+                "label": "关注内容",
+                "tags": {
+                  "0": "通用（默认）",
+                  "1": "安全优先"
+                },
+                "tagsLabel": "选项"
+              },
+              "inline": {
+                "description": "选择“是”时，会将每个发现项发布在相应的更改行以及汇总评论中。",
+                "label": "内联评论",
+                "tags": {
+                  "0": "是（默认）",
+                  "1": "否"
+                },
+                "tagsLabel": "选项"
+              },
+              "threads": {
+                "description": "默认否。选择“是”后，人们可以在审查线程内向 @fis-peai-engineering-bot 提问。",
+                "label": "线程内回答",
+                "tags": {
+                  "0": "否（默认）",
+                  "1": "是"
+                },
+                "tagsLabel": "选项"
+              }
+            },
+            "noun": {
+              "one": "卡片",
+              "other": "卡片"
+            },
+            "placeholder": "打开卡片以查看其选项"
+          },
+          "instructions": "打开每张卡片查看选项，然后回答 Droid。默认值适合首次安装。当 Droid 显示工作流文件时，选择 {{confirmLabel}}。",
+          "summary": "选择审查何时以及如何运行",
+          "tip": "标签、推送和线程内回答都由 PR 事件触发，工具包维护者必须先确认 Vault 接受这些事件。在他们确认之前，请保持自动审查为关闭、线程回答为否，并通过评论或手动方式启动审查。",
+          "title": "回答五个问题"
+        },
+        "checkRepo": {
+          "example": {
+            "expect": "`git status` 无输出，`isFork` 为 false，且 `viewerPermission` 为 WRITE、MAINTAIN 或 ADMIN。",
+            "heading": "安装前检查",
+            "host": "请使用 FIS 企业环境中的私有或内部 GitHub 仓库。不支持 Bitbucket。"
+          },
+          "instructions": "在你的克隆仓库中运行以下命令。当工作树干净、该仓库不是 fork 且你具有写入权限时，选择 {{confirmLabel}}。",
+          "summary": "选择安装器可接受的仓库",
+          "tip": "当工作树有更改、仓库是 fork 或你缺少写入权限时，安装器会停止，并且绝不会替你执行 stash。事先检查后，下一步就能直接进行到问答环节。",
+          "title": "检查仓库"
+        },
+        "firstReview": {
+          "example": {
+            "cost": "提问的费用低于一次新的审查。除非设置时已开启，否则审查线程内的回答默认关闭。",
+            "follow": "@fis-peai-engineering-bot 发现项 1 为什么被评为高严重度？",
+            "followHeading": "提出追问",
+            "good": {
+              "0": "处理期间会出现一个 eyes 表情回应",
+              "1": "一条汇总评论，按严重程度列出发现项",
+              "2": "内联发现项以评论审查的形式呈现，绝不会是批准",
+              "3": "如果在 Mint the acknowledging token 环节出现 Vault 错误，说明绑定尚未完成"
+            },
+            "goodHeading": "一次正常运行的预期表现",
+            "heading": "设置 PR 合并后",
+            "how": "如果不带 `review`，提及就是提问。机器人会在对话中回答并引用具体行。",
+            "mention": "@fis-peai-engineering-bot review",
+            "noReply": "没有回复？你需要具有写入权限，且 PR 必须来自此仓库，而不是 fork。",
+            "options": "添加 `security`、`deep` 或两者：`@fis-peai-engineering-bot review security deep`",
+            "or": "或者使用 Actions 标签页中的 Run workflow，或在 PR 下评论：",
+            "runHeading": "启动一次审查",
+            "stays": "已发布的审查评论会保留在其 PR 上。",
+            "stopHeading": "停止审查",
+            "swap": "替换为你自己的内容：my-org/my-service 和 PR 编号。"
+          },
+          "instructions": "设置 PR 合并后，启动一次审查并提出追问。还没有工作流？请阅读预期结果，然后选择 {{confirmLabel}}。",
+          "summary": "启动审查、追问、停止审查",
+          "tip": "当自动审查设为关闭时，除非有人请求，否则不会运行任何审查，因此手动运行一次或评论一次是安全的首次测试，不过每次都会产生一次计费的 Factory 运行。机器人在 GitHub Actions 中运行，因此本应用无法看到它的回复；如果没有 Run workflow 按钮，说明工作流尚未进入默认分支。",
+          "title": "准备就绪后运行首次审查"
+        },
+        "openDraftPr": {
+          "example": {
+            "heading": "Droid 会做什么",
+            "pins": {
+              "never": {
+                "label": "绝不合并",
+                "note": "它绝不会向默认分支提交、强制推送或合并。"
+              },
+              "twice": {
+                "label": "两次确认",
+                "note": "在你批准推送之前，任何内容都不会离开你的机器。"
+              },
+              "who": {
+                "label": "由谁完成",
+                "note": "管理员和工具包的 Vault 负责人会在 PR 合并前完成各自的部分。"
+              }
+            },
+            "steps": {
+              "0": "基于你的默认分支创建 `peai/install-pr-review`",
+              "1": "写入 `.github/workflows/peai-pr-review.yml` 并提交 `ci: add AI PR review workflow`",
+              "2": "展示提交，然后在 `git push` 前再次询问",
+              "3": "使用你的设置和首次运行前清单创建草稿 PR"
+            },
+            "who": {
+              "0": "仓库管理员：添加 ARTIFACTORY_NPM_TOKEN secret，每个工具包工作流都需要它",
+              "1": "工具包的 Vault 负责人：将审查工作流绑定到机器人的 Vault 角色，所有仓库只需执行一次",
+              "2": "你：阅读工作流文件，检查固定的发布版本，然后将 PR 标记为就绪",
+              "3": "审查者：批准并合并它；安装器绝不会合并"
+            },
+            "whoHeading": "合并之前"
+          },
+          "instructions": "当 Droid 提议创建分支和提交时选择同意，推送前再确认一次。当 Droid 显示 PR 链接时，选择 {{confirmLabel}}。",
+          "summary": "先批准分支，再批准推送",
+          "tip": "该草稿 PR 只改动一个文件（即工作流），因此审查起来很快。它会保持草稿状态是有意为之：在管理员和工具包的 Vault 负责人完成各自的部分之前，工作流无法运行，下一步会介绍这些内容。",
+          "title": "开启草稿设置 PR"
+        },
+        "readReview": {
+          "example": {
+            "heading": "审查结果包含什么",
+            "parts": {
+              "0": "更改的简要摘要",
+              "1": "按严重程度（从严重到低）列出发现项，每项都标注文件和行号",
+              "2": "它审查的 HEAD 提交",
+              "3": "没有风格评论，也不会向 GitHub 发布任何内容"
+            },
+            "post": "想把它发布到 PR 上？让 Droid 发布即可。它会先显示确切的评论内容，只有在你同意后才会发布。"
+          },
+          "instructions": "Droid 完成后，将其审查结果与下面的卡片对照。阅读完发现项后，选择 {{confirmLabel}}。",
+          "summary": "检查发现项和提交",
+          "tip": "审查结果会注明它读取的提交，因此你可以判断之后是否有新的推送。发现项只是建议：改什么仍由人决定，该技能绝不会批准 PR。",
+          "title": "阅读审查结果"
+        },
+        "reviewLocally": {
+          "coachmark": {
+            "body": "使用此仓库中的 PR 编号。Droid 只会读取 PR，不会发布任何内容。",
+            "example": "审查此仓库中的 PR <number>。不要发布任何内容。",
+            "title": "请求审查"
+          },
+          "example": {
+            "heading": "请求审查",
+            "prompt": "审查此仓库中的 PR <number>。不要发布任何内容。",
+            "q": "解释 PR <number> 在 <file> 中做了哪些更改。",
+            "qHeading": "或提出一个问题",
+            "swap": "替换为你自己的内容：<number>，此仓库中的一个 PR。"
+          },
+          "instructions": "在 PR 所在的仓库中启动新会话，并让 Droid 按编号审查该 PR。发送消息后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法启动会话，请使用此选项"
+          },
+          "summary": "让 Droid 审查一个 PR",
+          "tip": "Droid 使用 gh 读取 PR、其 diff 和评论，记录 HEAD 提交，并只报告本次更改引入的问题，严重程度从严重到低。它会跳过风格问题，并且只有在你提出请求并批准确切文本后，才会发布到 PR。",
+          "title": "在你的机器上审查 PR"
+        },
+        "startInstaller": {
+          "coachmark": {
+            "body": "Droid 会先检查仓库和最新的工具包发布版本。",
+            "title": "发送 /install-pr-review"
+          },
+          "example": {
+            "args": "你可以预先传入答案，例如 `--focus security`。Droid 会将其视为建议答案，而不是指令。",
+            "heading": "发送安装器"
+          },
+          "instructions": "在同一会话中发送 /install-pr-review。发送后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法启动会话或已经运行过安装器，请使用此选项"
+          },
+          "summary": "在新会话中运行 /install-pr-review",
+          "tip": "安装器会固定使用包含审查工作流的最新工具包发布版本（例如 v0.7.1），绝不会使用分支。如果该发布版本不包含工作流，安装器会停止并说明原因，因为工具包的 Vault 角色只接受已发布的工作流。",
+          "title": "启动安装器"
+        },
+        "what": {
+          "example": {
+            "about": {
+              "0": "插件：sdlc",
+              "1": "技能：pr-review。用平实的语言提问即可；它没有命令",
+              "2": "安装器：/install-pr-review 写入 .github/workflows/peai-pr-review.yml，该文件会调用工具包的 pr-review.yml",
+              "3": "在 GitHub 上：提及 @fis-peai-engineering-bot"
+            },
+            "goal": "对 PR 进行建议性审查：以高置信度指出本次更改引入的正确性、安全性、可靠性和测试问题。它还会回答有关 PR 的问题。",
+            "goalHeading": "用途",
+            "heading": "AI PR 审查",
+            "installGoal": "安装器会将同样的建议性审查添加到 GitHub 仓库：它会检查仓库、询问五个问题、写入一个工作流文件，并开启一个草稿设置 PR。",
+            "never": {
+              "0": "不会批准、推送或合并：审查仅以评论形式呈现",
+              "1": "不会报告风格问题",
+              "2": "不会从你的机器向 PR 发布任何内容，除非你提出请求并批准文本",
+              "3": "不会向默认分支提交或强制推送",
+              "4": "不会在 Bitbucket 或 fork 上工作"
+            },
+            "neverHeading": "它绝不会做什么",
+            "when": "在批准 PR 之前，或希望解释其中某部分时使用。当你希望 fis-peai-engineering-bot 在 FIS 的私有或内部 GitHub 仓库中审查 PR 时，安装该机器人。",
+            "whenHeading": "使用场景"
+          },
+          "instructions": "阅读审查技能及其安装器的定义、用途以及绝不会做的事。准备好后，选择 {{confirmLabel}}。",
+          "summary": "了解 AI 审查会检查哪些内容",
+          "tip": "PR 中的所有内容都会被视为不可信，试图指示审查者的文本会被报告为安全问题。该工作流固定使用某个工具包发布版本，并从工具包的 Vault 中获取密钥，因此仓库中不保存任何 Factory 密钥；请使用此安装器，而不是 Factory 自带的安装器。",
+          "title": "AI PR 审查能做什么"
+        },
+        "whatBotIgnores": {
+          "instructions": "将每条评论与其结果匹配。所有答案都正确后，选择 {{confirmLabel}}。",
+          "quiz": {
+            "heading": "每条评论会得到什么回应",
+            "options": {
+              "answer": "回答问题",
+              "ignored": "不回复",
+              "review": "审查 PR"
+            },
+            "scenarios": {
+              "noAccess": {
+                "explanation": "机器人只回复具有写入权限的人，且仅限来自此仓库（而非 fork）的 PR。",
+                "prompt": "没有写入权限的人提及了机器人"
+              },
+              "question": {
+                "explanation": "不带 review 的提及属于提问，会在对话中回答。",
+                "prompt": "@fis-peai-engineering-bot 这个函数出错时返回什么？"
+              },
+              "review": {
+                "explanation": "带 review 的提及会启动审查，security 或 deep 可调整审查方式。",
+                "prompt": "有写入权限的同事评论：@fis-peai-engineering-bot review security"
+              }
+            }
+          },
+          "summary": "了解机器人何时保持沉默",
+          "tip": "这些规则可防止不应受信任的人和文本操纵机器人。PR 中的所有内容（包括 diff）都会被视为数据，试图指示机器人的文本会被报告为安全问题。",
+          "title": "机器人会回答什么"
+        },
+        "whoDoesWhat": {
+          "instructions": "将每项任务与负责的人匹配。所有答案都正确后，选择 {{confirmLabel}}。",
+          "quiz": {
+            "heading": "设置 PR 合并之前",
+            "options": {
+              "admin": "仓库管理员",
+              "reviewer": "审查者",
+              "vault": "工具包的 Vault 负责人",
+              "you": "你"
+            },
+            "scenarios": {
+              "merge": {
+                "explanation": "安装器绝不会合并。由具有审查权限的人完成合并。",
+                "prompt": "批准并合并设置 PR"
+              },
+              "ready": {
+                "explanation": "PR 由你创建，因此由你检查设置和固定的发布版本。",
+                "prompt": "阅读工作流文件并将草稿 PR 标记为就绪"
+              },
+              "secret": {
+                "explanation": "每个工具包工作流都需要它，由仓库管理员添加。",
+                "prompt": "向仓库添加 ARTIFACTORY_NPM_TOKEN secret"
+              },
+              "vault": {
+                "explanation": "所有仓库只需执行一次。在此之前，工作流无法运行。",
+                "prompt": "将审查工作流绑定到机器人的 Vault 角色"
+              }
+            }
+          },
+          "summary": "了解合并前各自的职责",
+          "tip": "请尽早联系仓库管理员和工具包的 Vault 负责人，因为如果缺少他们的工作，已合并的工作流每次运行都会失败。他们确认后，先通过 Actions 标签页手动运行一次，再依赖评论触发。",
+          "title": "由谁完成设置"
+        },
+        "wrap": {
+          "example": {
+            "heading": "回顾",
+            "recap": {
+              "0": "本地：让 Droid 审查 PR <number>；不会发布任何内容",
+              "1": "安装：/install-pr-review 写入 peai-pr-review.yml 并开启草稿设置 PR",
+              "2": "管理员和工具包的 Vault 负责人完成设置",
+              "3": "运行：通过 Actions 标签页，或使用 @fis-peai-engineering-bot review，并附加 security 或 deep",
+              "4": "提问：不带 review 提及机器人",
+              "5": "停止：gh workflow disable peai-pr-review.yml",
+              "6": "下一步：让仓库为智能体做好准备，并保持其 wiki 最新"
+            }
+          },
+          "instructions": "阅读回顾内容。完成后选择 {{finishLabel}}。",
+          "summary": "回顾该技能及后续步骤",
+          "tip": "本地审查无需工作流，也不会发布任何内容，因此可用于任何你有权读取的 PR。设置 PR 只包含一个小文件，因此一旦管理员和 Vault 的工作完成，审查起来很快；在此之前，它会保持草稿状态。",
+          "title": "总结"
+        }
+      },
+      "title": "设置并使用 AI PR 审查"
+    },
+    "fisAppsecFindFix": {
+      "completion": {
+        "headline": "你完成了一个发现项从报告到修复的全流程！",
+        "nextStep": "学习《在 GitHub 上自动化 SAST 修复》，让机器人在 GitHub 上完成这些工作。",
+        "recapItems": {
+          "0": "了解了 appsec 技能能做什么、绝不做什么",
+          "1": "扫描了一个文件夹并阅读了报告",
+          "2": "预览了发现项并登记到本地台账",
+          "3": "修复了一个 SAST 发现项并审查了修复",
+          "4": "验证了修复并运行了 seen-red 检查",
+          "5": "修复了一个存在漏洞的依赖",
+          "6": "了解了发现项和修复如何到达机器人"
+        }
+      },
+      "description": "在你的机器上扫描、登记并修复安全发现项（SAST 与依赖），每项修复都经过验证，且不发布任何内容",
+      "docsLink": {
+        "label": "Mythos 漏洞修复"
+      },
+      "headerTitle": "安全发现项",
+      "steps": {
+        "answers": {
+          "explore": {
+            "heading": "设置问题",
+            "items": {
+              "fleet": {
+                "description": "并行扫描的子智能体数量，可设为 1 到 6。推荐 3 个；设为 2 可让首次扫描保持较小规模。",
+                "label": "并行规模",
+                "tags": {
+                  "0": "2"
+                },
+                "tagsLabel": "稳妥答案"
+              },
+              "model": {
+                "description": "每个分片运行所用的模型。如果 Droid 无法为每个子智能体单独设置，它会询问：切换会话模型、保持现状，还是停止。",
+                "label": "模型",
+                "tags": {
+                  "0": "团队默认值"
+                },
+                "tagsLabel": "稳妥答案"
+              },
+              "outdir": {
+                "description": "位于克隆目录之外，且为新建或空文件夹。默认值为 ~/.appsec/scans/<repo>-<date>-<time>。",
+                "label": "报告文件夹",
+                "tags": {
+                  "0": "默认值"
+                },
+                "tagsLabel": "稳妥答案"
+              },
+              "passes": {
+                "description": "深度复查与交叉复查会再次检查，包括跨分片复查。两者默认开启。",
+                "label": "额外复查",
+                "tags": {
+                  "0": "全部保留"
+                },
+                "tagsLabel": "稳妥答案"
+              },
+              "scope": {
+                "description": "要扫描的路径前缀。若前缀未匹配任何文件，计划将停止。",
+                "label": "范围",
+                "tags": {
+                  "0": "命令中的文件夹"
+                },
+                "tagsLabel": "稳妥答案"
+              }
+            },
+            "noun": {
+              "one": "卡片",
+              "other": "卡片"
+            },
+            "placeholder": "打开卡片查看稳妥答案"
+          },
+          "instructions": "Droid 会逐个提出设置问题。打开每张卡片查看稳妥答案，出现分片表后选择 {{confirmLabel}}。",
+          "summary": "逐个回答 Droid 的问题",
+          "tip": "Droid 会原样展示规划器打印的分片表，然后一次发送一批子智能体。看起来像凭据的文件（如 .env 或私钥）会在本地检查，绝不会发送给子智能体。",
+          "title": "回答设置问题"
+        },
+        "fileLedger": {
+          "coachmark": {
+            "body": "--to ledger 会将发现项保留在你的克隆目录中。--push never 会让分支只留在本地。",
+            "title": "登记到台账"
+          },
+          "example": {
+            "file": "结果示例：`.appsec/sast/<fingerprint>.json`，内容为 `status: open`，位于诸如 `appsec-intake/sast-<date>` 的分支上。",
+            "heading": "示例提示词",
+            "othersHeading": "其他输入",
+            "steps": {
+              "0": "validate：校验每个发现项，并按严重级别统计",
+              "1": "ledger：写入 .appsec/sast/ 条目，供本地修复使用",
+              "2": "render 与 github：起草并提交 issue，仅在 GitHub 模式下可用"
+            },
+            "stepsHeading": "发布环节的作用",
+            "swap": "替换为你自己的：<report>、Mythos 文件夹和 --source-prefix。缺少前缀时 Droid 会主动询问，绝不猜测。"
+          },
+          "instructions": "发送下方的台账命令，并在 Droid 询问时确认台账。发送后该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法运行，或 Droid 已完成但该步骤仍未关闭，可使用此项"
+          },
+          "summary": "将发现项登记为台账条目",
+          "tip": "两个目标端都会按指纹去重，因此同一份报告登记两次不会产生任何变化。台账条目是 /triage-sast --ledger 的本地队列；使用 --push never 时，不会有任何内容离开你的机器。",
+          "title": "登记到台账"
+        },
+        "fixFinding": {
+          "coachmark": {
+            "body": "替换为你自己的文件、前缀和仓库。--push never 会让修复只保留在本地。",
+            "title": "修复一个发现项"
+          },
+          "example": {
+            "advancedHeading": "进阶：通过台账",
+            "asks": {
+              "0": "只询问一次是单个还是批量，除非你传入了 --mode",
+              "1": "如果仓库或源码前缀缺失，会向你询问",
+              "2": "遇到未知格式时：会给出数量、样例，并请求你确认"
+            },
+            "asksHeading": "Droid 会询问的内容",
+            "beginnerHeading": "入门：一个 Mythos 发现项",
+            "dailyHeading": "日常：整个 PATCHES 文件夹",
+            "heading": "示例提示词",
+            "phases": {
+              "0": "发现项接入",
+              "1": "代码调查与范围界定",
+              "2": "漏洞确认与根本原因",
+              "3": "修复策略与风险",
+              "4": "实施",
+              "5": "测试与验证",
+              "6": "修复记录",
+              "7": "安全、性能与交付"
+            },
+            "phasesHeading": "八个阶段",
+            "swap": "替换为你自己的：Mythos 路径、--source-prefix 和 my-org/my-service。CxOne 或 SARIF 报告可以替代 Mythos 文件。"
+          },
+          "instructions": "带上你自己的路径发送入门命令，然后回答 Droid 的问题。发送后该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法运行，或 Droid 已完成但该步骤仍未关闭，可使用此项"
+          },
+          "summary": "请 Droid 修复一个发现项",
+          "tip": "从单个发现项开始，便于跟进每个阶段；--push never 会让修复只保留在本地分支。回答完问题后，Droid 会依次完成全部八个阶段，期间无需逐阶段批准，并在编写修复之前确保每项结论都以冻结提交中的代码为依据。",
+          "title": "修复一个发现项"
+        },
+        "onGithub": {
+          "example": {
+            "example": "调用方示例（已精简）。/setup-ai-workflows 会生成真正的调用方（第 2 课《在 GitHub 上自动化 SAST 修复》）。",
+            "facts": {
+              "0": "触发条件：sast-issue-triage 标签、手动单个或批量运行、定时计划，以及在机器人 PR 上评论 @fis-peai-engineering-bot fix",
+              "1": "输出：包含修复和回归测试的 PR，或附带原因的 ai-eng-bot:needs-review",
+              "2": "在本地，你的 PR 会带上 security、ai-eng-bot 和 ai-eng-bot:local"
+            },
+            "heading": "peai-sast.yml 和 peai-sca.yml",
+            "sastHeading": "SAST：peai-sast.yml 调用 sast-remediation.yml",
+            "scaCaller": "/setup-ai-workflows 以同样方式生成 SCA 调用方。它会对处于开启状态且带有 sca-issue-triage 标签的 issue 调用工具包中的 sca-remediation.yml。",
+            "scaExample": "触发条件示例（已精简）：每周扫描、CxOne 导入之后，以及手动运行。",
+            "scaFacts": {
+              "0": "输出：标题为 fix(deps): upgrade <package> to <version> (#<issue>) 的 PR",
+              "1": "或在 issue 上标记 needs-manual-review，并附上失败的命令",
+              "2": "修订：在机器人的 PR 上评论 @fis-peai-engineering-bot fix"
+            },
+            "scaHeading": "SCA：peai-sca.yml 调用 sca-remediation.yml"
+          },
+          "instructions": "了解修复机器人如何在 GitHub Actions 中运行 /triage-sast 和 /triage-sca。完成后选择 {{confirmLabel}}。",
+          "summary": "了解机器人如何运行修复技能",
+          "tip": "在机器人打开 PR 之前，独立的验证器会针对暂存的确切修复内容运行你团队的检查；机器人绝不批准或合并。将 sca-issue-triage 标签与 SAST 区分开，让每个发现项都能到达可修复它的技能。",
+          "title": "GitHub 上的相同技能"
+        },
+        "preview": {
+          "coachmark": {
+            "body": "替换为你的报告，或扫描生成的 findings.json。--dry-run 不写入任何内容。",
+            "title": "预览发现项"
+          },
+          "example": {
+            "direct": "/ingest-sast 直接读取扫描生成的 findings.json，无需重新录入任何内容。",
+            "heading": "Droid 会询问并展示的内容",
+            "shows": {
+              "0": "目标：Git 检出目录、origin 主机、gh 登录状态以及所有修复调用方",
+              "1": "建议的目标端（GitHub 或台账），由你确认",
+              "2": "校验通过的发现项及其按严重级别的统计，以及每个被跳过发现项的原因",
+              "3": "遇到未知格式时：至少三个发现项的样例，并在发布前请求你确认"
+            },
+            "swap": "替换为你自己的：<report> 是你的报告路径，<report folder> 是扫描写入 findings.json 的位置。"
+          },
+          "instructions": "使用你的报告或扫描生成的 findings.json 发送下方预览命令。发送后该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法运行，或 Droid 已完成但该步骤仍未关闭，可使用此项"
+          },
+          "summary": "预览发现项而不写入任何内容",
+          "tip": "试运行会规范化并校验每个发现项，展示统计结果，但不会登记任何内容。请仔细查看被跳过的发现项：未知格式会交给模型提取，在发布任何内容之前始终会明确征求你的同意。",
+          "title": "预览发现项"
+        },
+        "report": {
+          "example": {
+            "files": "Droid 会将 `report.json` 和 `findings.json` 写入报告文件夹，仅你可读。",
+            "heading": "报告包含的内容",
+            "parts": {
+              "0": "状态：完整、部分完成（有分片从未被审阅）或已过期（扫描期间 HEAD 发生变化）",
+              "1": "覆盖率：每个分片、其使用的模型以及是否通过",
+              "2": "按严重级别列出的发现项，以及被校验器拒绝的发现项"
+            },
+            "plain": "使用 Opus 对 <checkout> 运行 AI 安全扫描，范围是整个仓库，报告写入默认位置。",
+            "plainHeading": "或者用自然语言表达",
+            "scripts": {
+              "0": "scan-fleet.mjs：规划、分批、记录、重试、合并",
+              "1": "publish-findings.mjs：校验、台账、渲染、github"
+            },
+            "scriptsHeading": "Droid 为你运行的脚本",
+            "scriptsNote": "你无需亲自运行这些脚本，Droid 会代你运行。",
+            "wholeHeading": "信任之后：扫描整个仓库",
+            "wholeNote": "不传 --scope 会扫描所有文件；建议使用 3 个子智能体并行。Droid 仍会逐个询问模型、并行规模和报告文件夹。",
+            "wrong": {
+              "0": "子智能体超时：Droid 将该分片记为失败，然后重试",
+              "1": "某个分片的每次尝试都失败：报告会标记为部分完成，并指出无人审阅的分片",
+              "2": "你在扫描中途关闭会话：之后的会话会从下一批次继续",
+              "3": "扫描运行期间有人提交了代码：报告会标记为已过期，需要重新扫描",
+              "4": "报告文件夹位于克隆目录内：会被拒绝，请在克隆目录之外选择一个全新或空的文件夹"
+            },
+            "wrongHeading": "如果出现问题"
+          },
+          "instructions": "Droid 完成后，将其摘要与下方卡片进行对照。了解扫描状态后，选择 {{confirmLabel}}。",
+          "summary": "阅读状态、覆盖率与发现项",
+          "tip": "部分完成或已过期的扫描会如实说明，而不是显得一切正常；每个操作都会读写运行文件夹，因此扫描不会因会话关闭而丢失。每个分片都是一次独立的子智能体运行，因此全仓库扫描的成本会高于你的首次扫描。",
+          "title": "阅读报告"
+        },
+        "result": {
+          "instructions": "将每种情况与 Droid 报告的状态对应起来。所有答案正确后，选择 {{confirmLabel}}。",
+          "quiz": {
+            "heading": "fix_status 和 test_status",
+            "scenarios": {
+              "blocked": {
+                "explanation": "属于 fix_status。最终仍由评审人决定。",
+                "prompt": "通往汇聚点的每条路径现在都已阻断"
+              },
+              "noEvidence": {
+                "explanation": "属于 fix_status。请人工查看。",
+                "prompt": "没有足够证据判断该修复"
+              },
+              "none": {
+                "explanation": "属于 test_status。未传 --run-tests 时的默认值。",
+                "prompt": "未运行任何测试"
+              },
+              "oneLeft": {
+                "explanation": "属于 fix_status。该修复需要再次修订。",
+                "prompt": "仍有一个调用方未经检查就到达汇聚点"
+              },
+              "red": {
+                "explanation": "属于 test_status，来自 --run-tests。",
+                "prompt": "新测试在没有修复时失败，有修复时通过"
+              }
+            }
+          },
+          "summary": "将每个状态与其含义对应起来",
+          "tip": "verification.json 会分别报告 fix_status 与 test_status，以及任何策略违规和该修复引入的新问题。从未失败过的测试证明力有限，因此 seen-red 是修复能获得的最强 test_status。",
+          "title": "阅读结果"
+        },
+        "reviewDependency": {
+          "coachmark": {
+            "body": "阅读构建文件与锁文件的改动。",
+            "title": "打开变更"
+          },
+          "example": {
+            "heading": "需要关注的内容",
+            "look": {
+              "0": "仅构建文件和锁文件发生了改动",
+              "1": "满足建议的最低版本",
+              "2": "未新增包仓库或包来源"
+            },
+            "manual": "覆盖（override）和级联移除始终会添加 needs-manual-review，由人工决定。",
+            "outcomes": {
+              "0": "已解决：锁文件中已包含修复版本，因此 Droid 会先检查这一点",
+              "1": "直接升级：你的构建文件直接列出该包，因此会升级到可修复该问题的最低版本",
+              "2": "移除未使用依赖：没有任何代码导入该包，移除即可解决问题",
+              "3": "范围内固定：父依赖的版本范围已允许修复版本，因此 Droid 将其固定",
+              "4": "升级父依赖：只有更新的父依赖才能引入修复版本，因此 Droid 会升级父依赖"
+            },
+            "outcomesHeading": "可能的结果"
+          },
+          "instructions": "打开变更，阅读构建文件与锁文件的改动。打开变更后，该步骤即完成。",
+          "skip": {
+            "note": "如果 Droid 未改动任何文件，或你已打开变更但该步骤仍未关闭，可使用此项"
+          },
+          "summary": "阅读构建文件与锁文件的改动",
+          "tip": "如果构建、测试或 linter 失败，Droid 会回滚，保持工作树干净，并在 issue 上标记 needs-manual-review，附上失败的命令。失败的修复绝不会变成拉取请求。",
+          "title": "审查依赖变更"
+        },
+        "reviewFix": {
+          "coachmark": {
+            "body": "阅读修复内容以及 Droid 添加的回归测试。",
+            "title": "打开变更"
+          },
+          "example": {
+            "heading": "需要关注的内容",
+            "look": {
+              "0": "针对根本原因的小幅修复，而非只处理表面症状",
+              "1": "在没有修复时会失败的回归测试",
+              "2": "仓库的必需检查已运行并通过",
+              "3": "没有抑制标记、被删除的代码路径或被弱化的测试"
+            },
+            "outcomes": {
+              "0": "无依据：被标记的行不在冻结提交的代码中，因此不做任何改动",
+              "1": "已修复：最近的提交已对输入做了转义，因此 Droid 会记录证据",
+              "2": "不可利用：该值从不来自用户或请求；由人工确认",
+              "3": "本地修复：小幅修复，外加回归测试",
+              "4": "需要人工评审：身份认证、授权、密码学、产品决策或不受支持的语言"
+            },
+            "outcomesHeading": "可能的结果",
+            "record": "无论结果如何，都会生成修复记录，即使没有代码改动。"
+          },
+          "instructions": "打开变更，阅读修复内容和新增的回归测试。打开变更后，该步骤即完成。",
+          "skip": {
+            "note": "如果 Droid 未改动任何文件，或你已打开变更但该步骤仍未关闭，可使用此项"
+          },
+          "summary": "阅读修复及其回归测试",
+          "tip": "Droid 会在独立的工作树分支上完成修复，并运行仓库的必需检查。如果有检查失败，不会发布任何内容，本地补丁会保留供你检查。",
+          "title": "审查修复"
+        },
+        "scaFix": {
+          "coachmark": {
+            "body": "替换为你的 issue URL。Droid 会读取该 issue 和依赖关系图。",
+            "example": "这是直接依赖还是传递依赖？https://github.com/my-org/my-service/issues/42",
+            "title": "询问某个 issue"
+          },
+          "example": {
+            "classify": "这是直接依赖还是传递依赖？https://github.com/my-org/my-service/issues/42",
+            "classifyHeading": "首先，判断依赖类型",
+            "dailyHeading": "日常：多个 issue",
+            "fixHeading": "然后修复一个 issue",
+            "heading": "示例提示词",
+            "ledgerHeading": "没有 SCA issue？使用台账",
+            "swap": "替换为你自己的：issue URL、issue 编号或 <report>。不传 --mode 时，Droid 会询问一次：逐个处理，还是按相关批次处理。"
+          },
+          "instructions": "先询问该依赖是直接依赖还是传递依赖，然后带上 issue 编号发送修复命令。发送第一条命令后，该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法运行，或 Droid 已完成但该步骤仍未关闭，可使用此项"
+          },
+          "summary": "判断依赖类型，然后修复一个 issue",
+          "tip": "直接依赖会在你自己的构建文件中升级或移除；传递依赖则需要固定版本、升级父依赖或使用覆盖。Droid 会先检查锁文件中是否已有修复版本（因为扫描器可能落后于代码），然后运行构建、测试和 linter。",
+          "title": "修复存在漏洞的依赖"
+        },
+        "start": {
+          "coachmark": {
+            "body": "替换为你的代码检出目录的绝对路径。Droid 绝不假设工作文件夹的位置。",
+            "title": "扫描一个文件夹"
+          },
+          "example": {
+            "heading": "示例提示词",
+            "swap": "替换为你自己的：<checkout> 是克隆目录的绝对路径，src/api 是其中的一个小文件夹。"
+          },
+          "instructions": "在你的仓库中新建会话，并带上代码检出目录的绝对路径发送下方命令。发送后该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法启动会话，可使用此项"
+          },
+          "summary": "使用两个子智能体扫描一个文件夹",
+          "tip": "限定范围并使用 2 个并行智能体，可以让首次扫描更短。Droid 会主动询问检出目录，而不是假设为当前文件夹；它会在规划前先确定模型，因此扫描绝不会在你未同意的模型上运行。",
+          "title": "开始小范围扫描"
+        },
+        "toBot": {
+          "example": {
+            "asks": {
+              "0": "在提交任何 issue 之前，始终先做试运行",
+              "1": "如果批量运行不会处理你的 issue：仍然提交、改用台账，或停止",
+              "2": "可能的重复项，在你逐一确认纳入之前会暂缓处理",
+              "3": "是否启动修复运行，因为运行会产生计费"
+            },
+            "asksHeading": "Droid 首先询问的内容",
+            "bot": "提交的 issue 会带有 sast-issue-triage 标签，因此你的 peai-sast.yml 调用方会在标签触发、手动运行或定时运行时对其执行 sast-remediation.yml。",
+            "botPrHeading": "亲自检查机器人的 PR",
+            "choose": {
+              "0": "台账：你使用 /triage-sast --ledger 自行修复",
+              "1": "GitHub：由修复机器人处理",
+              "2": "公开仓库：两者都不适用，因为两者都会拒绝公开仓库"
+            },
+            "chooseHeading": "选择哪一种？",
+            "heading": "GitHub 模式与机器人",
+            "issue": "示例 issue：`[SAST] SQL injection in src/orders/repo.ts`，带有 `sast-issue-triage` 和 `appsec-intake` 标签。",
+            "noWorkflow": "没有任何工作流会运行 /scan-sast、/verify-sast-fix 或接入命令。它们从你的 Droid 中运行，并为修复工作流提供输入。",
+            "offer": "扫描结束后，Droid 会提供带上其发现项文件的 /ingest-sast，但绝不会未经询问就运行。",
+            "verifier": "在机器人中，独立的验证器会在任何 PR 打开之前，于以摘要固定的镜像中运行你的 SAST_VERIFICATION_POLICY 检查。其结果就是该次运行的验证产物。"
+          },
+          "instructions": "了解你的发现项如何到达修复机器人。你现在无需提交任何内容。完成后选择 {{confirmLabel}}。",
+          "summary": "了解发现项如何到达机器人",
+          "tip": "只有当调用方配置了标签触发时，提交 issue 才会启动机器人；否则会由手动运行或定时计划接手，并且 Droid 绝不会未经你同意就启动计费运行。机器人的验证器展示你的检查是否通过，而 /verify-sast-fix 则判断该修复是否阻断了通往汇聚点的每条路径。",
+          "title": "从你的机器到机器人"
+        },
+        "verify": {
+          "coachmark": {
+            "body": "替换为你的修复分支、其基础分支和代码检出目录。此时不会运行任何测试。",
+            "title": "验证修复"
+          },
+          "example": {
+            "asks": {
+              "0": "如果你没有指明发现项：会询问台账指纹、issue 编号或发现项文件",
+              "1": "如果修复没有 sast-triage 归属信息，会询问一次是否继续"
+            },
+            "asksHeading": "Droid 会询问的内容",
+            "heading": "示例提示词",
+            "prHeading": "已有 PR？",
+            "redAsks": {
+              "0": "它会先展示测试命令",
+              "1": "它会提示测试将以你的身份在一次性克隆中运行",
+              "2": "它会在安装依赖之前询问",
+              "3": "它会在恢复包仓库凭据之前询问"
+            },
+            "redHeading": "然后证明测试先失败",
+            "redNote": "在同一条命令中添加 --run-tests。例如：",
+            "statusHeading": "verification.json 报告的内容",
+            "statuses": {
+              "0": "fix_status 为 addressed：通往汇聚点的每条路径都已阻断，最终仍由评审人决定",
+              "1": "not-addressed：仍有一个调用方未经检查就到达汇聚点，因此该修复需要再次修订",
+              "2": "cannot-assess：没有足够证据判断该修复，请人工查看",
+              "3": "test_status 为 seen-red：新测试在没有修复时失败，有修复时通过",
+              "4": "unrun：未运行任何测试，未传 --run-tests 时的默认值"
+            },
+            "swap": "替换为你自己的：两个分支、作为克隆路径的 <checkout>，以及作为 PR 编号的 1234。"
+          },
+          "instructions": "带上修复分支发送下方命令，然后添加 --run-tests。发送第一条命令后，该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法运行，或 Droid 已完成但该步骤仍未关闭，可使用此项"
+          },
+          "summary": "获得独立复核，再运行 seen-red",
+          "tip": "验证会冻结 base 与 head 提交，仅使用 git show、git grep 和 git diff 读取代码，绝不在你的克隆目录中执行 checkout、reset 或 stash。它只会在你的克隆目录之外写入 verification.json；seen-red 检查会在临时克隆中分别在没有修复和有修复的情况下运行新测试。",
+          "title": "验证修复"
+        },
+        "what": {
+          "example": {
+            "about": {
+              "0": "插件：appsec，来自 FIS 工具包",
+              "1": "接入：appsec-intake，包含 /ingest-sast、/ingest-sca 和 /ingest-mythos-report",
+              "2": "扫描与验证：sast-review，包含 /scan-sast 和 /verify-sast-fix",
+              "3": "修复：sast-triage 提供 /triage-sast，sca-triage 提供 /triage-sca"
+            },
+            "goalHeading": "它们的用途",
+            "heading": "appsec 技能",
+            "inputs": {
+              "0": "CxOne JSON 导出文件。CxOne SARIF 的细节太少，无法进行分诊。",
+              "1": "SARIF 2.1.0、SCA CSV 或 Mythos 结果",
+              "2": "来自 /scan-sast 的 findings.json，或 Jira 键、URL 或 JQL 查询"
+            },
+            "inputsHeading": "它们接受的输入",
+            "jobs": {
+              "0": "appsec-intake 将扫描器输出转换为经过校验、带指纹的发现项，并让每项只登记一次：为机器人创建 GitHub issue，或写入本地台账文件",
+              "1": "/scan-sast 运行只读的 AI 扫描，将代码拆分为多个分片，由一组并行子智能体在你选择的模型上审阅，并如实报告覆盖率",
+              "2": "/triage-sast 将 SAST 发现项推进为可评审的修复（含回归测试），或形成有证据支撑的决策供人工定夺",
+              "3": "/verify-sast-fix 对一项修复给出独立、只读的第二意见，让评审人在批准前掌握证据",
+              "4": "/triage-sca 将依赖漏洞 issue 推进为经验证的升级，或形成标注清晰的决策供人工定夺"
+            },
+            "langs": "/triage-sast 支持 JS/TS、Java/Kotlin、.NET、Python、Go、Ruby、PHP、C/C++、Rust、Swift、Scala 和 Groovy。/triage-sca 支持 npm、Yarn、pnpm、Maven、Gradle 和 NuGet。",
+            "never": {
+              "0": "接入环节绝不修复、关闭或忽略发现项，也不更改扫描器的判定",
+              "1": "扫描与验证绝不修改你的克隆目录，也不发布任何内容",
+              "2": "/triage-sast 绝不抑制发现项、删除被标记的代码路径或弱化测试",
+              "3": "/triage-sca 绝不会直接采用最新版本；如果构建、测试或 linter 失败，会回滚"
+            },
+            "neverHeading": "它们绝不做什么",
+            "when": "你已有 SAST、SCA 或 Mythos 报告，或 Jira 工单，并且希望修复其中的发现项。还没有报告，或即将发布？先运行一次扫描，获得基于模型的检查结果。",
+            "whenHeading": "何时使用"
+          },
+          "instructions": "了解每个技能是什么、用途是什么，以及它绝不做什么。准备好试用时，选择 {{confirmLabel}}。",
+          "summary": "了解每个 appsec 技能的用途",
+          "tip": "每个技能只做一件事，并通过你可阅读的文件交接：台账条目、报告文件夹、修复分支和验证文件。在 /triage-sast 将其落实到代码之前，发现项只是一个待证实的说法，最终始终由人工决定。",
+          "title": "appsec 技能的作用"
+        },
+        "wrap": {
+          "example": {
+            "heading": "回顾",
+            "recap": {
+              "0": "扫描：/scan-sast <checkout> --scope <folder> --fleet 2，然后扫描整个仓库",
+              "1": "登记：/ingest-sast <report> --dry-run，然后 --to ledger --push never",
+              "2": "修复：/triage-sast <finding> --mode single --push never",
+              "3": "验证：/verify-sast-fix，然后加 --run-tests 以验证 seen-red",
+              "4": "依赖：/triage-sca <issue> --mode single --push never",
+              "5": "自动化：--to github 为机器人提供输入；peai-sast.yml 和 peai-sca.yml 运行相同的技能",
+              "6": "下一步：在 GitHub 上自动化 SAST 修复"
+            }
+          },
+          "instructions": "阅读回顾内容。完成后选择 {{finishLabel}}。",
+          "summary": "回顾各项技能及后续步骤",
+          "tip": "在 /triage-sast 将发现项落实到代码之前，每项发现都只是一个待证实的说法；验证是为评审人提供证据，而非替代评审人。如有疑问，用 --dry-run 预览，并通过台账和 --push never 让工作在本地完成。",
+          "title": "总结"
+        }
+      },
+      "title": "发现、登记并修复安全发现项"
+    },
+    "fisSastAutomation": {
+      "completion": {
+        "headline": "你的发现项已修复并合并！",
+        "nextStep": "你已完成 AppSec 系列课程。请用 /toolkit-feedback 告诉工具包团队你的体验。",
+        "recapItems": {
+          "0": "了解了修复机器人的功能与所需条件",
+          "1": "生成了 peai-sast.yml 并打开了设置 PR",
+          "2": "了解了由谁完成设置",
+          "3": "提交了工单，并在其中一个上运行了机器人",
+          "4": "检查了结果并请求了一次修订",
+          "5": "了解了运行如何启动以及如何停止",
+          "6": "合并了修复并关闭了工单"
+        }
+      },
+      "description": "设置 SAST 修复机器人，为它提交工单，在一个发现项上运行它，引导其 PR，并学会关闭它",
+      "docsLink": {
+        "label": "在 GitHub 上自动化修复"
+      },
+      "headerTitle": "SAST 自动化",
+      "steps": {
+        "before": {
+          "example": {
+            "heading": "机器人需要什么",
+            "later": "本课后续的机器人运行同样要求设置 PR 已合并并获接受。",
+            "lead": {
+              "0": "范围：本仓库中的 SAST 和 Mythos 修复",
+              "1": "触发器：先仅使用手动运行",
+              "2": "工单作者：批量运行是否接受人员提交的工单（accept_writer_issues）",
+              "3": "停止权限：谁可以停用工作流并取消运行"
+            },
+            "leadHeading": "与技术负责人达成一致",
+            "needs": {
+              "0": "FIS 企业内的私有或内部仓库",
+              "1": "运行器标签 ubuntu-latest-2-8，已列入 IP 允许列表，并具备 Docker",
+              "2": "已安装 fis-peai-engineering-bot App，且其密钥位于工具包的 Vault 中",
+              "3": "技术负责人已批准的推理预算"
+            },
+            "pool": "共享的 ubuntu-latest 运行器池不在允许列表中，且自托管运行器会被拒绝。"
+          },
+          "instructions": "阅读机器人所需的条件。当你的仓库已具备这些条件，或你知道该找谁时，选择 {{confirmLabel}}。",
+          "summary": "先确认机器人需要什么",
+          "tip": "每次运行都会消耗计费算力，所以请现在就与技术负责人商定预算和这些选择，因为已合并的调用工作流可以立即运行。若有任何缺失，运行会尽早失败：运行器标签不在允许列表中时，checkout 会以 403 失败。",
+          "title": "开始之前"
+        },
+        "check": {
+          "coachmark": {
+            "body": "只读：Droid 只查看，不做任何更改。",
+            "example": "显示最近一次 peai-sast.yml 运行、其验证产物，以及工单 42 的处理结果。只读。",
+            "title": "让 Droid 读取运行结果"
+          },
+          "example": {
+            "good": {
+              "0": "每个作业均通过，且产物中显示 \"verification\": \"passed\"",
+              "1": "工单上有一条认领评论，随后是 PR 链接或 ai-eng-bot:needs-review",
+              "2": "一个小型机器人 PR，包含回归测试，由你自己的 CI 构建"
+            },
+            "heading": "一次正常的运行",
+            "labels": {
+              "0": "ai-eng-bot:in-progress：已认领，认领有效期为 12 小时",
+              "1": "ai-eng-bot:fix-on-branch：修复已推送，随后会创建 PR",
+              "2": "ai-eng-bot:needs-review：由人员接手，并注明原因"
+            },
+            "labelsHeading": "工单上的标签"
+          },
+          "instructions": "发送下面的请求。Droid 会读取运行和工单，不做任何更改。发送后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法运行，或 Droid 已完成但步骤仍未关闭，请使用此选项"
+          },
+          "summary": "让 Droid 读取运行结果",
+          "tip": "模型自称测试通过，这一点永远不会被采信：验证器会在无网络、无凭据的条件下，仅针对已暂存的修复运行你团队的检查。任何检查失败，机器人就不会创建 PR，并在工单上说明原因。",
+          "title": "检查结果"
+        },
+        "file": {
+          "coachmark": {
+            "body": "替换为你的报告和仓库。--dry-run 不会提交任何内容。",
+            "title": "预览工单"
+          },
+          "example": {
+            "fileHeading": "准备就绪后提交",
+            "fileNote": "若要提交，请回答 yes。拒绝批量运行；下一步只运行一个工单。如果调用工作流配置了定时，Droid 的摘要会说明下一次运行。",
+            "heading": "先预览，再提交",
+            "labels": "每个工单都会获得 sast-issue-triage 和 appsec-intake 标签，以及一个隐藏指纹，因此重复提交不会带来任何变化。",
+            "shows": {
+              "0": "每个工单的标题。例如：[SAST] SQL injection in src/orders/repo.ts",
+              "1": "按严重程度统计的数量，以及被跳过的发现项及其原因",
+              "2": "可能重复的项，会暂缓处理，等你决定",
+              "3": "如果批量运行不会接受你提交的工单，会给出警告"
+            },
+            "swap": "替换为你自己的内容：<report> 和 my-org/my-service。"
+          },
+          "instructions": "发送下面的预览命令。当设置被接受且你准备就绪后，去掉 --dry-run 再发送一次。发送第一条命令后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法运行，或 Droid 已完成但步骤仍未关闭，请使用此选项"
+          },
+          "summary": "先预览工单，准备好后再提交",
+          "tip": "GitHub 模式始终先预览；如果调用工作流只接受其导入账号创建的工单，Droid 会提供三种选择：仍然提交、改用台账，或停止。提交之后由 GitHub 接管：开启标签触发器后，每个提交的工单都可能启动一次计费运行。",
+          "title": "预览后提交工单"
+        },
+        "generate": {
+          "coachmark": {
+            "body": "替换为你的仓库。指明自动化、harness 和触发器。",
+            "title": "请求 SAST 调用工作流"
+          },
+          "example": {
+            "asks": {
+              "0": "任何缺失项：自动化、harness、触发器或运行器",
+              "1": "方案：调用工作流、AGENTS.md 章节和检查清单",
+              "2": "它固定的发布标签。请保留：Vault 会拒绝分支和提交"
+            },
+            "asksHeading": "Droid 会询问和展示什么",
+            "heading": "示例提示词",
+            "swap": "替换为你自己的内容：my-org/my-service。你也可以指明基础分支、App、触发器和运行器。"
+          },
+          "instructions": "在你的仓库中新建会话，并发送下面的请求。发送后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法启动会话，请使用此选项"
+          },
+          "summary": "让 Droid 生成 SAST 调用工作流",
+          "tip": "Droid 使用工具包的工作流构建器，因此方案与构建器的生成结果一致。从手动运行开始，意味着在有人主动启动之前，不会有任何运行或费用产生。",
+          "title": "生成调用工作流"
+        },
+        "off": {
+          "example": {
+            "heading": "停止机器人",
+            "steps": {
+              "0": "停用不会取消已在进行的运行，因此还需要手动取消它们",
+              "1": "从运行已结束的工单上移除 ai-eng-bot:in-progress",
+              "2": "可选：删除 SAST_VERIFICATION_POLICY，使任何内容都无法发布"
+            },
+            "switch": "没有开/关变量：停用工作流就是开关，而且它不会取消已在进行的运行。"
+          },
+          "instructions": "阅读下面的步骤。了解如何安全停止机器人后，选择 {{confirmLabel}}。",
+          "summary": "了解如何安全停止机器人",
+          "tip": "调用工作流一经合并就会运行，并且没有单独的开/关变量，因此停用工作流就是开关。删除策略变量还会让发布一律被拒绝；你也可以关闭机器人的任何未合并 PR。",
+          "title": "关闭机器人"
+        },
+        "owners": {
+          "instructions": "将每项任务与负责的人匹配。所有答案都正确后，选择 {{confirmLabel}}。",
+          "quiz": {
+            "heading": "首次运行之前",
+            "options": {
+              "admin": "仓库管理员",
+              "image": "镜像流水线负责人",
+              "lead": "技术负责人",
+              "org": "组织管理员",
+              "you": "你"
+            },
+            "scenarios": {
+              "agents": {
+                "explanation": "它已包含在你的设置 PR 中。",
+                "prompt": "在 AGENTS.md 中添加“自动修复”章节"
+              },
+              "image": {
+                "explanation": "验证器会在此按摘要固定的镜像中运行你的检查。",
+                "prompt": "发布验证器镜像并按摘要固定"
+              },
+              "policy": {
+                "explanation": "它列出验证器运行的检查。在设置之前，机器人无法创建 PR。",
+                "prompt": "设置 SAST_VERIFICATION_POLICY 变量"
+              },
+              "runner": {
+                "explanation": "在此之前，checkout 会以 403 失败。",
+                "prompt": "将运行器标签加入 IP 允许列表"
+              },
+              "triggers": {
+                "explanation": "标签和定时触发器会启动计费运行。",
+                "prompt": "批准自动触发器"
+              }
+            }
+          },
+          "summary": "将每项任务与负责的人匹配",
+          "tip": "这部分需要数天时间和多位人员。在设置策略变量之前，发布一律被拒绝：机器人可以运行，但无法创建 PR。",
+          "title": "由谁完成设置"
+        },
+        "proposal": {
+          "example": {
+            "agents": "为你的 `AGENTS.md` 添加“自动修复”章节。",
+            "agentsHeading": "2. AGENTS.md",
+            "callerHeading": "1. 调用工作流 peai-sast.yml（示例，已精简）",
+            "checklist": {
+              "0": "SAST_VERIFICATION_POLICY：由仓库管理员设置的仓库变量。它列出验证器在按摘要固定的镜像中针对每项修复运行的检查命令",
+              "1": "在设置策略之前，机器人可以运行，但无法创建 PR",
+              "2": "验证器镜像的发布与摘要固定：镜像流水线负责人",
+              "3": "将运行器标签加入 IP 允许列表：组织管理员",
+              "4": "自动触发器：由技术负责人批准，因为标签和定时触发器会启动计费运行",
+              "5": "ARTIFACTORY_NPM_TOKEN secret：仓库管理员"
+            },
+            "checklistHeading": "3. 首次运行之前",
+            "checklistNote": "Droid 的检查清单会逐项列出这些内容。你的 PR 只包含调用工作流和 AGENTS.md 章节，由你提交。",
+            "heading": "方案"
+          },
+          "instructions": "将 Droid 的方案与卡片对照，然后在新分支上提交文件并打开一个设置 PR。PR 打开后，选择 {{confirmLabel}}。",
+          "summary": "检查方案并打开一个 PR",
+          "tip": "/setup-ai-workflows 绝不会替你提交，因此设置 PR 由你负责。在管理员完成工作之前，请保持其未合并，因为已合并的调用工作流可以立即运行。",
+          "title": "阅读方案并打开 PR"
+        },
+        "revise": {
+          "example": {
+            "heading": "请求修订",
+            "who": "你需要写入权限。修订会落在同一个 PR 上，并再次经过验证器。"
+          },
+          "instructions": "在机器人的 PR 上发布下面的评论，说明要更改什么。收到新的修订后，或要进入下一步时，选择 {{confirmLabel}}。",
+          "summary": "让机器人修改其 PR",
+          "tip": "把机器人的 PR 当作同事的 PR：先审查，然后每条评论提出一项明确的更改。修订会经过同一个验证器，而机器人绝不会批准或合并，因此始终由人决定。",
+          "title": "请求修订"
+        },
+        "run": {
+          "example": {
+            "actions": "或在仓库的 Actions 标签页中使用 Run workflow。",
+            "heading": "启动一次运行",
+            "jobs": "作业：initialize、preflight、authorize、single-freeze、single-claim、single-compute、single-publish、single-release。",
+            "label": "若已开启标签触发器，提交工单时就已经启动了一次运行。",
+            "watch": "观察工单：最先出现的是认领评论和 ai-eng-bot:in-progress。"
+          },
+          "instructions": "可选：用未关闭的工单编号运行下面的命令。它会启动一次计费运行。运行出现后，或要继续阅读时，选择 {{confirmLabel}}。",
+          "summary": "在一个工单上启动机器人",
+          "tip": "单次运行是最安全的首次运行：一个工单、一次认领，最多一个 PR，并且会消耗计费算力，因此请控制在技术负责人的预算内。机器人会认领工单、冻结基础提交，并在网络允许列表内的沙箱中运行你在本地用过的同一个 sast-triage 技能。",
+          "title": "准备就绪后运行一个发现项"
+        },
+        "triggers": {
+          "explore": {
+            "heading": "触发器",
+            "items": {
+              "label": {
+                "description": "添加 sast-issue-triage 标签后，机器人会自动针对该工单运行。添加标签的人需要写入权限。",
+                "label": "受理标签",
+                "tags": {
+                  "0": "需主动开启"
+                },
+                "tagsLabel": "状态"
+              },
+              "manual": {
+                "description": "gh workflow run，或 Actions 中的 Run workflow。单次模式处理一个工单，也可批量处理。",
+                "label": "手动运行",
+                "tags": {
+                  "0": "始终可用"
+                },
+                "tagsLabel": "状态"
+              },
+              "revision": {
+                "description": "在机器人的 PR 上评论 @fis-peai-engineering-bot fix，即会启动该 PR 的修订。",
+                "label": "修订评论",
+                "tags": {
+                  "0": "需主动开启"
+                },
+                "tagsLabel": "状态"
+              },
+              "schedule": {
+                "description": "每天或每周巡检一次，批量运行未关闭的工单。",
+                "label": "定时运行",
+                "tags": {
+                  "0": "需主动开启"
+                },
+                "tagsLabel": "状态"
+              }
+            },
+            "noun": {
+              "one": "卡片",
+              "other": "卡片"
+            },
+            "placeholder": "打开卡片以查看触发器"
+          },
+          "instructions": "打开每张卡片，查看运行可以如何启动。四张卡片全部打开后，选择 {{confirmLabel}}。",
+          "summary": "了解运行的四种启动方式",
+          "tip": "除手动运行外，每种触发器都需要主动开启，并获得技术负责人的预算批准。除非调用工作流接受写入者提交的工单，否则批量运行只接受导入账号的工单。",
+          "title": "运行如何启动"
+        },
+        "what": {
+          "example": {
+            "about": {
+              "0": "设置：sdlc 插件中的 /setup-ai-workflows。生成 peai-sast.yml，以及用于依赖项的 peai-sca.yml",
+              "1": "工具包工作流：sast-remediation.yml，它会运行 sast-triage 技能",
+              "2": "机器人账号：fis-peai-engineering-bot",
+              "3": "提交：appsec 插件中的 /ingest-sast"
+            },
+            "goal": "它处理处于开启状态且带有 sast-issue-triage 标签的工单：逐个认领，在沙箱中修复，由独立验证器运行你的检查，只有检查通过才创建 PR。",
+            "goalHeading": "用途",
+            "heading": "SAST 修复机器人",
+            "never": {
+              "0": "/setup-ai-workflows 绝不索取令牌、设置 secret、启动运行、向你的基础分支提交或合并",
+              "1": "机器人绝不批准或合并；始终由人审查"
+            },
+            "neverHeading": "它们绝不会做什么",
+            "path": {
+              "0": "/ingest-sast 提交一个 sast-issue-triage 工单",
+              "1": "peai-sast.yml 在其上运行机器人",
+              "2": "验证器对修复运行你的检查",
+              "3": "机器人创建 PR，或将工单交给人员处理",
+              "4": "你请求修订，然后由审查者合并"
+            },
+            "pathHeading": "完整流程",
+            "setupGoal": "/setup-ai-workflows 会引导你使用工具包的工作流构建器，并给出一个调用工作流、一个 AGENTS.md 章节和一份检查清单。",
+            "when": "你的团队已同意在一个仓库上自动执行修复，并且发现项已作为工单提交。",
+            "whenHeading": "使用场景"
+          },
+          "instructions": "阅读修复机器人及其设置命令的定义、用途与绝不会做的事。准备好后，选择 {{confirmLabel}}。",
+          "summary": "了解机器人和其设置的作用",
+          "tip": "调用工作流是你仓库中的一个简短文件，它按固定的发布版本调用工具包的 sast-remediation.yml，而模型和机器人密钥始终保存在工具包的 Vault 中。机器人运行的 sast-triage 技能与你在第 1 课中使用的相同，因此它创建的 PR 与你自己的相似。",
+          "title": "修复机器人的功能"
+        },
+        "wrap": {
+          "example": {
+            "heading": "最后一次交接",
+            "localHeading": "还没有机器人？在本地完成",
+            "merge": "合并机器人的 PR 会关闭对应工单。机器人绝不批准或合并。",
+            "recap": {
+              "0": "设置：/setup-ai-workflows 生成 peai-sast.yml；由管理员和技术负责人完成后续设置",
+              "1": "提交：先执行 --dry-run，再运行 /ingest-sast <report> --to github",
+              "2": "运行：通过标签或 gh workflow run 在工单上运行 peai-sast.yml",
+              "3": "引导：在机器人的 PR 上评论 @fis-peai-engineering-bot fix",
+              "4": "停止：执行 gh workflow disable，然后取消进行中的运行"
+            }
+          },
+          "instructions": "请具有审查权限的人批准并合并 PR，然后阅读回顾内容。完成后选择 {{finishLabel}}。",
+          "summary": "合并修复并回顾流程",
+          "tip": "你跟随一个发现项走完了每一次交接：报告、工单、机器人运行、验证器、PR、修订与合并。在设置 SAST_VERIFICATION_POLICY 之前，发布一律被拒绝；已取消运行的认领会在 12 小时后失效。",
+          "title": "合并并收尾"
+        }
+      },
+      "title": "在 GitHub 上自动化 SAST 修复"
+    },
+    "fisToolkit": {
+      "confirmLabel": "知道了"
+    },
+    "fisToolkitExplore": {
+      "completion": {
+        "headline": "你已经熟悉工具包了！",
+        "nextStep": "只要工具包的某个服务无法使用，就运行 /connect-fis-tools。",
+        "recapItems": {
+          "0": "找到了工具包起始页和 Getting Started",
+          "1": "了解了关键命令和技能的作用",
+          "2": "询问了 Droid 可以使用哪些工具包技能",
+          "3": "让 Droid 搜索了工具包的 Confluence 页面",
+          "4": "用只读提示词读取了一个 Jira 工单"
+        }
+      },
+      "description": "找到工具包 Wiki，认识其关键命令和技能，并让 Droid 搜索 Confluence、读取 Jira 工单",
+      "docsLink": {
+        "label": "工具包起始页"
+      },
+      "steps": {
+        "askCapabilities": {
+          "coachmark": {
+            "body": "发送此提示词，查看本会话中已加载的技能和命令。",
+            "example": "你在这里可以使用哪些工具包技能和斜杠命令？它们各自的用途是什么？",
+            "title": "询问 Droid 可以使用什么"
+          },
+          "instructions": "新建会话，询问 Droid 可以使用哪些工具包技能和命令。发送消息后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法启动会话，请使用此选项"
+          },
+          "summary": "询问 Droid 具备哪些工具包技能",
+          "tip": "询问是查看本会话已加载内容最快的方式。你也可以输入 /skills 浏览这些技能；列表中应同时出现 agentic-repo-init 和 spec-driven-development。",
+          "title": "询问 Droid 可以使用什么"
+        },
+        "exploreCommands": {
+          "coachmark": {
+            "body": "输入卡片中的命令，然后按 Enter。/connect-fis-tools 是安全的首次尝试。",
+            "title": "试用命令"
+          },
+          "explore": {
+            "exampleLabel": "示例",
+            "heading": "日常工具包",
+            "items": {
+              "bitbucketAha": {
+                "description": "在 bitbucket.fis.dev 上处理代码，并读取 fisam.aha.io 上的 Aha! 计划。",
+                "example": "我在 Bitbucket 中是谁？",
+                "label": "bitbucket-dc 和 aha-query"
+              },
+              "confluence": {
+                "description": "在 wiki.fisglobal.com 上查找和读取页面。",
+                "example": "我在 Confluence 中是谁？",
+                "label": "confluence-dc"
+              },
+              "connect": {
+                "description": "检查你的设置，引导完成各项登录，并从每个服务读取一条记录。",
+                "example": "只要某个服务无法使用，就再次运行它。",
+                "label": "/connect-fis-tools"
+              },
+              "jira": {
+                "description": "在 jira.fis.dev 上读取和更新 Jira。任何写入前都会先确认。",
+                "example": "显示 Jira 工单 ABC-1",
+                "label": "jira-dc"
+              },
+              "sdd": {
+                "description": "六阶段的规格驱动开发，从 Jira Epic 或 PRD 到可运行的代码。",
+                "example": "/sdd-specify from Jira epic <EPIC-KEY>",
+                "label": "/sdd-specify to /sdd-implement"
+              },
+              "unitTests": {
+                "description": "根据用户故事的验收标准编写测试，然后让它们接受审查。",
+                "example": "/write-unit-tests <KEY-123>",
+                "label": "/write-unit-tests"
+              }
+            },
+            "noun": {
+              "one": "卡片",
+              "other": "卡片"
+            },
+            "placeholder": "打开卡片以查看其功能和使用场景。"
+          },
+          "instructions": "打开下方每张卡片，查看其功能和使用场景，然后选择 {{confirmLabel}}。",
+          "summary": "了解日常命令和技能的作用",
+          "tip": "当请求与技能用途匹配时，技能会自动加载，因此很少需要点名某个技能。斜杠命令会启动特定的工作流；在输入框中输入 / 会列出你拥有的全部命令。",
+          "title": "认识关键命令和技能"
+        },
+        "openWiki": {
+          "example": {
+            "gettingStarted": "Getting Started：",
+            "heading": "文档在哪里",
+            "repository": "如果有企业 GitHub 访问权限，同样的文档也存放在仓库中：`{{url}}`",
+            "startPage": "起始页："
+          },
+          "instructions": "通过本面板顶部的文档链接打开工具包起始页。将起始页和 Getting Started 加入书签，然后选择 {{confirmLabel}}。",
+          "summary": "收藏起始页和 Getting Started",
+          "tip": "Confluence 页面面向 FIS 的所有人编写，包括没有企业 GitHub 访问权限的人员。这些页面从工具包仓库发布，请留言评论，而不要直接编辑。",
+          "title": "打开工具包 Wiki"
+        },
+        "readJiraIssue": {
+          "coachmark": {
+            "body": "将工单键换成一个你熟悉的工单。Droid 只会读取。",
+            "example": "显示 Jira 工单 <KEY-123>：仅显示摘要和状态。不要更改任何内容。",
+            "title": "读取一个工单"
+          },
+          "instructions": "按工单键，让 Droid 查询一个你熟悉的 Jira 工单的摘要和状态。Droid 读取 Jira 后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法启动会话，或 Droid 已显示工单但步骤仍未关闭，请使用此选项"
+          },
+          "summary": "查询一个工单的摘要和状态",
+          "tip": "用工单键指定工单，例如 ABC-123，或粘贴其 jira.fis.dev 链接。出现 403 表示你的账号无法查看该项目，这属于 Jira 权限，而不是 Droid 的问题。",
+          "title": "读取 Jira 工单"
+        },
+        "searchConfluence": {
+          "coachmark": {
+            "body": "只要求标题和链接。Droid 会在你可查看的页面中搜索。",
+            "example": "在 ENTPP 空间中查找工具包的 Confluence 页面，并列出标题和链接。只读。",
+            "title": "搜索 Confluence"
+          },
+          "instructions": "让 Droid 在 ENTPP 空间中查找工具包的页面。Droid 搜索或读取 Confluence 后，此步骤即完成。",
+          "skip": {
+            "note": "如果暂时无法启动会话，或 Droid 已搜索但步骤仍未关闭，请使用此选项"
+          },
+          "summary": "让 Droid 在 Confluence 中搜索工具包页面",
+          "tip": "Droid 通过工具包的 Confluence 服务读取内容，因此能看到你可查看的页面。如果它尝试抓取 wiki.fisglobal.com，只会得到登录页；请让它改用 Confluence。",
+          "title": "搜索工具包的 Confluence 页面"
+        }
+      },
+      "title": "探索 FIS 工具包"
+    },
+    "fisToolkitFeedback": {
+      "completion": {
+        "headline": "你已经清楚每份报告该提交到哪里！",
+        "nextStep": "下次工具包技能出现意外表现时，运行 /toolkit-feedback。",
+        "recapItems": {
+          "0": "将问题归类为工具包、Factory 和访问权限问题",
+          "1": "了解了 /toolkit-feedback 如何起草、脱敏并等待批准",
+          "2": "找到了没有 GitHub 访问权限时提交反馈的位置",
+          "3": "学会了只在无受限数据的会话中使用 /bug"
+        }
+      },
+      "description": "区分工具包问题与 Factory 问题，安全地提交工具包反馈，并在不共享受限数据的情况下报告 Factory Bug",
+      "docsLink": {
+        "label": "工具包起始页"
+      },
+      "steps": {
+        "commentOnConfluence": {
+          "example": {
+            "comment": "请留言评论，而不要直接编辑。该页面从仓库发布，编辑内容会被覆盖。",
+            "heading": "没有 GitHub 时的反馈",
+            "startPage": "起始页："
+          },
+          "instructions": "没有 GitHub 访问权限？改为在工具包起始页留言。通过本面板的文档链接打开它，然后选择 {{confirmLabel}}。",
+          "summary": "在工具包起始页提交反馈",
+          "tip": "起始页上的评论会送达工具包的维护者。请描述你提出的请求、实际发生的情况以及你的预期，并略去任何你不愿发布在内部页面上的内容。",
+          "title": "没有 GitHub 访问权限？在 Confluence 上留言"
+        },
+        "reportFactoryBug": {
+          "example": {
+            "alternative": "不确定会话是否干净？在新会话中复现该问题并在其中运行 /bug，或在不附带会话数据的情况下发送邮件至 `support@factory.com`。",
+            "beforeYouSend": "发送之前",
+            "heading": "/bug",
+            "prompt": "/bug Factory App 在打开会话时卡死",
+            "rule": "PoC 数据规则：“不得将 PCI、PII 或客户数据引入任何 Droid 或 AI 智能体工作流。”"
+          },
+          "instructions": "/bug 会上传会话及其日志。使用前，请确认会话中不含 PCI、PII 或客户数据。然后选择 {{finishLabel}}。",
+          "summary": "仅在会话干净时使用 /bug",
+          "tip": "/bug 会向 Factory 提供复现问题所需的内容：会话及其日志。也正因如此，它绝不能携带受限数据。通过邮件，你可以精确选择要共享的内容。",
+          "title": "安全地报告 Factory Bug"
+        },
+        "reportToolkit": {
+          "example": {
+            "heading": "/toolkit-feedback",
+            "issues": "问题会提交到 `{{url}}`，并在 FIS 企业范围内可读。请勿包含密钥、客户数据以及无法如此广泛共享的代码。",
+            "steps": {
+              "0": "Droid 会根据会话起草一个 GitHub 工单，并对凭据和邮箱进行脱敏。",
+              "1": "它会询问是否可以共享仓库片段；默认为否。",
+              "2": "在你批准草稿之前，它不会提交任何内容。"
+            }
+          },
+          "instructions": "阅读 /toolkit-feedback 的工作方式。下次工具包技能行为异常时，请立即在该会话中运行它。完成后选择 {{confirmLabel}}。",
+          "summary": "出现问题后立即运行 /toolkit-feedback",
+          "tip": "在问题发生后立即运行，Droid 才能引用你的请求和实际发生的情况，这正是工具包团队复现问题所需的信息。它需要 Node.js 22 或更高版本以及 gh；没有 gh 时，它会保存草稿供你提交。",
+          "title": "报告工具包问题"
+        },
+        "sortProblems": {
+          "instructions": "将每个问题匹配到其所属类别。所有答案都正确后，{{confirmLabel}} 才会解锁。",
+          "quiz": {
+            "heading": "它属于哪里？",
+            "options": {
+              "access": "访问权限：申请权限",
+              "factory": "Factory：使用 /bug 或发送邮件给支持团队",
+              "toolkit": "工具包：运行 /toolkit-feedback"
+            },
+            "scenarios": {
+              "appCrash": {
+                "explanation": "应用、CLI、会话和模型属于 Factory。",
+                "prompt": "打开任何会话时 Factory App 都会崩溃。"
+              },
+              "doctorProxy": {
+                "explanation": "droid doctor 检查 Droid 自身的设置，这属于 Factory。",
+                "prompt": "droid doctor 报告代理或证书问题。"
+              },
+              "forbidden": {
+                "explanation": "403 是 Jira 权限问题，而不是工具包或 Factory 中的 Bug。",
+                "prompt": "Jira 对某个项目返回 403 Forbidden。"
+              },
+              "pluginNotFound": {
+                "explanation": "工具包的插件和市场属于工具包。",
+                "prompt": "某个工具包插件无法安装，日志中显示 plugin-not-found。"
+              },
+              "skillIgnored": {
+                "explanation": "技能、命令和工具包文档属于工具包。",
+                "prompt": "jira-dc 技能忽略了你请求的一部分。"
+              }
+            }
+          },
+          "summary": "判断问题属于哪里",
+          "tip": "将报告提交到正确的位置能更快解决问题。工具包团队负责其技能、命令和文档，而 Factory 负责应用、CLI、会话和模型。",
+          "title": "工具包问题还是 Factory 问题？"
+        }
+      },
+      "title": "报告工具包反馈与 Bug"
+    },
+    "fisToolkitSetup": {
+      "completion": {
+        "headline": "你已完成 FIS 工具包设置！",
+        "nextStep": "接下来学习“探索 FIS 工具包”，看看这个工具包能做什么。",
+        "recapItems": {
+          "0": "检查了你的 Factory 访问权限、网络和 GitHub 账户",
+          "1": "使用 Droid 或引导脚本安装了工具包",
+          "2": "运行了 /connect-fis-tools 检查各层设置",
+          "3": "通过 /mcp 登录了 Jira 和 Confluence",
+          "4": "确认了 Droid 可以读取 Jira"
+        }
+      },
+      "description": "检查访问权限，安装 FIS 工具包，登录 Jira 和 Confluence，并确认 Droid 可以读取它们",
+      "docsLink": {
+        "label": "工具包起始页"
+      },
+      "steps": {
+        "checkAccess": {
+          "example": {
+            "access": "Factory 访问权限：`factory_ai_poc_users` AD 组，需在 MyAccess 的 Manage User Access 中申请。先由你的经理批准，再由组负责人批准。",
+            "github": "一个以 `_fisglbl` 结尾的 GitHub 账户，且属于 FIS GitHub 企业下的某个组织。仅有 Copilot 许可证并不代表你是该组织的成员。",
+            "heading": "开始之前",
+            "linksHeading": "前往何处",
+            "network": "一台由 FIS 管理的 macOS 或 Windows 笔记本电脑，且已接入 FIS 网络或 VPN。",
+            "noGitHub": "没有企业 GitHub 账户？请改为按照《Install Without GitHub Access》操作：",
+            "requestAccess": "申请 Factory 访问权限："
+          },
+          "instructions": "检查下列各项。继续之前，先申请缺少的内容，然后选择 {{confirmLabel}}。",
+          "summary": "确认访问权限、网络和 GitHub 账户",
+          "tip": "Droid 从私有 GitHub 仓库安装工具包，并且只能从 FIS 网络访问 Jira 和 Confluence。缺少其中任一条件时，后续步骤会因看似无关的错误而失败，因此请先检查这些内容。",
+          "title": "检查访问权限"
+        },
+        "install": {
+          "example": {
+            "droidHeading": "方式 1：让 Droid 完成（推荐）",
+            "droidIntro": "在你的 FIS 笔记本电脑上启动本地 Droid 会话（不要使用远程或云端计算机），然后发送以下提示词。Droid 会在每次更改前征求你的同意，GitHub 登录则由你在浏览器中完成。",
+            "droidPrompt": "在这台机器上安装 FIS peai-engineering-toolkit。执行任何会改动内容的命令之前，先征求我的同意。\n1. 先确认此会话运行在我自己的 FIS 托管笔记本电脑上，而不是远程或云端计算机。如果不是，请停止，并告诉我应在我笔记本上启动本地会话，或改用 PowerShell 或 Terminal 方式。\n2. 检查是否已安装 gh 和 Git。若缺少其中之一：在 macOS 上，提议通过 Workbrew 运行 brew install gh；在 Windows 上，停止操作，并告诉我从 Company Portal 安装 GitHub CLI 和 Git，因为 FIS 禁止其他安装方式。\n3. 运行 gh auth status。如果我未使用 _fisglbl 账户登录，请告诉我在我自己的终端中运行 {{githubSignIn}}，并等待我在浏览器中完成登录。\n4. 将适用于我系统的引导脚本下载到一个位于任何项目之外的新建私有临时文件夹中；如果下载失败则停止。下载成功时，命令会打印脚本的完整路径。你的每条命令可能都在新的 shell 中运行，因此请从此时起使用该路径，而不是文件夹变量。在 macOS 上：\n{{macosDownload}}\n在 Windows 上：\n{{windowsDownload}}\n5. 读取该路径下的脚本，并告诉我它将改动什么。然后按该路径运行它：在 macOS 上使用 {{macosRunner}}，在 Windows 上使用 {{windowsRunner}}。\n6. 完成后，告诉我重启 Factory App。\n仅供参考：AIEE Runbook 1，{{runbookUrl}}。它需要 FIS 单点登录，因此你可能无法打开；请按上述步骤操作。",
+            "heading": "选择一种安装方式",
+            "macosHeading": "方式 3：macOS（Terminal）",
+            "macosPrerequisites": "首先通过 Workbrew 运行 `brew install gh`。然后在 Terminal 中运行以下命令，并在最后一行执行脚本之前先阅读下载的脚本。",
+            "oneMethod": "这些方式只需其一。选定一种运行即可，不必全部执行。",
+            "runbook": "在 FIS 网络上，自行按照 Runbook 的步骤操作：",
+            "runbookHeading": "方式 4：手动操作（AIEE Runbook 1）",
+            "windowsHeading": "方式 2：Windows（PowerShell）",
+            "windowsPrerequisites": "首先从 Company Portal 安装 GitHub CLI 和 Git。然后在 PowerShell 中运行以下命令，并在最后一行执行脚本之前先阅读下载的脚本。"
+          },
+          "instructions": "从下方选择一种方式并运行。只需一种即可，其中“让 Droid 完成”最为简单。完成后重启 Factory App，然后选择 {{confirmLabel}}。",
+          "summary": "使用 Droid 或脚本安装，然后重启",
+          "tip": "引导脚本会注册工具包的插件市场并安装其中的插件，因此你无需逐个手动安装。Droid 可以替你运行，但 GitHub 登录只能由你在浏览器中完成。插件在应用启动时加载，因此重启这一步很重要。",
+          "title": "安装工具包"
+        },
+        "runCheck": {
+          "coachmark": {
+            "body": "输入该命令并按 Enter。Droid 会先运行只读检查。",
+            "title": "发送 /connect-fis-tools"
+          },
+          "instructions": "启动新的 Droid 会话，并在对话中发送 /connect-fis-tools。发送后该步骤即完成。随后 Droid 会检查你的设置，并列出需要登录的项目。",
+          "skip": {
+            "note": "如果你现在无法启动会话，或已经运行过，请使用此项"
+          },
+          "summary": "用一条命令检查各层设置",
+          "tip": "该命令会检查 GitHub、插件市场、你的插件，以及各 FIS 服务是否可访问。每项检查会输出 PASS、WARN 或 FAIL，让你在登录前明确知道需要修复什么。",
+          "title": "在 Droid 中运行 /connect-fis-tools"
+        },
+        "signIn": {
+          "coachmark": {
+            "body": "输入 /mcp 并按 Enter。先登录 Jira，再登录 Confluence。",
+            "title": "打开 /mcp"
+          },
+          "instructions": "输入 /mcp，选择 Jira，并使用你的 FIS 账户在浏览器中完成登录。然后对 Confluence 重复此操作。两者均显示已连接后，选择 {{confirmLabel}}。",
+          "skip": {
+            "note": "如果你还无法启动会话，请使用此项，稍后通过 /mcp 登录"
+          },
+          "summary": "通过 /mcp 登录 Jira 和 Confluence",
+          "tip": "Jira 和 Confluence 是独立部署，登录其中一个不会同时登录另一个。登录会在浏览器中打开，因此你无需粘贴令牌或网址。仅当你已拥有 Aha! 访问权限时，才需要登录。",
+          "title": "登录 Jira 和 Confluence"
+        },
+        "verifyJira": {
+          "coachmark": {
+            "body": "使用此提示词。检查连接期间，读取操作是安全的。",
+            "example": "我在 Jira 中是谁？只读，不要更改任何内容。",
+            "title": "提一个只读问题"
+          },
+          "instructions": "对 Droid 说：“我在 Jira 中是谁？只读。”当 Droid 读取你的 Jira 个人资料后，该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法启动会话，或 Droid 已从 Jira 得到回答但该步骤仍未完成，请使用此项"
+          },
+          "summary": "向 Droid 提一个只读的 Jira 问题",
+          "tip": "真实的读取是连接可用的唯一证明。请保持检查为只读；如果 Jira 返回 401，请通过 /mcp 重新登录 Jira。",
+          "title": "确认 Droid 可以读取 Jira"
+        }
+      },
+      "title": "设置 FIS 工具包"
+    },
+    "fisToolkitUpdate": {
+      "completion": {
+        "headline": "你的工具包已是最新版本！",
+        "nextStep": "当某个技能或命令看起来已过时，就更新工具包。",
+        "recapItems": {
+          "0": "检查了工具包的 commit 并更新了插件市场",
+          "1": "启动了新会话以加载更新",
+          "2": "通过 /mcp 刷新了 Jira 登录",
+          "3": "再次确认了 Droid 可以读取 Jira",
+          "4": "学会了使用工具包的连接，而不是 Factory 连接器"
+        }
+      },
+      "description": "更新工具包，启动全新会话，在 Jira 登录过期时重新连接，并用只读检查确认",
+      "docsLink": {
+        "label": "工具包起始页"
+      },
+      "steps": {
+        "chooseConnections": {
+          "instructions": "为每种情况匹配应执行的操作。全部答对后即可解锁 {{finishLabel}}。",
+          "quiz": {
+            "heading": "使用哪种连接？",
+            "options": {
+              "decline": "拒绝，然后运行 /connect-fis-tools",
+              "gh": "在终端中使用 gh",
+              "permission": "申请 Jira 权限",
+              "signIn": "通过 /mcp 重新登录"
+            },
+            "scenarios": {
+              "factoryConnector": {
+                "explanation": "在 FIS，Jira、Confluence、Bitbucket 和 Aha! 均来自工具包的 MCP 服务器，而不是 Factory 连接器。",
+                "prompt": "Droid 提议为 Jira 连接 Factory 连接器。"
+              },
+              "forbidden": {
+                "explanation": "403 表示你的账户无法查看该项目。这是 Jira 权限问题，而不是 Droid 的问题。",
+                "prompt": "Jira 对某个项目返回 403 Forbidden。"
+              },
+              "pullRequest": {
+                "explanation": "GitHub 通过 gh CLI 和工具包的 gh-cli 技能完成操作。",
+                "prompt": "Droid 需要在 GitHub 上创建拉取请求。"
+              },
+              "unauthorized": {
+                "explanation": "401 表示你的 Jira 登录已过期。请通过 /mcp 重新登录 Jira。",
+                "prompt": "Jira 返回 401 Unauthorized。"
+              }
+            }
+          },
+          "summary": "了解各系统应使用哪种连接",
+          "tip": "工具包的 atlassian-dc 和 pdlc 插件为 Jira、Confluence、Bitbucket 和 Aha! 分别添加一个 MCP 服务器，你需要在浏览器中逐一登录。在 FIS，这些系统不使用 Factory 连接器。",
+          "title": "使用工具包的连接"
+        },
+        "refreshJira": {
+          "instructions": "输入 /mcp 并检查 Jira。如果需要认证，请重新登录。如果工具仍然缺失，请重启 Droid（即 Factory App），然后再次检查 /mcp。最后选择 {{confirmLabel}}。",
+          "skip": {
+            "note": "如果你现在无法启动会话，请使用此项，稍后再检查 /mcp"
+          },
+          "summary": "Jira 登录过期时通过 /mcp 重新连接",
+          "tip": "Jira 登录会不时过期，Jira 返回 401 即表示已过期。/connect-fis-tools 还会找出所有需要登录的服务器，并逐一引导你完成。",
+          "title": "刷新 Jira 登录"
+        },
+        "startSession": {
+          "coachmark": {
+            "body": "发送此命令，检查更新后的工具包和你的登录状态。",
+            "title": "重新检查设置"
+          },
+          "instructions": "在任意项目中启动新会话，并发送 /connect-fis-tools 重新检查设置。先输入 / 即可看到列出的工具包命令。",
+          "skip": {
+            "note": "如果你现在无法启动会话，请使用此项"
+          },
+          "summary": "在新会话中加载更新",
+          "tip": "插件和技能在会话启动时加载，因此更新期间保持打开的会话仍会沿用旧版本。如果新命令在新会话中仍未显示，请重启 Factory App。",
+          "title": "启动新会话"
+        },
+        "update": {
+          "example": {
+            "heading": "更新工具包",
+            "version": "VERSION 显示的是工具包的 commit，而不是版本号。Droid 跟随工具包的 main 分支。"
+          },
+          "instructions": "在终端中运行以下命令。对比更新前后 VERSION 列中的 commit，然后选择 {{confirmLabel}}。",
+          "summary": "查看你的版本，然后更新插件市场",
+          "tip": "Droid 保留自己的工具包副本，只有在你更新插件市场时才会刷新。定期更新可以获取技能、命令和服务连接的修复。",
+          "title": "检查并更新工具包"
+        },
+        "verifyJira": {
+          "coachmark": {
+            "body": "使用此提示词。检查连接期间，读取操作是安全的。",
+            "example": "我在 Jira 中是谁？只读，不要更改任何内容。",
+            "title": "提一个只读问题"
+          },
+          "instructions": "对 Droid 说：“我在 Jira 中是谁？只读。”当 Droid 读取你的 Jira 个人资料后，该步骤即完成。",
+          "skip": {
+            "note": "如果你现在无法启动会话，或 Droid 已从 Jira 得到回答但该步骤仍未完成，请使用此项"
+          },
+          "summary": "向 Droid 提一个只读的 Jira 问题",
+          "tip": "真实的读取是连接可用的唯一证明。请保持检查为只读；如果 Jira 返回 401，请通过 /mcp 重新登录 Jira。",
+          "title": "用只读检查确认"
+        }
+      },
+      "title": "保持 FIS 工具包为最新"
+    },
+    "glossary": {
+      "access": {
+        "definition": "登录用于识别你的账户，权限则决定 Droid 可以读取哪些内容。登录成功并不能证明你有权访问私有频道或文档。",
+        "term": "认证与访问权限"
+      },
+      "agentReadiness": {
+        "definition": "智能体就绪度回答的问题是：是什么让这个仓库对智能体而言难以处理？使用 /readiness-report 检查设置、文档、测试及其他缺口。可在“分析”→“智能体就绪度”下查看报告（如可用）。",
+        "term": "智能体就绪度"
+      },
+      "agentsMd": {
+        "definition": "AGENTS.md 提供长期有效的仓库指引：设置与测试命令、约定和边界。缺失时，使用 /init 起草；请审阅生成结果。如果已有该文件，请要求针对性改进，而不是替换。",
+        "term": "AGENTS.md"
+      },
+      "autonomy": {
+        "definition": "自主级别设定 Droid 无需暂停等待批准即可执行的最高风险操作。级别越高，Droid 能自主完成的事情越多；你可以在处理任务的过程中循环切换级别。",
+        "levels": {
+          "high": {
+            "description": "推送、迁移",
+            "label": "高"
+          },
+          "low": {
+            "description": "编辑文件",
+            "label": "低"
+          },
+          "medium": {
+            "description": "可逆的写入操作",
+            "label": "中"
+          },
+          "off": {
+            "description": "仅读取",
+            "label": "关闭"
+          }
+        },
+        "term": "自主级别"
+      },
+      "connectors": {
+        "definition": "连接器是 Factory 管理的、与受支持应用之间的连接。你可以用它们读取分配给你的工单、查找 Slack 中的决策，或查阅共享文档。",
+        "term": "连接器"
+      },
+      "mcp": {
+        "definition": "MCP（Model Context Protocol）通过 MCP 服务器连接更多工具。适用于团队批准的内部服务，或连接器未覆盖的工具。",
+        "term": "MCP"
+      },
+      "skillScope": {
+        "definition": "~/.factory/skills/ 中的个人技能会随你跨项目使用。.factory/skills/ 中的项目技能随仓库流转。导入前请检查 SKILL.md、支撑文件、依赖项和权限。",
+        "term": "技能所在位置"
+      },
+      "skills": {
+        "definition": "技能将审查 API 变更、更新文档或准备周报等工作流打包起来。Droid 可以加载匹配的技能，你也可以用 /skill-name 调用可用的技能。",
+        "term": "技能"
+      },
+      "specMode": {
+        "definition": "Droid 会先研究你的任务，并在改动任何代码之前提出一份称为规格的方案。规划期间它只读取和搜索：不编辑文件、不提交、不调用服务。批准规格后开始构建，或继续迭代。",
+        "term": "规格模式"
+      },
+      "wiki": {
+        "definition": "Wiki 回答的问题是：这个代码库如何运作？用它了解架构、定位某项功能，或熟悉陌生的仓库。可从个人资料菜单打开 Wiki，或向 /browse-wiki 提问。",
+        "term": "Wiki"
+      }
+    },
+    "securityReview": {
+      "completion": {
+        "headline": "你学会了发现并修复安全风险",
+        "nextStep": "在下次合并前扫描你的更改，或为每个拉取请求开启安全审查。",
+        "recapItems": {
+          "0": "使用 /security-review 扫描了分支上的更改",
+          "1": "阅读了一条发现项：优先级、数据流、攻击和修复",
+          "2": "按 P0 到 P3 为发现项分级",
+          "3": "让 Droid 修复了最严重的发现项并添加了测试"
+        }
+      },
+      "docsLink": {
+        "label": "了解安全审查"
+      },
+      "priorities": {
+        "p0": {
+          "label": "P0 严重"
+        },
+        "p1": {
+          "label": "P1 高"
+        },
+        "p2": {
+          "label": "P2 中"
+        },
+        "p3": {
+          "label": "P3 低"
+        }
+      },
+      "priorityScenarios": {
+        "loginRateLimit": {
+          "explanation": "需要多次尝试才能造成危害：中。安排修复计划。",
+          "prompt": "登录表单允许任何人无限次尝试密码。",
+          "whyNot": {
+            "p0": "猜测密码需要多次尝试，因此无法立即利用。",
+            "p1": "攻击需要时间和运气，因此风险为中等。",
+            "p3": "密码猜测可能导致账户被接管，因此不止是“低”。"
+          }
+        },
+        "openAdmin": {
+          "explanation": "易于利用、危害严重、无需登录：严重。阻止合并。",
+          "prompt": "互联网上的任何人都能调用新的管理端点，无需登录。",
+          "whyNot": {
+            "p1": "“高”需要某种条件，例如登录；此问题不需要任何条件。",
+            "p2": "如今任何人都能做到，因此比“中”更严重。",
+            "p3": "开放的管理权限属于严重危害，而不是小问题。"
+          }
+        },
+        "otherInvoices": {
+          "explanation": "登录后即可利用并泄露真实数据：高。合并前修复。",
+          "prompt": "已登录用户可以通过更改 ID 读取其他客户的发票。",
+          "whyNot": {
+            "p0": "它需要先登录，因此是“高”，而不是“严重”。",
+            "p2": "攻击路径真实存在且数据敏感，因此是“高”。",
+            "p3": "泄露客户数据属于严重危害，而不是小问题。"
+          }
+        }
+      },
+      "sampleFinding": {
+        "body": {
+          "text": "`search` 参数被直接拼接进 SQL 字符串。任何已登录用户都可以搜索 `' OR 1=1 --`，读取所有客户的发票。"
+        },
+        "fix": {
+          "text": "将 `q` 作为绑定参数传入，让数据库将其视为文本而非 SQL。"
+        },
+        "title": {
+          "tags": {
+            "0": {
+              "label": "P1"
+            },
+            "1": {
+              "label": "安全"
+            }
+          },
+          "text": "将发票搜索查询参数化"
+        }
+      },
+      "securityAutomations": {
+        "guidelines": {
+          "action": {
+            "text": "创建 .factory/skills/security-review-guidelines/SKILL.md，写入我们团队的安全规则"
+          },
+          "description": "Droid 会在每次安全审查中遵循这些规则。",
+          "title": "让它学会你的规则"
+        },
+        "installCodeReview": {
+          "action": {
+            "text": "/install-code-review"
+          },
+          "description": "/install-code-review 会在拉取请求上配置 Droid。在安全审查一项选择“是”。",
+          "title": "检查每个拉取请求"
+        },
+        "securityAudit": {
+          "description": "安全审计模板会按你的计划扫描仓库。",
+          "title": "按计划审计"
+        }
+      },
+      "steps": {
+        "automateSecurityReview": {
+          "activity": {
+            "heading": "让它自动运行"
+          },
+          "instructions": "选择 Droid 持续检查的方式：每个拉取请求、按计划，或使用团队自己的规则。",
+          "summary": "无需主动要求即可运行安全审查",
+          "tip": "自动扫描会检查每位队友的更改，包括没人想到要扫描的更改。将团队规则写入 .factory/skills/security-review-guidelines/SKILL.md，让 Droid 标记你安全团队关注的问题。若要审计每个文件，请要求全项目扫描并选择“深度”；这可能运行数小时"
+        },
+        "fixSecurityFinding": {
+          "activity": {
+            "choices": {
+              "fixAndTest": {
+                "action": {
+                  "text": "修复最严重的发现项，并添加一个本可捕获它的测试"
+                },
+                "description": "测试既能证明问题已修复，也能防止其回归。",
+                "title": "修复最严重的发现项"
+              }
+            },
+            "heading": "修复并证明"
+          },
+          "instructions": "在下方起草修复内容并发送。Droid 完成后，打开“变更”，检查修复及其测试。",
+          "skip": {
+            "label": "暂时跳过",
+            "note": "Droid 完成后查看“变更”。",
+            "whileWorkingLabel": "无需等待，继续"
+          },
+          "summary": "让 Droid 修复最严重的发现项",
+          "tip": "一个能重放该攻击的测试，可以证明漏洞已封堵，并在漏洞重现时失败。对于注入类发现项，就是发送恶意输入并期望被拒绝的测试。如果 Droid 没有发现问题，可改为让它为某个路由添加输入校验",
+          "waitLabel": "Droid 正在修复发现项"
+        },
+        "learnSecurityScan": {
+          "activity": {
+            "caption": "Droid 只报告它能追踪到的内容，因此每条发现项都值得阅读。",
+            "heading": "一条安全发现项",
+            "pins": {
+              "attack": {
+                "label": "攻击",
+                "note": "每条发现项都会指明一种现实的攻击方式。没有攻击路径，就没有发现项。"
+              },
+              "fix": {
+                "label": "修复",
+                "note": "建议的修复方案，你可以让 Droid 应用。"
+              },
+              "priority": {
+                "label": "优先级",
+                "note": "P0 到 P3 表示修复的紧迫程度。P1 表示合并前必须修复。"
+              },
+              "sourceToSink": {
+                "label": "数据流",
+                "note": "Droid 会追踪用户输入从请求进入数据库查询的路径。"
+              }
+            }
+          },
+          "confirmLabel": "知道了",
+          "instructions": "在 Droid 扫描期间，阅读这条示例发现项。选择每个部分，了解真实的发现项能告诉你什么。",
+          "summary": "了解发现项的组成部分",
+          "tip": "能快速读懂的发现项，才能在合并前修复。Droid 会检查 STRIDE 威胁、OWASP Top 10、提示注入等 LLM 风险，以及新增依赖。它只报告存在现实攻击方式的问题，因此每条发现项都会展示数据流"
+        },
+        "reviewSecurityFindings": {
+          "activity": {
+            "heading": "你会多快修复它？"
+          },
+          "coachmarks": {
+            "askAboutFinding": {
+              "body": "不确定某条发现项的含义？让 Droid 解释一下。",
+              "example": "用通俗的话解释最严重的发现项",
+              "title": "询问发现项"
+            }
+          },
+          "confirmLabel": "我已阅读",
+          "instructions": "为下方每条发现项分级，然后查看你自己的结果，找出优先级最高的一条。没有发现项就是好结果。",
+          "summary": "按修复紧迫程度为发现项分级",
+          "tip": "优先级把一长串发现项变成行动计划。合并前修复 P0 和 P1，因为 P1 表示在特定条件下可确定利用的问题；为 P2 制定计划，P3 可在方便时修复。如果想象不出攻击过程，请让 Droid 带你梳理一遍"
+        },
+        "startSession": {
+          "coachmarks": {
+            "askForSecurityReview": {
+              "body": "用通俗的话说明要扫描什么，这样 Droid 就无需再问。",
+              "example": "/security-review 我分支上的更改",
+              "title": "扫描你的更改"
+            }
+          },
+          "instructions": "在一个有分支更改的 Git 项目中启动新会话。发送提示中的示例，让 Droid 仅扫描这些更改。",
+          "noComputerInstructions": "先设置一台计算机，然后在一个有分支更改的 Git 项目中启动会话，并发送：/security-review 我分支上的更改",
+          "summary": "扫描你分支上的更改",
+          "tip": "仅扫描你的更改可在数分钟内返回结果，此时趁代码仍记忆犹新，便于修复。/security-review 接受自然语言，因此点明分支可避免 Droid 追问要扫描什么。大型仓库的全项目扫描可能耗时久得多"
+        }
+      }
+    },
+    "tips": {
+      "autonomy": {
+        "actionLabel": "保持此级别",
+        "body": "自主级别决定 Droid 无需询问即可执行的操作。“中”适合大多数任务：它会编辑文件并运行可撤销的测试。",
+        "title": "选择 Droid 自主执行的程度"
+      },
+      "choices": {
+        "draft": {
+          "actionLabel": "起草",
+          "doneLabel": "已起草"
+        },
+        "navigate": {
+          "actionLabel": "打开",
+          "doneLabel": "已打开"
+        }
+      },
+      "model": {
+        "body": "模型决定 Droid 的工作速度与推理深度。更强的模型适合棘手的多文件任务。",
+        "title": "选择模型"
+      },
+      "newSession": {
+        "body": "选择“新建会话”，为本课打开一个全新会话。",
+        "title": "启动新会话"
+      },
+      "projectPicker": {
+        "body": "选择 Droid 应在其中工作的文件夹。",
+        "title": "选择项目"
+      },
+      "smallTask": {
+        "body": "描述一个小任务：完成的标准是什么、从哪里入手、不要改动什么，以及如何验证。",
+        "title": "让 Droid 完成一个任务"
+      },
+      "specMode": {
+        "body": "规格模式让 Droid 先研究你的任务并写出方案，经你批准后才做任何更改。",
+        "title": "切换到规格模式"
+      },
+      "specReview": {
+        "approve": {
+          "body": "可在任意行发表评论；若有偏差，可选择“继续迭代”。方案符合预期后再批准。",
+          "title": "先引导，再批准"
+        },
+        "card": {
+          "body": "Droid 已研究你的任务并写好规格。在任何代码更改之前，打开它阅读方案。",
+          "title": "打开规格"
+        },
+        "read": {
+          "body": "检查四点：目标、Droid 计划更改的文件、它的做法，以及它将如何验证结果。",
+          "title": "像阅读方案一样审阅"
+        }
+      },
+      "tourPanelTipPrefix": "使用方向键浏览导览。"
+    }
+  },
+  "lessonCoachmarks": {
+    "backToCurrentTip": "返回当前提示",
+    "finishTour": "完成导览",
+    "next": "下一步",
+    "nextTipHint": "按 → 查看下一条提示",
+    "pressEnterToSend": "按 Enter 发送并继续",
+    "stepPosition": "第 {{number}} 步，共 {{total}} 步",
+    "stepTipPosition": "第 {{number}} 步 · 提示 {{current}}/{{total}}",
+    "tourPosition": "导览 · {{current}}/{{total}}",
+    "useSamplePrompt": "使用示例提示词"
+  },
+  "lessonPanel": {
+    "adminMustConfigureConnector": "请联系管理员配置此连接器。",
+    "completion": {
+      "droidStillWorking": "Droid 仍在工作",
+      "durationMinutes": "{{minutes}}分钟 {{seconds}}秒",
+      "durationSeconds": "{{seconds}}秒",
+      "recapIntro": "在本课中，你完成了：",
+      "yourSession": "你的会话"
+    },
+    "connectAtLeastOneApp": "至少连接一个应用以继续",
+    "connectToContinue": "连接 {{names}} 以继续",
+    "connectToolsInstructions_other": "连接 {{names}}。Droid 在规划时会将其作为上下文读取。",
+    "continue": "继续",
+    "eyebrow": {
+      "position": "第 {{number}} 课，共 {{total}} 课",
+      "preview": "预览"
+    },
+    "fallback": {
+      "addProject": "添加项目",
+      "computerConnecting": "正在等待你的计算机连接",
+      "manageComputers": "管理计算机",
+      "noComputer": "Droid 需要一台计算机才能工作",
+      "noProject": "添加一个供 Droid 工作的项目",
+      "notGitRepository": "此文件夹不是 Git 仓库，因此没有可审查的差异",
+      "setUpComputer": "设置计算机",
+      "skipStep": "跳过此步"
+    },
+    "finishLesson": "完成课程",
+    "goToPage": "前往 {{page}}",
+    "personas": {
+      "admin": "管理员",
+      "design": "设计",
+      "engineering": "工程",
+      "finance": "财务",
+      "founder": "创始人",
+      "marketing": "市场",
+      "operations": "运营",
+      "product": "产品",
+      "sales": "销售",
+      "somethingElse": "其他"
+    },
+    "requiredToolsConnected": "所需工具已连接",
+    "scorecardReady": "你的评分卡已就绪",
+    "seeYourScorecard": "查看你的评分卡"
+  },
+  "myLessonsProgress": {
+    "alreadyUsing": "已在使用",
+    "completedAt": "完成于 {{date}}",
+    "detectedNote": "你已在使用此功能，因此计为完成。你仍可从侧边栏学习此课程。",
+    "noLessonsAreAssignedToYou": "尚未向你分配任何课程。",
+    "notCompleted": "未完成",
+    "progressAriaLabel": "{{title}} 的进度",
+    "startedAt": "开始于 {{date}}",
+    "stepsAriaLabel": "{{title}} 的步骤",
+    "stepsSummary": "{{completed}}/{{total}} 步 · {{percent}}%"
+  },
+  "onboardingTracker": {
+    "loadingLessonProgress": "正在加载课程进度…",
+    "myProgress": "我的进度",
+    "onboardingTracker": "入门进度",
+    "orgWideProgress": "全组织课程进度",
+    "orgWideProgressUpdated": "全组织课程进度 · 更新于 {{timeAgo}}",
+    "organization": "组织",
+    "progressView": "进度视图",
+    "retry": "重试",
+    "showingPreviouslyLoadedLessons": "正在显示之前加载的课程",
+    "unableToLoadLessons": "无法加载课程",
+    "yourLessonProgress": "你的课程进度"
+  },
+  "organizationLessonsProgress": {
+    "activeLearners": "活跃学习者",
+    "activeLearnersTooltip": "过去 {{days}} 天内有课程活动的学习者，统计范围为全部已加入学习者。",
+    "allCohorts": "全部群组",
+    "allPersonas": "全部角色",
+    "allStatuses": "全部状态",
+    "cancel": "取消",
+    "clearFilters": "清除筛选条件",
+    "completionByLesson": "各课程完成情况",
+    "confirmDescription_other": "所选学习者的每项已分配课程都将显示为已完成。他们已完成的步骤将保留原始日期。",
+    "confirmTitle_other": "将 {{count}} 名学习者标记为已完成？",
+    "everyone": "所有人",
+    "exportCsv": "导出 CSV",
+    "filterByCohort": "按群组筛选进度",
+    "filterByPersona": "按角色筛选进度",
+    "filterLearnersByStatus": "按状态筛选学习者",
+    "footer": {
+      "learners": "{{shown}}/{{total}} 名学习者",
+      "selectLimit": "一次最多选择 {{max}} 项",
+      "selected": "已选择 {{number}} 项"
+    },
+    "last8WeeksWeeksStartOn": "最近 8 周 · 每周从周一（UTC）开始。",
+    "learnerStatus": "学习者状态",
+    "learners": "学习者",
+    "lessonCompletionAriaLabel": "{{title}} 的完成情况",
+    "lessonCompletionSummary": "已完成 {{completed}} · {{percent}}%",
+    "lessonCompletionSummaryWithDetected": "已完成 {{completed}}（其中 {{detected}} 节已在使用）· {{percent}}%",
+    "lessonsCompleted": "已完成课程",
+    "lessonsCompletedPerWeek": "每周完成课程数",
+    "loadingProgress": "正在加载组织进度…",
+    "markComplete": "标记为完成",
+    "markCompleteWithCount": "标记为完成（{{number}}）",
+    "markedComplete_other": "已将 {{count}} 名学习者标记为已完成。",
+    "marking": "正在标记…",
+    "noLearnersEnrolled": "尚无学习者加入。",
+    "noLearnersMatchFilters": "没有符合筛选条件的学习者。",
+    "noLessonsAreAssignedYet": "尚未分配任何课程。",
+    "orgCompletion": "组织完成率",
+    "orgCompletionTooltip": "已完成课程分配占全部课程分配的百分比。",
+    "persona": "角色",
+    "retry": "重试",
+    "searchLearners": "搜索学习者",
+    "showingPreviouslyLoadedProgress": "正在显示之前加载的进度",
+    "status": "状态",
+    "unableToLoadOrganizationProgress": "无法加载组织进度"
+  },
+  "trackerUtils": {
+    "csv": {
+      "alreadyUsing": "已在使用课程",
+      "email": "邮箱",
+      "lastActive": "最近活跃",
+      "learner": "学习者",
+      "lessonsAssigned": "已分配课程",
+      "progressPercent": "进度（%）",
+      "status": "状态",
+      "stepsAssigned": "已分配步骤",
+      "stepsCompleted": "已完成步骤",
+      "stepsSkipped": "已跳过步骤",
+      "userId": "用户 ID"
+    },
+    "lessonsCompleted": "已完成课程",
+    "lessonsWithDetected": "{{completed}}/{{assigned}} · 已在使用 {{detected}} 节",
+    "never": "从未",
+    "progressWithSkipped_other": "{{percent}}% · 已跳过 {{count}} 项",
+    "status": {
+      "completed": "已完成",
+      "inProgress": "进行中",
+      "notStarted": "未开始",
+      "stalled": "已停滞"
+    }
+  },
+  "useLessonActivityPanel": {
+    "draftedMessage": "你的请求已填入输入框。准备好后发送即可。",
+    "exploreBlocker": "再打开 {{number}} 个{{noun}}以继续",
+    "quizBlocker_other": "再正确回答 {{count}} 道题以继续"
+  },
+  "useLessonReadinessPanel": {
+    "levelsBlocker_other": "再打开 {{count}} 个层级以继续",
+    "pillarsBlocker_other": "再打开 {{count}} 个支柱以继续",
+    "reportLoadFailed": "无法加载你的就绪度报告",
+    "waitingForReport": "正在等待你的就绪度报告"
+  },
+  "useLessonsNavState": {
+    "groupTitle": "{{cohortGroup}} · {{group}}"
+  },
+  "utils": {
+    "pageGuide": {
+      "app": {
+        "agentReadiness": {
+          "body": "此步骤在智能体就绪度页面进行。请在“分析”的侧边栏中选择它。",
+          "title": "打开智能体就绪度"
+        },
+        "analytics": {
+          "body": "智能体就绪度位于“分析”中。选择“分析”，然后在其侧边栏中选择“智能体就绪度”。",
+          "title": "打开分析"
+        },
+        "automationTemplates": {
+          "body": "选择“新建自动化”，然后选择“从模板创建”。",
+          "fromElsewhereBody": "模板库位于自动化页面。请在侧边栏中选择“自动化”。",
+          "title": "打开模板库"
+        },
+        "automations": {
+          "body": "此步骤在自动化页面进行。请在侧边栏中选择“自动化”。",
+          "title": "打开自动化"
+        },
+        "profileMenu": {
+          "body": "{{item}} 位于你的用户菜单中。打开该菜单，然后选择 {{item}}。",
+          "item": {
+            "analytics": "分析",
+            "wiki": "Wiki"
+          },
+          "title": "打开用户菜单"
+        },
+        "review": {
+          "body": "此步骤在审查页面进行。请在侧边栏中选择“审查”。",
+          "title": "打开审查"
+        },
+        "wiki": {
+          "body": "此步骤在 Wiki 页面进行。请选择 Wiki。",
+          "title": "打开 Wiki"
+        }
+      },
+      "backToAppBody": "此步骤在会话中进行。请返回应用以继续。",
+      "backToAppTitle": "返回应用",
+      "openPageBody": "此步骤在 {{page}} 页面进行。",
+      "openPageTitle": "打开 {{page}}",
+      "openSettingsBody": "{{page}} 位于设置中。",
+      "openSettingsTitle": "打开设置"
+    }
+  }
+}

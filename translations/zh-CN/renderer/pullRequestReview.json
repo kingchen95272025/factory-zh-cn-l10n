@@ -1,0 +1,790 @@
+{
+  "commentChip": {
+    "conversation": "对话",
+    "tooltip": {
+      "byAuthorInConversation": "{{author}} 在对话中的评论",
+      "byAuthorOnLocation": "{{author}} 在 {{location}} 的评论",
+      "inConversation": "对话中的评论",
+      "onLocation": "{{location}} 的评论",
+      "outdated": "{{tooltip}}（已过时）"
+    }
+  },
+  "pullRequestAccess": {
+    "approvalDescription": "需要 GitHub 组织所有者批准 Factory 应用。批准后请重新检查。",
+    "checkAgain": "重新检查",
+    "checksUnavailable": "Factory 能够读取此 PR 后，检查结果将显示在这里。",
+    "checksUnavailable_gitlab": "Factory 能够读取此合并请求后，检查结果将显示在这里。",
+    "connectDescription": "拉取请求使用你自己的 GitHub 权限读取。连接你的账号即可在此审查此 PR。",
+    "connectTitle": "连接 GitHub 以查看此 PR",
+    "copySetupLink": "复制链接发给管理员",
+    "giveAccess": "在 GitHub 上授予访问权限",
+    "installApp": "安装 Factory 应用",
+    "installAskAdminDescription": "Factory 通过 GitHub 上的 Factory 应用读取拉取请求。请将设置链接发送给组织中的 Factory 管理员，以便其安装到 {{owner}}，然后重新检查。",
+    "installDescription": "Factory 通过 GitHub 上的 Factory 应用读取拉取请求。请在 {{owner}} 上安装并授予其对 {{repository}} 的访问权限，然后重新检查。",
+    "installStep": "在 {{owner}} 上安装 Factory 应用",
+    "participantsUnavailable": "Factory 能够读取此 PR 后，审查和标签将显示在这里。",
+    "participantsUnavailable_gitlab": "Factory 能够读取此合并请求后，审查和标签将显示在这里。",
+    "repositoryAccessAskAdminDescription": "Factory 应用已安装在 {{owner}} 上，但无法读取 {{repository}}。请将设置链接发送给组织中的 Factory 管理员，以便其授予访问权限，然后重新检查。",
+    "repositoryAccessDescription": "Factory 应用已安装在 {{owner}} 上，但无法读取 {{repository}}。请在 GitHub 上授予其访问权限，然后重新检查。",
+    "repositoryStep": "授予应用对 {{repository}} 的访问权限",
+    "setupLink": "设置链接",
+    "statusFailedDescription": "Factory 无法检查其 GitHub 设置，因此暂时无法确定缺少哪些配置。请稍后重新检查。",
+    "title": "Factory 尚无法读取 {{repository}}"
+  },
+  "pullRequestCodeHostMenu": {
+    "connected": "已连接",
+    "current": "当前",
+    "heading": "代码托管服务",
+    "label": "代码托管服务：{{host}}",
+    "manageConnections": "管理连接",
+    "notConnected": "未连接",
+    "notConnectedTooltip": "你的 {{host}} 账号尚未连接。请从“管理连接”中连接。"
+  },
+  "pullRequestCodeHostSetup": {
+    "connectionsDisabledManagerMessage": "代码审查 通过每个人自己的 GitHub 或 GitLab 账号列出拉取请求。请在应用权限中允许个人 GitHub 或 GitLab 连接以使用此功能。",
+    "connectionsDisabledMemberMessage": "代码审查 通过你自己的 GitHub 或 GitLab 账号列出拉取请求，但你的组织不允许这样做。请联系 Factory 管理员允许个人 GitHub 或 GitLab 连接。",
+    "connectionsDisabledTitle": "个人代码托管服务连接已关闭",
+    "githubAccountStep": "连接你的 GitHub 账号",
+    "githubSteps": "连接你的账号，然后安装 Factory 应用",
+    "gitlabAccountStep": "连接你的 GitLab 账号",
+    "gitlabSelfHostedAccountStep": "连接你的 GitLab Self-Hosted 账号",
+    "gitlabSelfHostedSetupStep": "在设置中完成 GitLab Self-Hosted 配置，然后连接你的账号",
+    "gitlabSteps": "连接你的 GitLab 群组，然后连接你的账号",
+    "needsAdmin": "需要管理员操作",
+    "openAppPermissions": "打开应用权限",
+    "useOtherHost": "改用 {{provider}}"
+  },
+  "pullRequestCommentChatButton": {
+    "addToChat": "添加到对话"
+  },
+  "pullRequestConnectGithub": {
+    "changesLoadWithYourOwnGithub": "更改使用你自己的 GitHub 权限加载，从而让组织内所有人的审查保持快速。",
+    "connectGithub": "连接 GitHub",
+    "connectGithubToReviewCodeHere": "连接 GitHub 以在此审查代码"
+  },
+  "pullRequestConnectGitlab": {
+    "changesLoadWithYourOwnGitlab": "更改使用你自己的 GitLab 权限加载，从而让组织内所有人的审查保持快速。",
+    "connectGitlab": "连接 GitLab",
+    "connectGitlabToReviewCodeHere": "连接 GitLab 以在此审查代码"
+  },
+  "pullRequestConnectGitlabSelfHosted": {
+    "changesLoadWithYourOwnGitlabSelfHosted": "更改使用你自己的 {{host}} 权限加载，从而让组织内所有人的审查保持快速。",
+    "connectGitlabSelfHosted": "连接 {{host}}",
+    "connectGitlabSelfHostedToReviewCodeHere": "连接 {{host}} 以在此审查代码",
+    "openSettings": "打开设置",
+    "unavailableManagerDescription": "在设置中添加 GitLab Self-Hosted OAuth 应用的 ID 和密钥，以便成员连接自己的账号。",
+    "unavailableMemberDescription": "请联系 Factory 管理员完成 GitLab Self-Hosted 设置，以便你连接自己的账号。",
+    "unavailableTitle": "{{host}} 尚未准备好用于个人连接"
+  },
+  "pullRequestDiffExpansion": {
+    "contextExpansionFailed": "无法展开上下文。文件内容必须可用且与此差异匹配。请重试。"
+  },
+  "pullRequestFix": {
+    "chatHidden": "返回对话后即可使用 Fix。",
+    "chatLoading": "请等待对话加载完成后再使用 Fix。",
+    "missionUnavailable": "此任务中无法使用 Fix。",
+    "readOnlySession": "只读会话中不可用。",
+    "skillDisabled": "开启 fix-pull-request 技能后才能使用 Fix。",
+    "updateDroid": "更新 Droid 后才能使用 Fix。"
+  },
+  "pullRequestInbox": {
+    "authored": {
+      "title": "你的 PR",
+      "title_gitlab": "你的合并请求"
+    },
+    "codeReviewNotEnabled": {
+      "managerMessage": "请联系你的 Factory 客户团队为组织开启 代码审查。",
+      "memberMessage": "请联系组织中的 Factory 管理员开启 代码审查。",
+      "title": "你的组织尚未开启 代码审查"
+    },
+    "connectGithubDescription": "你的审查请求和拉取请求使用你自己的 GitHub 权限读取。",
+    "connectGithubTitle": "连接 GitHub 以查看你的 PR",
+    "connectGitlabDescription": "你的审查请求和合并请求使用你自己的 GitLab 权限读取。",
+    "connectGitlabSelfHostedDescription": "你的审查请求和合并请求使用你自己的 {{host}} 权限读取。",
+    "connectGitlabSelfHostedTitle": "连接 {{host}} 以查看你的合并请求",
+    "connectGitlabTitle": "连接 GitLab 以查看你的合并请求",
+    "connectHostAccount": "连接你在 {{host}} 上的账号以查看你的 PR。",
+    "connectHostAccount_gitlab": "连接你在 {{host}} 上的账号以查看你的合并请求。",
+    "loadFailedNoReason": "出了点问题。请稍后重试。",
+    "loadMoreFailed": "无法加载更多 PR。",
+    "loadMoreFailed_gitlab": "无法加载更多合并请求。",
+    "loadingCodeHosts": "正在加载代码托管服务",
+    "loadingSection": "正在加载 {{title}}",
+    "loadingYourPullRequests": "正在加载你的 PR",
+    "loadingYourPullRequests_gitlab": "正在加载你的合并请求",
+    "noneLoadedListable": "目前加载的 PR 均无法在此显示。",
+    "noneLoadedListable_gitlab": "目前加载的合并请求均无法在此显示。",
+    "recentlyViewed": {
+      "emptyMessage": "你最近查看的 PR 均无法加载。",
+      "emptyMessage_gitlab": "你最近查看的合并请求均无法加载。",
+      "title": "最近查看"
+    },
+    "reviewRequested": {
+      "title": "需要你审查"
+    },
+    "sectionLoadFailed": "无法加载 PR",
+    "sectionLoadFailed_gitlab": "无法加载合并请求",
+    "teamReviewRequested": {
+      "title": "需要你的团队审查"
+    },
+    "yourPullRequestsLoadFailed": "无法加载你的 PR",
+    "yourPullRequestsLoadFailed_gitlab": "无法加载你的合并请求"
+  },
+  "pullRequestInboxEmpty": {
+    "allMessage": "你可以访问的仓库中的已开启拉取请求会显示在这里。如需审查其他位置的拉取请求，请将其链接粘贴到搜索栏。",
+    "allMessage_gitlab": "你可以访问的项目中的已开启合并请求会显示在这里。如需审查其他位置的合并请求，请将其链接粘贴到搜索栏。",
+    "allTitle": "你连接的仓库中没有已开启的拉取请求",
+    "allTitle_gitlab": "你连接的项目中没有已开启的合并请求",
+    "authoredMessage": "你在连接的仓库中开启的拉取请求会显示在这里。",
+    "authoredMessage_gitlab": "你在连接的项目中开启的合并请求会显示在这里。",
+    "authoredTitle": "你暂无已开启的 PR",
+    "authoredTitle_gitlab": "你暂无已开启的合并请求",
+    "clearSearch": "清除搜索",
+    "filterNeededMessage": "输入文本或筛选条件（如 author:username 或 label:bug），以查找你可以访问的项目中的合并请求。",
+    "filterNeededTitle": "添加筛选条件以搜索合并请求",
+    "goToAll": "前往“全部”",
+    "goToAll_gitlab": "前往“搜索”",
+    "noResultsMessage": "没有符合此搜索的拉取请求。请尝试减少筛选条件，或清除搜索。",
+    "noResultsMessage_gitlab": "没有符合此搜索的合并请求。请尝试减少筛选条件，或清除搜索。",
+    "noResultsTitle": "无结果",
+    "reviewRequestedMessage": "当有人请你审查拉取请求时，它会显示在这里。",
+    "reviewRequestedMessage_gitlab": "当有人请你审查合并请求时，它会显示在这里。",
+    "reviewRequestedTitle": "暂无审查请求",
+    "teamReviewRequestedMessage": "请求你的团队审查的拉取请求会显示在这里。",
+    "teamReviewRequestedMessage_gitlab": "GitLab 合并请求面向个人而非团队发起审查。请求你审查的合并请求会显示在“审查请求”中。",
+    "teamReviewRequestedTitle": "暂无团队审查请求",
+    "viewMessage": "符合视图搜索条件的拉取请求会显示在这里。要扩大视图范围，请编辑其搜索并保存更改。",
+    "viewMessage_gitlab": "符合视图搜索条件的合并请求会显示在这里。要扩大视图范围，请编辑其搜索并保存更改。",
+    "viewTitle": "没有符合此视图的拉取请求",
+    "viewTitle_gitlab": "没有符合此视图的合并请求"
+  },
+  "pullRequestInboxTabs": {
+    "all": "全部",
+    "all_gitlab": "搜索",
+    "label": "PR 列表",
+    "label_gitlab": "合并请求列表",
+    "mine": "我的 PR",
+    "mine_gitlab": "我的 MR",
+    "recentlyViewed": "最近查看",
+    "reviewRequests": "审查请求",
+    "teamReviews": "团队审查"
+  },
+  "pullRequestInboxViews": {
+    "queryTooLong": "仅可保存长度不超过 {{max}} 个字符的搜索。",
+    "viewLimitReached": "你最多可保留 {{max}} 个已保存视图。删除一个即可保存新的视图。"
+  },
+  "pullRequestLayeredDiff": {
+    "architecture": "架构",
+    "diagram": "示意图",
+    "howItAllFitsTogether": "整体如何协同",
+    "internalChanges": "底层实现",
+    "noChangedLinesInTheCurrent": "当前差异中没有符合此分层的更改行。",
+    "overview": "概览",
+    "productChanges": "产品变更",
+    "sublayerTitle": "{{layer}}：{{sublayer}}",
+    "unassignedChanges": "未分配的变更",
+    "unassignedChangesSummary": "未分配到导览章节的变更。"
+  },
+  "pullRequestMoreActions": {
+    "autoMerge": {
+      "connectProvider": "在设置中连接你的 Git 提供商账号以更改自动合并。",
+      "disableFailure": "自动合并未能关闭。",
+      "disabled": "自动合并已关闭。",
+      "draft": "将 PR 转为待审查以开启自动合并。",
+      "enableFailure": "自动合并未能开启。",
+      "enabled": "自动合并已开启。PR 在满足要求后即会合并。",
+      "label": "自动合并",
+      "mergeable": "此 PR 现在即可合并，因此自动合并无需等待。",
+      "method": "满足要求后合并。",
+      "method_merge": "满足要求后通过合并提交进行合并。",
+      "method_rebase": "满足要求后进行变基并合并。",
+      "method_squash": "满足要求后进行压缩并合并。",
+      "unavailable": "你的 Git 提供商不允许你更改此 PR 的自动合并设置。"
+    },
+    "connectGithubToChangeState": "在设置中连接你的 Git 提供商账号以更改 PR 状态。",
+    "connectGithubToChangeState_gitlab": "在设置中连接你的 GitLab 账号以更改合并请求状态。",
+    "morePullRequestActions": "更多 PR 操作",
+    "morePullRequestActions_gitlab": "更多合并请求操作",
+    "stateAction": {
+      "close": {
+        "failure": "PR 未能关闭。",
+        "failure_gitlab": "合并请求未能关闭。",
+        "label": "关闭 PR",
+        "label_gitlab": "关闭合并请求",
+        "success": "PR 已关闭。",
+        "success_gitlab": "合并请求已关闭。"
+      },
+      "convertToDraft": {
+        "failure": "PR 未能转换为草稿。",
+        "failure_gitlab": "合并请求未能转换为草稿。",
+        "label": "转换为草稿",
+        "success": "PR 已转换为草稿。",
+        "success_gitlab": "合并请求已转换为草稿。"
+      },
+      "readyForReview": {
+        "failure": "PR 未能转为待审查。",
+        "failure_gitlab": "合并请求未能转为待审查。",
+        "label": "转为待审查",
+        "success": "PR 已转为待审查。",
+        "success_gitlab": "合并请求已转为待审查。"
+      },
+      "reopen": {
+        "failure": "PR 未能重新开启。",
+        "failure_gitlab": "合并请求未能重新开启。",
+        "label": "重新开启 PR",
+        "label_gitlab": "重新开启合并请求",
+        "success": "PR 已重新开启。",
+        "success_gitlab": "合并请求已重新开启。"
+      }
+    },
+    "stateChangesGithubOnly": "此 Git 提供商不支持 PR 状态更改。"
+  },
+  "pullRequestOmittedFiles": {
+    "imageAlt": "{{side}}版本的 {{path}}",
+    "previewUnavailable": "预览不可用",
+    "side": {
+      "after": "之后",
+      "before": "之前"
+    }
+  },
+  "pullRequestParticipantSelect": {
+    "assignees": {
+      "loadFailed": "无法加载指派人。",
+      "loadMoreFailed": "无法加载更多指派人。",
+      "loading": "正在加载指派人…",
+      "loadingMore": "正在加载更多指派人",
+      "loadingMoreRow": "正在加载更多指派人…",
+      "noMatching": "没有匹配的指派人",
+      "searchMoreFailed": "无法搜索更多指派人。",
+      "searchPlaceholder": "搜索指派人…",
+      "searching": "正在搜索指派人…"
+    },
+    "labels": {
+      "loadFailed": "无法加载标签。",
+      "loadMoreFailed": "无法加载更多标签。",
+      "loading": "正在加载标签…",
+      "loadingMore": "正在加载更多标签",
+      "loadingMoreRow": "正在加载更多标签…",
+      "noMatching": "没有匹配的标签",
+      "searchMoreFailed": "无法搜索更多标签。",
+      "searchPlaceholder": "搜索标签…",
+      "searching": "正在搜索标签…"
+    },
+    "reviewers": {
+      "loadFailed": "无法加载审查者。",
+      "loadMoreFailed": "无法加载更多审查者。",
+      "loading": "正在加载审查者…",
+      "loadingMore": "正在加载更多审查者",
+      "loadingMoreRow": "正在加载更多审查者…",
+      "noMatching": "没有匹配的审查者",
+      "searchMoreFailed": "无法搜索更多审查者。",
+      "searchPlaceholder": "搜索审查者…",
+      "searching": "正在搜索审查者…"
+    }
+  },
+  "pullRequestParticipants": {
+    "addGithubOnly": "此 Git 提供商不支持请求审查或添加标签。",
+    "checkingGithubAccess": "正在检查你的 Git 提供商访问权限…",
+    "collapseSection": "收起 {{section}}",
+    "commentGroups": {
+      "bugs": "Bug",
+      "comments": "评论",
+      "mainConversation": "主对话",
+      "outdated": "已过时",
+      "resolved": "已解决",
+      "security": "安全",
+      "vulnerabilities": "漏洞"
+    },
+    "commentsFrom": "{{login}} 的评论",
+    "connectGithubToAdd": "在设置中连接你的 Git 提供商账号以请求审查和添加标签。",
+    "expandSection": "展开 {{section}}",
+    "labelNotRemoved": "标签未能移除。",
+    "labels": "标签",
+    "mergeStatus": "合并状态",
+    "noCommentText": "无文本",
+    "noLabels": "无标签",
+    "noOpenComments": "没有未解决评论",
+    "noReviewsRequested": "未请求任何审查。",
+    "noReviewsYet": "暂无审查",
+    "openComments": "未解决评论",
+    "openCommentsSummary": "未解决评论：{{counts}}",
+    "participantsLoadFailed": "无法加载审查和标签。请刷新以重试。",
+    "picker": {
+      "assignee": {
+        "add": "添加指派人",
+        "matchingSearch": "符合搜索的指派人",
+        "notAdded": "指派人未能添加。"
+      },
+      "label": {
+        "add": "添加标签",
+        "matchingSearch": "符合搜索的标签",
+        "notAdded": "标签未能添加。"
+      },
+      "reviewer": {
+        "add": "添加审查者",
+        "matchingSearch": "符合搜索的审查者",
+        "notAdded": "审查者未能添加。"
+      }
+    },
+    "requestReview": "请求审查",
+    "requestedReviewers": "已请求的审查者",
+    "reviewCounts": {
+      "bugs_other": "{{count}} 个 Bug",
+      "comments_other": "{{count}} 条评论",
+      "openComments_other": "{{count}} 条未解决评论",
+      "security_other": "{{count}} 个安全问题"
+    },
+    "reviewFrom": "{{login}} 的审查",
+    "reviewerLimitReached": "此 GitLab 项目仅允许一位审查者。",
+    "reviewerState": {
+      "approved": "已批准",
+      "changesRequested": "已请求更改",
+      "commented": "已评论",
+      "dismissed": "审查已驳回",
+      "requested": "已请求审查"
+    },
+    "reviews": "审查",
+    "sessions": "会话",
+    "shownGithubOnly": "此 Git 提供商不支持审查或标签详情。"
+  },
+  "pullRequestReviewChatSession": {
+    "chatUnavailable": "无法显示此对话。",
+    "loadingChat": "正在加载拉取请求对话…",
+    "loadingChat_gitlab": "正在加载合并请求对话…",
+    "newChat": "新建对话",
+    "tryAgain": "重试"
+  },
+  "pullRequestReviewWorkspace": {
+    "branchName": "分支名称",
+    "changesDetected": "检测到更改",
+    "changesUnavailableMessage": "请在 GitHub 上打开，以审查其更改的文件。",
+    "changesUnavailableMessage_gitlab": "请在 GitLab 上打开，以审查其更改的文件。",
+    "changesUnavailableTitle": "此处无法显示此 PR 的更改",
+    "changesUnavailableTitle_gitlab": "此处无法显示此合并请求的更改",
+    "codeFromEarlierRevision": "来自较早修订版本的代码。",
+    "codePreviewUnavailable": "代码预览不可用。",
+    "collapseCommentAt": "折叠 {{location}} 处的评论",
+    "collapseThreadAt": "折叠 {{location}} 处的讨论串",
+    "commentKinds": {
+      "bug": "Bug",
+      "comment": "评论",
+      "securityIssue": "安全问题"
+    },
+    "commentNotDeleted": "评论未删除。",
+    "commentNotPosted": "评论未发布。",
+    "commentNotPostedStaleRevision": "PR 已发生变化，因此你的评论未能发布。请复制评论、刷新，然后重新发布。",
+    "commentNotPostedStaleRevision_gitlab": "合并请求已发生变化，因此你的评论未能发布。请复制评论、刷新，然后重新发布。",
+    "commentNotSaved": "评论未保存。",
+    "commentOnEarlierRevision": "此评论针对较早的修订版本。",
+    "commentsLoadFailed": "无法加载评论。请刷新后重试。",
+    "connectProviderToMergeOrReview": "在设置中连接你的提供商账号，以你自己的身份合并或审查。",
+    "copiedComment": "评论",
+    "copyComment": "复制评论",
+    "diffLayers": "差异分层",
+    "expandCommentAt": "展开 {{location}} 处的评论",
+    "expandThreadAt": "展开 {{location}} 处的讨论串",
+    "goToLocation": "转到 {{location}}",
+    "goToLocationInDiff": "在差异中转到 {{location}}",
+    "inlineCommentsLoadFailed": "无法加载行内评论。请刷新后重试。",
+    "lineNotInCurrentDiff": "此行不在当前差异中。",
+    "linkedPullRequestRequired": "需要关联 PR 才能查看文件。",
+    "mergeReviewUnsupportedProvider": "此提供商不支持合并和审查。",
+    "noAiSummary": "未提供 AI 摘要。",
+    "noCommentsOnThisPullRequest": "此 PR 暂无评论。",
+    "noCommentsOnThisPullRequest_gitlab": "此合并请求暂无评论。",
+    "noPullRequestYet": "暂无 PR",
+    "noWalkthrough": "此 PR 暂无代码导览。",
+    "pendingReviewDiscarded": "已放弃待处理的审查。",
+    "pendingReviewNotDiscarded": "待处理的审查未放弃。",
+    "pullRequestMergeInProgress": "提供商仍在合并。完成后 PR 将自动更新。",
+    "pullRequestMergeQueued": "PR 已加入合并队列。",
+    "pullRequestMerged": "PR 已合并。",
+    "pullRequestMerged_gitlab": "合并请求已合并。",
+    "pullRequestNotMerged": "PR 未合并。",
+    "pullRequestNotMerged_gitlab": "合并请求未合并。",
+    "pullRequestNotRefreshed": "无法刷新 PR。",
+    "pullRequestNotRefreshed_gitlab": "无法刷新合并请求。",
+    "pullRequestUnavailableMessage": "其仓库可能未连接到你的组织，或者你的 Git 提供商账号没有访问权限。",
+    "pullRequestUnavailableMessage_gitlab": "其项目可能未连接到你的组织，或者你的 GitLab 账号没有访问权限。",
+    "pullRequestUnavailableTitle": "此处无法显示此 PR",
+    "pullRequestUnavailableTitle_gitlab": "此处无法显示此合并请求",
+    "pullRequestView": "PR 视图",
+    "pullRequestView_gitlab": "合并请求视图",
+    "pullRequestsMerged_other": "已合并 {{count}} 个 PR。",
+    "rateLimitedMessage": "{{provider}} 限制了你的账号可发起的请求数量。请等待一分钟，然后重试。",
+    "reactionNotSaved": "回应未保存。",
+    "refreshPullRequestData": "刷新 PR 数据",
+    "refreshPullRequestData_gitlab": "刷新合并请求数据",
+    "refreshToRetry": "刷新 PR 以重试。",
+    "refreshToRetry_gitlab": "刷新合并请求以重试。",
+    "replyToThreadAt": "回复 {{location}} 处的讨论串",
+    "requestedChangesNotRecorded": "你的审查已发布，但 GitLab 未记录“请求更改”。请在 GitLab 上请求更改。",
+    "resizeLayerSidebar": "调整侧边栏大小",
+    "resolveThread": "解决",
+    "reviewNotSubmitted": "审查未提交。",
+    "reviewSuccess": {
+      "approve": "批准已提交。",
+      "comment": "审查评论已提交。",
+      "requestChanges": "已请求更改。",
+      "requestChangesDiscussion": "审查评论已发布。"
+    },
+    "summaryLoadFailed": "无法加载 PR 摘要。请刷新后重试。",
+    "summaryLoadFailed_gitlab": "无法加载合并请求摘要。请刷新后重试。",
+    "theProvidersChangedFileListMay": "提供商返回的更改文件列表可能不完整。打开 PR 以查看所有文件。",
+    "theProvidersChangedFileListMay_gitlab": "GitLab 的更改文件列表可能不完整。打开合并请求以查看所有文件。",
+    "thePullRequestDiffCouldNot": "无法加载 PR 差异",
+    "thePullRequestDiffCouldNot_gitlab": "无法加载合并请求差异",
+    "threadReplyNotSaved": "你的回复未发布。请刷新后重试。",
+    "threadResolutionNotSaved": "无法更新此审查讨论串。请刷新后重试。",
+    "unknown": "未知",
+    "unresolveThread": "取消解决",
+    "view": {
+      "diff": "文件变更",
+      "summary": "对话",
+      "validation": "验证",
+      "walkthrough": "代码导览"
+    },
+    "walkthroughWrittenFromChat": {
+      "description": "设置代码导览后，每个 PR 都会生成一份，并随每次新提交更新。",
+      "dismiss": "忽略",
+      "setUp": "设置代码导览",
+      "title": "Droid 根据你的对话撰写了此代码导览"
+    },
+    "walkthroughsUnavailableOnGitlabMessage": "代码导览自动化运行在 GitHub Actions 上，因此合并请求暂时无法获得代码导览。",
+    "walkthroughsUnavailableOnGitlabTitle": "GitLab 暂不支持代码导览"
+  },
+  "pullRequestRowMenu": {
+    "addToChat": "添加到对话",
+    "autofix": "自动修复",
+    "autofixPaused": "已暂停",
+    "autofixRecipient": "后续消息将发送给 {{agent}}。",
+    "autofixSettings": "自动修复设置",
+    "autofixTooltipDescription": "自动处理审查评论、修复失败的 CI 检查，并向负责该 PR 的智能体发送后续消息，以对其执行变基。",
+    "autofixTooltipDescription_gitlab": "自动处理审查评论、修复失败的 CI 检查，并向负责该合并请求的智能体发送后续消息，以对其执行变基。",
+    "autofixTooltipTitle": "PR 自动后续处理",
+    "autofixTooltipTitle_gitlab": "合并请求自动后续处理",
+    "autofixUnavailable": "不可用",
+    "copiedDesktopLink": "桌面链接",
+    "copiedLink": "链接",
+    "copiedProviderLink": "{{provider}} 链接",
+    "copyDesktopLink": "复制桌面链接",
+    "copyLink": "复制链接",
+    "copyProviderLink": "复制 {{provider}} 链接",
+    "off": "关闭",
+    "on": "开启",
+    "openInCodeReview": "在 代码审查 中打开",
+    "openInNewTab": "在新标签页中打开",
+    "openInSidebar": "在侧边栏中打开",
+    "openOnProvider": "在 {{provider}} 上打开"
+  },
+  "pullRequestSearch": {
+    "connectGithubDescription": "连接 GitHub 以搜索 PR。",
+    "connectGithubTitle": "连接 GitHub 以搜索 PR",
+    "connectGitlabDescription": "连接 GitLab 以搜索合并请求。",
+    "connectGitlabSelfHostedDescription": "连接 {{host}} 以搜索合并请求。",
+    "connectGitlabSelfHostedTitle": "连接 {{host}} 以搜索合并请求",
+    "connectGitlabTitle": "连接 GitLab 以搜索合并请求",
+    "noOtherLoadedMatches": "目前已加载的其他结果均不匹配此搜索。",
+    "noOtherMatches": "没有其他 PR 匹配此搜索。",
+    "noOtherMatches_gitlab": "没有其他合并请求匹配此搜索。",
+    "searchFailed": "无法搜索 PR。",
+    "searchFailedTitle": "搜索失败",
+    "searchFailed_gitlab": "无法搜索合并请求。",
+    "searchResultsTitle": "所有 PR",
+    "searchResultsTitle_gitlab": "所有合并请求",
+    "searching": "正在搜索 PR",
+    "searching_gitlab": "正在搜索合并请求"
+  },
+  "pullRequestSearchQuery": {
+    "dates": {
+      "format": "输入 YYYY-MM-DD，可在前面加上 >、>=、< 或 <=，也可使用 YYYY-MM-DD..YYYY-MM-DD 这样的范围。",
+      "pastMonth": "过去一个月",
+      "pastThreeMonths": "过去 3 个月",
+      "pastWeek": "过去一周",
+      "pastYear": "过去一年",
+      "today": "今天"
+    },
+    "issues": {
+      "invalidValue": "{{value}} 不是 {{qualifier}} 可接受的值。",
+      "missingValue": "{{qualifier}}：需要一个值。",
+      "missingValueExamples": "{{qualifier}}：需要一个值，例如 {{examples}}。",
+      "notNegatable": "{{qualifier}}：无法使用 - 排除。",
+      "repeated": "{{qualifier}}：在此代码托管服务上只能使用一次。",
+      "textTooLong": "搜索文本过长。",
+      "tooManyValues": "{{qualifier}}：最多可使用 {{max}} 次。",
+      "unknownQualifier": "{{qualifier}}：不是搜索筛选条件。",
+      "unsupported": "此代码托管服务暂不支持搜索 {{token}}。"
+    },
+    "keys": {
+      "assignee": {
+        "description": "分配给某人的 PR",
+        "description_gitlab": "分配给某人的合并请求",
+        "label": "指派人",
+        "negatedDescription": "排除分配给某人的 PR",
+        "negatedDescription_gitlab": "排除分配给某人的合并请求",
+        "negatedLabel": "排除指派人"
+      },
+      "author": {
+        "description": "某人创建的 PR",
+        "description_gitlab": "某人创建的合并请求",
+        "label": "作者",
+        "negatedDescription": "排除某人创建的 PR",
+        "negatedDescription_gitlab": "排除某人创建的合并请求",
+        "negatedLabel": "排除作者"
+      },
+      "base": {
+        "description": "合并到某分支的 PR",
+        "description_gitlab": "目标为某分支的合并请求",
+        "label": "基础分支"
+      },
+      "checks": {
+        "description": "通过、失败或待处理的检查",
+        "label": "检查"
+      },
+      "closed": {
+        "description": "在指定日期、之前、之后或区间内关闭",
+        "label": "已关闭"
+      },
+      "commenter": {
+        "description": "某人评论过的 PR",
+        "label": "评论者",
+        "negatedDescription": "排除某人评论过的 PR",
+        "negatedLabel": "排除评论者"
+      },
+      "created": {
+        "description": "在指定日期、之前、之后或区间内创建",
+        "label": "已创建"
+      },
+      "directReviewer": {
+        "description": "按姓名请求某人审查的 PR",
+        "description_gitlab": "按姓名请求某人审查的合并请求",
+        "label": "直接请求审查",
+        "negatedDescription": "排除按姓名请求某人审查的 PR",
+        "negatedDescription_gitlab": "排除按姓名请求某人审查的合并请求",
+        "negatedLabel": "排除直接审查请求"
+      },
+      "head": {
+        "description": "从某分支合并的 PR",
+        "description_gitlab": "来自某分支的合并请求",
+        "label": "头部分支"
+      },
+      "involves": {
+        "description": "某人创建、被分配、评论或被提及的 PR",
+        "label": "涉及",
+        "negatedDescription": "排除涉及某人的 PR",
+        "negatedLabel": "排除涉及"
+      },
+      "is": {
+        "description": "已开启、已关闭、已合并、未合并或草稿",
+        "label": "状态",
+        "negatedDescription": "排除处于某状态的 PR",
+        "negatedDescription_gitlab": "排除处于某状态的合并请求",
+        "negatedLabel": "排除状态"
+      },
+      "label": {
+        "description": "带有某标签的 PR",
+        "description_gitlab": "带有某标签的合并请求",
+        "label": "标签",
+        "negatedDescription": "排除带有某标签的 PR",
+        "negatedDescription_gitlab": "排除带有某标签的合并请求",
+        "negatedLabel": "排除标签"
+      },
+      "mentions": {
+        "description": "提及某人的 PR",
+        "label": "提及",
+        "negatedDescription": "排除提及某人的 PR",
+        "negatedLabel": "排除提及"
+      },
+      "merged": {
+        "description": "在指定日期、之前、之后或区间内合并",
+        "label": "已合并"
+      },
+      "milestone": {
+        "description": "属于某里程碑的 PR",
+        "description_gitlab": "属于某里程碑的合并请求",
+        "label": "里程碑",
+        "negatedDescription": "排除属于某里程碑的 PR",
+        "negatedDescription_gitlab": "排除属于某里程碑的合并请求",
+        "negatedLabel": "排除里程碑"
+      },
+      "no": {
+        "description": "缺少标签、指派人或里程碑的 PR",
+        "description_gitlab": "缺少标签、指派人或里程碑的合并请求",
+        "label": "缺失"
+      },
+      "repo": {
+        "description": "某个仓库中的 PR",
+        "description_gitlab": "某个项目中的合并请求",
+        "label": "仓库",
+        "label_gitlab": "项目",
+        "negatedDescription": "排除某个仓库中的 PR",
+        "negatedDescription_gitlab": "排除某个项目中的合并请求",
+        "negatedLabel": "排除仓库",
+        "negatedLabel_gitlab": "排除项目"
+      },
+      "review": {
+        "description": "已批准、已请求更改、需要审查或无",
+        "label": "审查决定"
+      },
+      "reviewedBy": {
+        "description": "某人审查过的 PR",
+        "label": "审查者",
+        "negatedDescription": "排除某人审查过的 PR",
+        "negatedLabel": "排除审查者"
+      },
+      "reviewer": {
+        "description": "直接或通过团队请求某人审查的 PR",
+        "description_gitlab": "请求某人审查的合并请求",
+        "label": "请求审查"
+      },
+      "sort": {
+        "description": "结果列表的排序方式",
+        "label": "排序"
+      },
+      "teamReviewer": {
+        "description": "请求团队审查的 PR",
+        "label": "请求团队审查",
+        "negatedDescription": "排除请求团队审查的 PR",
+        "negatedLabel": "排除团队审查请求"
+      },
+      "updated": {
+        "description": "在指定日期、之前、之后或区间内更新",
+        "label": "已更新"
+      }
+    },
+    "options": {
+      "branches": {
+        "addRepository": "添加 repo:owner/name 以获取其分支建议。",
+        "addRepository_gitlab": "添加 repo:group/project 以获取其分支建议。",
+        "loadFailed": "无法加载分支。",
+        "loadMoreFailed": "无法加载更多分支。",
+        "loading": "正在加载分支…",
+        "loadingMore": "正在加载更多分支",
+        "loadingMoreRow": "正在加载更多分支…",
+        "searchMoreFailed": "无法搜索更多分支。",
+        "searching": "正在搜索分支…"
+      },
+      "labels": {
+        "addRepository": "添加 repo:owner/name 以获取其标签建议。",
+        "addRepository_gitlab": "添加 repo:group/project 以获取其标签建议。"
+      },
+      "milestones": {
+        "addRepository": "添加 repo:owner/name 以获取其里程碑建议。",
+        "addRepository_gitlab": "添加 repo:group/project 以获取其里程碑建议。",
+        "loadFailed": "无法加载里程碑。",
+        "loadMoreFailed": "无法加载更多里程碑。",
+        "loading": "正在加载里程碑…",
+        "loadingMore": "正在加载更多里程碑",
+        "loadingMoreRow": "正在加载更多里程碑…",
+        "searchMoreFailed": "无法搜索更多里程碑。",
+        "searching": "正在搜索里程碑…"
+      },
+      "people": {
+        "addRepository": "添加 repo:owner/name 以获取其人员建议。",
+        "addRepository_gitlab": "添加 repo:group/project 以获取其人员建议。",
+        "loadFailed": "无法加载人员。",
+        "loadMoreFailed": "无法加载更多人员。",
+        "loading": "正在加载人员…",
+        "loadingMore": "正在加载更多人员",
+        "loadingMoreRow": "正在加载更多人员…",
+        "searchMoreFailed": "无法搜索更多人员。",
+        "searching": "正在搜索人员…"
+      },
+      "teams": {
+        "addRepository": "添加 repo:owner/name 以获取其组织的团队建议。",
+        "loadFailed": "无法加载团队。",
+        "loadMoreFailed": "无法加载更多团队。",
+        "loading": "正在加载团队…",
+        "loadingMore": "正在加载更多团队",
+        "loadingMoreRow": "正在加载更多团队…",
+        "searchMoreFailed": "无法搜索更多团队。",
+        "searching": "正在搜索团队…"
+      }
+    },
+    "values": {
+      "approved": "已批准",
+      "changesRequested": "已请求更改",
+      "closed": "已关闭（包括已合并）",
+      "commentsAsc": "评论数从少到多",
+      "commentsDesc": "评论数从多到少",
+      "createdAsc": "最早优先",
+      "createdDesc": "最新优先",
+      "draft": "草稿，包括已开启或已关闭",
+      "failing": "有检查失败",
+      "interactionsAsc": "评论和回应数从少到多",
+      "interactionsDesc": "评论和回应数从多到少",
+      "merged": "已合并",
+      "noAssignee": "无指派人",
+      "noLabel": "无标签",
+      "noMilestone": "无里程碑",
+      "none": "暂无审查",
+      "open": "已开启（包括草稿）",
+      "passing": "所有检查均通过",
+      "pending": "检查仍在运行",
+      "reactionsAsc": "回应数从少到多",
+      "reactionsDesc": "回应数从多到少",
+      "required": "需要审查",
+      "unmerged": "已开启，或未合并即关闭",
+      "updatedAsc": "最久未更新优先",
+      "updatedDesc": "最近更新优先"
+    }
+  },
+  "pullRequestSlicedDiff": {
+    "noChangedLinesInTheCurrent": "当前差异中没有符合此分层的更改行。"
+  },
+  "pullRequestStack": {
+    "connectProviderToUnstack": "在设置中连接你的提供商账号，以你自己的身份取消堆叠。",
+    "keptInStack_other": "{{count}} 个 PR 仍保留在堆叠中，例如因为已排队等待合并。",
+    "notStacked": "这些 PR 未能堆叠。",
+    "notUnstacked": "这些 PR 未能取消堆叠。",
+    "stacked": "PR 已堆叠。",
+    "unstacked": "已取消堆叠这些 PR，且未关闭其中任何一个。"
+  },
+  "pullRequestValidation": {
+    "checksLoadFailed": "无法加载检查。请刷新后重试。",
+    "collapseCommentBy": "折叠 {{author}} 的评论",
+    "comment": "评论",
+    "emptyCommentBody": "未提供评论正文。",
+    "expandCommentBy": "展开 {{author}} 的评论",
+    "newCommentOnPullRequest": "此 PR 上的新评论",
+    "newCommentOnPullRequest_gitlab": "此合并请求上的新评论",
+    "noAutomatedQaCommentsYet": "暂无自动化 QA 评论。",
+    "noQaDetailsWereReportedFor": "此部分未报告 QA 详情。",
+    "noQaReported": "未报告 QA 结果。",
+    "qaAppRecording": "{{app}} QA 录制",
+    "qaCommentsLoadFailed": "无法加载 QA 评论。请刷新后重试。",
+    "qaRecording": "QA 录制",
+    "reply": "回复",
+    "replyToCommentBy": "回复 {{author}} 的评论",
+    "replyWithQuoteTo": "正在以引用评论的形式回复 @{{author}}",
+    "sendComment": "发送评论",
+    "writeComment": "编写评论…"
+  },
+  "review": {
+    "codeHostsLoadFailed": "无法加载代码托管服务",
+    "codeReview": "代码审查",
+    "loadingPullRequests": "正在加载 PR",
+    "loadingPullRequests_gitlab": "正在加载合并请求",
+    "pullRequestChat": "PR 对话",
+    "pullRequestChat_gitlab": "合并请求对话",
+    "searchOrPasteALink": "搜索或粘贴 PR 链接",
+    "searchOrPasteALink_gitlab": "搜索或粘贴合并请求链接",
+    "sessionWalkthroughKickoff": "为此 PR 编写一份代码导览：{{url}}\n在 {{minutes}}分钟的超时限制内运行 `{{command}}`，并等待其完成。该命令可能会检出此 PR 的头部提交，因此请在仓库的单独克隆（例如新的工作树）中运行，而不要在你当前工作的检出中运行。",
+    "sessionWalkthroughKickoff_gitlab": "为此合并请求编写一份代码导览：{{url}}\n在 {{minutes}}分钟的超时限制内运行 `{{command}}`，并等待其完成。该命令可能会检出此合并请求的头部提交，因此请在仓库的单独克隆（例如新的工作树）中运行，而不要在你当前工作的检出中运行。",
+    "walkthroughChatHidden": "请返回对话中试用。",
+    "walkthroughChatInputReplaced": "对话当前无法接收消息。",
+    "walkthroughKickoff": "为此 PR 编写一份代码导览：{{url}}\n在其仓库的克隆中，在 {{minutes}}分钟的超时限制内运行 `{{command}}`，并等待其完成。如果该命令将代码导览交由智能体处理，该智能体可能会在该克隆中检出此 PR 的头部提交。",
+    "walkthroughNeedsComputer": "代码导览在 Droid 计算机上编写。请创建一台，或打开 Factory Desktop 以在本地工作。",
+    "walkthroughNeedsNewerDroid": "请更新此计算机上的 Droid 后试用",
+    "walkthroughSharedSession": "无法在共享会话中试用。",
+    "workstreamWalkthroughKickoff": "为此 PR 编写一份代码导览：{{url}}\n让智能体在 {{minutes}}分钟的超时限制内运行 `{{command}}`，并等待命令完成。该命令可能会检出此 PR 的头部提交，因此智能体应在没有其他智能体正在使用的仓库克隆（例如新的工作树）中运行该命令。"
+  },
+  "walkthroughReadError": {
+    "loadFailed": "无法加载代码导览。请刷新后重试。",
+    "noPullRequest": "找不到该 PR。",
+    "notConnected": "连接你的 Git 提供商账号以加载代码导览。",
+    "providerError": "无法加载代码导览，因为 PR 差异加载失败。请刷新后重试。",
+    "providerNotConfigured": "连接你的 Git 提供商以加载代码导览。",
+    "unsupportedProvider": "此 Git 提供商不支持代码导览。"
+  }
+}

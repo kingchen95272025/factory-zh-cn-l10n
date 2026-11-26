@@ -1,0 +1,46 @@
+{
+  "evaluationPresets": {
+    "cancel": "取消",
+    "deleteDescription": "要为组织中的所有人删除 {{name}} 吗？现有运行不受影响。",
+    "deletePreset": "删除预设",
+    "deletePresetTitle": "删除预设？",
+    "duplicateName": "{{name}} 副本"
+  },
+  "evaluationSkillFiles": {
+    "loading": "正在加载技能文件…",
+    "unavailable": "技能文件不可用。"
+  },
+  "evaluationTaskFiles": {
+    "filesUnavailable": "文件不可用",
+    "listingTooLarge": "文件列表超出预览大小限制。",
+    "loading": "正在加载文件…",
+    "noFiles": "暂无文件",
+    "truncatedNotice": "由于已达到预览上限，部分文件未显示。"
+  },
+  "evaluations": {
+    "couldNotLoadVersion": "无法加载此版本。",
+    "datasetNotFound": "未找到数据集",
+    "datasetNotInLibrary": "此数据集库中没有“{{name}}”。",
+    "latestVersion": "最新版本",
+    "listViews": {
+      "allDatasets": "全部数据集",
+      "allRuns": "全部运行",
+      "datasets": "数据集",
+      "runs": "运行"
+    },
+    "runNotFound": "未找到运行",
+    "runNotReported": "此评估尚未报告结果。",
+    "tabs": {
+      "library": "库",
+      "presets": "预设"
+    },
+    "tasksUnavailable": "任务不可用",
+    "versionNotFound": "未找到版本",
+    "versionNotFoundDescription": "在 {{dataset}} 中未找到版本“{{version}}”。"
+  },
+  "filePreview": {
+    "binary": "二进制文件。无法提供文本预览。",
+    "symlink": "文件预览不会跟随符号链接。",
+    "tooLarge": "此文件超出预览大小限制。"
+  }
+}

@@ -1,0 +1,2081 @@
+{
+  "automationBreadcrumbV2": {
+    "automations": "自动化"
+  },
+  "automationChainedDetailPage": {
+    "cancel": "取消",
+    "cancelCreationOf": "取消创建“{{name}}”？设置会话将被放弃。",
+    "chainedAfter": "链式触发",
+    "edit": "编辑",
+    "noChangesHaveBeenMade": "尚未做出任何更改",
+    "save": "保存",
+    "saving": "正在保存…",
+    "sessionPrivacy": "会话隐私"
+  },
+  "automationChainedEditFormV2": {
+    "agentInstructions": "智能体指令",
+    "chainedAfter": "链式触发",
+    "chainedAfterNames": "链式触发：{{names}}",
+    "describeWhatDroidShouldDoEach": "描述 Droid 在每次此自动化启动时应该做什么…",
+    "instructions": "指令",
+    "permanentlyRemovesThisAutomationTheAutomations": "永久移除此自动化。触发它的自动化将停止启动它。历史运行记录会保留。",
+    "runsStartWhenARunOf": "当其中任一自动化的一次运行结束时（无论完成还是失败），运行即会启动。",
+    "whatDroidDoesEachTimeThe": "Droid 在前置自动化完成一次运行后执行的操作。"
+  },
+  "automationCideleteModal": {
+    "description": "移除操作会开启一个 PR，用于删除每个已勾选仓库中的工作流文件；若其安装 PR 尚未合并，则会关闭该 PR。只要还有仓库保留该工作流，自动化就会继续显示在列表中。",
+    "loadingRepositories": "正在加载仓库…",
+    "statusesUnavailable": "无法加载仓库状态，正在重试…"
+  },
+  "automationCioverview": {
+    "configuration": "配置",
+    "custom": "自定义",
+    "default": "默认",
+    "events": "事件",
+    "lastRun": "上次运行",
+    "mixedAcrossRepositories": "{{count}} 个仓库的设置不一致",
+    "model": "模型",
+    "noEventsConfigured": "未配置事件",
+    "owner": "所有者",
+    "prompt": "提示词",
+    "repository": "仓库",
+    "reviewGuidelines": {
+      "generateNow": "立即生成",
+      "lastRefresh": "上次刷新",
+      "latestUpdate": "最新更新",
+      "notCreatedYet": "尚未创建",
+      "notRunYet": "尚未运行",
+      "off": "关闭",
+      "prStatus": {
+        "closed": "已关闭",
+        "merged": "已合并",
+        "open": "等待审查"
+      },
+      "refresh": "刷新",
+      "refreshValue": {
+        "monthlyHumansOnly": "每月 · 仅人工评论",
+        "monthlyWithBots": "每月 · 人工与机器人评论",
+        "weeklyHumansOnly": "每周 · 仅人工评论",
+        "weeklyWithBots": "每周 · 人工与机器人评论"
+      },
+      "ruleCount_other": "{{count}} 条规则",
+      "rules": "规则",
+      "setUp": "设置",
+      "starting": "正在启动…",
+      "status": "状态",
+      "title": "审查指南"
+    },
+    "runHistory": "运行历史",
+    "schedule": "计划（CI）",
+    "successRate7d": "成功率（7 天）",
+    "template": "模板",
+    "triggers": "触发器",
+    "viewOnGithub": "在 GitHub 上查看",
+    "workflow": "工作流",
+    "workflowFile": "工作流文件",
+    "workflowFiles": "{{count}} 个工作流文件"
+  },
+  "automationCipage": {
+    "applyChanges": "应用更改",
+    "applying": "正在应用…",
+    "automation": "自动化",
+    "automationActions": "自动化操作",
+    "automationPrompt": "自动化提示词",
+    "automationUpdated": "自动化已更新",
+    "cancel": "取消",
+    "chooseWhichOrganizationRulesGet": "选择哪些组织规则接收你的更改。未勾选的组织规则将保留当前设置。",
+    "chooseWhichReposAndOrganizationRules": "选择哪些仓库和组织规则接收你的更改。未勾选的将保留当前设置。",
+    "chooseWhichReposGetYourChanges": "选择哪些仓库接收你的更改。未勾选的仓库将保留当前设置。",
+    "deleteFailed": "删除失败",
+    "deletePrOpenedFor": "已为 {{repo}} 开启删除 PR",
+    "describeWhatYouWantThisAutomation": "描述你希望此自动化在每次运行时完成的任务…",
+    "edit": "编辑",
+    "editFailed": "编辑失败",
+    "editPrOpenedFor": "已为 {{repo}} 开启编辑 PR",
+    "emptyPromptError": "此自动化依赖提示词运行，因此不能留空。请描述它应该做什么，或删除该自动化。",
+    "envPermissionsConcurrencyRunsOnOverrides": "env、permissions、concurrency、runs-on 覆盖…",
+    "githubActionParameters": "GitHub Action 参数",
+    "howThisWorkflowRunsChangesApply": "此工作流的运行方式。更改仅应用于你选择的仓库。",
+    "installTargets": {
+      "organization": {
+        "applyTo_other": "应用到 {{count}} 个组织",
+        "selectAll_other": "选择全部 {{count}} 个组织以应用新名称。",
+        "selectAtLeastOne": "至少选择一个组织以应用更改。",
+        "selectTheOne": "选择要应用新名称的组织。"
+      },
+      "repository": {
+        "applyTo_other": "应用到 {{count}} 个仓库",
+        "selectAll_other": "选择全部 {{count}} 个仓库以应用新名称。",
+        "selectAtLeastOne": "至少选择一个仓库以应用更改。",
+        "selectTheOne": "选择要应用新名称的仓库。"
+      },
+      "target": {
+        "applyTo_other": "应用到 {{count}} 个目标",
+        "selectAll_other": "选择全部 {{count}} 个目标以应用新名称。",
+        "selectAtLeastOne": "至少选择一个目标以应用更改。",
+        "selectTheOne": "选择要应用新名称的目标。"
+      }
+    },
+    "instructions": "指令",
+    "model": "模型",
+    "nameChangeWillBeAppliedHere": "名称更改将立即在此处生效，但需要在 PR 获批后才会反映到 YAML 文件中",
+    "noneOfTheSelectedRepositoriesAllowPushing": "所选仓库均不允许推送。请联系维护者获取写入权限。",
+    "optionalWorkflowInputsAsYamlOr": "可选：以 YAML 或 JSON 格式提供工作流输入",
+    "organizationPlural": "组织",
+    "organizationRule": "组织规则",
+    "organizationSingular": "组织",
+    "organizations": "组织",
+    "overrideTheModelThisWorkflowRuns": "覆盖此工作流使用的模型。保留为「默认」可沿用工作流当前的模型。",
+    "overrideTheReasoningEffortThisWorkflow": "覆盖此工作流使用的推理强度。保留为「默认」可沿用工作流当前的设置。",
+    "reasoningLevel": "推理级别",
+    "renameHintAllRepos": "重命名会应用到所有仓库。请全选 {{count}} 个以应用。",
+    "renameHintSingleRepo": "重命名会应用到所有仓库。请选择要应用该更改的仓库。",
+    "repositories": "仓库",
+    "reset": "重置",
+    "reviewGuidelinesStarted_other": "已开始学习 {{count}} 个仓库的审查指南。每次运行完成后会开启一个 PR。",
+    "targetPlural": "目标",
+    "targetSingular": "目标",
+    "triggers": "触发器",
+    "viewPr": "查看 PR",
+    "whatDroidDoesEachTimeThis": "Droid 在每次工作流运行时执行的操作。",
+    "whereItsInstalled": "安装位置",
+    "workflow": "工作流",
+    "workflowYamlExtras": "工作流 YAML 附加项"
+  },
+  "automationCirepoStatus": {
+    "active": "已启用",
+    "deletePrOpen": "删除 PR 已开启",
+    "failed": "失败",
+    "openingDeletePr": "正在开启删除 PR…",
+    "openingPr": "正在开启 PR…",
+    "prClosed": "PR 已关闭",
+    "prOpen": "PR 已开启",
+    "readOnly": "只读",
+    "writable": "可写"
+  },
+  "automationCirepositoriesPanel": {
+    "access": "访问权限",
+    "load25More": "再加载 25 个",
+    "organization": "组织",
+    "organizations": "组织",
+    "repositories": "仓库",
+    "repository": "仓库",
+    "status": "状态"
+  },
+  "automationDeleteModal": {
+    "cancel": "取消",
+    "cancelAutomationCreation": "取消自动化创建",
+    "cancelCreation": "取消创建",
+    "cancelling": "正在取消…",
+    "delete": "删除",
+    "deleting": "正在删除…",
+    "keepCreating": "继续创建",
+    "removesFiles": "这将永久移除该自动化及其所有文件。历史运行记录会保留。",
+    "removesReceiver": "这将永久移除该自动化及其接收端 URL，之后将不再接收新的投递。历史运行记录会保留。",
+    "stopsTriggers": "触发它的自动化将停止启动它。历史运行记录会保留。",
+    "title": "删除 {{name}}？"
+  },
+  "automationDetailActionsMenuV2": {
+    "automationActions": "自动化操作",
+    "moreActions": "更多操作"
+  },
+  "automationDetailMetaLine": {
+    "lastRun": "上次运行 {{value}}",
+    "lastRunNever": "从未运行",
+    "successRate7d": "成功率（7 天）{{value}}"
+  },
+  "automationDetailPageShell": {
+    "automationDetailSections": "自动化详情分区",
+    "openSidebar": "打开侧边栏",
+    "tabs": {
+      "config": "配置",
+      "dashboard": "仪表盘",
+      "events": "事件",
+      "flow": "流程"
+    }
+  },
+  "automationEditFormFieldsV2": {
+    "absolutePathTheRunExecutesIn": "运行执行所在的绝对路径，例如 ~/code/my-repo",
+    "automation": "自动化",
+    "automationName": "自动化名称",
+    "delete": "删除",
+    "deleteAutomation": "删除自动化",
+    "description": "描述",
+    "descriptionOptional": "描述（可选）",
+    "orgDefaultModel": "组织默认",
+    "sessions": "会话",
+    "sharedSessionModelLocked": "运行会投递到现有会话，该会话将继续使用自身的模型和推理设置。如需更改模型和推理设置，请从概览页打开该会话。",
+    "shortSummaryShownInTheAutomation": "显示在自动化列表中的简短摘要",
+    "templateAutomation": "{{name}} 自动化",
+    "visibility": "可见性",
+    "whoCanOpenTheSessionsThisAutomationStarts": "谁可以打开此自动化启动的会话。",
+    "whoCanSeeAndRunThisAutomation": "谁可以查看和运行此自动化，以及谁可以打开它启动的会话。",
+    "workingDirectory": "工作目录",
+    "workingDirectoryOptional": "工作目录（可选）"
+  },
+  "automationEventsTableV2": {
+    "alerts": "条告警",
+    "bodySize": "正文大小：{{size}}",
+    "channel": "频道：{{channel}}",
+    "deliveries": "次投递",
+    "duration": "时长",
+    "event": "事件",
+    "events": "事件",
+    "filter": {
+      "alerts": "告警",
+      "all": "全部",
+      "countOpenEnded": "{{value}}+",
+      "deliveries": "投递",
+      "label": "事件类型",
+      "runs": "运行"
+    },
+    "goToSession": "转到会话",
+    "loadingEvents": "正在加载事件…",
+    "noAlerts": "暂无告警",
+    "noEventsYet": "暂无事件",
+    "noRunId": "无",
+    "noRunsYet": "暂无运行",
+    "noSlackDeliveriesYet": "暂无投递 — 请在该自动化的任一频道中发送一条消息。",
+    "noWebhookDeliveriesYet": "暂无投递 — 请向 Webhook URL 发送请求。",
+    "pageLabel": "第 {{page}} 页",
+    "retry": "重试",
+    "runEntryDataMayBeIncomplete": "运行记录数据可能不完整",
+    "runs": "次运行",
+    "session": "会话",
+    "sessionIsBeingCreated": "正在创建会话…",
+    "sessionIsPrivate": "此会话为私有。",
+    "slackMessageReceived": "已收到 Slack 消息",
+    "timestamp": "时间戳",
+    "unableToLoad": "无法加载 {{label}}：{{message}}",
+    "webhookDelivery": "Webhook 投递"
+  },
+  "automationFlow": {
+    "addAfter": "在后面添加",
+    "addAfterLabel": "添加一个在 {{name}} 之后运行的自动化",
+    "addAfterLocked": "添加一个在 {{name}} 之后运行的自动化。{{reason}}",
+    "addBefore": "在前面添加",
+    "addBeforeLabel": "添加一个在 {{name}} 之前运行的自动化",
+    "addBeforeLocked": "添加一个在 {{name}} 之前运行的自动化。{{reason}}",
+    "canvasLabel": "自动化链",
+    "chainAfterExistingAutomations": "在现有自动化之后链接",
+    "chainedAfterUpdated": "链式触发已更新",
+    "fitToView": "适应视图",
+    "onlyTheOwnerCanAddAfter": "只有所有者才能在此自动化之后添加自动化：所添加的自动化必须来自所有者自己的自动化。",
+    "runsUnavailable": "无法加载运行记录",
+    "sharedSessionCannotAddAfter": "运行会投递到现有会话中，因此无法启动其他自动化。",
+    "zoomIn": "放大",
+    "zoomOut": "缩小"
+  },
+  "automationMarketplaceV2": {
+    "openSidebar": "打开侧边栏",
+    "templates": "模板"
+  },
+  "automationModelControlsV2": {
+    "automationModel": "自动化模型",
+    "automationReasoningLevel": "自动化推理级别",
+    "model": "模型",
+    "reasoning": "推理"
+  },
+  "automationOverviewProperties": {
+    "chainAFollowUpAutomation": "链接后续自动化",
+    "createNew": "新建",
+    "selectExisting": "选择现有"
+  },
+  "automationRunHistoryTableV2": {
+    "duration": "时长",
+    "goToSession": "转到会话",
+    "loadingHistory": "正在加载历史…",
+    "loadingRuns": "正在加载运行…",
+    "noRunsYet": "暂无运行",
+    "outcome": "结果",
+    "outcomeChanged": "已编辑",
+    "outcomeChangedNote": "备注：{{note}}",
+    "outcomeChangedTooltip": "结果由 {{name}} 更改\n原值：{{status}}",
+    "pageLabel": "第 {{page}} 页",
+    "recentRuns": "最近运行",
+    "retry": "重试",
+    "runEntryDataMayBeIncomplete": "运行记录数据可能不完整",
+    "session": "会话",
+    "sessionIsBeingCreated": "正在创建会话…",
+    "started": "开始时间",
+    "startedCreate": "{{startedLabel}}（创建）",
+    "unableToLoadHistory": "无法加载历史记录：{{message}}"
+  },
+  "automationRunTableRows": {
+    "openSession": "打开会话"
+  },
+  "automationScheduleDetailPage": {
+    "backToDashboard": "返回仪表盘",
+    "cancel": "取消",
+    "cancelCreationOf": "取消创建“{{name}}”？已写入磁盘的设置文件将被删除，设置会话也将被放弃。",
+    "computerConnected": "计算机已连接",
+    "computerIsOfflineOrHibernating": "计算机已离线或休眠。点击重试…",
+    "configuration": "配置",
+    "connectToComputer": "连接到计算机",
+    "connectTooltip": {
+      "owning": {
+        "connectPrompt": "连接到所属机器以运行或修改此自动化",
+        "connected": "已连接到所属机器",
+        "connecting": "正在连接到所属机器…",
+        "unavailable": "所属机器不可用，可能已被删除。"
+      },
+      "remote": {
+        "connectPrompt": "连接到远程机器以运行或修改此自动化",
+        "connected": "已连接到远程机器",
+        "connecting": "正在连接到远程机器…",
+        "unavailable": "远程机器不可用，可能已被删除。"
+      }
+    },
+    "edit": "编辑",
+    "fullscreen": "全屏",
+    "noChangesHaveBeenMade": "尚未做出任何更改",
+    "notConfigured": "未配置",
+    "runDetails": "运行详情",
+    "runTheAutomationToGenerateA": "请先运行自动化以生成可视化",
+    "save": "保存",
+    "saving": "正在保存…",
+    "schedule": "计划",
+    "triggers": "触发器"
+  },
+  "automationScheduleEditFormV2": {
+    "agentInstructions": "智能体指令",
+    "automationSchedule": "自动化计划",
+    "describeWhatDroidShouldDoEach": "描述 Droid 在每次此自动化运行时应该做什么…",
+    "frequency": "频率",
+    "instructions": "指令",
+    "permanentlyRemovesThisAutomationPastRun": "永久移除此自动化。历史运行记录会保留。",
+    "schedule": "计划",
+    "whatDroidDoesEachTimeThis": "Droid 在每次此自动化运行时执行的操作。",
+    "whenSetScheduledRunsExecuteFrom": "设置后，计划运行会在此目录中执行，以便使用该项目的技能、仓库和相对路径。留空则从 Droid 的默认自动化文件夹运行。",
+    "whenThisAutomationRunsUsePlain": "此自动化的运行时间。可使用普通文字或 cron 表达式。"
+  },
+  "automationShareDropdownV2": {
+    "access": "访问权限",
+    "private": "私有",
+    "share": "共享",
+    "shared": "已共享"
+  },
+  "automationSlackDetailPage": {
+    "cancel": "取消",
+    "cancelCreationOf": "取消创建“{{name}}”？已写入磁盘的设置文件将被删除，设置会话也将被放弃。",
+    "channelRules": "频道规则",
+    "channels": "频道",
+    "edit": "编辑",
+    "excludedKeywords": "排除的关键词",
+    "excludedSenders": "排除的发送者",
+    "keywords": "关键词",
+    "messageSource": "消息来源",
+    "noChangesHaveBeenMade": "尚未做出任何更改",
+    "noChannels": "暂无频道",
+    "privateChannel": "私有频道",
+    "save": "保存",
+    "saving": "正在保存…",
+    "sessionPrivacy": "会话隐私"
+  },
+  "automationSlackEditFormV2": {
+    "enableAutomation": "启用自动化",
+    "enabled": "已启用",
+    "permanentlyRemovesThisAutomationPastRun": "永久移除此自动化。历史运行记录会保留。",
+    "turnOffToPauseTheAutomation": "关闭后将暂停该自动化。"
+  },
+  "automationStatusChip": {
+    "active": "已启用",
+    "activeDegraded": "已启用 · 降级",
+    "activeDegradedAriaLabel": "已启用 · 降级。{{tooltip}}",
+    "automationStatusCreating": "自动化状态：创建中",
+    "creating": "创建中",
+    "degraded": "降级",
+    "paused": "已暂停"
+  },
+  "automationVisualViewerV2": {
+    "automationVisualOutput": "自动化可视化输出",
+    "runTheAutomationToGenerateA": "运行自动化以生成可视化",
+    "selectAnAutomationToViewIts": "选择一个自动化以查看其可视化输出",
+    "theVisualFileMayContainInvalid": "可视化文件可能包含无效的 HTML。请尝试重新运行该自动化。"
+  },
+  "automationWebhookDetailPage": {
+    "cancel": "取消",
+    "cancelCreationOf": "取消创建“{{name}}”？设置会话将被放弃。",
+    "copied": "已复制",
+    "copyUrl": "复制 URL",
+    "copyWebhookUrl": "复制 Webhook URL",
+    "edit": "编辑",
+    "noChangesHaveBeenMade": "尚未做出任何更改",
+    "notConfigured": "未配置",
+    "payloadFilter": "载荷过滤器",
+    "save": "保存",
+    "saving": "正在保存…",
+    "secretFingerprint": "密钥指纹",
+    "sessionPrivacy": "会话隐私",
+    "webhookUrl": "Webhook URL"
+  },
+  "automationWebhookEditFormV2": {
+    "agentInstructions": "智能体指令",
+    "describeWhatDroidShouldDoEach": "描述 Droid 在每次 Webhook 触发时应该做什么…",
+    "everyDeliveryStartsARun": "每次投递都会启动一次运行",
+    "instructions": "指令",
+    "payloadFilterSummary": "载荷过滤器：{{payloadFilter}}",
+    "permanentlyRemovesThisAutomationAndIts": "永久移除此自动化及其接收端 URL。历史运行记录会保留。",
+    "runsStartWhenAnHttpPost": "当 HTTP POST 请求到达此自动化的唯一 URL 时，运行会启动。不符合过滤器的投递将记录为「已过滤」，且不会启动运行。",
+    "webhook": "Webhook",
+    "webhookPayloadFilter": "Webhook 载荷过滤器",
+    "whatDroidDoesWhenAnEvent": "Droid 在事件到达时执行的操作。"
+  },
+  "automationWebhookRotateSecret": {
+    "cancel": "取消",
+    "rotateSecret": "轮换密钥",
+    "rotateWebhookSecret": "轮换 Webhook 密钥",
+    "rotating": "正在轮换…",
+    "rotatingMintsANewSecretAnd": "轮换会生成新密钥并立即使当前密钥失效。所有发送方都必须更新为新密钥，其投递才会被再次接受。"
+  },
+  "automationsListChromeV2": {
+    "automations": "自动化",
+    "automationsRequireAConnectionToThe": "自动化需要连接本地守护进程。<desktopLink>打开 Factory 桌面应用</desktopLink>即可使用此功能。",
+    "browseTemplates": "浏览模板",
+    "connectGithub": "连接 GitHub",
+    "connectYourGithubAccountToView": "连接你的 GitHub 账号以查看和管理 CI 自动化。",
+    "createFromTemplate": "从模板创建",
+    "createManually": "手动创建",
+    "createWithDroid": "与 Droid 一起创建",
+    "desktopAppRequired": "需要桌面应用",
+    "githubWorkflowScanFailed": "GitHub 工作流扫描失败",
+    "newAutomation": "新建自动化",
+    "reconnectGithub": "重新连接 GitHub",
+    "refreshCiWorkflows": "刷新 CI 工作流",
+    "rescanGithubWorkflows": "重新扫描 GitHub 工作流",
+    "searchAutomations": "搜索自动化",
+    "yourGithubConnectionHasExpired": "你的 GitHub 连接已过期。请重新连接以查看和管理 CI 自动化。"
+  },
+  "automationsListModalsV2": {
+    "attention": "注意",
+    "dismiss": "忽略",
+    "goToSession": "转到会话",
+    "theSetupSessionRequiresYourResponse": "设置会话需要你的回复才能继续。"
+  },
+  "automationsV2": {
+    "automationForkedSuccessfully": "自动化复刻成功",
+    "automationSetToPrivate": "自动化已设为私有",
+    "automationSharedWithOrg": "自动化已与组织共享",
+    "automationUpdated": "自动化已更新",
+    "couldNotScanGithubWorkflows": "无法扫描 GitHub 工作流",
+    "failedToDeleteAutomation": "删除自动化失败",
+    "failedToDeleteAutomationFiles": "删除自动化文件失败",
+    "failedToForkAutomationV2": "复刻自动化失败（v2）",
+    "failedToPause": "暂停失败",
+    "failedToResume": "恢复失败",
+    "failedToRotateTheWebhookSecret": "轮换 Webhook 密钥失败",
+    "failedToUpdateAutomation": "更新自动化失败",
+    "failedToUpdatePrivacy": "更新隐私设置失败",
+    "failedToUpdateSlackAutomation": "更新 Slack 自动化失败",
+    "failedToWriteForkedAutomationFiles": "写入复刻的自动化文件失败",
+    "forkedWithoutOthersTriggeredBy": "自动化已复刻。其“链式触发”自动化未被复制，因为它们属于其他人。",
+    "forkedWithoutTriggeredBy": "自动化已复刻。其“链式触发”自动化未被复制，因为此计算机无法由其他自动化启动。",
+    "githubWorkflowsScannedClickToRescan": "GitHub 工作流已扫描 {{scannedAgo}}。点击重新扫描。",
+    "loadingCiWorkflows": "正在加载 CI 工作流…",
+    "loadingSharedAutomations": "正在加载共享自动化…",
+    "noAccessTokenAvailable": "无可用访问令牌",
+    "noAutomationsYet": "暂无自动化",
+    "pendingPrDescription": "{{repoFullName}} · 待处理的 PR",
+    "rescanGithubWorkflows": "重新扫描 GitHub 工作流",
+    "setupSessionEndedMessage": "设置会话在设置完成前已结束。请打开设置会话以完成设置，或取消创建后重试。",
+    "setupStep": {
+      "configuringFiles": "正在配置自动化文件",
+      "planning": "正在规划你的自动化",
+      "settingUp": "正在设置你的自动化"
+    },
+    "setupTimedOutMessage": "自动化创建在设置完成前超时。请打开设置会话以完成设置，或取消创建后重试。",
+    "slackAutomationUpdated": "Slack 自动化已更新",
+    "startFromATemplateOrDescribeTheJob": "从模板开始，或描述任务，由 Droid 与你一起完成设置。",
+    "thisMachine": "本机",
+    "untitledSession": "未命名会话",
+    "webhookSecretRotated": "Webhook 密钥已轮换"
+  },
+  "automationsV2Queries": {
+    "localAutomationsDesktopOnly": "本地自动化仅在桌面应用中可用",
+    "localDaemonDisconnected": "未连接到本地守护进程。请等待桌面应用重新连接后重试。"
+  },
+  "buildAutomationConfigurationRows": {
+    "access": "访问权限",
+    "chain": "自动化链",
+    "chainedAfter": "链式触发",
+    "createdIn": "创建于",
+    "defaultModel": "默认",
+    "forkedFrom": "复刻自",
+    "inProgress": "进行中",
+    "lastRun": "上次运行",
+    "model": "模型",
+    "noRunTarget": "无运行目标 — 无法启动运行。请使用计算机或环境重新创建此自动化。",
+    "none": "无",
+    "openSetupSession": "打开设置会话",
+    "orgDefaultModel": "组织默认",
+    "orgDefaultUnavailable": "组织默认不可用",
+    "owner": "所有者",
+    "privateSession": "私有会话",
+    "prompt": "提示词",
+    "retry": "重试",
+    "runAs": "运行身份",
+    "runSettings": "运行设置",
+    "runsOn": "运行于",
+    "session": "会话",
+    "sessionEnded": "会话已结束",
+    "setupSession": "设置会话",
+    "startsNext": "接下来启动",
+    "successRate7d": "成功率（7 天）",
+    "trigger": "触发器",
+    "viewInFlow": "在流程中查看",
+    "visibility": "可见性",
+    "visibilityOnlyYou": "仅你",
+    "visibilityOrganization": "组织内所有人",
+    "waitingForYourResponse": "等待你的回复",
+    "workingDirectory": "工作目录"
+  },
+  "buildCIAutomations": {
+    "automaticCodeReview": "自动代码审查",
+    "droidExecOnMention": "提及 @droid 时运行 Droid exec",
+    "runOnDroidMentions": "提及 @droid 时运行 Droid"
+  },
+  "chainExistingAutomationsModal": {
+    "followUpAutomationsUpdated": "后续自动化已更新"
+  },
+  "chainExistingAutomationsModalV2": {
+    "cancel": "取消",
+    "chainExistingAutomations": "链接现有自动化",
+    "save": "保存",
+    "saving": "正在保存…",
+    "startsNext": "接下来启动",
+    "startsNextHelperText": "当此自动化的一次运行结束时（无论完成还是失败）启动的自动化。"
+  },
+  "ciRepoAccess": {
+    "appNotInstalled": "此仓库未安装 Factory Droid GitHub App。",
+    "requiresWriteAccess": "创建 CI 自动化需要对该仓库具有写入权限。你只有 {{permission}} 权限。",
+    "unknownPermission": "未知"
+  },
+  "codeReviewMode": {
+    "allowedBots": "允许的机器人",
+    "commaSeparatedBotLoginsAllowedTo": "允许触发审查的机器人登录名，以逗号分隔。留空则不允许机器人创建的 PR。",
+    "controlsHowMuchExtraReasoningThe": "控制智能体在每次审查中投入的额外推理量。",
+    "custom": "自定义…",
+    "deep": "深度",
+    "disableToKeepTheWorkflowOn": "停用后，工作流仍保留在磁盘上，但会跳过每次运行。",
+    "eGDependabotRenovate": "例如 dependabot,renovate",
+    "eGMinimal": "例如 minimal",
+    "reasoning": "推理级别",
+    "reasoningDefault": "默认",
+    "reasoningHigh": "高",
+    "reasoningLow": "低",
+    "reasoningMedium": "中",
+    "reviewDepth": "审查深度",
+    "securityReview": "安全审查",
+    "shallow": "浅层",
+    "shallowIsAFastSurfaceReview": "浅层是快速的表层审查。深度则允许智能体在评论前探索相关代码。",
+    "turnsOnAutomaticSecurityReviewFor": "为 droid-action 步骤开启 automatic_security_review。"
+  },
+  "codeReviewModeV2": {
+    "allowedBots": "允许的机器人",
+    "commaSeparatedBotLoginsAllowedTo": "允许触发审查的机器人登录名，以逗号分隔。留空则不允许机器人创建的 PR。",
+    "controlsHowMuchExtraReasoningThe": "控制智能体在每次审查中投入的额外推理量。",
+    "custom": "自定义…",
+    "customReasoning": "自定义推理级别",
+    "deep": "深度",
+    "disableToKeepTheWorkflowOn": "停用后，工作流仍保留在磁盘上，但会跳过每次运行。",
+    "eGDependabotRenovate": "例如 dependabot,renovate",
+    "eGMinimal": "例如 minimal",
+    "reasoning": "推理级别",
+    "reasoningDefault": "默认",
+    "reasoningHigh": "高",
+    "reasoningLow": "低",
+    "reasoningMedium": "中",
+    "reviewDepth": "审查深度",
+    "reviewGuidelinesMixed": "各仓库设置不一致（{{total}} 个仓库中有 {{enabled}} 个已开启）。更改会应用于你选择的仓库。",
+    "securityReview": "安全审查",
+    "shallow": "浅层",
+    "shallowIsAFastSurfaceReview": "浅层是快速的表层审查。深度则允许智能体在评论前探索相关代码。",
+    "summary": {
+      "allowedBots": "允许的机器人：{{allowedBots}}",
+      "deepReview": "深度审查",
+      "disabled": "已停用",
+      "learnsGuidelinesMonthly": "每月学习审查指南",
+      "learnsGuidelinesWeekly": "每周学习审查指南",
+      "reasoning": "推理级别：{{reasoning}}",
+      "securityReviewOn": "安全审查已开启",
+      "shallowReview": "浅层审查"
+    },
+    "turnsOnAutomaticSecurityReviewFor": "为 droid-action 步骤开启 automatic_security_review。"
+  },
+  "codeWalkthroughModeV2": {
+    "disableToKeepTheWorkflow": "停用后，代码走查工作流仍保留在磁盘上，但会跳过每个拉取请求事件。",
+    "includeDraftPrs": "包含草稿 PR",
+    "model": {
+      "balanced": "均衡",
+      "balancedDescription": "在低成本与准确性之间取得平衡。",
+      "lite": "轻量",
+      "liteDescription": "成本极低，但有时会遗漏细节。"
+    },
+    "skipsDraftPullRequests": "Droid 会跳过草稿拉取请求，并在其被标记为可供审查后编写走查。",
+    "summary": {
+      "includesDraftPrs": "包含草稿 PR"
+    },
+    "writesAndUpdatesOnDrafts": "Droid 也会在草稿拉取请求上编写和更新走查。每次推送到草稿都会启动一次运行。"
+  },
+  "constants": {
+    "breadcrumbLabels": {
+      "alertResponder": "新建 Webhook 事件响应自动化",
+      "chained": "新建链式触发自动化",
+      "channelQa": "新建频道问答自动化",
+      "ciFailureTriage": "新建 CI 失败分诊自动化",
+      "codeHealth": "新建代码健康自动化",
+      "codeReview": "新建代码审查自动化",
+      "codeWalkthrough": "新建代码走查自动化",
+      "dailyStatusDigest": "新建每日状态摘要自动化",
+      "docsRefresh": "新建文档刷新自动化",
+      "errorTriage": "新建定时错误分诊自动化",
+      "github": "新建 GitHub 自动化",
+      "incidentResponse": "新建 Slack 事件响应自动化",
+      "meetingNotesSync": "新建会议纪要同步自动化",
+      "newIssueInvestigator": "新建工单调查自动化",
+      "prReviewer": "新建 PR 审查自动化",
+      "qa": "新建 QA 自动化",
+      "reviewCommentFixer": "新建审查评论修复自动化",
+      "scheduled": "新建定时自动化",
+      "securityAudit": "新建安全审计自动化",
+      "slack": "新建 Slack 自动化",
+      "slackBugFixer": "新建 Slack Bug 修复自动化",
+      "slackDigest": "新建 Slack 摘要自动化",
+      "slackTicketFiler": "新建 Slack 工单登记自动化",
+      "testCoverage": "新建测试覆盖率自动化",
+      "ticketToPr": "新建工单转 PR 自动化",
+      "triage": "新建分诊自动化",
+      "unified": "新建自动化",
+      "webhook": "新建 Webhook 自动化",
+      "wiki": "新建 AutoWiki 自动化"
+    },
+    "chainAfterExistingHelperText": "将此自动化设置为在另一个自动化完成后运行。",
+    "chainAfterExistingLabel": "链接到现有自动化之后？",
+    "chainDepthLimitMessage": "链接此自动化将超出 {{max}} 个链式自动化的深度上限。",
+    "chainFollowUpsRefreshError": "无法刷新你的自动化，因此未保存任何内容。请重试。",
+    "chainFollowUpsRefreshErrorWithReason": "无法刷新你的自动化，因此未保存任何内容：{{message}}",
+    "chainInboundLimitMessage": "此自动化已达到 {{max}} 个入站链式自动化的上限。",
+    "chainOutboundLimitMessage": "此自动化已达到 {{max}} 个出站链式自动化的上限。",
+    "chainPickerLoadError": "无法加载你的自动化。请重新加载页面后重试。",
+    "chainTargetLocalOnlyMessage": "只有运行在 Droid 计算机、自托管计算机、环境或组织默认位置上的自动化，才能链接到其他自动化之后。",
+    "chainedTriggeredByEmpty": "尚未有任何来源触发此自动化",
+    "chainedTriggeredByNoneVisible": "你可见的自动化均不会触发此自动化",
+    "chainedTriggeredByUnavailable": "你的组织未启用链式自动化",
+    "ciModeAutonomyLabels": {
+      "high": "高",
+      "low": "低",
+      "medium": "中"
+    },
+    "ciTemplates": {
+      "codeReview": {
+        "description": "在拉取请求上让 Droid 自动执行代码审查。",
+        "label": "代码审查"
+      },
+      "codeReviewSecurity": {
+        "description": "在拉取请求上让 Droid 自动执行代码审查，并启用安全审查。",
+        "label": "含安全审查的代码审查"
+      },
+      "codeWalkthrough": {
+        "description": "适用于在 Factory 桌面应用和网页应用中审查的拉取请求。为此仓库中的每个拉取请求维护一份代码走查。会开启一个拉取请求来添加 `.github/workflows/droid-code-walkthrough.yml`，该工作流在拉取请求开启时写入走查内容，并在每次有新提交时更新。",
+        "label": "代码走查"
+      },
+      "custom": {
+        "description": "手动配置 GitHub Action 参数。",
+        "label": "自定义"
+      },
+      "qa": {
+        "description": "为此仓库设置自动化 QA 测试。会开启一个 Droid 会话，运行 /install-qa 分析你的代码库并生成 QA 技能与工作流。",
+        "label": "QA 测试"
+      },
+      "securityAudit": {
+        "description": "为此仓库设置定期的深度安全审计。会开启一个拉取请求来添加 `.github/workflows/deep-security-review.yml`，按你设定的计划在整个代码库上运行 /security-review。",
+        "label": "安全审计"
+      },
+      "wiki": {
+        "description": "为此仓库设置自动生成 Wiki。会开启一个拉取请求来添加 `.github/workflows/droid-wiki-refresh.yml`，按你选择的触发器刷新 Factory Wiki。每次刷新还会将 Wiki 提交到仓库中一个持续更新的 `factory/droid-wiki` 拉取请求。",
+        "label": "AutoWiki"
+      }
+    },
+    "computerConnectFailure": "无法连接到计算机。它可能已离线或正在休眠。",
+    "computerConnectionLost": "与计算机的连接已断开。它可能已离线或正在休眠。",
+    "computerPickerConnectRequired": "请连接到所选计算机以继续。",
+    "computerPickerRequired": "为此自动化选择一台计算机或环境以运行。",
+    "createStepLabels": {
+      "additional": "其他设置",
+      "goal": "目标",
+      "instructions": "指令",
+      "trigger": "触发器",
+      "where": "运行位置",
+      "workstream": "工作流"
+    },
+    "createWithDroidPrompt": {
+      "guidance": "创建前，请先向我询问仍需要的信息，包括应由什么触发：定时会按固定节奏运行提示词，Webhook 则会在外部服务向为该自动化生成的接收端 URL 发送 POST 请求时运行。",
+      "opening": "使用 Factory 创建一个自动化。",
+      "openingNamed": "使用 Factory 创建一个名为“{{name}}”的自动化。",
+      "whatItShouldDo": "它应该做什么：{{description}}"
+    },
+    "createWithDroidSuggestions": {
+      "dependencyAdvisories": "每周一检查我们的依赖是否有安全公告，并开启拉取请求升级受影响的依赖。",
+      "mergedPrDigest": "每个工作日上午 9 点，汇总昨天合并的拉取请求，并将摘要发布到 #eng-updates。",
+      "sentryFix": "当 Sentry 报告新错误时，找出可能的原因，并开启一个包含修复的草稿拉取请求。"
+    },
+    "degradedChipTooltip": "最近的运行失败。自动化仍会按计划继续运行，并在下次运行成功后恢复为已启用。",
+    "deleteOtherHostWarning": "警告：此自动化似乎归另一台机器所有。删除很可能导致另一台机器上的数据丢失。确定要继续吗？",
+    "deleteUnknownHostWarning": "警告：此计算机似乎并不拥有此自动化的文件。删除可能导致另一台机器上的数据丢失。确定要继续吗？",
+    "githubTriggerEventLabels": {
+      "checksCompleted": "检查已完成",
+      "commentAdded": "已添加评论",
+      "labelChange": "标签变更",
+      "prOpened": "已开启拉取请求",
+      "pullRequest": "拉取请求活动",
+      "push": "分支有新推送"
+    },
+    "marketplaceSections": {
+      "ciWorkflows": {
+        "description": "在仓库的 GitHub Actions 中运行 Droid 的工作流。设置后会向仓库添加一个工作流文件。",
+        "title": "CI 工作流"
+      },
+      "useCases": {
+        "description": "团队最常自动化的任务，创建表单已预填，可直接使用。",
+        "title": "自动化模板"
+      }
+    },
+    "maxRunsPerHourHelpText": "最多 {{max}} 次。在一个自然小时内超过此上限的请求会记录为「已达上限」，且不会启动运行。",
+    "maxRunsPerHourInvalid": "请输入 1 到 {{max}} 之间的整数。",
+    "maxRunsPerHourLabel": "每小时最大运行次数",
+    "modelAvailabilityPendingHint": "正在检查此模型在自动化运行位置是否可用",
+    "modelConnectingTooltip": "此自定义模型的宿主计算机正在连接…",
+    "modelUnavailableHint": "请选择在自动化运行位置可用的模型",
+    "modelUnavailableTooltip": "此模型在自动化运行位置不可用。",
+    "modelUnverifiedTooltip": "无法检查此模型，因为此自动化的运行机器尚未连接。如果该机器上未设置此模型，运行将改用默认模型。",
+    "passUpstreamContextHelperText": "如果此自动化不依赖触发它的那次运行的输出，请关闭此选项",
+    "passUpstreamContextLabel": "传递上游上下文？",
+    "passUpstreamContextOwnerOnly": "只有此自动化的所有者才能重新开启上游上下文。",
+    "payloadFilterHelpText": "采用 JavaScript 正则表达式语法，由 RE2 对原始请求体进行匹配：不支持先行断言、后行断言、反向引用或内联修饰符。如需同时匹配多个字段，请按它们在载荷中出现的顺序依次匹配。不匹配的投递会记录为「已过滤」，且不会启动运行。留空则对每个事件都运行。",
+    "payloadFilterInvalid": "载荷过滤器必须是 RE2 能够匹配的有效 JavaScript 正则表达式：不支持先行断言、后行断言、反向引用或内联修饰符。",
+    "payloadFilterLabel": "载荷过滤器",
+    "payloadFilterPlaceholder": "例如 \"action\":\\s*\"created\"[\\s\\S]*\"type\":\\s*\"Issue\"",
+    "payloadFilterTag": "正则",
+    "privacyHelperText": {
+      "organization": "组织中的所有人都可以找到并运行此自动化。",
+      "private": "只有你可以查看和运行此自动化。"
+    },
+    "privacyLabels": {
+      "organization": "共享",
+      "private": "私有"
+    },
+    "reasoningEffortLabels": {
+      "dynamic": "动态",
+      "extraHigh": "极高",
+      "high": "高",
+      "low": "低",
+      "max": "最高",
+      "medium": "中",
+      "minimal": "最低",
+      "none": "无",
+      "off": "关闭"
+    },
+    "reviewGuidelinesSchedule": {
+      "monthly": "每月 1 日 09:00 UTC 运行。",
+      "weekly": "每周一 09:00 UTC 运行。"
+    },
+    "runAsSelfIdentityNote": "运行将使用你的连接器访问权限，Slack 消息以你的账号发布。",
+    "runAsSelfOptionLabel": "未选择（你自己）",
+    "runAsServiceIdentityNote": "运行将使用此服务账号的连接器访问权限，Slack 消息以 Factory 名义发布。",
+    "runFailedFallbackLabel": "失败",
+    "runOutcome": {
+      "cancelled": {
+        "eventLabel": "运行已取消",
+        "label": "已取消"
+      },
+      "failure": {
+        "eventLabel": "运行失败",
+        "label": "失败"
+      },
+      "inProgress": {
+        "eventLabel": "运行进行中",
+        "label": "运行中"
+      },
+      "pending": {
+        "eventLabel": "运行等待中",
+        "label": "等待中"
+      },
+      "success": {
+        "eventLabel": "运行成功",
+        "label": "成功"
+      }
+    },
+    "sessionPrivacyHelperText": {
+      "private": "只有你可以打开每次运行启动的会话。",
+      "team": "组织中的所有人都可以打开每次运行启动的会话。"
+    },
+    "sessionPrivacyLabels": {
+      "private": "私有",
+      "team": "团队"
+    },
+    "slackChannelEmptySearch": "没有匹配的频道。添加 * 以按名称匹配。",
+    "slackChannelPickerHint": "输入频道名称，或使用通配符（*）匹配任意子串（例如 incident-*）",
+    "slackChannelsUnavailable": "无法加载 Slack 频道。请在设置中连接 Slack，然后重新加载以添加规则。",
+    "slackMessageSourceLabels": {
+      "anyone": "任何人",
+      "bots": "仅机器人",
+      "humans": "仅人工"
+    },
+    "slackNoChannels": "没有可用的 Slack 频道。请先在设置中连接 Slack。",
+    "slackPatternAlreadyAdded": "该规则已添加。",
+    "slackPatternErrors": {
+      "empty": "请输入频道名称规则。",
+      "noWildcard": "添加 * 以匹配多个频道。",
+      "tooBroad": "除 * 外至少添加 {{minLiteralLength}} 个字符，否则会匹配工作区中的大多数频道。",
+      "tooLong": "规则长度上限为 {{maxLength}} 个字符。"
+    },
+    "slackPatternMatchBase": "会监听 Droid 已加入的所有匹配频道，以及新建的匹配频道。",
+    "slackWorkingDirectoryTooltip": "设置后，从 Slack 触发的运行将在此目录中执行，以便使用该项目的技能、仓库和相对路径。留空则从计算机的主目录运行。",
+    "templateFlow": {
+      "output": {
+        "commitAndComment": "提交 + 评论",
+        "commitAndReply": "提交 + 回复",
+        "notionOrTracker": "Notion / 跟踪系统",
+        "prComment": "PR 评论",
+        "pullRequest": "拉取请求",
+        "slackDm": "Slack 私信",
+        "slackOrPr": "Slack / PR",
+        "slackSummary": "Slack 摘要",
+        "threadReply": "线程回复",
+        "ticketAndThreadReply": "工单 + 线程回复",
+        "ticketCommentOrPr": "工单评论 / PR"
+      },
+      "trigger": {
+        "hourly": "每小时",
+        "prComment": "PR 评论",
+        "prOpenedOrUpdated": "PR 开启 / 更新",
+        "push": "推送",
+        "scheduled": "定时",
+        "slackMessage": "Slack 消息",
+        "threeTimesADay": "每天三次",
+        "webhook": "Webhook",
+        "weekdays6am": "每个工作日 6:00",
+        "weekdays8am": "每个工作日 8:00",
+        "weekdays9am": "每个工作日 9:00"
+      }
+    },
+    "templateVariablesUnresolved": "请填写模板变量 {{placeholder}} 以继续",
+    "templates": {
+      "alertResponder": {
+        "description": "在 Sentry、Datadog 或 PagerDuty 告警触发时进行调查：进行根因分析，并在安全的情况下提供修复 PR。运行于 Droid 计算机或环境。保存后，将 Webhook URL 添加到发送服务。",
+        "name": "Webhook 事件响应"
+      },
+      "chained": {
+        "description": "当另一个自动化的一次运行结束时运行。可选择由哪些自动化触发。",
+        "name": "链式触发"
+      },
+      "channelQa": {
+        "connectorPurposes": {
+          "notion": "在你的文档中搜索答案。",
+          "slack": "监听你的频道并在线程中回复。"
+        },
+        "description": "基于你的文档、Notion、工单和代码在频道中回答问题，并始终在线程中引用来源。",
+        "name": "频道问答"
+      },
+      "ciFailureTriage": {
+        "connectorPurposes": {
+          "github": "读取失败的运行及其背后的提交。"
+        },
+        "description": "将失败的 GitHub Actions 或 GitLab 流水线归类为不稳定、基础设施问题或回归，并指出相关提交。运行于 Droid 计算机或环境。保存后，将 Webhook URL 添加到发送服务。",
+        "name": "CI 失败分诊"
+      },
+      "codeHealth": {
+        "description": "轮换进行依赖审计、死代码、覆盖缺口和过期文档的检查，每次运行提交一个小型维护 PR。",
+        "name": "代码健康"
+      },
+      "codeReview": {
+        "description": "审查你仓库中的拉取请求。",
+        "name": "代码审查"
+      },
+      "codeWalkthrough": {
+        "description": "为在 Factory 桌面应用和网页应用中审查的拉取请求保持走查内容最新。",
+        "name": "代码走查"
+      },
+      "dailyStatusDigest": {
+        "connectorPurposes": {
+          "github": "读取你已开启的拉取请求和待处理的审查。",
+          "linear": "读取分配给你的工单及其进展。",
+          "slack": "向你发送晨间摘要。"
+        },
+        "description": "你的 PR 和工单的晨间摘要：哪些需要你处理、哪些在等待他人，以及自昨天以来的进展。",
+        "name": "每日状态摘要"
+      },
+      "docsRefresh": {
+        "description": "每次向默认分支推送时，通过拉取请求让仓库中的文档保持最新。如需 Factory Wiki，请使用 AutoWiki。",
+        "name": "文档刷新"
+      },
+      "errorTriage": {
+        "connectorPurposes": {
+          "sentry": "每小时轮询新的错误进行调查。"
+        },
+        "description": "每小时轮询 Sentry、Datadog 或其他错误来源，调查重要错误，并在安全的情况下报告根因和修复 PR。",
+        "name": "定时错误分诊"
+      },
+      "github": {
+        "description": "配置自定义 GitHub Actions 工作流，在仓库事件发生时运行 Droid。",
+        "name": "GitHub"
+      },
+      "incidentResponse": {
+        "connectorPurposes": {
+          "slack": "监听你的告警频道并在线程中发布 RCA。"
+        },
+        "defaultName": "事件响应",
+        "description": "调查发布到 Slack 频道的告警，并在线程中回复根因分析。",
+        "name": "Slack 事件响应"
+      },
+      "meetingNotesSync": {
+        "connectorPurposes": {
+          "granola": "读取每次已结束会议的纪要。",
+          "notion": "归档摘要和行动项。"
+        },
+        "description": "总结已结束的会议，提取行动项，并将其归入 Notion、你的 CRM 或跟踪系统。",
+        "name": "会议纪要同步"
+      },
+      "newIssueInvestigator": {
+        "connectorPurposes": {
+          "linear": "读取每个新工单，并评论调查发现。"
+        },
+        "description": "调查每个新的 Linear、Jira 或 GitHub 工单：重复项、可能原因、涉及的文件，以及针对简单修复的 PR。运行于 Droid 计算机或环境。保存后，将 Webhook URL 添加到发送服务。",
+        "name": "新工单调查"
+      },
+      "prReviewer": {
+        "connectorPurposes": {
+          "github": "读取新的拉取请求，并为每个头部提交发布一次审查。"
+        },
+        "description": "按计划审查新的拉取或合并请求，并为每个头部提交发布一条评论审查。同时支持 GitLab 和 GitHub。如需在 GitHub Actions 中运行审查，请使用代码审查。",
+        "name": "PR 审查（GitLab/GitHub）"
+      },
+      "qa": {
+        "description": "针对你的更改生成并运行 QA 检查。",
+        "name": "QA"
+      },
+      "reviewCommentFixer": {
+        "description": "当队友在拉取请求上发表评论要求更改时，完成更改，向分支推送一个提交并回复。",
+        "name": "审查评论修复"
+      },
+      "scheduled": {
+        "description": "按周期性计划运行提示词。",
+        "name": "定时"
+      },
+      "securityAudit": {
+        "description": "按计划在你的仓库中运行深度安全审查。",
+        "name": "安全审计"
+      },
+      "slack": {
+        "description": "根据 Slack 频道中的消息触发 Droid 会话。",
+        "name": "Slack"
+      },
+      "slackBugFixer": {
+        "description": "将频道中发布的 Bug 报告转化为工单、在线程中给出根因假设，并在改动较小时提供修复 PR。",
+        "name": "Slack Bug 修复"
+      },
+      "slackDigest": {
+        "connectorPurposes": {
+          "slack": "读取私信、提及和频道动态。向你发送私信。"
+        },
+        "description": "一封私密的晨间私信，列出等待你处理的 Slack 线程、需要了解的提及，以及来自你频道的亮点。",
+        "name": "Slack 摘要"
+      },
+      "slackTicketFiler": {
+        "connectorPurposes": {
+          "linear": "将每条可处理的消息登记为工单。",
+          "slack": "监听你的频道并在线程中发布工单链接。"
+        },
+        "description": "将频道中可处理的消息登记为工单，去重后路由到合适的团队，并将链接回帖到线程中。",
+        "name": "Slack 工单登记"
+      },
+      "testCoverage": {
+        "description": "为每个拉取请求改动的代码添加有针对性的测试，推送到分支并评论现已覆盖的内容。",
+        "name": "自动化测试覆盖率"
+      },
+      "ticketToPr": {
+        "connectorPurposes": {
+          "linear": "领取就绪的工单，并将每个工单链接到其拉取请求。"
+        },
+        "description": "从跟踪系统逐个领取就绪的工单，并推动每个工单直至产生一个已开启的拉取请求。",
+        "name": "工单转 PR"
+      },
+      "triage": {
+        "description": "按计划进行分诊，并对需要关注的事项采取行动。",
+        "name": "分诊"
+      },
+      "webhook": {
+        "description": "从任何能发送 HTTP Webhook 的外部服务触发运行。",
+        "name": "Webhook"
+      },
+      "wiki": {
+        "description": "按每日计划刷新仓库的代码库 Wiki，并将其保存在一个持续更新的拉取请求中。如需仓库中的文档，请使用文档刷新。",
+        "name": "AutoWiki"
+      }
+    },
+    "webhookWorkingDirectoryTooltip": "设置后，由此 Webhook 触发的运行将在此目录中执行，以便使用该项目的技能、仓库和相对路径。留空则从计算机的主目录运行。",
+    "wikiPullRequestTriggerWarning": "警告：此工作流会触发完整的 Wiki 重建。在活跃仓库中，这些触发可能过于频繁。"
+  },
+  "createAutomationCoreV2": {
+    "absolutePathTheRunExecutesIn": "运行执行所在的绝对路径，例如 ~/code/my-repo",
+    "addGithubEventTriggers": "添加 GitHub 事件触发器",
+    "additionalSettings": "其他设置",
+    "allowedBots": "允许的机器人",
+    "allowedBotsHelperText": "允许触发审查的机器人登录名，以逗号分隔。留空则不允许机器人创建的 PR。",
+    "alreadyConfigured": "已配置",
+    "applyTo": "应用到",
+    "applyToOrganizationHint": "通过组织规则集上的 GitHub Required Workflows 应用。",
+    "applyToRepositoryHint": "将工作流文件添加到一个或多个仓库。",
+    "automationModel": "自动化模型",
+    "automationName": "输入名称",
+    "cannotCreateCiAutomationForRepository": "无法为此仓库创建 CI 自动化。",
+    "checkingDirectory": "正在检查目录…",
+    "couldNotVerifyWorkingDirectory": "无法验证工作目录。请重试。",
+    "customCiPromptPlaceholder": "描述你希望此自动化在每次运行时完成的任务…",
+    "deep": "深度",
+    "description": "描述",
+    "descriptionHelperText": "帮助队友了解此自动化的作用。",
+    "descriptionTooLong": "描述最多使用 {{max}} 个字符。",
+    "droidWillPickHostRepoPerOrg": "Droid 将为每个组织选择宿主仓库",
+    "eGDependabotRenovate": "例如 dependabot,renovate",
+    "eligibleForOrgWideInstall": "可用于组织范围安装",
+    "existingModeWorkflowHelperText": {
+      "codeWalkthrough": "此仓库已有代码走查工作流 — 点击“创建”将改为打开已有的自动化。",
+      "qa": "此仓库已有 QA 工作流 — 点击“创建”将改为打开已有的自动化。",
+      "securityAudit": "此仓库已有安全审计工作流 — 点击“创建”将改为打开已有的自动化。",
+      "wiki": "此仓库已有 AutoWiki 工作流 — 点击“创建”将改为打开已有的自动化。"
+    },
+    "fineTuneHowThisAutomationRuns": "微调此自动化的运行方式。这里的每项设置都有合理的默认值。",
+    "fixedInstructions": "此工作流类型的指令无法修改",
+    "githubActionParameters": "GitHub Action 参数",
+    "githubEventTriggers": "GitHub 事件触发器",
+    "githubOrganizations": "GitHub 组织",
+    "hasCodeReview": "包含代码审查",
+    "hostRepositoryLabel": "宿主仓库（工作流文件所在位置）",
+    "howShouldThisAutomationImproveOver": "此自动化应如何随时间改进？它应在各次运行之间记住什么？",
+    "installAppApprovalRequested": "需要 GitHub 组织所有者批准 Factory Droid App。批准后，请再次选择 {{action}} 以完成。",
+    "installAppCancelled": "Factory Droid App 未安装。请选择 {{action}} 重试。",
+    "installAppFailed": "无法安装 Factory Droid App。请选择 {{action}} 重试。",
+    "installAppStillOpen": "GitHub 窗口仍处于打开状态。请在该窗口中完成安装，或再次选择 {{action}} 重新开始。",
+    "installTheFactoryDroidApp": "安装 Factory Droid App",
+    "instructions": "指令",
+    "instructionsStep": {
+      "chained": "前置自动化每次完成一次运行后，Droid 执行的操作。",
+      "prefilled": "已从模板预填。",
+      "prefilledWithVariables": "已从模板预填。继续前请替换 {{placeholder}} 中的内容。",
+      "schedule": "此自动化每次运行时 Droid 执行的操作。",
+      "slack": "会添加到匹配消息所启动的每个会话中。",
+      "webhook": "事件到达时 Droid 执行的操作。"
+    },
+    "loadingRepositories": "正在加载仓库…",
+    "memoryAmpEvolution": "记忆与演进",
+    "memoryAndEvolution": "记忆与演进",
+    "memoryEvolutionHelperText": "在各次运行之间延续的内容，使自动化不断改进。",
+    "modeCreateHelperText": {
+      "codeWalkthrough": "点击“创建”将开启一个拉取请求，向所选仓库添加 .github/workflows/droid-code-walkthrough.yml。该工作流会在拉取请求被创建或被标记为可供审查时生成代码走查，并在每次有新提交时更新。走查适用于在 Factory 桌面应用和 Web 应用中审查的拉取请求。仓库需要配置 FACTORY_API_KEY Actions 密钥。",
+      "qa": "点击“创建”将开启一个新的 Droid 会话，并预填 /install-qa 命令和你上面的选择。智能体将以交互方式分析所选仓库，并生成 QA 技能以及一个可提交的 .github/workflows/qa.yml 工作流。",
+      "securityAudit": "点击“创建”将开启一个拉取请求，向所选仓库添加 .github/workflows/deep-security-review.yml。该工作流会按你设置的计划（采用上面的设置）在整个代码库上运行 /security-review，也可手动运行。",
+      "wiki": "点击“创建”将开启一个拉取请求，向所选仓库添加 .github/workflows/droid-wiki-refresh.yml。该工作流会按你选择的触发器（采用上面的设置）刷新 Factory Wiki，也可手动运行。每次刷新还会将 Wiki 提交到 factory/droid-wiki 分支，并保持一个包含最新版本的拉取请求处于开启状态。"
+    },
+    "model": "模型",
+    "modelHelperText": "覆盖此自动化的默认模型。",
+    "nameSection": "自动化名称",
+    "next": "下一步",
+    "noAccess": "无访问权限",
+    "noComputersAvailable": "暂无可用计算机。请在设置 → Droid 计算机中添加一台。",
+    "noGithubOrganizationsAvailable": "暂无可用的 GitHub 组织。",
+    "noMatchingOrganizations": "没有匹配的组织",
+    "noWritableRepositoriesFound": "未找到可写仓库",
+    "openExistingArrow": "打开已有项 →",
+    "openSidebar": "打开侧边栏",
+    "optional": "可选",
+    "optionalWorkflowInputsAsYamlOr": "可选：以 YAML 或 JSON 格式提供工作流输入",
+    "orgAlreadyHasOrgWideInstall": "{{org}} 已有此模板的组织范围安装 — 点击“创建”将直接前往该安装。",
+    "orgDefaultModel": "组织默认",
+    "orgDisableReason": {
+      "alreadyInstalled": "已有组织范围安装",
+      "planRequired": "需要 Team / Enterprise 方案"
+    },
+    "orgDisableTooltip": {
+      "alreadyInstalled": "此组织已安装由 Factory 管理的组织范围工作流。",
+      "planRequired": "GitHub Required Workflows 需要 GitHub Team 或 Enterprise 方案。"
+    },
+    "orgSelected": "已选择 {{login}}",
+    "organization": "组织",
+    "organizationsSelected": "已选择 {{count}} 个组织",
+    "privateSuffix": " · 私有",
+    "qaComputerDescription": "Droid 使用此计算机创建自动化。运行在 GitHub Actions 中进行。",
+    "reasoningLevel": "推理级别",
+    "reasoningLevelHelperText": "覆盖模型特定的默认推理级别。",
+    "removeRepository": "移除仓库 {{fullName}}",
+    "repoCoveredByOrgWideInstall": "此仓库已被 {{org}} 上的组织范围安装覆盖。此处添加的仓库级工作流将与之并行运行。",
+    "repositories": "仓库",
+    "repository": "仓库",
+    "reviewDepth": "审查深度",
+    "runAsDescription": "此自动化运行所使用的身份与计费方式。",
+    "runAsDescriptionWithNote": "此自动化运行所使用的身份与计费方式。{{note}}",
+    "runConfig": {
+      "custom": "自行配置计算机和身份设置",
+      "dynamic": "{{environment}} 上的 {{serviceAccount}}",
+      "dynamicWithoutEnvironment": "组织默认环境上的 {{serviceAccount}}",
+      "needsSetup": "我们将设置你组织的默认服务账号和环境",
+      "orgDefault": "在组织默认计算机和服务账号上运行（推荐）",
+      "persistent": "组织委托计算机上的 {{serviceAccount}}",
+      "serviceAccountFallback": "你组织的默认服务账号",
+      "title": "配置"
+    },
+    "schedule": "计划",
+    "schedulePromptPlaceholder": "描述此自动化每次运行时 Droid 应该做什么…",
+    "searchOrganizations": "搜索组织…",
+    "searchRepositories": "搜索仓库…",
+    "securityReview": "安全审查",
+    "selectAnOrganizationFirst": "请先选择组织",
+    "selectTrigger": "选择触发器",
+    "serviceAccountRequired": {
+      "orgDefaultUnavailable": "Slack 自动化以服务账号运行，因此绝不会使用你个人的访问权限发帖，而你组织的默认服务账号当前不可用。管理员可以在设置 → 委托中完成设置。"
+    },
+    "sessionWillPickHostRepositoryPerOrg": "Droid 会话将为每个所选组织选择一个宿主仓库，然后为每个组织创建一个 Required Workflow 规则集。",
+    "setupComputer": "设置计算机",
+    "shallow": "浅层",
+    "shallowIsAFastSurfaceReview": "浅层是快速的表层审查。深度则允许智能体在评论前探索相关代码。",
+    "shortSummaryShownInTheAutomation": "显示在自动化列表中的简短摘要",
+    "slackPromptPlaceholder": "要注入到从此频道触发的每个会话中的指令…",
+    "submit": {
+      "create": "创建",
+      "createWithSession": "通过会话创建",
+      "createWithWorkstream": "通过工作流创建",
+      "createWorkstreamAndAutomation": "创建工作流和自动化",
+      "creating": "正在创建…",
+      "openExisting": "打开已有项",
+      "openingWorkstream": "正在打开工作流…"
+    },
+    "templates": "模板",
+    "trigger": "触发器",
+    "triggerHelper": {
+      "github": "在 GitHub Actions 工作流中运行 Droid。",
+      "schedule": "运行会按你在下方设置的计划启动。"
+    },
+    "triggerOptions": {
+      "chained": "自动化",
+      "github": "GitHub",
+      "schedule": "计划",
+      "slack": "Slack",
+      "webhook": "Webhook"
+    },
+    "triggerSection": {
+      "description": "选择触发此自动化运行的事件。",
+      "title": "什么会触发此自动化？"
+    },
+    "triggerStep": {
+      "chained": "当另一个自动化的一次运行结束时（无论完成还是失败），运行即会启动。你可以随时更改它们。",
+      "schedule": "可使用自然语言或 cron 表达式。",
+      "schedulePrefilled": "可使用自然语言或 cron 表达式。已从 {{name}} 模板预填。",
+      "slack": "当这些频道之一发布消息时，Droid 会启动一次运行。",
+      "webhook": "当有 HTTP POST 请求到达此自动化的唯一 URL 时，运行即会启动。该 URL 及其密钥会在你创建自动化后生成，且仅显示一次。"
+    },
+    "turnsOnAutomaticSecurityReviewFor": "为 droid-action 步骤开启 automatic_security_review。",
+    "validation": {
+      "addName": "添加名称",
+      "allowManagedModel": "请管理员允许使用此自动化的其中一个模型",
+      "chooseWorkflow": "选择工作流",
+      "connectSelectedComputer": "连接到所选计算机以继续",
+      "describeAutomationGoal": "描述此自动化应达成的目标",
+      "describeWhatDroidShouldDo": "描述 Droid 应该做什么",
+      "fixWorkingDirectory": "修正工作目录",
+      "nameWorkstream": "为工作流命名",
+      "pickAtLeastOneRepository": "至少选择一个仓库",
+      "pickComputerForQaSetup": "选择运行 QA 设置会话的计算机",
+      "pickComputerOrTemplate": "选择此自动化运行所用的计算机或环境",
+      "pickComputerOrTemplateForServiceAccount": "选择服务账号运行所用的计算机或环境",
+      "pickDifferentComputer": "选择其他计算机",
+      "pickEventOrSchedule": "至少选择一个 GitHub 事件或添加计划",
+      "pickGithubEvent": "至少选择一个 GitHub 事件",
+      "pickOrganization": "选择一个组织",
+      "pickRepoForAutoWiki": "选择要设置 AutoWiki 的仓库",
+      "pickRepoForCodeWalkthrough": "选择要设置代码走查的仓库",
+      "pickRepoForSecurityAudit": "选择要设置安全审计的仓库",
+      "pickRepoToScaffoldQa": "选择要搭建 QA 的仓库",
+      "pickRepository": "选择一个仓库",
+      "pickServiceAccount": "选择此自动化运行所使用的服务账号",
+      "pickSlackChannel": "至少选择一个 Slack 频道",
+      "pickWorkstream": "选择一个工作流",
+      "pickWorkstreamMachine": "为工作流选择一台机器",
+      "selectTrigger": "选择触发器",
+      "setValidSchedule": "设置有效的计划，或移除计划触发器",
+      "shortenWorkstreamName": "缩短工作流名称",
+      "waitForWorkstreamMachines": "等待工作流的机器加载完成"
+    },
+    "visualization": "可视化",
+    "visualizationHelperText": "Droid 会根据此描述为每次运行构建仪表盘。",
+    "webhookPromptPlaceholder": "事件到达时，Droid 应该做什么？",
+    "whatShouldDroidDoEachRun": "Droid 在每次运行时应该做什么？",
+    "whatShouldTheDashboardDisplayE": "仪表盘应显示什么？例如未解决工单的表格、随时间变化的趋势图表…",
+    "whereShouldItRun": "应在哪里运行？",
+    "whereStep": {
+      "chained": "每次运行所在的计算机或环境，以及其可见性。",
+      "customCi": "此工作流要添加到哪个仓库。",
+      "default": "每次运行的身份、计算机和可见性。",
+      "gitlabNotSupported": "目前不支持 GitLab 自动化，请尝试<ciLink>改为从 GitLab CI 运行 Droid</ciLink>。"
+    },
+    "workflowInstructions": {
+      "codeReview": "审查每个拉取请求，并将高置信度的问题以行内评论形式发布，同时附上摘要。若仓库存在审查指南，则遵循该指南。",
+      "codeWalkthrough": "为每个拉取请求编写走查，在新提交时更新，并显示在审查页面上。",
+      "qa": "在设置期间，Droid 会研究仓库并为其编写 QA 技能。每次运行都会遵循该技能并撰写报告。"
+    },
+    "workflowSection": {
+      "customName": "自定义工作流",
+      "description": "选择一个工作流，或通过“自定义工作流”自行定义。",
+      "label": "工作流",
+      "wikiDescription": "按每日计划刷新仓库的代码库 Wiki，并将其保持在一个持续更新的拉取请求中。"
+    },
+    "workflowYamlWillBeCommittedToRepo": "工作流 YAML 将提交到此仓库，并通过 GitHub Required Workflow 规则集在组织其余部分强制执行。",
+    "workingDirectory": "工作目录",
+    "workingDirectoryNotAccessible": "工作目录无法访问。",
+    "workingDirectoryTooltip": "设置后，计划运行将从此目录执行，以便使用该项目的技能、仓库和相对路径。留空则从 Droid 的默认自动化文件夹（~/{{factoryDirName}}/automations/<automation-slug>）运行，该文件夹用于存储提示词、仪表盘、记忆和报告。",
+    "workstreamStep": {
+      "createNew": "新建工作流",
+      "createNewDescription": "启动一个专用于此自动化的工作流。",
+      "description": "工作流会创建此自动化，引导你完成其余设置，并运行它。",
+      "goalDescription": "用你自己的话描述。工作流会向你询问所需的信息，例如来源、凭据、筛选条件和目标仓库。",
+      "goalLabel": "目标",
+      "goalPlaceholder": "描述你希望每次运行达成的结果",
+      "goalTitle": "它应达成什么目标？",
+      "loadingWorkstreams": "正在加载你的工作流…",
+      "modeLabel": "工作流",
+      "noWorkstreams": "你还没有可选择的工作流。请改为新建一个工作流。",
+      "noWorkstreamsMatch": "没有匹配的工作流",
+      "pickerHelper": "此处仅列出你可以打开的工作流。",
+      "pickerLabel": "现有工作流",
+      "pickerPlaceholder": "选择工作流",
+      "searchWorkstreams": "搜索工作流",
+      "title": "应由哪个工作流来运行它？",
+      "triggerDescriptionSchedule": "创建后，工作流会与你一起设置计划。",
+      "triggerDescriptionSlack": "创建后，工作流会与你一起选择 Slack 频道。",
+      "untitledWorkstream": "未命名工作流",
+      "useExisting": "使用现有工作流",
+      "useExistingDescription": "将自动化添加到已有的工作流中。",
+      "workstreamsCouldNotLoad": "无法加载你的工作流。请改为新建一个工作流。"
+    }
+  },
+  "createRepoGroupModal": {
+    "cancel": "取消",
+    "chooseRepositoriesHelper": "选择应驱动此软件工厂视图的仓库。",
+    "clearFiltered": "清除筛选结果",
+    "createAPersonalSoftwareFactoryView": "从你有权访问的仓库创建个人软件工厂视图。",
+    "createGroup": "创建分组",
+    "createRepositoryGroup": "创建仓库分组",
+    "groupName": "分组名称 *",
+    "makeDefault": "设为默认",
+    "nameRequiredHelper": "必填。保存前请为此视图命名。",
+    "noRepositoriesFound": "未找到仓库。",
+    "repositoryGroupName": "仓库分组名称",
+    "searchRepositories": "搜索仓库",
+    "selectFiltered": "选择筛选结果",
+    "selectedFromAccessibleRepositories": "已从 {{available}} 个可访问的仓库中选择 {{selected}} 个。",
+    "selectedOnly": "仅显示已选"
+  },
+  "editSectionSummaries": {
+    "autonomy": "自主级别：{{level}}",
+    "description": "描述：{{description}}",
+    "disabled": "已禁用",
+    "excludedKeywords_other": "{{count}} 个已排除的关键词",
+    "excludedSenders_other": "{{count}} 个已排除的发送者",
+    "githubActionParameters": "GitHub Action 参数",
+    "keywords": "关键词：{{keywords}}",
+    "messagesFrom": {
+      "anyone": "来自任何人的消息",
+      "bots": "仅来自机器人的消息",
+      "humans": "仅来自人的消息"
+    },
+    "model": "模型：{{model}}",
+    "paused": "已暂停",
+    "privacy": {
+      "organization": "共享自动化",
+      "private": "私有自动化"
+    },
+    "reasoning": "推理级别：{{reasoning}}",
+    "sessionPrivacy": {
+      "private": "私有会话",
+      "team": "团队会话"
+    },
+    "workflowYamlExtras": "工作流 YAML 附加项",
+    "workingDirectory": "工作目录：{{path}}"
+  },
+  "forkAutomationModalV2": {
+    "computerOrTemplateTheForkedAutomation": "复刻后的自动化将在其上运行的计算机或环境。",
+    "fork": "复刻",
+    "forkOptions": "复刻选项",
+    "noComputersOrTemplatesAvailable": "暂无可用计算机或环境。请添加一台计算机以复刻此自动化。",
+    "selectRunTarget": "选择运行目标",
+    "serviceAccountForksAreSharedWith": "使用服务账号的复刻会与你的组织共享。"
+  },
+  "formatModelFallbackNotice": {
+    "customModelNotConfigured": "运行此自动化的机器上未配置 {{label}} — 已改用默认模型",
+    "notAvailableForOrg": "你的组织已无法使用 {{label}} — 已改用默认模型"
+  },
+  "getAutomationRunAsLabel": {
+    "myself": "我自己",
+    "none": "无",
+    "runAsComputerEmpty": "{{serviceAccountName}} 目前没有可用的计算机或环境。管理员可以在设置 → 身份 → 服务账号中添加计算机，或在设置 → 环境中创建组织环境。",
+    "serviceAccount": "服务账号",
+    "serviceAccountIdentity": "{{name}}（服务账号）"
+  },
+  "humanizeCron": {
+    "cadenceAtTimes": "{{cadence}}，{{times}}",
+    "cadenceBetween": "{{cadence}}，在{{first}}至{{last}}之间",
+    "cadenceEveryNHours": "{{cadence}}，每 {{count}} 小时",
+    "cadenceWithDays": "{{cadence}}，{{days}}",
+    "daily": "每天",
+    "dailyInMonths": "{{months}}每天",
+    "dayOfMonth_ordinal_other": "{{count}} 日",
+    "days": {
+      "fri": "周五",
+      "mon": "周一",
+      "sat": "周六",
+      "sun": "周日",
+      "thu": "周四",
+      "tue": "周二",
+      "wed": "周三"
+    },
+    "daysAtTimes": "{{days}}{{times}}",
+    "daysInMonths": "{{months}}的{{days}}",
+    "daysOfEachMonth": "每月的 {{days}}",
+    "daysOfMonths": "{{months}} {{days}}",
+    "everyMinute": "每分钟",
+    "everyNDays": "每 {{count}} 天",
+    "everyNDaysInMonths": "{{months}}每 {{count}} 天",
+    "everyNHours": "每 {{count}} 小时",
+    "everyNHoursAt": "每 {{count}} 小时的 {{minutes}}",
+    "everyNHoursBetween": "每 {{count}} 小时，在{{first}}至{{last}}之间",
+    "everyNMinutes": "每 {{count}} 分钟",
+    "everyNMonths": "每 {{count}} 个月",
+    "hourly": "每小时",
+    "hourlyAt": "每小时的 {{minutes}}",
+    "hourlyBetween": "每小时，在{{first}}至{{last}}之间",
+    "listSeparator": "、",
+    "minuteMark": "{{minute}} 分",
+    "minutesBetween": "在{{first}}至{{last}}之间的 {{minutes}}",
+    "minutesPastTimes": "{{times}}过 {{minutes}}",
+    "months": {
+      "apr": "4 月",
+      "aug": "8 月",
+      "dec": "12 月",
+      "feb": "2 月",
+      "jan": "1 月",
+      "jul": "7 月",
+      "jun": "6 月",
+      "mar": "3 月",
+      "may": "5 月",
+      "nov": "11 月",
+      "oct": "10 月",
+      "sep": "9 月"
+    },
+    "nthWeekday": {
+      "fifth": "第五个{{day}}",
+      "fifth_sunday": "第五个{{day}}",
+      "first": "第一个{{day}}",
+      "first_sunday": "第一个{{day}}",
+      "fourth": "第四个{{day}}",
+      "fourth_sunday": "第四个{{day}}",
+      "second": "第二个{{day}}",
+      "second_sunday": "第二个{{day}}",
+      "third": "第三个{{day}}",
+      "third_sunday": "第三个{{day}}"
+    },
+    "nthWeekdayOfEachMonth": "每月的{{days}}",
+    "rawCronInUtc": "{{cron}}（UTC）",
+    "time": {
+      "am": "上午 {{hour}} 点",
+      "amWithMinutes": "上午 {{hour}}:{{minute}}",
+      "pm": "下午 {{hour}} 点",
+      "pmWithMinutes": "下午 {{hour}}:{{minute}}",
+      "twelveAm": "上午 12 点",
+      "twelveAmWithMinutes": "上午 12:{{minute}}",
+      "twelvePm": "下午 12 点",
+      "twelvePmWithMinutes": "下午 12:{{minute}}"
+    },
+    "timeInUtc": "{{time}} UTC",
+    "weekdays": "工作日",
+    "weekends": "周末"
+  },
+  "improveAutomationModalCoreV2": {
+    "cancel": "取消",
+    "eGImproveTheVisualizationReduce": "例如改进可视化、减少误报、让报告更具可操作性…",
+    "recordOnly": {
+      "description": "这将启动一个 Droid 会话，审查“{{automationName}}”并建议对其提示词和设置进行更改。",
+      "placeholder": "例如仅处理新工单、让回复更简短、忽略机器人消息…"
+    },
+    "reviewImprove": "审查与改进",
+    "startSession": "启动会话",
+    "starting": "正在启动…",
+    "startsOnEnvironmentComputer": "会话会在一台从自动化所属环境启动的新计算机上运行，因此可能需要一两分钟才能打开。",
+    "thisWillStartADroidSession": "这将启动一个 Droid 会话，分析“{{automationName}}”并建议对其提示词、记忆和输出进行优化。",
+    "whatShouldTheReviewFocusOn": "审查应侧重什么？（可选）"
+  },
+  "modelSelectorV2": {
+    "default": "默认",
+    "labelWithAvailability": "{{label}}。{{availability}}",
+    "loadingCustomModels": "正在加载自定义模型…",
+    "model": "模型",
+    "noModelsAvailable": "暂无可用模型",
+    "selectAModel": "选择模型…"
+  },
+  "optionalSettingsSectionV2": {
+    "additionalSettings": "其他设置",
+    "fineTuneHowThisAutomationRuns": "微调此自动化的运行方式。这里的每项设置都有合理的默认值。",
+    "optional": "可选"
+  },
+  "pendingAutomationCreationState": {
+    "cancelCreation": "取消创建",
+    "connectingToLocalDaemon": "正在连接本地守护进程",
+    "creatingAutomationCard": "正在创建自动化卡片",
+    "initializingRemoteSetupSession": "正在初始化远程设置会话",
+    "initializingSetupSession": "正在初始化设置会话",
+    "openSetupSession": "打开设置会话",
+    "registeringRemoteSchedule": "正在注册远程计划",
+    "registeringSchedule": "正在注册计划",
+    "scaffoldingAutomationFiles": "正在生成自动化文件骨架",
+    "scaffoldingAutomationFilesRemotely": "正在远程生成自动化文件骨架",
+    "waitingForYourResponse": "正在等待你的回复",
+    "wakingAndConnectingRemoteComputer": "正在唤醒并连接远程计算机"
+  },
+  "pendingAutomationCreationsAtom": {
+    "setupInProgressDescription": "自动化设置仍在进行中。"
+  },
+  "promptModelSelectorV2": {
+    "automationModel": "自动化模型",
+    "automationModelWithAvailability": "自动化模型。{{availability}}",
+    "default": "默认",
+    "loadingCustomModels": "正在加载自定义模型…",
+    "loadingModel": "正在加载模型",
+    "loadingModels": "正在加载模型…",
+    "modelName": "模型：{{model}}",
+    "noModelsAvailable": "暂无可用模型"
+  },
+  "promptReasoningSelectorV2": {
+    "automationReasoningLevel": "自动化推理级别",
+    "default": "默认",
+    "defaultWithEffort": "默认（{{effort}}）",
+    "loadingReasoningLevel": "正在加载推理级别",
+    "reasoningLevelName": "推理级别：{{level}}"
+  },
+  "qaMode": {
+    "autoCommitUpdates": "自动提交更新",
+    "disableToKeepTheQaWorkflow": "停用后，QA 工作流仍保留在磁盘上，但会跳过每次运行。",
+    "eG10Default": "例如 10（默认）",
+    "editCurrentlyUnsupported": "（暂不支持编辑）",
+    "failureLearning": "失败模式学习",
+    "howQaShouldPropagateNewFailure": "QA 应如何将新的失败模式经验回写到技能文件中。",
+    "imagemagick": "ImageMagick",
+    "installImagemagickInCiSoQa": "在 CI 中安装 ImageMagick，以便 QA 生成前后截图对比的动画 GIF。",
+    "openAPr": "开启 PR",
+    "suggestInReportDefault": "在报告中建议（默认）",
+    "timeoutMinutes": "超时（分钟）"
+  },
+  "qaModeV2": {
+    "autoCommitUpdates": "自动提交更新",
+    "disableToKeepTheQaWorkflow": "停用后，QA 工作流仍保留在磁盘上，但会跳过每次运行。",
+    "eG10Default": "例如 10（默认）",
+    "editCurrentlyUnsupported": "（暂不支持编辑）",
+    "failureLearning": "失败模式学习",
+    "howQaShouldPropagateNewFailure": "QA 应如何将新的失败模式经验回写到技能文件中。",
+    "imagemagick": "ImageMagick",
+    "installImagemagickInCiSoQa": "在 CI 中安装 ImageMagick，以便 QA 生成前后截图对比的动画 GIF。",
+    "openAPr": "开启 PR",
+    "suggestInReportDefault": "在报告中建议（默认）",
+    "summary": {
+      "timeout": "超时：{{timeout}} 分钟"
+    },
+    "timeoutMinutes": "超时（分钟）"
+  },
+  "reasoningLevelSelectorV2": {
+    "default": "默认",
+    "defaultWithEffort": "默认（{{effort}}）",
+    "noReasoningLevelsAvailable": "暂无可用推理级别",
+    "selectAReasoningLevel": "选择推理级别…"
+  },
+  "runAsPicker": {
+    "chooseServiceAccount": "选择服务账号",
+    "learnMore": "了解更多",
+    "noServiceAccounts": "你的组织尚无活跃的服务账号。请在设置 → 身份 → 服务账号中创建。",
+    "noServiceAccountsMatch": "没有匹配的服务账号",
+    "runAsServiceAccount": "以服务账号运行",
+    "runAsServiceAccountOptional": "以服务账号运行？",
+    "searchServiceAccounts": "搜索服务账号…"
+  },
+  "runHistory": {
+    "never": "从未",
+    "pageSummary": "{{start}}–{{end}}，共 {{total}}",
+    "statusTooltip": {
+      "cancelled": "会话已取消。",
+      "failed": "会话失败。",
+      "inProgress": "会话进行中。",
+      "success": "会话已成功完成。"
+    },
+    "timestamp": "{{date}} · {{time}}",
+    "tooltip": {
+      "description": "描述：{{description}}",
+      "failed": "失败时间：{{time}}",
+      "parentSession": "父会话：{{sourceRunId}}",
+      "posted": "发布时间：{{time}}",
+      "reason": "原因：{{reason}}",
+      "runId": "运行 ID：{{runId}}",
+      "triggeredBy": "触发者：{{sourceName}}"
+    }
+  },
+  "runOnComputerPicker": {
+    "computer": "计算机",
+    "connectedToName": "已连接到 {{name}}。",
+    "connectingToName": "正在连接到 {{name}}…",
+    "droidComputers": "Droid 计算机",
+    "localComputerName": "{{name}}（本地）",
+    "reconnectingToName": "正在重新连接到 {{name}}…",
+    "remoteComputersNotEnabled": "你的组织未启用远程计算机",
+    "remoteComputersNotOnPlan": "Droid 计算机在当前方案中不可用。升级到 Pro 或更高版本即可使用。",
+    "remoteComputersRegionUnsupported": "Droid 计算机在此地区不可用。",
+    "remoteComputersSubscriptionInactive": "由于订阅状态，Droid 计算机不可用",
+    "selectTemplateOrComputer": "选择环境或计算机",
+    "thisComputerAlreadyHasAutomations": "此计算机已设置 {{count}} 个自动化。请考虑在其他计算机上运行此自动化，以免使其过载。"
+  },
+  "runOnComputerPickerV2": {
+    "computerOrTemplateThisAutomationRunsOn": "此自动化运行的计算机或环境。",
+    "retry": "重试",
+    "runOn": "运行于"
+  },
+  "runTargetLabel": {
+    "environment": "{{name}}（环境）",
+    "localMachine": "本地机器",
+    "notSet": "未设置",
+    "orgDefault": "组织默认",
+    "thisMachine": "本机",
+    "thisMachineWithName": "本机（{{name}}）",
+    "unknownComputer": "未知计算机",
+    "unknownEnvironment": "未知环境",
+    "workstreamAgent": "智能体：{{name}}",
+    "workstreamAgentUntitled": "工作流智能体",
+    "workstreamOrchestrator": "编排器"
+  },
+  "scheduleInput": {
+    "dayNames": {
+      "friday": "星期五",
+      "monday": "星期一",
+      "saturday": "星期六",
+      "sunday": "星期日",
+      "thursday": "星期四",
+      "tuesday": "星期二",
+      "wednesday": "星期三"
+    },
+    "inputError": "请输入类似“每周一 PST 上午 9 点”的计划，或 5 段式 cron 表达式。",
+    "inputPlaceholder": "例如：每周一 PST 上午 9 点，或 0 9 * * 1",
+    "list": {
+      "many": "{{items}}和{{last}}",
+      "pair": "{{first}}和{{second}}",
+      "separator": "、"
+    },
+    "monthNames": {
+      "april": "4 月",
+      "august": "8 月",
+      "december": "12 月",
+      "february": "2 月",
+      "january": "1 月",
+      "july": "7 月",
+      "june": "6 月",
+      "march": "3 月",
+      "may": "5 月",
+      "november": "11 月",
+      "october": "10 月",
+      "september": "9 月"
+    },
+    "neverRuns": "不会运行：没有日期与此计划匹配",
+    "nthWeekday": {
+      "fifth": "第五个{{day}}",
+      "fifth_sunday": "第五个{{day}}",
+      "first": "第一个{{day}}",
+      "first_sunday": "第一个{{day}}",
+      "fourth": "第四个{{day}}",
+      "fourth_sunday": "第四个{{day}}",
+      "second": "第二个{{day}}",
+      "second_sunday": "第二个{{day}}",
+      "third": "第三个{{day}}",
+      "third_sunday": "第三个{{day}}"
+    },
+    "recurrence": {
+      "atPrefix": "{{recurrence}} ",
+      "everyDayAtUtc": "每天 {{time}} UTC",
+      "everyDaysAtUtc": "每 {{days}} {{time}} UTC",
+      "everyHour": "每小时",
+      "everyHourAtMinute": "每小时的第 {{minute}} 分钟",
+      "everyHourAtMinutes": "每小时的第 {{minutes}} 分钟",
+      "everyMinute": "每分钟",
+      "everyNMinutes": "每 {{minutes}} 分钟",
+      "everyWeekdayAtUtc": "每个工作日 {{time}} UTC",
+      "everyWeekendDayAtUtc": "每个周末 {{time}} UTC",
+      "localAt": "{{recurrence}} {{times}} {{timeZone}}",
+      "localEveryDay": "每天",
+      "localEveryDays": "每 {{days}}",
+      "localEveryWeekday": "每个工作日",
+      "localEveryWeekendDay": "每个周末",
+      "localMonthly": "每月 {{day}}",
+      "localWithUtc": "{{local}}（{{utc}}）",
+      "monthlyAtUtc": "每月 {{day}} {{time}} UTC",
+      "nthWeekdayAtUtc": "每月 {{day}} {{time}} UTC",
+      "onSchedule": "按计划 {{cron}}",
+      "scopeWeekdays": "工作日",
+      "scopeWeekends": "周末",
+      "scoped": "{{recurrence}}（{{days}}）",
+      "yearlyAtUtc": "每年 {{month}} {{day}} {{time}} UTC"
+    },
+    "runs": "运行：{{schedule}}",
+    "time": {
+      "am": "上午 {{hour}}:{{minute}}",
+      "pm": "下午 {{hour}}:{{minute}}",
+      "twelveAm": "凌晨 12:{{minute}}",
+      "twelvePm": "中午 12:{{minute}}"
+    },
+    "timeZones": {
+      "centralDaylight": "中部夏令时间",
+      "centralStandard": "中部标准时间",
+      "easternDaylight": "东部夏令时间",
+      "easternStandard": "东部标准时间",
+      "mountainDaylight": "山地夏令时间",
+      "mountainStandard": "山地标准时间",
+      "pacificDaylight": "太平洋夏令时间",
+      "pacificStandard": "太平洋标准时间"
+    }
+  },
+  "securityAuditMode": {
+    "customInstructions": "自定义指令",
+    "disableToKeepTheSecurityAudit": "停用后，安全审计工作流仍保留在磁盘上，但会跳过每次计划运行。",
+    "eGFocusOnAuthenticationAnd": "例如：重点关注身份验证和 API 层",
+    "optionalAppendedToTheSlashCommand": "可选。会附加到 <code>/security-review</code> 斜杠命令之后。"
+  },
+  "securityAuditModeV2": {
+    "addedToTheEndOfTheCommand": "会添加到 <code>/security-review</code> 命令的末尾。",
+    "customInstructions": "自定义指令",
+    "customInstructionsOptional": "自定义指令（可选）",
+    "disableToKeepTheSecurityAudit": "停用后，安全审计工作流仍保留在磁盘上，但会跳过每次计划运行。",
+    "eGFocusOnAuthenticationAnd": "例如：重点关注身份验证和 API 层",
+    "optionalAppendedToTheSlashCommand": "可选。会附加到 <code>/security-review</code> 斜杠命令之后。",
+    "summary": {
+      "customInstructions": "自定义指令：{{extras}}"
+    }
+  },
+  "sessionPrivacySelectorV2": {
+    "sessionPrivacy": "会话隐私"
+  },
+  "shareAutomationModalCoreV2": {
+    "anyoneInYourOrganizationCanView": "组织内任何人都可以查看",
+    "copied": "已复制",
+    "copy": "复制",
+    "onlyYouCanAccess": "仅你可访问",
+    "organization": "组织",
+    "private": "私有",
+    "shareAutomation": "共享自动化",
+    "shareLink": "共享链接",
+    "visibility": "可见性"
+  },
+  "shared": {
+    "autonomyLevel": "自主级别",
+    "enabled": "已启用",
+    "high": "高",
+    "low": "低",
+    "medium": "中",
+    "setsTheAutoFlagPassedTo": "设置传递给 <code>droid exec</code> 的 <code>--auto</code> 标志。"
+  },
+  "sharedV2": {
+    "autonomyLevel": "自主级别",
+    "enabled": "已启用",
+    "reviewGuidelines": {
+      "actedOnOnly": "仅使用作者已采纳的评论。",
+      "description": "将团队已采纳的审查评论转化为 Droid 遵循的指南。每次更新都是一个由你批准的拉取请求。",
+      "includeBotComments": "包含机器人评论",
+      "label": "学习审查指南",
+      "monthly": "每月",
+      "refresh": "刷新",
+      "weekly": "每周"
+    },
+    "setsTheAutoFlagPassedTo": "设置传递给 <code>droid exec</code> 的 <code>--auto</code> 标志。"
+  },
+  "slackAutomationFormV2": {
+    "aMessageContainingOneOfThese": "包含其中任一关键词的消息绝不会启动运行。",
+    "aSlackMemberIdABot": "Slack 成员 ID、机器人 ID 或机器人的显示名称。",
+    "addedToEverySessionAMatching": "会添加到匹配消息启动的每个会话中。",
+    "channels": "频道",
+    "droidStartsARunWhenA": "当这些频道中发布消息时，Droid 会启动一次运行。",
+    "eGB0a663lrwusAxiomMonitorMonitor": "例如 B0A663LRWUS、Axiom Monitor Monitor",
+    "excludeKeywords": "排除关键词",
+    "excludeSenders": "排除发送者",
+    "instructions": "指令",
+    "instructionsToInjectIntoEverySession": "要注入到此频道触发的每个会话中的指令…",
+    "keywords": "关键词",
+    "matchChannelsNamed": "匹配名称为 {{pattern}} 的频道",
+    "narrowWhichMessagesStartARun": "进一步限定哪些消息会启动运行以及运行在哪里执行。",
+    "onlyMessagesContainingOneOfThese": "仅包含其中任一关键词的消息才会启动运行。留空则在每条消息上触发。",
+    "pickAtLeastOneChannel": "请至少选择一个频道。",
+    "prompt": "提示词",
+    "removeChannel": "移除频道 {{name}}",
+    "removeChannelNameRule": "移除频道名称规则 {{name}}",
+    "removeKeyword": "移除关键词 {{keyword}}",
+    "removeLabelValue": "移除 {{label}} {{value}}",
+    "searchChannels": "搜索频道…",
+    "trigger": "触发器",
+    "triggerOnMessagesFrom": "对来自以下发送者的消息触发",
+    "typeKeywordsSeparatedByCommas": "输入关键词，以逗号分隔",
+    "typeKeywordsToExcludeSeparatedBy": "输入要排除的关键词，以逗号分隔"
+  },
+  "slackChannelSelection": {
+    "matchListWithOverflow_other": "当前匹配 {{count}} 个频道：{{names}}（另有 {{overflow}} 个…）",
+    "matchList_other": "当前匹配 {{count}} 个频道：{{names}}"
+  },
+  "softwareFactory": {
+    "addNewGroup": "添加新分组",
+    "badges": {
+      "intakeRate": "受理率",
+      "mergeGate": "合并门禁",
+      "reliability": "可靠性",
+      "shipRate": "交付率",
+      "trend": "趋势"
+    },
+    "comingSoon": "即将推出",
+    "createAPersonalSoftwareFactoryView": "从你可访问的仓库创建个人软件工厂视图，以开始跟踪自动化指标。",
+    "createRepositoryGroup": "创建仓库分组",
+    "defaultView": "默认视图",
+    "deleteGroup": "删除分组",
+    "deleteGroupAriaLabel": "删除 {{label}}",
+    "deploy": "部署",
+    "editGroup": "编辑分组",
+    "editGroupAriaLabel": "编辑 {{label}}",
+    "editRepositoryGroup": "编辑仓库分组",
+    "healthFraction": {
+      "healthy": "{{healthy}}/{{total}} 项健康",
+      "integrations": "{{healthy}}/{{total}} 个集成",
+      "repos": "{{healthy}}/{{total}} 个仓库"
+    },
+    "healthy": "健康",
+    "inputSources_other": "{{count}} 个输入源",
+    "loadingMetricLabels": {
+      "averageTicketsPerDay": "日均工单数",
+      "effectivenessReports": "效能报告",
+      "linesOfCode": "代码行数",
+      "numberOfDocs": "文档数量",
+      "numberOfIncidents": "事件数量",
+      "pagesGenerated": "生成的页面数",
+      "prsInReview": "审查中的 PR",
+      "prsPerDay": "每日 PR 数",
+      "ticketsInBacklog": "积压工单",
+      "validations": "验证次数"
+    },
+    "makeDefaultView": "设为默认视图",
+    "makeGroupDefaultAriaLabel": "将 {{label}} 设为默认软件工厂视图",
+    "metrics": {
+      "incidentsProcessed": {
+        "title": "已处理事件",
+        "tooltipDescription": "由事件响应自动化处理的错误、告警和事件",
+        "tooltipTitle": "已处理事件数量",
+        "unitLabel": "事件",
+        "valueLabel": "个事件"
+      },
+      "prValidations": {
+        "title": "PR 验证",
+        "unitLabel": "验证",
+        "valueLabel": "次验证"
+      },
+      "prsMerged": {
+        "title": "已合并 PR",
+        "tooltipDescription": "此时间范围内合并的拉取请求。",
+        "tooltipTitle": "已合并 PR 数量",
+        "unitLabel": "PR",
+        "valueLabel": "个 PR"
+      },
+      "ticketsTriaged": {
+        "title": "已分类工单",
+        "tooltipDescription": "由分类自动化完成分类、去重或转派的工单",
+        "tooltipTitle": "已分类工单数量",
+        "unitLabel": "工单",
+        "valueLabel": "个工单"
+      }
+    },
+    "noData": "暂无数据",
+    "noPeakData": "无峰值数据",
+    "noPriorData": "无历史数据",
+    "noRepositoryGroupsYet": "暂无仓库分组",
+    "notConfigured": "未配置",
+    "peak": "峰值 {{label}}",
+    "prValidationsTooltip": {
+      "breakdown": "{{qa}} 次 QA + {{codeReviews}} 次代码审查 = {{total}}",
+      "title": "PR 验证数量",
+      "total": "总计：{{total}}"
+    },
+    "prsMergedCaption": "已合并 PR / {{range}}",
+    "repoCount": "{{formattedCount}} 个仓库",
+    "saveGroup": "保存分组",
+    "signal": "信号",
+    "signalsCaption": "信号 / {{range}}",
+    "stageCount": {
+      "automations": "{{count}} 个自动化",
+      "integrations": "{{count}} 个集成"
+    },
+    "stages": {
+      "codeGen": {
+        "automationCountTooltip": "已连接的代码生成集成数量。",
+        "description": "将工程需求转化为实现会话，同时延续产品上下文、仓库上下文和进度更新。",
+        "title": "代码生成"
+      },
+      "docs": {
+        "automationCountTooltip": "文档自动化数量。",
+        "description": "在代码变更时，保持仓库知识、设置说明、API 和实现上下文的一致性。",
+        "title": "文档"
+      },
+      "monitor": {
+        "automationCountTooltip": "监控自动化数量。",
+        "description": "跟踪错误、事件和自动化效能，让运维问题回流到工程工作中。",
+        "title": "监控"
+      },
+      "release": {
+        "automationCountTooltip": "发布自动化即将推出。",
+        "description": "在发布自动化可用后，协调发布就绪、部署门禁和交付工作流。",
+        "title": "发布"
+      },
+      "triage": {
+        "automationCountTooltip": "分类自动化数量。",
+        "description": "对新进工作分类，减少重复请求，并将可执行事项连同正确的上下文一并转派。",
+        "title": "分类"
+      },
+      "validate": {
+        "automationCountTooltip": "验证自动化数量。",
+        "description": "为仓库配置代码审查、安全审查和 QA 自动化，使拉取请求在变更合并前得到检查。",
+        "title": "验证"
+      }
+    },
+    "trackHowAutomationIsScalingEngineering": "跟踪自动化如何在审查、分类、交付和事件响应中扩展工程工作流。这些指标会显示自动化在哪些环节创造了杠杆效应，以及团队接下来可以在哪里投入。",
+    "unknown": "未知",
+    "yourSoftwareFactory": "你的软件工厂"
+  },
+  "softwareFactoryChart": {
+    "max": "最大",
+    "mid": "中间",
+    "min": "最小",
+    "now": "现在",
+    "thisMonth": "本月",
+    "thisQuarter": "本季度",
+    "thisWeek": "本周"
+  },
+  "softwareFactoryStageDetail": {
+    "back": "← 返回",
+    "codeGen": {
+      "description": "代码生成是将工程意图转化为实现工作的环节。连接你的规划与沟通系统，让请求在委派时能够把需求、决策和仓库上下文带入会话。",
+      "linear": {
+        "description": "从已连接的工单委派实现工作。工单详情、评论、标签和验收标准会成为上下文，同时进度始终与来源条目保持关联。"
+      },
+      "slack": {
+        "description": "从已连接的对话委派实现工作。相关讨论、文件和决策会成为会话的上下文，进度则会回报到来源。"
+      },
+      "title": "代码生成"
+    },
+    "codeValidation": {
+      "codeReview": {
+        "description": "审查拉取请求的正确性、回归、可维护性以及仓库特有的约定。聚焦的反馈帮助团队在上下文尚且新鲜时及时发现问题。",
+        "title": "代码审查"
+      },
+      "description": "验证是合并前的质量关卡。自动审查、安全与 QA 工作流会接入仓库，确保实现工作在交付前经过正确性、风险和预期行为方面的检查。",
+      "qa": {
+        "description": "围绕变更后的行为规划验证，运行已配置的工作流，并在失败时附带复现上下文进行报告。QA 让实现会话始终有证据支撑，确认用户路径仍然可用。",
+        "title": "QA"
+      },
+      "securityAudit": {
+        "description": "按计划对整个仓库执行深度安全审查，以固定周期而非逐个拉取请求的方式，发现漏洞、密钥泄露和风险依赖。",
+        "title": "安全审计"
+      },
+      "securityReview": {
+        "description": "增加一次以安全为重点的检查，覆盖漏洞、密钥泄露、不安全的依赖和安全敏感的代码路径。适用于变更在合并前需要额外审查的仓库。",
+        "title": "安全审查"
+      },
+      "title": "验证"
+    },
+    "columns": {
+      "automations": "自动化",
+      "checks": "检查",
+      "repository": "仓库"
+    },
+    "docs": {
+      "autoWiki": {
+        "description": "读取仓库的最新状态，并用架构说明、API、安装步骤和运维上下文更新项目知识。AutoWiki 帮助文档紧跟代码，避免随时间推移逐渐脱节。"
+      },
+      "description": "文档是代码变更落地后的知识层。仓库文档、安装步骤、API 和架构上下文保持同步，让工程师和智能体可以依赖最新的实现图谱。",
+      "title": "文档"
+    },
+    "emptyText": {
+      "agentEffectiveness": "暂无智能体效能检查。",
+      "incidentResponse": "尚未创建任何事件响应自动化。",
+      "repositories": "尚无仓库启用此自动化。",
+      "triage": "尚未创建任何分类自动化。"
+    },
+    "lastRun": {
+      "daysAgo": "{{count}}天前",
+      "hoursAgo": "{{count}}小时前",
+      "last7d": "近 7 天",
+      "minutesAgo": "{{count}}分钟前",
+      "monthsAgo": "{{count}}个月前",
+      "never": "从未",
+      "secondsAgo": "{{count}}秒前",
+      "weeksAgo": "{{count}}周前",
+      "yearsAgo": "{{count}}年前"
+    },
+    "observability": {
+      "agentEffectiveness": {
+        "description": "检查近期的自动化活动是否已对照工程成果进行衡量。这让团队获得一个简单信号：智能体工作正在被评估，而不仅仅是被计数。",
+        "noRecentRun": "近期无运行",
+        "noRecentRunDetected": "过去一周内未检测到符合条件的智能体效能运行。",
+        "recentRun": "近期有运行",
+        "recentRunDetected": "过去一周内检测到符合条件的智能体效能运行。",
+        "title": "智能体效能"
+      },
+      "description": "监控将错误、事件与工程行动串联成闭环。事件响应自动化负责组织后续工作，智能体效能则检查自动化活动是否在产出有价值的工程成果。",
+      "incidentResponse": {
+        "description": "通过收集上下文、总结变更内容并跟踪后续步骤，协助协调事件、错误和告警的后续处理。可用于将运维问题转化为结构化的工程工作。",
+        "title": "事件响应"
+      },
+      "title": "监控"
+    },
+    "rowDetail": {
+      "lastRun": "上次运行：{{status}}",
+      "status": "状态：{{status}}"
+    },
+    "securityReviewDisclaimer": "运行活动仅限于启用了安全审查的仓库，但工作流运行包含完整的审查任务，目前尚无法拆分为仅安全审查的运行。",
+    "triage": {
+      "description": "分类是软件工厂的接收入口层。传入的请求会经过审查，识别出可执行的工程工作，检查重复项，并在进入规划之前将合适的工作分派给合适的团队。",
+      "panelDescription": "这些自动化由分类模板创建，并通过其持久化的模板 ID 匹配。每个自动化都会将入站请求转化为结构化工作，保留来源上下文，并避免重复项割裂待办事项的归属。",
+      "panelTitle": "分类自动化",
+      "title": "分类"
+    },
+    "unitLabels": {
+      "automations": "个自动化",
+      "check": "项检查",
+      "repositories": "个仓库"
+    },
+    "valueLabels": {
+      "audits": "次审计",
+      "incidents": "个事件",
+      "ticketsTriaged": "个已分类工单",
+      "validations": "次验证",
+      "wikiRefreshes": "次 Wiki 刷新"
+    },
+    "viewOption": "视图：{{name}}"
+  },
+  "stageDetailReusable": {
+    "createNew": "新建",
+    "enabled": "已启用",
+    "filterStagesBy": "按 {{integration}} 筛选阶段",
+    "lastRun": "上次运行",
+    "manageIntegrations": "管理集成",
+    "noPriorData": "无历史数据",
+    "noRecentRun": "近期无运行",
+    "noRowsToShow": "无可显示的行。",
+    "notEnabled": "未启用",
+    "openIn": "在 {{source}} 中打开",
+    "recentRun": "近期有运行",
+    "setUpNow": "立即设置",
+    "sources": "来源"
+  },
+  "stageMetricDetailContent": {
+    "back": "← 返回"
+  },
+  "triggeredByPickerV2": {
+    "addAutomation": "添加自动化…",
+    "chainedAfter": "链式触发",
+    "chainedAfterHelp": "当这些自动化的运行结束时（无论完成还是失败），会启动此自动化。",
+    "loadingAutomations": "正在加载自动化…",
+    "noAutomationsMatch": "没有匹配的自动化",
+    "noOtherAutomationsToPickFrom": "没有其他可选的自动化",
+    "onlyTheOwnerCanChangeWhich": "只有所有者才能更改哪些自动化触发此自动化：来源必须取自所有者自己的自动化。",
+    "removeName": "移除 {{name}}",
+    "searchAutomations": "搜索自动化…"
+  },
+  "triggersFieldV2": {
+    "addAtLeastOneGithubEvent": "至少添加一个 GitHub 事件才能启动运行。",
+    "addAtLeastOneGithubEventOrSchedule": "至少添加一个 GitHub 事件或计划才能启动运行。",
+    "addSchedule": "请添加计划",
+    "editSchedule": "编辑计划",
+    "eventsConfigured_other": "已配置 {{count}} 个事件",
+    "fixedTriggers": "此工作流类型的触发器无法修改",
+    "frequency": "频率",
+    "githubEvents": "GitHub 事件",
+    "other": "其他",
+    "runsOnAScheduleUseNaturalLanguage": "按计划运行。可使用自然语言，例如 “every Monday at 9am”，或 5 段式 cron 表达式。",
+    "schedule": "计划（CI）",
+    "scheduleOnly": "此工作流类型仅支持按计划运行。"
+  },
+  "useAutomationSessionV2": {
+    "authenticationRequired": "需要身份验证",
+    "localAutomationsDesktopOnly": "本地自动化只能从桌面应用运行"
+  },
+  "useCreateAutomationV2": {
+    "automationSetupDidNotComplete": "自动化设置未完成。",
+    "ciAutomationRequiresAtLeastOneRepository": "CI 自动化需要至少一个 “owner/repo” 形式的仓库。",
+    "couldNotRegisterTheAutomationSchedule": "无法注册自动化计划。设置会话仍在运行，请打开该会话继续操作，或取消创建。",
+    "failedToCreateAutomationPr": "创建自动化 PR 失败",
+    "failedToStartAutomationCreation": "启动自动化创建失败",
+    "noPrUrlReturned": "未返回 PR URL",
+    "setupPrOpenedForRepo": "已为 {{repo}} 创建设置 PR",
+    "setupPrsOpenedForRepositories": "已为 {{count}} 个仓库创建设置 PR",
+    "viewPr": "查看 PR"
+  },
+  "useImproveAutomationV2": {
+    "recordPrompt": {
+      "focus": "我想更改的内容：{{focusArea}}",
+      "opening": "编辑 ID 为 {{automationId}} 的 Factory 自动化。",
+      "review": "审查其提示词和设置，提出改进建议，并在做出任何更改之前询问我要应用哪些建议。",
+      "tools": "它仅存储在 Factory 中，计算机上没有对应文件，因此请使用 automations_read 读取，使用 automations_edit 修改（较旧版本的 Droid 使用 ReadAutomation 和 EditAutomation），两者均需将 executionLocation 设为 “remote”。"
+    },
+    "startFailed": "启动改进会话失败"
+  },
+  "useRunAutomationV2": {
+    "runFailed": "运行自动化失败"
+  },
+  "webhookCredentialsRevealModal": {
+    "connectYourSender": "连接你的发送方",
+    "copyLabel": "复制 {{label}}",
+    "copyTheSecretNowItsStored": "请立即复制密钥 — 它以哈希形式存储，之后无法再次显示。如果丢失，可轮换密钥以签发新的密钥：接收端 URL 保持不变，但所有仍在使用旧密钥的发送方都会停止工作，直到你更新为止。",
+    "done": "完成",
+    "forToolsWithSeparateFieldsFor": "适用于将请求头名称和值分开填写的工具。",
+    "githubAndMostSaasWebhookSettings": "GitHub 和大多数 SaaS 的 Webhook 设置没有用于自定义请求头的字段。",
+    "identifiesTheStoredSecretWithoutRevealing": "用于标识已存储的密钥，但不会泄露其内容。如需记录当前启用的密钥，请复制它。",
+    "ifYourSenderCanAddRequest": "如果你的发送方可以添加请求头，请使用以下内容：",
+    "ifYourSenderOnlyAcceptsA": "如果你的发送方仅接受 URL，请使用以下内容：",
+    "newWebhookSecret": "新的 Webhook 密钥",
+    "recommendedKeepsTheSecretOutOf": "推荐。可避免密钥出现在 URL 中。",
+    "runsAsIsAndShouldShow": "可原样运行，并应在几秒内出现在 Deliveries 中。",
+    "secret": "密钥",
+    "secretFingerprint": "密钥指纹",
+    "secretHeader": "密钥请求头",
+    "testCommand": "测试命令",
+    "theSecretTravelsInTheUrl": "密钥会随 URL 传输，因此可能出现在发送方的日志和投递历史中。如果泄露，请轮换密钥。",
+    "urlWithSecret": "带密钥的 URL",
+    "webhookCreated": "Webhook 已创建",
+    "webhookUrl": "Webhook URL"
+  },
+  "wikiMode": {
+    "branches": "分支",
+    "commaSeparatedPushesToTheseBranches": "以逗号分隔。推送到这些分支会刷新 Wiki。",
+    "customInstructions": "自定义指令",
+    "disableToKeepTheWikiWorkflow": "禁用后，Wiki 工作流会保留在磁盘上，但会跳过所有刷新。",
+    "eGIncludePackages": "例如 --include packages/**",
+    "mainDev": "main, dev",
+    "optionalAppendedToTheSlashCommand": "可选。会追加到 <code>/wiki</code> 斜杠命令之后。"
+  },
+  "wikiModeV2": {
+    "addedToTheEndOfTheCommand": "会添加到 <code>/wiki</code> 命令的末尾。",
+    "branches": "分支",
+    "commaSeparatedPushesToTheseBranches": "以逗号分隔。推送到这些分支会刷新 Wiki。",
+    "customInstructions": "自定义指令",
+    "customInstructionsOptional": "自定义指令（可选）",
+    "disableToKeepTheWikiWorkflow": "禁用后，Wiki 工作流会保留在磁盘上，但会跳过所有刷新。",
+    "eGIncludePackages": "例如 --include packages/**",
+    "mainDev": "main, dev",
+    "optionalAppendedToTheSlashCommand": "可选。会追加到 <code>/wiki</code> 斜杠命令之后。",
+    "summary": {
+      "branches": "分支：{{branches}}",
+      "customInstructions": "自定义指令：{{extras}}"
+    }
+  }
+}
